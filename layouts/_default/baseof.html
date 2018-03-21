@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html id="{{ .Params.cid }}" lang="en" class="{{ .Params.class }}">
+	{{ partial "head.html" . }}
+	<body>
+		{{ partial "header.html" . }}
+		{{ block "main" . }}{{ end }}
+		{{ partialCached "footer.html" . }}
+		{{ partial "footer-scripts.html" . }}
+	</body>
+</html>	

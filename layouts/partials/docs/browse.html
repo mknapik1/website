@@ -1,0 +1,33 @@
+<div class="browsedocs">
+{{/* assign sections = "setup,concepts,tasks,tutorials,reference,docs-home" | split: "," TODO(bep) */}}
+{{ range .Parent.Sections }}
+  <div class="browsesection">
+    <div class="docstitle">
+      <a href="{{ .RelPermalink }}">{{ .Params.bigheader | default .Title }}</a>
+    </div>
+    <div class="pages">
+    {{ $num_pages := len .Pages }}
+    {{ if gt $num_pages 0 }}
+    {{ $column_size :=  (div $num_pages 3) | math.Ceil | int | default 1 }}
+    {{  range $i, $e := .Pages  }}
+      {{ $offset := mod $i $column_size |  add 1 }}
+      {{/* TODO(bep) 
+      {{ if .Params.display_browse_numbers }}
+        {{ assign browse_number = i | prepend: "0" | slice: -2, 2 | append: " - " }}
+      {{ else }}
+        {{ assign browse_number = "" }}
+      {{ end }}
+      */}}
+      {{ if eq $offset 1 }}
+        <div class="browsecolumn">
+      {{ end }}
+	    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a><br>
+      {{ if or (eq $offset $column_size) (eq (add $i 1) $num_pages)}}
+        </div>
+      {{ end }}
+    {{ end }}
+    {{ end }}
+    </div><!-- end pages -->
+  </div><!-- end browsesection -->
+{{ end }}
+</div><!-- end browsedocs -->

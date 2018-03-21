@@ -1,0 +1,42 @@
+
+
+
+./cn/docs/ => content/cn
+./docs => content/en
+
+404.md
+
+
+Content move/renames:
+
+/cn/docs/tasks/debug-application-cluster/ => _index.md
+/docs/tasks/debug-application-cluster/ => _index.md
+
+./cn/docs/tasks/debug-application-cluster/debug-application.md
+
+=> docs/tasks/cdebug-application-cluster/debug-application.cn.md
+=> docs/tasks/cdebug-application-cluster/debug-application.md
+
+
+reference/generated => static
+
+OK Ignorefiles
+
+OWNERS
+README.md
+
+
+Redirects from aliases
+
+_redirects
+
+
+TODO
+
+* Check _headers
+* {{ page.cid }}" lang="en" class="{{ page.class }}
+* styles.css, just copied for now
+* main class {{ toc.bigheader }}
+* {% capture overview %} > shortcode with Scratch
+* Remove superflous "layout:"
+* 404

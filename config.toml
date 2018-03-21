@@ -1,0 +1,113 @@
+baseURL = "https://kubernetes.io"
+title = "Kubernetes"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "robotsTXT"]
+
+ignoreFiles = [ "^OWNERS$", "README.md", "^node_modules$" ]
+
+contentDir = "content/en"
+
+# TODO(bep)
+[social]
+twitter = "kubernetesio"
+
+[params]
+description = "Production-Grade Container Orchestration"
+
+# TODO(bep)
+logo = "/images/favicon.png"
+
+[languages]
+[languages.en]
+title = "Kubernetes"
+description = "Production-Grade Container Orchestration"
+languageName ="English"
+# Weight used for sorting.
+weight = 1
+[languages.cn]
+title = "Kubernetes"
+# TODO(bep)
+description = "Production-Grade Container Orchestration"
+# TODO(bep) this should probably be the name in Chinese
+languageName ="Chinese"
+weight = 2
+contentDir = "content/cn"
+
+
+# TODO(bep) defaults?
+
+[[params.defaults]]
+
+[params.defaults.scope]
+path = ""
+
+[params.defaults.values]
+fullversion = "v1.10.0"
+version = "v1.10"
+githubbranch = "master"
+docsbranch = "master"
+deprecated = false
+currentUrl = "https://kubernetes.io/docs/home/"
+nextUrl = "http://kubernetes-io-vnext-staging.netlify.com/"
+
+[[params.defaults.values.versions]]
+fullversion = "v1.10.0"
+version = "v1.10"
+githubbranch = "v1.10.0"
+docsbranch = "release-1.10"
+url = "https://kubernetes.io"
+
+[[params.defaults.values.versions]]
+fullversion = "v1.9.0"
+version = "v1.9"
+githubbranch = "v1.9.0"
+docsbranch = "release-1.9"
+url = "https://v1-9.docs.kubernetes.io"
+
+[[params.defaults.values.versions]]
+fullversion = "v1.8.4"
+version = "v1.8"
+githubbranch = "v1.8.4"
+docsbranch = "release-1.8"
+url = "https://v1-8.docs.kubernetes.io"
+
+[[params.defaults.values.versions]]
+fullversion = "v1.7.6"
+version = "v1.7"
+githubbranch = "v1.7.6"
+docsbranch = "release-1.7"
+url = "https://v1-7.docs.kubernetes.io"
+
+[[params.defaults.values.versions]]
+fullversion = "v1.6.8"
+version = "v1.6"
+githubbranch = "v1.6.8"
+docsbranch = "release-1.6"
+url = "https://v1-6.docs.kubernetes.io"
+
+[[params.defaults]]
+
+[params.defaults.scope]
+path = "docs"
+
+[params.defaults.values]
+layout = "docwithnav"
+showedit = true
+
+# TODO(bep)
+emptyArray = []
+
+tocs = [
+  "docs-home",
+  "setup",
+  "tasks",
+  "tutorials",
+  "concepts",
+  "reference",
+  "samples",
+  "search",
+  "imported"
+]
