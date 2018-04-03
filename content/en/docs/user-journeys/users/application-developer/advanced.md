@@ -34,7 +34,7 @@ As you may know, it's an antipattern to migrate an entire app (e.g. containerize
 
 #### Pod configuration
 
-Usually, you use {% glossary_tooltip text="labels" term_id="label" %} and {% glossary_tooltip text="annotations" term_id="annotation" %} to attach metadata to your resources. To inject data into your resources, you'd likely create {% glossary_tooltip text="ConfigMaps" term_id="configmap" %} (for nonconfidential data) or {% glossary_tooltip text="Secrets" term_id="secret" %} (for confidential data).
+Usually, you use {{< glossary_tooltip text="labels" term_id="label" >}} and {{< glossary_tooltip text="annotations" term_id="annotation" >}} to attach metadata to your resources. To inject data into your resources, you'd likely create {{< glossary_tooltip text="ConfigMaps" term_id="configmap" >}} (for nonconfidential data) or {{< glossary_tooltip text="Secrets" term_id="secret" >}} (for confidential data).
 
 Below are some other, lesser-known ways of configuring your resources' Pods:
 
@@ -45,9 +45,9 @@ Below are some other, lesser-known ways of configuring your resources' Pods:
 #### Additional API Objects
 
 {: .note }
-Before setting up the following resources, check to see if they are the responsibility of your organization's {% glossary_tooltip text="cluster operators" term_id="cluster-operator" %}.
+Before setting up the following resources, check to see if they are the responsibility of your organization's {{< glossary_tooltip text="cluster operators" term_id="cluster-operator" >}}.
 
-* **{% glossary_tooltip text="Horizontal Pod Autoscaler (HPA)" term_id="horizontal-pod-autoscaler" %}** - These resources are a great way to automate the process of scaling your application when CPU usage or other [custom metrics](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/custom-metrics-api.md){:target="_blank"} spike. [See an example](/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/){:target="_blank"} to understand how HPAs are set up.
+* **{{< glossary_tooltip text="Horizontal Pod Autoscaler (HPA)" term_id="horizontal-pod-autoscaler" >}}** - These resources are a great way to automate the process of scaling your application when CPU usage or other [custom metrics](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/custom-metrics-api.md){:target="_blank"} spike. [See an example](/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/){:target="_blank"} to understand how HPAs are set up.
 
 * **Federated cluster objects** - If you are running an application on multiple Kubernetes clusters using *federation*, you need to deploy the federated version of the standard Kubernetes API objects. For reference, check out the guides for setting up [Federated ConfigMaps](/docs/tasks/administer-federation/configmap/){:target="_blank"} and [Federated Deployments](/docs/tasks/administer-federation/deployment/){:target="_blank"}.
 
@@ -61,7 +61,7 @@ Before making any customizations, it's important that you understand the general
 
 * **Kubernetes objects are a way of storing structured data about your cluster.**
   In the case of Deployments, this data represents desired state (such as "How many replicas should be running?"), but it can also be general metadata (such as database credentials).
-* **Kubernetes objects are modified via the {% glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" %}**.
+* **Kubernetes objects are modified via the {{< glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" >}}**.
   In other words, you can make `GET` and `POST` requests to a specific resource path (such as `<api-server-url>/api/v1/namespaces/default/deployments`) to read and write the corresponding object type.
 * **By leveraging the [Controller pattern](/docs/concepts/api-extension/custom-resources/#custom-controllers){:target="_blank"}, Kubernetes objects can be used to enforce desired state**. For simplicity, you can think of the Controller pattern as the following continuous loop:
 
@@ -92,9 +92,9 @@ You may also find the following info helpful:
 
 #### Service Catalog
 
-If you want to consume or provide complete services (rather than individual resources), **{% glossary_tooltip text="Service Catalog" term_id="service-catalog" %}** provides a [specification](https://github.com/openservicebrokerapi/servicebroker){:target="_blank"} for doing so. These services are registered using {% glossary_tooltip text="Service Brokers" term_id="service-broker" %} (see [some examples](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#example-service-brokers){:target="_blank"}).
+If you want to consume or provide complete services (rather than individual resources), **{{< glossary_tooltip text="Service Catalog" term_id="service-catalog" >}}** provides a [specification](https://github.com/openservicebrokerapi/servicebroker){:target="_blank"} for doing so. These services are registered using {{< glossary_tooltip text="Service Brokers" term_id="service-broker" >}} (see [some examples](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#example-service-brokers){:target="_blank"}).
 
-If you do not have a {% glossary_tooltip text="cluster operator" term_id="cluster-operator" %} to manage the installation of Service Catalog, you can do so using [Helm](/docs/tasks/service-catalog/install-service-catalog-using-helm/){:target="_blank"} or an [installer binary](/docs/tasks/service-catalog/install-service-catalog-using-sc/){:target="_blank"}.
+If you do not have a {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}} to manage the installation of Service Catalog, you can do so using [Helm](/docs/tasks/service-catalog/install-service-catalog-using-helm/){:target="_blank"} or an [installer binary](/docs/tasks/service-catalog/install-service-catalog-using-sc/){:target="_blank"}.
 
 
 ## Explore additional resources

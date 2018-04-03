@@ -26,7 +26,7 @@ After checking out the current page and its linked sections, you should have a b
 
 ## Learn additional workload patterns
 
-As your Kubernetes use cases become more complex, you may find it helpful to familiarize yourself with more of the toolkit that Kubernetes provides. [Basic workload](/docs/user-journeys/users/application-developer/foundational/#section-2){:target="_blank"} objects like {% glossary_tooltip text="Deployments" term_id="deployment" %} make it straightforward to run, update, and scale applications, but they are not ideal for every scenario.
+As your Kubernetes use cases become more complex, you may find it helpful to familiarize yourself with more of the toolkit that Kubernetes provides. [Basic workload](/docs/user-journeys/users/application-developer/foundational/#section-2){:target="_blank"} objects like {{< glossary_tooltip text="Deployments" term_id="deployment" >}} make it straightforward to run, update, and scale applications, but they are not ideal for every scenario.
 
 The following API objects provide functionality for additional workload types, whether they are *persistent* or *terminating*.
 
@@ -34,10 +34,10 @@ The following API objects provide functionality for additional workload types, w
 
 Like Deployments, these API objects run indefinitely on a cluster until they are manually terminated. They are best for long-running applications.
 
-* **{% glossary_tooltip text="StatefulSets" term_id="statefulset" %}** - Like Deployments, StatefulSets allow you to specify that a certain number of replicas should be running for your application.
+* **{{< glossary_tooltip text="StatefulSets" term_id="statefulset" >}}** - Like Deployments, StatefulSets allow you to specify that a certain number of replicas should be running for your application.
 
   {: .note }
-  It's misleading to say that Deployments can't handle stateful workloads. Using {% glossary_tooltip text="PersistentVolumes" term_id="persistent-volume" %}, you can persist data beyond the lifecycle of any individual Pod in your Deployment.
+  It's misleading to say that Deployments can't handle stateful workloads. Using {{< glossary_tooltip text="PersistentVolumes" term_id="persistent-volume" >}}, you can persist data beyond the lifecycle of any individual Pod in your Deployment.
 
      However, StatefulSets can provide stronger guarantees about "recovery" behavior than Deployments. StatefulSets maintain a sticky, stable identity for their Pods. The following table provides some concrete examples of what this might look like:
 
@@ -50,7 +50,7 @@ Like Deployments, these API objects run indefinitely on a cluster until they are
      In practice, this means that StatefulSets are best suited for scenarios where replicas (Pods) need to coordinate their workloads in a strongly consistent manner. Guaranteeing an identity for each Pod helps avoid [split-brain](https://en.wikipedia.org/wiki/Split-brain_(computing)){:target="_blank"} side effects in the case when a node becomes unreachable ([network partition](https://en.wikipedia.org/wiki/Network_partition){:target="_blank"}). This makes StatefulSets a great fit for distributed datastores like Cassandra or Elasticsearch.
 
 
-* **{% glossary_tooltip text="DaemonSets" term_id="daemonset" %}** - DaemonSets run continuously on every node in your cluster, even as nodes are added or swapped in. This guarantee is particularly useful for setting up global behavior across your cluster, such as:
+* **{{< glossary_tooltip text="DaemonSets" term_id="daemonset" >}}** - DaemonSets run continuously on every node in your cluster, even as nodes are added or swapped in. This guarantee is particularly useful for setting up global behavior across your cluster, such as:
 
   * Logging and monitoring, from applications like `fluentd`
   * Network proxy or [service mesh](https://www.linux.com/news/whats-service-mesh-and-why-do-i-need-one){:target="_blank"}
@@ -60,9 +60,9 @@ Like Deployments, these API objects run indefinitely on a cluster until they are
 
 In contrast to Deployments, these API objects are finite. They stop once the specified number of Pods have completed successfully.
 
-* **{% glossary_tooltip text="Jobs" term_id="job" %}** - You can use these for one-off tasks like running a script or setting up a work queue. These tasks can be executed sequentially or in parallel. These tasks should be relatively independent, as Jobs do not support closely communicating parallel processes. [Read more about Job patterns](/docs/concepts/workloads/controllers/jobs-run-to-completion/#job-patterns){:target="_blank"}.
+* **{{< glossary_tooltip text="Jobs" term_id="job" >}}** - You can use these for one-off tasks like running a script or setting up a work queue. These tasks can be executed sequentially or in parallel. These tasks should be relatively independent, as Jobs do not support closely communicating parallel processes. [Read more about Job patterns](/docs/concepts/workloads/controllers/jobs-run-to-completion/#job-patterns){:target="_blank"}.
 
-* **{% glossary_tooltip text="CronJobs" term_id="cronjob" %}** - These are similar to Jobs, but allow you to schedule their execution for a specific time or for periodic recurrence. You might use CronJobs to send reminder emails or to run backup jobs. They are set up with a similar syntax as *crontab*.
+* **{{< glossary_tooltip text="CronJobs" term_id="cronjob" >}}** - These are similar to Jobs, but allow you to schedule their execution for a specific time or for periodic recurrence. You might use CronJobs to send reminder emails or to run backup jobs. They are set up with a similar syntax as *crontab*.
 
 #### Other resources
 
@@ -76,7 +76,7 @@ The beginner tutorials on this site, such as the [Guestbook app](/docs/tutorials
 
 #### Declarative configuration
 
-You are likely interacting with your Kubernetes cluster via {% glossary_tooltip text="kubectl" term_id="kubectl" %}. kubectl can be used to debug the current state of your cluster (such as checking the number of nodes), or to modify live Kubernetes objects (such as updating a workload's replica count with `kubectl scale`).
+You are likely interacting with your Kubernetes cluster via {{< glossary_tooltip text="kubectl" term_id="kubectl" >}}. kubectl can be used to debug the current state of your cluster (such as checking the number of nodes), or to modify live Kubernetes objects (such as updating a workload's replica count with `kubectl scale`).
 
 When using kubectl to update your Kubernetes objects, it's important to be aware that different commands correspond to different approaches:
 * [Purely imperative](/docs/tutorials/object-management-kubectl/imperative-object-management-command/){:target="_blank"}
@@ -89,11 +89,11 @@ For additional configuration best practices, familiarize yourself with [this gui
 
 #### Security
 
-You may be familiar with the *principle of least privilege*---if you are too generous with permissions when writing or using software, the negative effects of a compromise can escalate out of control. Would you be cautious handing out `sudo` privileges to software on your OS? If so, you should be just as careful when granting your workload permissions to the {% glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" %} server! The API server is the gateway for your cluster's source of truth; it provides endpoints to read or modify cluster state.
+You may be familiar with the *principle of least privilege*---if you are too generous with permissions when writing or using software, the negative effects of a compromise can escalate out of control. Would you be cautious handing out `sudo` privileges to software on your OS? If so, you should be just as careful when granting your workload permissions to the {{< glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" >}} server! The API server is the gateway for your cluster's source of truth; it provides endpoints to read or modify cluster state.
 
-You (or your {% glossary_tooltip text="cluster operator" term_id="cluster-operator" %}) can lock down API access with the following:
-* **{% glossary_tooltip text="ServiceAccounts" term_id="service-account" %}** - An "identity" that your Pods can be tied to
-* **{% glossary_tooltip text="RBAC" term_id="rbac" %}** - One way of granting your ServiceAccount explicit permissions
+You (or your {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}}) can lock down API access with the following:
+* **{{< glossary_tooltip text="ServiceAccounts" term_id="service-account" >}}** - An "identity" that your Pods can be tied to
+* **{{< glossary_tooltip text="RBAC" term_id="rbac" >}}** - One way of granting your ServiceAccount explicit permissions
 
 For even more comprehensive reading about security best practices, consider checking out the following topics:
 * [Authentication](/docs/admin/authentication/){:target="_blank"} (Is the user who they say they are?)
@@ -104,7 +104,7 @@ For even more comprehensive reading about security best practices, consider chec
 If your workloads are operating in a *multi-tenant* environment with multiple teams or projects, your container(s) are not necessarily running alone on their node(s). They are sharing node resources with other containers which you do not own.
 
 Even if your cluster operator is managing the cluster on your behalf, it is helpful to be aware of the following:
-* **{% glossary_tooltip text="Namespaces" term_id="namespace" %}**, used for isolation
+* **{{< glossary_tooltip text="Namespaces" term_id="namespace" >}}**, used for isolation
 * **[Resource quotas](/docs/concepts/policy/resource-quotas/){:target="_blank"}**, which affect what your team's workloads can use
 * **[Memory](/docs/tasks/configure-pod-container/assign-memory-resource/){:target="_blank"} and [CPU](/docs/tasks/configure-pod-container/assign-cpu-resource/){:target="_blank"} requests**, for a given Pod or container
 * **[Monitoring](/docs/tasks/debug-application-cluster/resource-usage-monitoring/){:target="_blank"}**, both on the cluster level and the app level
@@ -123,7 +123,7 @@ To learn about the most commonly used kubectl commands, check out the [kubectl c
 * [kubeconfig files](/docs/tasks/access-application-cluster/configure-access-multiple-clusters/){:target="_blank"} - Your kubeconfig file tells kubectl what cluster to talk to, and can reference multiple clusters (such as dev and prod).
 * [The various output formats available](/docs/reference/kubectl/cheatsheet/#formatting-output){:target="_blank"} - This is useful to know when you are using `kubectl get` to list information about certain API objects.
 
-* [The JSONPath output format](/docs/reference/kubectl/jsonpath/){:target="_blank"} - This is related to the output formats above. JSONPath is especially useful for parsing specific subfields out of `kubectl get` output (such as the URL of a {% glossary_tooltip text="Service" term_id="service" %}).
+* [The JSONPath output format](/docs/reference/kubectl/jsonpath/){:target="_blank"} - This is related to the output formats above. JSONPath is especially useful for parsing specific subfields out of `kubectl get` output (such as the URL of a {{< glossary_tooltip text="Service" term_id="service" >}}).
 
 * [`kubectl run` vs `kubectl apply`](/docs/reference/kubectl/conventions/){:target="_blank"} - This ties into the [declarative configuration](#declarative-configuration) discussion in the previous section.
 
@@ -131,7 +131,7 @@ For the full list of kubectl commands and their options, check out [the referenc
 
 #### Helm
 
-To leverage pre-packaged configurations from the community, you can use **{% glossary_tooltip text="Helm charts" term_id="helm-chart" %}**.
+To leverage pre-packaged configurations from the community, you can use **{{< glossary_tooltip text="Helm charts" term_id="helm-chart" >}}**.
 
 Helm charts package up YAML configurations for specific apps like Jenkins and Postgres. You can then  install and run these apps on your cluster with minimal extra configuration. This approach makes the most sense for "off-the-shelf" components which do not require much custom implementation logic.
 

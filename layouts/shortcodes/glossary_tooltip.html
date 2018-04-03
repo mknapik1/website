@@ -1,0 +1,24 @@
+{{ $id := .Get "term_id" }}
+{{ $text := .Get "text" }}
+{{ $term_info := index .Page.Site.Data.glossary $id }}
+{{ if not $term_info }}
+{{ errorf "%q is not a valid glossary term_id, see ./_data/glossary/* for a full list" $id }}
+{{ end }}
+{{ $glossary_home := "docs/reference/glossary/?all=true" | relURL }}
+{{ $external_link := (index $term_info "full-link") | default (printf "%s#%s" $glossary_home $term_info.id | safeURL  ) }}
+{{ $tooltip := index $term_info "short-description" }}         
+  {{/* 
+	TODO(bep) check gsub etc
+       "#{GLOSSARY_HOME}#term-#{term_info["id"]}"
+     tooltip = term_info["short-description"].
+       gsub(NESTED_TOOLTIPS, '\2').
+       gsub(NESTED_MARKDOWN_LINKS, '\2').
+       strip
+  */}}
+
+<a class='glossary-tooltip' href='{{ $external_link }}' target='_blank'>
+	{{- $text | default $term_info -}}
+	<span class='tooltip-text'>
+		{{- $tooltip -}}
+	</span>"
+</a>

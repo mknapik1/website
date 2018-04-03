@@ -24,6 +24,20 @@ type keyVal struct {
 	val string
 }
 
+type contentFixer func(path, s string) (string, error)
+type contentFixers []contentFixer
+
+func (f contentFixers) fix(path, s string) (string, error) {
+	var err error
+	for _, fixer := range f {
+		s, err = fixer(path, s)
+		if err != nil {
+			return "", err
+		}
+	}
+	return s, nil
+}
+
 var (
 	frontmatterRe = regexp.MustCompile(`(?s)---
 (.*)
@@ -83,7 +97,7 @@ func (m *mover) contentMoveStep1() error {
 	}
 
 	for _, title := range linkTitles {
-		if err := m.replaceInFile(filepath.Join("content", title.key), addLinkTitle(title.val)); err != nil {
+		if err := m.replaceInFileRel(filepath.Join("content", title.key), addLinkTitle(title.val)); err != nil {
 			return err
 		}
 	}
@@ -99,17 +113,50 @@ func (m *mover) contentMoveStep1() error {
 
 	for i, f := range filesInDocsMainMenu {
 		weight := 20 + (i * 10)
-		if err := m.replaceInFile(filepath.Join("content", f), addToDocsMainMenu(weight)); err != nil {
+		if err := m.replaceInFileRel(filepath.Join("content", f), addToDocsMainMenu(weight)); err != nil {
 			return err
 		}
 	}
 
 	// Adjust some layouts
-	if err := m.replaceInFile(filepath.Join("content", "en/docs/home/_index.md"), stringsReplacer("layout: docsportal", "layout: docsportal_home")); err != nil {
+	if err := m.replaceInFileRel(filepath.Join("content", "en/docs/home/_index.md"), stringsReplacer("layout: docsportal", "layout: docsportal_home")); err != nil {
+		return err
+	}
+
+	contentFixers := contentFixers{
+		// This is a type, but it creates a breaking shortcode
+		// {{ "{% glossary_tooltip text=" }}"cluster" term_id="cluster" %}
+		func(path, s string) (string, error) {
+			return strings.Replace(s, `{{ "{% glossary_tooltip text=" }}"cluster" term_id="cluster" %}`, `{% glossary_tooltip text=" term_id="cluster" %}`, 1), nil
+		},
+
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% glossary_tooltip text="(.*?)" term_id="(.*?)" %}`)
+			return re.ReplaceAllString(s, `{{< glossary_tooltip text="$1" term_id="$2" >}}`), nil
+			return s, nil
+		},
+	}
+
+	if err := m.applyContentFixes(contentFixers, "md$"); err != nil {
 		return err
 	}
 
 	return nil
+}
+
+func (m *mover) applyContentFixes(fixes contentFixers, match string) error {
+	re := regexp.MustCompile(match)
+	return m.doWithContentFile("", func(path string, info os.FileInfo) error {
+		if !info.IsDir() && re.MatchString(path) {
+			if !m.try {
+				if err := m.replaceInFile(path, fixes.fix); err != nil {
+					return err
+				}
+			}
+		}
+
+		return nil
+	})
 }
 
 func (m *mover) renameContentFiles(match, renameTo string) error {
@@ -194,7 +241,7 @@ func main() {
 	}
 	must(m.contentMoveStep1())
 
-	m.printStats(os.Stdout)
+	//	m.printStats(os.Stdout)
 
 }
 
@@ -229,8 +276,7 @@ func (m *mover) openFileForWriting(filename string, info os.FileInfo) (io.ReadWr
 	return os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, info.Mode())
 }
 
-func (m *mover) handleFile(name string, create bool, info os.FileInfo, replacer func(path string, content string) (string, error)) error {
-	sourceFilename := m.absFilename(name)
+func (m *mover) handleFile(filename string, create bool, info os.FileInfo, replacer func(path string, content string) (string, error)) error {
 
 	var (
 		out io.ReadWriteCloser
@@ -238,7 +284,7 @@ func (m *mover) handleFile(name string, create bool, info os.FileInfo, replacer 
 		err error
 	)
 
-	infile, err := os.Open(sourceFilename)
+	infile, err := os.Open(filename)
 	if err != nil {
 		return err
 	}
@@ -246,9 +292,9 @@ func (m *mover) handleFile(name string, create bool, info os.FileInfo, replacer 
 	infile.Close()
 
 	if create {
-		out, err = m.openOrCreateTargetFile(sourceFilename, info)
+		out, err = m.openOrCreateTargetFile(filename, info)
 	} else {
-		out, err = m.openFileForWriting(sourceFilename, info)
+		out, err = m.openFileForWriting(filename, info)
 	}
 
 	if err != nil {
@@ -256,7 +302,7 @@ func (m *mover) handleFile(name string, create bool, info os.FileInfo, replacer 
 	}
 	defer out.Close()
 
-	return m.replace(name, &in, out, replacer)
+	return m.replace(filename, &in, out, replacer)
 }
 
 func (m *mover) replace(path string, in io.Reader, out io.Writer, replacer func(path string, content string) (string, error)) error {
@@ -281,8 +327,12 @@ func (m *mover) replace(path string, in io.Reader, out io.Writer, replacer func(
 	return nil
 }
 
+func (m *mover) replaceInFileRel(rel string, replacer func(path string, content string) (string, error)) error {
+	return m.replaceInFile(m.absFilename(rel), replacer)
+}
+
 func (m *mover) replaceInFile(filename string, replacer func(path string, content string) (string, error)) error {
-	fi, err := os.Stat(m.absFilename(filename))
+	fi, err := os.Stat(filename)
 	if err != nil {
 		return err
 	}

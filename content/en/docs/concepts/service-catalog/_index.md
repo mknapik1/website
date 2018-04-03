@@ -10,7 +10,7 @@ reviewers:
 A service broker, as defined by the [Open service broker API spec](https://github.com/openservicebrokerapi/servicebroker/blob/v2.13/spec.md), is an endpoint for a set of managed services offered and maintained by a third-party, which could be a cloud provider such as AWS, GCP, or Azure.
 Some examples of managed services are Microsoft Azure Cloud Queue, Amazon Simple Queue Service, and Google Cloud Pub/Sub, but they can be any software offering that can be used by an application.
 
-Using Service Catalog, a {% glossary_tooltip text="cluster operator" term_id="cluster-operator" %} can browse the list of managed services offered by a service broker, provision an instance of a managed service, and bind with it to make it available to an application in the Kubernetes cluster.
+Using Service Catalog, a {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}} can browse the list of managed services offered by a service broker, provision an instance of a managed service, and bind with it to make it available to an application in the Kubernetes cluster.
 
 {% endcapture %}
 
@@ -18,7 +18,7 @@ Using Service Catalog, a {% glossary_tooltip text="cluster operator" term_id="cl
 {% capture body %}
 ## Example use case
 
-An {% glossary_tooltip text="application developer" term_id="application-developer" %} wants to use message queuing as part of their application running in a Kubernetes cluster.
+An {{< glossary_tooltip text="application developer" term_id="application-developer" >}} wants to use message queuing as part of their application running in a Kubernetes cluster.
 However, they do not want to deal with the overhead of setting such a service up and administering it themselves.
 Fortunately, there is a cloud provider that offers message queuing as a managed service through its service broker.
 
@@ -224,7 +224,7 @@ The following example describes how to map secret values into application enviro
 
 
 {% capture whatsnext %}
-* If you are familiar with {% glossary_tooltip text="Helm Charts" term_id="helm-chart" %}, [install Service Catalog using Helm](/docs/tasks/service-catalog/install-service-catalog-using-helm/) into your Kubernetes cluster. Alternatively, you can [install Service Catalog using the SC tool](/docs/tasks/service-catalog/install-service-catalog-using-sc/).
+* If you are familiar with {{< glossary_tooltip text="Helm Charts" term_id="helm-chart" >}}, [install Service Catalog using Helm](/docs/tasks/service-catalog/install-service-catalog-using-helm/) into your Kubernetes cluster. Alternatively, you can [install Service Catalog using the SC tool](/docs/tasks/service-catalog/install-service-catalog-using-sc/).
 * View [sample service brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers).
 * Explore the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog) project.
 

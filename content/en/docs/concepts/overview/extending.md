@@ -14,10 +14,10 @@ there is rarely a need to fork or submit patches to the Kubernetes
 project code.
 
 This guide describes the options for customizing a Kubernetes
-cluster. It is aimed at {% glossary_tooltip text="Cluster Operators" term_id="cluster-operator" %} who want to
+cluster. It is aimed at {{< glossary_tooltip text="Cluster Operators" term_id="cluster-operator" >}} who want to
 understand how to adapt their Kubernetes cluster to the needs of
 their work environment. Developers who are prospective {% glossary_tooltip text="Platform
-Developers" term_id="platform-developer" %} or Kubernetes Project {% glossary_tooltip text="Contributors" term_id="contributor" %} will also find it
+Developers" term_id="platform-developer" %} or Kubernetes Project {{< glossary_tooltip text="Contributors" term_id="contributor" >}} will also find it
 useful as an introduction to what extension points and patterns
 exist, and their trade-offs and limitations.
 

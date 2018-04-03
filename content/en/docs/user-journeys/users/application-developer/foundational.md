@@ -12,7 +12,7 @@ track: "USERS › APPLICATION DEVELOPER › FOUNDATIONAL"
 If you're a developer looking to run applications on Kubernetes, this page and its linked topics can help you get started with the fundamentals. Though this page primarily describes development workflows, [the subsequent page in the series](/docs/home/?path=users&persona=app-developer&level=intermediate){:target="_blank"} covers more advanced, production setups.
 
 {: .note }
-**A quick note**<br>This app developer "user journey" is *not* a comprehensive overview of Kubernetes. It focuses more on *what* you develop, test, and deploy to Kubernetes, rather than *how* the underlying infrastructure works.<br><br>Though it's possible for a single person to manage both, in many organizations, it’s common to assign the latter to a dedicated {% glossary_tooltip text="cluster operator" term_id="cluster-operator" %}.
+**A quick note**<br>This app developer "user journey" is *not* a comprehensive overview of Kubernetes. It focuses more on *what* you develop, test, and deploy to Kubernetes, rather than *how* the underlying infrastructure works.<br><br>Though it's possible for a single person to manage both, in many organizations, it’s common to assign the latter to a dedicated {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}}.
 
 {% endcapture %}
 
@@ -40,11 +40,11 @@ Minikube can be installed locally, and runs a simple, single-node Kubernetes clu
 
 * [Install Minikube](/docs/tasks/tools/install-minikube/){:target="_blank"}.
 
-* [Install kubectl](/docs/tasks/tools/install-kubectl/){:target="_blank"}. ({% glossary_tooltip text="What is kubectl?" term_id="kubectl" %})
+* [Install kubectl](/docs/tasks/tools/install-kubectl/){:target="_blank"}. ({{< glossary_tooltip text="What is kubectl?" term_id="kubectl" >}})
 
 * *(Optional)* [Install Docker](/docs/setup/independent/install-kubeadm/#installing-docker){:target="_blank"} if you plan to run your Minikube cluster as part of a local development environment.
 
-   Minikube includes a Docker daemon, but if you're developing applications locally, you'll want an independent Docker instance to support your workflow. This allows you to create {% glossary_tooltip text="containers" term_id="container" %} and push them to a container registry.
+   Minikube includes a Docker daemon, but if you're developing applications locally, you'll want an independent Docker instance to support your workflow. This allows you to create {{< glossary_tooltip text="containers" term_id="container" >}} and push them to a container registry.
 
    {: .note }
    Version 1.12 is recommended for full compatibility with Kubernetes, but a few other versions are tested and known to work.
@@ -66,12 +66,12 @@ Through these deployment tasks, you'll gain familiarity with the following:
 
   * **Configuration files** - Written in YAML or JSON, these files describe the desired state of your application in terms of Kubernetes API objects. A file can include one or more API object descriptions (*manifests*). (See [the example YAML](/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment) from the stateless app).
 
-  * **{% glossary_tooltip text="Pods" term_id="pod" %}** - This is the basic unit for all of the workloads you run on Kubernetes. These workloads, such as *Deployments* and *Jobs*, are composed of one or more Pods. To learn more, check out [this explanation of Pods and Nodes](/docs/tutorials/kubernetes-basics/explore-intro/){:target="_blank"}.
+  * **{{< glossary_tooltip text="Pods" term_id="pod" >}}** - This is the basic unit for all of the workloads you run on Kubernetes. These workloads, such as *Deployments* and *Jobs*, are composed of one or more Pods. To learn more, check out [this explanation of Pods and Nodes](/docs/tutorials/kubernetes-basics/explore-intro/){:target="_blank"}.
 
 * Common workload objects
-  * **{% glossary_tooltip text="Deployment" term_id="deployment" %}** - The most common way of running *X* copies (Pods) of your application. Supports rolling updates to your container images.
+  * **{{< glossary_tooltip text="Deployment" term_id="deployment" >}}** - The most common way of running *X* copies (Pods) of your application. Supports rolling updates to your container images.
 
-  * **{% glossary_tooltip text="Service" term_id="deployment" %}** - By itself, a Deployment can't receive traffic. Setting up a Service is one of the simplest ways to configure a Deployment to receive and loadbalance requests. Depending on the `type` of Service used, these requests can come from external client apps or be limited to apps within the same cluster. A Service is tied to a specific Deployment using {% glossary_tooltip text="label" term_id="label" %} selection.
+  * **{{< glossary_tooltip text="Service" term_id="deployment" >}}** - By itself, a Deployment can't receive traffic. Setting up a Service is one of the simplest ways to configure a Deployment to receive and loadbalance requests. Depending on the `type` of Service used, these requests can come from external client apps or be limited to apps within the same cluster. A Service is tied to a specific Deployment using {{< glossary_tooltip text="label" term_id="label" >}} selection.
 
 The subsequent topics are also useful to know for basic application deployment.
 
@@ -79,24 +79,24 @@ The subsequent topics are also useful to know for basic application deployment.
 
 You can also specify custom information about your Kubernetes API objects by attaching key/value fields. Kubernetes provides two ways of doing this:
 
-* **{% glossary_tooltip text="Labels" term_id="label" %}** - Identifying metadata that you can use to sort and select sets of API objects. Labels have many applications, including the following:
+* **{{< glossary_tooltip text="Labels" term_id="label" >}}** - Identifying metadata that you can use to sort and select sets of API objects. Labels have many applications, including the following:
 
   * *To keep the right number of replicas (Pods) running in a Deployment.* The specified label (`app: nginx` in the [stateless app example](/docs/tasks/run-application/run-stateless-application-deployment/#creating-and-exploring-an-nginx-deployment){:target="_blank"}) is used to stamp the Deployment's newly created Pods (as the value of the `spec.template.labels` configuration field), and to query which Pods it already manages (as the value of `spec.selector.matchLabels`).
 
   * *To tie a Service to a Deployment* using the `selector` field, which is demonstrated in the [stateful app example](/docs/tasks/run-application/run-single-instance-stateful-application/#deploy-mysql){:target="_blank"}.
 
-  * *To look for specific subset of Kubernetes objects, when you are using {% glossary_tooltip text="kubectl" term_id="kubectl" %}.* For instance, the command `kubectl get deployments --selector=app=nginx` only displays Deployments from the nginx app.
+  * *To look for specific subset of Kubernetes objects, when you are using {{< glossary_tooltip text="kubectl" term_id="kubectl" >}}.* For instance, the command `kubectl get deployments --selector=app=nginx` only displays Deployments from the nginx app.
 
-* **{% glossary_tooltip text="Annotations" term_id="annotation" %}** - Nonidentifying metadata that you can attach to API objects, usually if you don't intend to use them for sorting purposes. These often serve as supplementary data about an app's deployment, such as Git SHAs, PR numbers, or URL pointers to observability dashboards.
+* **{{< glossary_tooltip text="Annotations" term_id="annotation" >}}** - Nonidentifying metadata that you can attach to API objects, usually if you don't intend to use them for sorting purposes. These often serve as supplementary data about an app's deployment, such as Git SHAs, PR numbers, or URL pointers to observability dashboards.
 
 
 #### Storage
 
 You'll also want to think about storage. Kubernetes provides different types of storage API objects for different storage needs:
 
-* **{% glossary_tooltip text="Volumes" term_id="volume" %}** -  Let you define storage for your cluster that is tied to the lifecycle of a Pod. It is therefore more persistent than container storage. Learn [how to configure volume storage](/docs/tasks/configure-pod-container/configure-volume-storage/){:target="_blank"}, or [read more about volume storage](/docs/concepts/storage/volumes/){:target="_blank"}.
+* **{{< glossary_tooltip text="Volumes" term_id="volume" >}}** -  Let you define storage for your cluster that is tied to the lifecycle of a Pod. It is therefore more persistent than container storage. Learn [how to configure volume storage](/docs/tasks/configure-pod-container/configure-volume-storage/){:target="_blank"}, or [read more about volume storage](/docs/concepts/storage/volumes/){:target="_blank"}.
 
-* **{% glossary_tooltip text="PersistentVolumes" term_id="persistent-volume" %}** and **{% glossary_tooltip text="PersistentVolumeClaims" term_id="persistent-volume-claim" %}** - Let you define storage at the cluster level. Typically a cluster operator defines the PersistentVolume objects for the cluster, and cluster users (application developers, you) define the PersistentVolumeClaim objects that your application requires. Learn [how to set up persistent storage for your cluster](/docs/tasks/configure-pod-container/configure-persistent-volume-storage/){:target="_blank"} or [read more about persistent volumes](/docs/concepts/storage/persistent-volumes/){:target="_blank"}.
+* **{{< glossary_tooltip text="PersistentVolumes" term_id="persistent-volume" >}}** and **{{< glossary_tooltip text="PersistentVolumeClaims" term_id="persistent-volume-claim" >}}** - Let you define storage at the cluster level. Typically a cluster operator defines the PersistentVolume objects for the cluster, and cluster users (application developers, you) define the PersistentVolumeClaim objects that your application requires. Learn [how to set up persistent storage for your cluster](/docs/tasks/configure-pod-container/configure-persistent-volume-storage/){:target="_blank"} or [read more about persistent volumes](/docs/concepts/storage/persistent-volumes/){:target="_blank"}.
 
 #### Configuration
 
@@ -119,13 +119,13 @@ To avoid having to unnecessarily rebuild your container images, you should decou
     <td>Command-line flag</td>
   </tr>
   <tr>
-    <td>Using <b>{% glossary_tooltip text="ConfigMaps" term_id="configmap" %}</b></td>
+    <td>Using <b>{{< glossary_tooltip text="ConfigMaps" term_id="configmap" >}}</b></td>
     <td>Non-confidential</td>
     <td>Environment variable OR local file</td>
     <td>nginx configuration</td>
   </tr>
   <tr>
-    <td>Using <b>{% glossary_tooltip text="Secrets" term_id="secret" %}</b></td>
+    <td>Using <b>{{< glossary_tooltip text="Secrets" term_id="secret" >}}</b></td>
     <td>Confidential</td>
     <td>Environment variable OR local file</td>
     <td>Database credentials</td>
@@ -162,7 +162,7 @@ There are two key parts of the control plane that facilitate this behavior: the 
 
 #### Kubernetes API server
 
-For Kubernetes to be useful, it needs to know *what* sort of cluster state you want it to maintain. Your YAML or JSON *configuration files* declare this desired state in terms of one or more API objects, such as {% glossary_tooltip text="Deployments" term_id="deployment" %}. To make updates to your cluster's state, you submit these files to the {% glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" %} server (`kube-apiserver`).
+For Kubernetes to be useful, it needs to know *what* sort of cluster state you want it to maintain. Your YAML or JSON *configuration files* declare this desired state in terms of one or more API objects, such as {{< glossary_tooltip text="Deployments" term_id="deployment" >}}. To make updates to your cluster's state, you submit these files to the {{< glossary_tooltip text="Kubernetes API" term_id="kubernetes-api" >}} server (`kube-apiserver`).
 
 Examples of state include but are not limited to the following:
 

@@ -16,7 +16,7 @@ Use [Helm](https://helm.sh/) to install Service Catalog on your Kubernetes clust
 * Understand the key concepts of [Service Catalog](/docs/concepts/service-catalog/).
 * Service Catalog requires a Kubernetes cluster running version 1.7 or higher.
 * You must have a Kubernetes cluster with cluster DNS enabled.
-    * If you are using a cloud-based Kubernetes cluster or {% glossary_tooltip text="Minikube" term_id="minikube" %}, you may already have cluster DNS enabled.
+    * If you are using a cloud-based Kubernetes cluster or {{< glossary_tooltip text="Minikube" term_id="minikube" >}}, you may already have cluster DNS enabled.
     * If you are using `hack/local-up-cluster.sh`, ensure that the `KUBE_ENABLE_CLUSTER_DNS` environment variable is set, then run the install script.
 * [Install and setup kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) v1.7 or higher. Make sure it is configured to connect to the Kubernetes cluster.
 * Install [Helm](http://helm.sh/) v2.7.0 or newer.
