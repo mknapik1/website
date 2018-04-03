@@ -11,11 +11,15 @@
 {{/* TODO(bep) */}}
 <p><a href="/editdocs#{{ .Params.path }}" id="editPageButton">Edit This Page</a></p>
 
+
 {{ if not .Params.notitle }}
   <h1>{{ .Title }}</h1>
 {{ end }}
 {{ .TableOfContents }}
 {{ .Content }}
+
+
 {{ end }}
-{{/* TODO(bep) check if this is needed */}}
+
 {{ define "content-id" }}docsContent{{ end }}
+

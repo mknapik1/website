@@ -8,6 +8,7 @@ $( document ).ready(function() {
   }
 
   $('#content h2').each(function(index) {
+   
     var title = $(this).text();
     var id = $(this).attr("id");
 
