@@ -2,7 +2,7 @@
 title: Tutorials
 menu:
   docsmain:
-    weight: 50
+    weight: 60
 ---
 
 This section of the Kubernetes documentation contains tutorials.

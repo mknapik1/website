@@ -40,3 +40,4 @@ TODO
 * {% capture overview %} > shortcode with Scratch
 * Remove superflous "layout:"
 * 404
+* customcss/js

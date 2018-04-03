@@ -7,7 +7,7 @@ no_issue: true
 title: Setup
 menu:
   docsmain:
-    weight: 20
+    weight: 30
 ---
 
 This section provides instructions for installing Kubernetes and setting

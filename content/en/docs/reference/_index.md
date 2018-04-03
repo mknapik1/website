@@ -5,7 +5,7 @@ approvers:
 linkTitle: "Reference"
 menu:
   docsmain:
-    weight: 60
+    weight: 70
 ---
 
 ## API Reference

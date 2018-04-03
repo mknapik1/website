@@ -78,6 +78,7 @@ func (m *mover) contentMoveStep1() error {
 
 	// Adjust link titles
 	linkTitles := []keyVal{
+		keyVal{"en/docs/home/_index.md", "Home"},
 		keyVal{"en/docs/reference/_index.md", "Reference"},
 	}
 
@@ -88,6 +89,7 @@ func (m *mover) contentMoveStep1() error {
 	}
 
 	filesInDocsMainMenu := []string{
+		"en/docs/home/_index.md",
 		"en/docs/setup/_index.md",
 		"en/docs/concepts/_index.md",
 		"en/docs/tasks/_index.md",
@@ -100,6 +102,11 @@ func (m *mover) contentMoveStep1() error {
 		if err := m.replaceInFile(filepath.Join("content", f), addToDocsMainMenu(weight)); err != nil {
 			return err
 		}
+	}
+
+	// Adjust some layouts
+	if err := m.replaceInFile(filepath.Join("content", "en/docs/home/_index.md"), stringsReplacer("layout: docsportal", "layout: docsportal_home")); err != nil {
+		return err
 	}
 
 	return nil
@@ -302,5 +309,12 @@ func appendToFrontMatter(src, addition string) string {
 $1
 %s
 ---$2`, addition))
+
+}
+
+func stringsReplacer(old, new string) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return strings.Replace(s, old, new, -1), nil
+	}
 
 }

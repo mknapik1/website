@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ "css/custom-jekyll/tags.css" | relURL }}">
     {{ if .Params.deprecated }}<link rel="stylesheet" type="text/css" href="{{ "css/deprecation-warning.css" | relURL }}">{{ end }}
     {{ if eq .Params.class "gridPage" }}<link rel="stylesheet" type="text/css" href="{{ "css/grid.Params.css" | relURL }}">{{ end }}
-    {{ with .Params.css }}{{ range (split . ",") }}<link rel="stylesheet" type="text/css" href="{{ . | safeURL }}"><!-- custom css added -->
+    {{ with .Params.css }}{{ range (split . ",") }}<link rel="stylesheet" type="text/css" href="{{ (trim . " ") | safeURL }}"><!-- custom css added -->
     {{ end }}{{ else }}<!-- no custom css detected -->{{ end }}
     {{ if .Params.description }}
     <meta name="description" content="{{ .Params.description }}" />
@@ -24,7 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script src="{{ "js/script.js" | relURL }}"></script>
     <script src="{{ "js/custom-jekyll/tags.js" | relURL }}"></script>
-    {{ with .Params.js }}{{ range (split . ",") }}<script src="{{ . | safeURL }}"></script><!-- custom js added -->
+    {{ with .Params.js }}{{ range (split . ",") }}<script src="{{ (trim . " ") | safeURL }}"></script><!-- custom js added -->
     {{ end }}{{ else }}<!-- no custom js detected -->{{ end }}
     {{/* TODO(bep) seo */}}
 </head>
