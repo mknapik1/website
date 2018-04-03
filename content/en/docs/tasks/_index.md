@@ -1,5 +1,8 @@
 ---
 title: Tasks
+menu:
+  docsmain:
+    weight: 40
 ---
 
 This section of the Kubernetes documentation contains pages that

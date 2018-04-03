@@ -2,6 +2,10 @@
 title: Reference Documentation
 approvers:
 - chenopis
+linkTitle: "Reference"
+menu:
+  docsmain:
+    weight: 60
 ---
 
 ## API Reference

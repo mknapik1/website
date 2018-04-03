@@ -134,7 +134,6 @@ The open source project is hosted by the Cloud Native Computing Foundation ([CNC
       {% assign offset = index | modulo: column_size | plus: 1 %}
       {% assign section_elt = section_toc[index] %}
 
-
       {% if page.display_browse_numbers %}
         {% assign browse_number = i | prepend: "0" | slice: -2, 2 | append: " - " %}
       {% else %}

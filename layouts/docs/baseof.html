@@ -9,20 +9,7 @@
 			{{/* TODO(bep) */}}
 			<h1>{{ .Params.bigheader | default .Title }}</h1>
 			<h5>{{ .Params.abstract }}</h5>
-			<div id="vendorStrip" class="light-text">
-				<ul>
-					{{/* TODO(bep) menu */}}
-					<li><a href="/docs/home/" class="YAH">HOME</a></li>
-					<li><a href="/docs/setup/" class="YAH">SETUP</a></li>
-					<li><a href="/docs/concepts/" class="YAH">CONCEPTS</a></li>
-					<li><a href="/docs/tasks/" class="YAH">TASKS</a></li>
-					<li><a href="/docs/tutorials/" class="YAH">TUTORIALS</a></li>
-					<li><a href="/docs/reference/" class="YAH">REFERENCE</a></li>
-				</ul>
-				<div id="searchBox">
-					<input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)" autofocus="autofocus">
-				</div>
-			</div>
+			{{ partial "docs/top-menu.html" . }}
 		</section>
 		{{ end }}
 		{{ block "deprecation" . }}{{ partial "deprecation-warning.html" . }}{{ end }}

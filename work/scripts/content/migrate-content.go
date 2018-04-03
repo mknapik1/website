@@ -6,17 +6,31 @@ import (
 	"log"
 	"regexp"
 
+	"bytes"
 	"flag"
+	"fmt"
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/hacdias/fileutils"
 
 	"github.com/olekukonko/tablewriter"
 )
 
-type migrator struct {
+type keyVal struct {
+	key string
+	val string
+}
+
+var (
+	frontmatterRe = regexp.MustCompile(`(?s)---
+(.*)
+---(\n?)`)
+)
+
+type mover struct {
 	// Test run.
 	try bool
 
@@ -25,19 +39,19 @@ type migrator struct {
 	projectRoot string
 }
 
-func newMigrator(root string) *migrator {
-	return &migrator{projectRoot: root}
+func newMigrator(root string) *mover {
+	return &mover{projectRoot: root}
 }
 
-func (m *migrator) contentPath() string {
+func (m *mover) contentPath() string {
 	return filepath.Join(m.projectRoot, "content")
 }
 
-func (m *migrator) logChange(from, to string) {
+func (m *mover) logChange(from, to string) {
 	m.changeLogFromTo = append(m.changeLogFromTo, from, to)
 }
 
-func (m *migrator) contentMoveStep1() error {
+func (m *mover) contentMoveStep1() error {
 	// Copy main content to content/en
 	if err := m.copyDir("docs", "content/en/docs"); err != nil {
 		return err
@@ -57,10 +71,41 @@ func (m *migrator) contentMoveStep1() error {
 		return err
 	}
 
+	// Copy additional content files from the work dir.
+	if err := m.copyDir("work/content", "content"); err != nil {
+		return err
+	}
+
+	// Adjust link titles
+	linkTitles := []keyVal{
+		keyVal{"en/docs/reference/_index.md", "Reference"},
+	}
+
+	for _, title := range linkTitles {
+		if err := m.replaceInFile(filepath.Join("content", title.key), addLinkTitle(title.val)); err != nil {
+			return err
+		}
+	}
+
+	filesInDocsMainMenu := []string{
+		"en/docs/setup/_index.md",
+		"en/docs/concepts/_index.md",
+		"en/docs/tasks/_index.md",
+		"en/docs/tutorials/_index.md",
+		"en/docs/reference/_index.md",
+	}
+
+	for i, f := range filesInDocsMainMenu {
+		weight := 20 + (i * 10)
+		if err := m.replaceInFile(filepath.Join("content", f), addToDocsMainMenu(weight)); err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
-func (m *migrator) renameContentFiles(match, renameTo string) error {
+func (m *mover) renameContentFiles(match, renameTo string) error {
 	re := regexp.MustCompile(match)
 	return m.doWithContentFile("", func(path string, info os.FileInfo) error {
 		if !info.IsDir() && re.MatchString(path) {
@@ -76,14 +121,14 @@ func (m *migrator) renameContentFiles(match, renameTo string) error {
 	})
 }
 
-func (m *migrator) doWithContentFile(subfolder string, f func(path string, info os.FileInfo) error) error {
+func (m *mover) doWithContentFile(subfolder string, f func(path string, info os.FileInfo) error) error {
 	docsPath := filepath.Join(m.projectRoot, "content", subfolder)
 	return filepath.Walk(docsPath, func(path string, info os.FileInfo, err error) error {
 		return f(path, info)
 	})
 }
 
-func (m *migrator) copyDir(from, to string) error {
+func (m *mover) copyDir(from, to string) error {
 	from, to = m.absFromTo(from, to)
 
 	m.logChange(from, to)
@@ -94,7 +139,7 @@ func (m *migrator) copyDir(from, to string) error {
 	return fileutils.CopyDir(from, to)
 }
 
-func (m *migrator) moveDir(from, to string) error {
+func (m *mover) moveDir(from, to string) error {
 	from, to = m.absFromTo(from, to)
 	m.logChange(from, to)
 	if m.try {
@@ -109,13 +154,16 @@ func (m *migrator) moveDir(from, to string) error {
 
 }
 
-func (m *migrator) absFromTo(from, to string) (string, string) {
-	from = filepath.Join(m.projectRoot, from)
-	to = filepath.Join(m.projectRoot, to)
-	if len(from) < 20 || len(to) < 20 {
+func (m *mover) absFromTo(from, to string) (string, string) {
+	return m.absFilename(from), m.absFilename(to)
+}
+
+func (m *mover) absFilename(name string) string {
+	abs := filepath.Join(m.projectRoot, name)
+	if len(abs) < 20 {
 		panic("path too short")
 	}
-	return from, to
+	return abs
 }
 
 func main() {
@@ -149,7 +197,7 @@ func must(err error) {
 	}
 }
 
-func (m *migrator) printStats(w io.Writer) {
+func (m *mover) printStats(w io.Writer) {
 	table := tablewriter.NewWriter(w)
 	for i := 0; i < len(m.changeLogFromTo); i += 2 {
 		table.Append([]string{m.changeLogFromTo[i], m.changeLogFromTo[i+1]})
@@ -157,4 +205,102 @@ func (m *migrator) printStats(w io.Writer) {
 	table.SetHeader([]string{"From", "To"})
 	table.SetBorder(false)
 	table.Render()
+}
+
+func (m *mover) openOrCreateTargetFile(target string, info os.FileInfo) (io.ReadWriteCloser, error) {
+	targetDir := filepath.Dir(target)
+
+	err := os.MkdirAll(targetDir, os.FileMode(0755))
+	if err != nil {
+		return nil, err
+	}
+
+	return m.openFileForWriting(target, info)
+}
+
+func (m *mover) openFileForWriting(filename string, info os.FileInfo) (io.ReadWriteCloser, error) {
+	return os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, info.Mode())
+}
+
+func (m *mover) handleFile(name string, create bool, info os.FileInfo, replacer func(path string, content string) (string, error)) error {
+	sourceFilename := m.absFilename(name)
+
+	var (
+		out io.ReadWriteCloser
+		in  bytes.Buffer
+		err error
+	)
+
+	infile, err := os.Open(sourceFilename)
+	if err != nil {
+		return err
+	}
+	in.ReadFrom(infile)
+	infile.Close()
+
+	if create {
+		out, err = m.openOrCreateTargetFile(sourceFilename, info)
+	} else {
+		out, err = m.openFileForWriting(sourceFilename, info)
+	}
+
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	return m.replace(name, &in, out, replacer)
+}
+
+func (m *mover) replace(path string, in io.Reader, out io.Writer, replacer func(path string, content string) (string, error)) error {
+	var buff bytes.Buffer
+	if _, err := io.Copy(&buff, in); err != nil {
+		return err
+	}
+
+	var r io.Reader
+
+	fixed, err := replacer(path, buff.String())
+	if err != nil {
+		fmt.Printf("%s\t%s\n", path, err)
+		r = &buff
+	} else {
+		r = strings.NewReader(fixed)
+	}
+
+	if _, err = io.Copy(out, r); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (m *mover) replaceInFile(filename string, replacer func(path string, content string) (string, error)) error {
+	fi, err := os.Stat(m.absFilename(filename))
+	if err != nil {
+		return err
+	}
+	return m.handleFile(filename, false, fi, replacer)
+}
+
+func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return appendToFrontMatter(s, fmt.Sprintf(`menu:
+  docsmain:
+    weight: %d`, weight)), nil
+	}
+
+}
+
+func addLinkTitle(title string) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return appendToFrontMatter(s, fmt.Sprintf("linkTitle: %q", title)), nil
+	}
+}
+
+func appendToFrontMatter(src, addition string) string {
+	return frontmatterRe.ReplaceAllString(src, fmt.Sprintf(`---
+$1
+%s
+---$2`, addition))
+
 }

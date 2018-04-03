@@ -1,6 +1,7 @@
 <div class="browsedocs">
 {{/* assign sections = "setup,concepts,tasks,tutorials,reference,docs-home" | split: "," TODO(bep) */}}
-{{ range .Parent.Sections }}
+{{ $pages := .Pages | union  .Sections  }}
+{{ range $pages }}
   <div class="browsesection">
     <div class="docstitle">
       <a href="{{ .RelPermalink }}">{{ .Params.bigheader | default .Title }}</a>

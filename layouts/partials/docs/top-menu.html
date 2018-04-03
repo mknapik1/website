@@ -1,0 +1,21 @@
+<div id="vendorStrip" class="light-text">
+	<ul>
+		{{ $p := . }}
+		{{ range .Site.Menus.docsmain }}
+		{{ $p.Scratch.Set "IsAncestor" false }}
+		{{ if ne .URL "/docs/" }}{{ with .Page }}{{ $p.Scratch.Set "IsAncestor" (.IsAncestor $p) }}{{ end }}{{ end }}
+		<li><a href="{{ .URL }}" {{if or ($p.Scratch.Get "IsAncestor") ($.IsMenuCurrent "docsmain" .) ($.HasMenuCurrent "docsmain" .) }} class="YAH"{{end}}>{{ .Name | upper }}</a></li>
+		{{ end }}
+		{{ $home := .Site.Home }}
+		{{ if gt (len $home.AllTranslations ) 1 }}
+		{{ end }}
+		{{ range $home.AllTranslations }}
+		{{ if ne $home.Language .Language }}
+		<li><a href="{{ .Permalink }}">{{ .Language.LanguageName | upper }}</a></li>
+		{{ end }}
+		{{ end }}
+	</ul>
+	<div id="searchBox">
+		<input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)" autofocus="autofocus">
+	</div>
+</div>
