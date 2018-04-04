@@ -1,7 +1,4 @@
 {{ define "content" }}
-    {{ if not .Params.notitle }}
-	 <h1>{{ .Title }}</h1>
-    {{ end }}
     {{ partial "docs/browse.html" . }}
 {{ end }}
 

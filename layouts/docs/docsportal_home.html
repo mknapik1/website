@@ -4,7 +4,7 @@
 	 <h1>{{ .Title }}</h1>
     {{ end }}
     {{ template "docs-portal-user-journey" . }}
-    {{ partial "docs/browse.html" . }}
+    {{ partial "docs/browse.html" .Parent }}
 {{ end }}
 
 {{ define "docs-portal-user-journey" }}

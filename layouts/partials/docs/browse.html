@@ -5,18 +5,17 @@
   </div>
 <div class="browsedocs">
 {{/* assign sections = "setup,concepts,tasks,tutorials,reference,docs-home" | split: "," TODO(bep) */}}
-{{/* template "docs-browse-section"  . */}}
-{{ range .Parent.Sections }}
+{{ template "docs-browse-section"  . }}
+{{ range .Sections }}
 {{ template "docs-browse-section"  .}}
 {{ end }}
 </div><!-- end browsedocs -->
 
 
-
 {{ define "docs-browse-section" }}
 <div class="browsesection">
   <div class="docstitle">
-    <br/><br/><br/><a href="{{ .RelPermalink }}">{{ .Params.bigheader | default .Title }}</a><br/><br/><br/>
+    <h3><a href="{{ .RelPermalink }}">{{ .Params.bigheader | default .Title }}</a></h3>
   </div>
   <div class="pages">
   {{ $num_pages := len .Pages }}
