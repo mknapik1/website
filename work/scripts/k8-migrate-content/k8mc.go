@@ -166,6 +166,9 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 	if err := m.replaceInFileRel(filepath.Join("content", "en/docs/home/_index.md"), stringsReplacer("layout: docsportal", "layout: docsportal_home")); err != nil {
 		return err
 	}
+	if err := m.replaceInFileRel(filepath.Join("content", "en/docs/reference/glossary.md"), stringsReplacer("title: Standardized Glossary", "title: Standardized Glossary\nlayout: glossary")); err != nil {
+		return err
+	}
 
 	contentFixers := contentFixers{
 		// This is a type, but it creates a breaking shortcode

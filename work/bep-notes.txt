@@ -31,7 +31,7 @@ _redirects
 TODO
 
 * Nested tooltips in Glossary. Convert terms to content files? Would also solve the translation issue ...
-
+* Liquid inside data
 
 * See the includes.md
 * Check _headers
