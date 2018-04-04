@@ -1,6 +1,4 @@
 
-
-
 ./cn/docs/ => content/cn
 ./docs => content/en
 
@@ -25,7 +23,6 @@ OK Ignorefiles
 OWNERS
 README.md
 
-
 Redirects from aliases
 
 _redirects
@@ -33,12 +30,15 @@ _redirects
 
 TODO
 
+* Nested tooltips in Glossary. Convert terms to content files? Would also solve the translation issue ...
+
+
 * See the includes.md
 * Check _headers
 * {{ page.cid }}" lang="en" class="{{ page.class }}
 * styles.css, just copied for now
 * main class {{ toc.bigheader }}
-* {% capture overview %} > shortcode with Scratch
+* OK {% capture overview %} > shortcode with Scratch
 * Remove superflous "layout:"
 * 404
-* customcss/js
+* OK customcss/js
