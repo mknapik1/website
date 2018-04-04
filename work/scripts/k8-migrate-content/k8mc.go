@@ -19,6 +19,44 @@ import (
 	"github.com/olekukonko/tablewriter"
 )
 
+func main() {
+	log.SetFlags(0)
+	log.SetPrefix("k8cm: ")
+	pwd, err := os.Getwd()
+	if err != nil {
+		log.Fatal("error:", err)
+	}
+
+	m := newMigrator(filepath.Join(pwd, "../../../"))
+	flag.BoolVar(&m.try, "try", false, "trial run, no updates")
+
+	flag.Parse()
+
+	// During development.
+	m.try = false
+
+	if m.try {
+		log.Println("trial mode on")
+	}
+
+	// Copies the content files into the new Hugo content roots and do basic
+	// renaming of some files to match Hugo's standard.
+	must(m.contentMigrate_Step1_Basic_Copy_And_Rename())
+
+	// Do all replacements needed in the content files:
+	// * Add menu config
+	// * Replace inline Liquid with shortcodes
+	// * Etc.
+	must(m.contentMigrate_Step2_Replacements())
+
+	if m.try {
+		m.printStats(os.Stdout)
+	}
+
+	log.Println("Done.")
+
+}
+
 type keyVal struct {
 	key string
 	val string
@@ -57,15 +95,10 @@ func newMigrator(root string) *mover {
 	return &mover{projectRoot: root}
 }
 
-func (m *mover) contentPath() string {
-	return filepath.Join(m.projectRoot, "content")
-}
+func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 
-func (m *mover) logChange(from, to string) {
-	m.changeLogFromTo = append(m.changeLogFromTo, from, to)
-}
+	log.Println("Start Step 1 …")
 
-func (m *mover) contentMoveStep1() error {
 	// Copy main content to content/en
 	if err := m.copyDir("docs", "content/en/docs"); err != nil {
 		return err
@@ -88,6 +121,19 @@ func (m *mover) contentMoveStep1() error {
 	// Copy additional content files from the work dir.
 	if err := m.copyDir("work/content", "content"); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (m *mover) contentMigrate_Step2_Replacements() error {
+	log.Println("Start Step 2 …")
+
+	if m.try {
+		// The try flag is mainly to get the first step correct before we
+		// continue.
+		m.logChange("All content files", "Replacements")
+		return nil
 	}
 
 	// Adjust link titles
@@ -137,24 +183,24 @@ func (m *mover) contentMoveStep1() error {
 		},
 	}
 
-	if err := m.applyContentFixes(contentFixers, "md$"); err != nil {
+	if err := m.applyContentFixers(contentFixers, "md$"); err != nil {
 		return err
 	}
 
 	return nil
+
 }
 
-func (m *mover) applyContentFixes(fixes contentFixers, match string) error {
+func (m *mover) applyContentFixers(fixers contentFixers, match string) error {
 	re := regexp.MustCompile(match)
 	return m.doWithContentFile("", func(path string, info os.FileInfo) error {
 		if !info.IsDir() && re.MatchString(path) {
 			if !m.try {
-				if err := m.replaceInFile(path, fixes.fix); err != nil {
+				if err := m.replaceInFile(path, fixers.fix); err != nil {
 					return err
 				}
 			}
 		}
-
 		return nil
 	})
 }
@@ -189,7 +235,6 @@ func (m *mover) copyDir(from, to string) error {
 	if m.try {
 		return nil
 	}
-
 	return fileutils.CopyDir(from, to)
 }
 
@@ -203,9 +248,7 @@ func (m *mover) moveDir(from, to string) error {
 	if err := os.RemoveAll(to); err != nil {
 		return err
 	}
-
 	return os.Rename(from, to)
-
 }
 
 func (m *mover) absFromTo(from, to string) (string, string) {
@@ -218,31 +261,6 @@ func (m *mover) absFilename(name string) string {
 		panic("path too short")
 	}
 	return abs
-}
-
-func main() {
-	log.SetFlags(0)
-	log.SetPrefix("content migrator: ")
-	pwd, err := os.Getwd()
-	if err != nil {
-		log.Fatal("error:", err)
-	}
-
-	m := newMigrator(filepath.Join(pwd, "../../../"))
-	flag.BoolVar(&m.try, "try", false, "trial run, no updates")
-
-	flag.Parse()
-
-	// During development.
-	m.try = false
-
-	if m.try {
-		log.Println("trial mode on")
-	}
-	must(m.contentMoveStep1())
-
-	//	m.printStats(os.Stdout)
-
 }
 
 func must(err error) {
@@ -259,6 +277,10 @@ func (m *mover) printStats(w io.Writer) {
 	table.SetHeader([]string{"From", "To"})
 	table.SetBorder(false)
 	table.Render()
+}
+
+func (m *mover) logChange(from, to string) {
+	m.changeLogFromTo = append(m.changeLogFromTo, from, to)
 }
 
 func (m *mover) openOrCreateTargetFile(target string, info os.FileInfo) (io.ReadWriteCloser, error) {
@@ -315,7 +337,9 @@ func (m *mover) replace(path string, in io.Reader, out io.Writer, replacer func(
 
 	fixed, err := replacer(path, buff.String())
 	if err != nil {
-		fmt.Printf("%s\t%s\n", path, err)
+		// Just print the path and error to the console.
+		// This will have to be handled manually somehow.
+		log.Printf("%s\t%s\n", path, err)
 		r = &buff
 	} else {
 		r = strings.NewReader(fixed)
