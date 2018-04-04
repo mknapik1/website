@@ -4,21 +4,21 @@ approvers:
 title: 使用 Weave 网络来提供 NetworkPolicy
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 本页展示怎么样使用 Weave 网络来提供 NetworkPolicy
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 
 完成 [kubeadm 入门指南](/docs/getting-started-guides/kubeadm/)中的步骤1、2和3
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 安装 Weave 网络插件
@@ -29,9 +29,9 @@ title: 使用 Weave 网络来提供 NetworkPolicy
 
 Kubernetes 的 Weave 网络插件配有一个[网络策略控制器](https://www.weave.works/docs/net/latest/kube-addon/#npc)，它监控所有命名空间下 NetworkPolicy 相关的注解，然后配置 iptables 规则生成允许或者阻断通信的策略
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture example %}
+{{% capture example %}}
 
 
 ## 命名空间隔离示例
@@ -113,6 +113,6 @@ spec:
 
 Weave 网络插件安装完成之后，您可以通过 [NetworkPolicy 入门指南](/docs/getting-started-guides/network-policy/walkthrough)去尝试使用 Kubernetes NetworkPolicy
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

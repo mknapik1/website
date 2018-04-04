@@ -5,16 +5,16 @@ approvers:
 title: 镜像
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 在Kubernetes pod中引用镜像前，请创建Docker镜像，并将之推送到镜像仓库中。
 容器的“image”属性支持和Docker命令行相同的语法，包括私有仓库和标签。
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 升级镜像
 默认的镜像拉取策略是“IfNotPresent”，在镜像已经存在的情况下，kubelet将不在去拉取镜像。
@@ -291,6 +291,6 @@ spec:
    - 为每个租户获取仓库凭证，放置在secret中，并发布到每个租户的namespace下
    - 租户将secret增加到每个namespace下的imagePullSecrets中
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

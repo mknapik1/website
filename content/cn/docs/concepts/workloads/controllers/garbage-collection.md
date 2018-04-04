@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 
@@ -16,10 +16,10 @@ Kubernetes 垃圾收集器的角色是删除指定的对象，这些对象曾经
 
 **注意**：垃圾收集是 beta 特性，在 Kubernetes 1.4 及以上版本默认启用。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 
 ## Owner 和 Dependent
@@ -164,17 +164,17 @@ kubectl delete replicaset my-repset --cascade=false
 
 [其它已知的问题](https://github.com/kubernetes/kubernetes/issues/26120)
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 
 [设计文档 1](https://git.k8s.io/community/contributors/design-proposals/garbage-collection.md)
 [设计文档 2](https://git.k8s.io/community/contributors/design-proposals/synchronous-garbage-collection.md)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/concept.md %}

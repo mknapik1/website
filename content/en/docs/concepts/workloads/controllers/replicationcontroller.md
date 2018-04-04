@@ -5,7 +5,7 @@ reviewers:
 title: ReplicationController
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 **NOTE:** A [`Deployment`](/docs/concepts/workloads/controllers/deployment/) that configures a [`ReplicaSet`](/docs/concepts/workloads/controllers/replicaset/) is now the recommended way to set up replication.
 {: .note}
@@ -14,10 +14,10 @@ A _ReplicationController_ ensures that a specified number of pod replicas are ru
 time. In other words, a ReplicationController makes sure that a pod or a homogeneous set of pods is
 always up and available.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## How a ReplicationController Works
 
@@ -274,6 +274,6 @@ safe to terminate when the machine is otherwise ready to be rebooted/shutdown.
 
 Read [Run Stateless AP Replication Controller](/docs/tutorials/stateless-application/run-stateless-ap-replication-controller/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

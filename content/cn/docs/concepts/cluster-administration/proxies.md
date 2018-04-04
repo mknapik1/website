@@ -2,11 +2,11 @@
 title: Kubernetes 中的代理
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本文讲述了 Kubernetes 中所使用的代理。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 代理
 
@@ -58,6 +58,6 @@ Kubernetes 用户通常只需要关心前两种类型的代理，集群管理员
 
 代理已经取代重定向功能，重定向已被弃用。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

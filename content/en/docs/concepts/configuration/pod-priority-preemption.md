@@ -5,7 +5,7 @@ reviewers:
 title: Pod Priority and Preemption
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% include feature-state-alpha.md %}
 
@@ -15,9 +15,9 @@ the scheduler tries to preempt (evict) lower priority Pods to make scheduling of
 pending Pod possible. In Kubernetes 1.9 and later, Priority also affects scheduling
 order of Pods and out-of-resource eviction ordering on the Node.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## How to use priority and preemption
 To use priority and preemption in Kubernetes 1.8 and later, follow these steps:
@@ -235,6 +235,6 @@ We may consider adding cross Node preemption in future versions if we find an
 algorithm with reasonable performance. We cannot promise anything at this point, 
 and cross Node preemption will not be considered a blocker for Beta or GA.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

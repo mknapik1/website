@@ -2,11 +2,11 @@
 title: 使用命令式的方式管理 Kubernetes 对象
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 直接使用内置的 `kubectl` 命令行工具，以命令式方式可以快速创建，更新和删除 Kubernetes 对象。本文档介绍了这些命令是如何组织的，以及如何使用它们来管理活动对象。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 权衡
 
@@ -124,13 +124,13 @@ kubectl create --edit -f /tmp/srv.yaml
 1. 使用`create --edit` 在创建对象之前打开配置文件进行编辑。
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
  -  [使用对象配置管理 Kubernetes 对象(必要)](/docs/tutorials/object-management-kubectl/imperative-object-management-configuration/)
  -  [使用对象配置(声明式)管理 Kubernetes 对象](/docs/tutorials/object-management-kubectl/declarative-object-management-configuration/)
  -  [Kubectl 命令参考](/docs/user-guide/kubectl/v1.6/)
  -  [Kubernetes 对象模式参考](/docs/resources-reference/v1.6/)
- {% endcapture %}
+ {{% /capture %}}
 
  {% include templates/concept.md %}

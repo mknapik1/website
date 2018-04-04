@@ -2,11 +2,11 @@
 title: Kubernetes 对象管理
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 `kubectl` 命令行工具支持 Kubernetes 对象几种不同的创建和管理方法。本文档简要介绍了这些方法.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 管理技巧
 
@@ -136,9 +136,9 @@ kubectl apply -R -f configs/
 - 声明式对象配置在意外情况下难以调试和了解结果。
 - 使用差异的部分更新会创建复杂的合并和补丁操作。
 
- {% endcapture %}
+ {{% /capture %}}
 
- {% capture whatsnext %}
+ {{% capture whatsnext %}}
  -  [使用命令式的命令管理 Kubernetes 对象](/docs/tutorials/object-management-kubectl/imperative-object-management-command/)
  -  [使用对象配置管理 Kubernetes 对象(必要)](/docs/tutorials/object-management-kubectl/imperative-object-management-configuration/)
  -  [使用对象配置(声明式)管理 Kubernetes 对象](/docs/tutorials/object-management-kubectl/declarative-object-management-configuration/)
@@ -147,6 +147,6 @@ kubectl apply -R -f configs/
 
  {% comment %}
  {% endcomment %}
- {% endcapture %}
+ {{% /capture %}}
 
  {% include templates/concept.md %}

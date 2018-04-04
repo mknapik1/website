@@ -2,11 +2,11 @@
 title: Understanding Kubernetes Objects
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains how Kubernetes objects are represented in the Kubernetes API, and how you can express them in `.yaml` format.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Understanding Kubernetes Objects
 
 *Kubernetes Objects* are persistent entities in the Kubernetes system. Kubernetes uses these entities to represent the state of your cluster. Specifically, they can describe:
@@ -62,10 +62,10 @@ For example, the `spec` format for a `Pod` object can be found
 and the `spec` format for a `Deployment` object can be found
 [here](/docs/reference/generated/kubernetes-api/{{page.version}}/#deploymentspec-v1-apps).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn about the most important basic Kubernetes objects, such as [Pod](/docs/concepts/workloads/pods/pod-overview/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

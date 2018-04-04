@@ -2,17 +2,17 @@
 title: Assign CPU Resources to Containers and Pods
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to assign a CPU *request* and a CPU *limit* to
 a Container. A Container is guaranteed to have as much CPU as it requests,
 but is not allowed to use more CPU than its limit.
 
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
@@ -42,10 +42,10 @@ NAMESPACE    NAME      CLUSTER-IP    EXTERNAL-IP  PORT(S)  AGE
 kube-system  heapster  10.11.240.9   <none>       80/TCP   6d
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create a namespace
 
@@ -246,9 +246,9 @@ Delete your namespace:
 kubectl delete namespace cpu-example
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 ### For app developers
@@ -273,7 +273,7 @@ kubectl delete namespace cpu-example
 
 * [Configure Quotas for API Objects](/docs/tasks/administer-cluster/quota-api-object/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

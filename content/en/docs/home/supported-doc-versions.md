@@ -2,14 +2,14 @@
 title: Supported Versions of the Kubernetes Documentation
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This website contains documentation for the current version of Kubernetes
 and the four previous versions of Kubernetes.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Current version
 
@@ -24,6 +24,6 @@ The current version is
 {% endif %}
 {% endfor %}
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

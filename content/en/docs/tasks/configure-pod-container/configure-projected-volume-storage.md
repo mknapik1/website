@@ -5,15 +5,15 @@ reviewers:
 title: Configure a Pod to Use a Projected Volume for Storage
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to use a [`projected`](/docs/concepts/storage/volumes/#projected) volume to mount several existing volume sources into the same directory. Currently, `secret`, `configMap`, and `downwardAPI` volumes can be projected.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 {% include task-tutorial-prereqs.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Configure a projected volume for a pod
 
 In this exercise, you create username and password Secrets from local files. You then create a Pod that runs one Container, using a [`projected`](/docs/concepts/storage/volumes/#projected) Volume to mount the Secrets into the same shared directory.
@@ -53,11 +53,11 @@ the Pod:
 1. In your shell, verify that the `projected-volume` directory contains your projected sources:
 
        / # ls /projected-volume/
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [`projected`](/docs/concepts/storage/volumes/#projected) volumes.
 * Read the [all-in-one volume](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/node/all-in-one-volume.md) design document.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

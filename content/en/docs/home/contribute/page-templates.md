@@ -49,32 +49,32 @@ start the section with a level-two heading.</p>
 title: Configuring This Thing
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to ...
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * Do this.
 * Do this too.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Doing ...
 
 1. Do this.
 1. Do this next. Possibly read this [related explanation](...).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ## Understanding ...
 
 Here's an interesting thing to know about the steps you just did.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [this](...).
 * See this [related task](...).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}</pre>
 {% endraw %}
@@ -120,22 +120,22 @@ use <code>###</code> and <code>####</code> as needed.
 title: Running a Thing
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to ...
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * Do this.
 * Do this too.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 * Learn this.
 * Build this.
 * Run this.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 ## Building ...
 
 1. Do this.
@@ -148,17 +148,17 @@ This page shows how to ...
 
 ## Understanding the code
 Here's something interesting about the code you ran in the preceding steps.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 * Delete this.
 * Stop this.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [this](...).
 * See this [related tutorial](...).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}</pre>
 {% endraw %}
@@ -200,11 +200,11 @@ use <code>###</code> and <code>####</code> as needed.
 title: Understanding this Thing
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains ...
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Understanding ...
 
 Kubernetes provides ...
@@ -212,12 +212,12 @@ Kubernetes provides ...
 ## Using ...
 
 To use ...
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [this](...).
 * See this [related task](...).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}</pre>
 {% endraw %}

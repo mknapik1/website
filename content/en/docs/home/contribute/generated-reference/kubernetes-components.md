@@ -2,17 +2,17 @@
 title: Generating Reference Pages for Kubernetes Components and Tools
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to use the `update-imported-docs` tool to generate
 reference documentation for tools and components in the
 [Kubernetes](https://github.com/kubernetes/kubernetes) and
 [Federation](https://github.com/kubernetes/federation) repositories.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * You need a machine that is running Linux or MacOS.
 
@@ -33,10 +33,10 @@ Typically, this involves creating a fork of the repository. For more
 information, see
 [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Getting two repositories
 
@@ -289,15 +289,15 @@ A few minutes after your pull request is merged, your updated reference
 topics will be visible in the
 [published documentation](/docs/home/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Generating Reference Documentation for kubectl Commands](/docs/home/contribute/generated-reference/kubectl/) 
 * [Generating Reference Documentation for the Kubernetes API](/docs/home/contribute/generated-reference/kubernetes-api/)
 * [Generating Reference Documentation for the Kubernetes Federation API](/docs/home/contribute/generated-reference/federation-api/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

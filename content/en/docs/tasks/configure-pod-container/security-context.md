@@ -6,7 +6,7 @@ reviewers:
 title: Configure a Security Context for a Pod or Container
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 A security context defines privilege and access control settings for
 a Pod or Container. Security context settings include:
@@ -29,15 +29,15 @@ a Pod or Container. Security context settings include:
 For more information about security mechanisms in Linux, see
 [Overview of Linux Kernel Security Features](https://www.linux.com/learn/overview-linux-kernel-security-features)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Set the security context for a Pod
 
@@ -337,9 +337,9 @@ label given to all Containers in the Pod as well as the Volumes.
 **Warning:** After you specify an MCS label for a Pod, all Pods with the same label can access the Volume. If you need inter-Pod protection, you must assign a unique MCS label to each Pod.
 {: .warning}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [PodSecurityContext](/docs/reference/generated/kubernetes-api/{{page.version}}/#podsecuritycontext-v1-core)
 * [SecurityContext](/docs/reference/generated/kubernetes-api/{{page.version}}/#securitycontext-v1-core)
@@ -351,6 +351,6 @@ label given to all Containers in the Pod as well as the Volumes.
   document](https://git.k8s.io/community/contributors/design-proposals/auth/no-new-privs.md)
 
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

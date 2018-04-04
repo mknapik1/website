@@ -2,7 +2,7 @@
 title: Generating Reference Documentation for kubectl Commands
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to automatically generate reference pages for the
 commands provided by the `kubectl` tool.
@@ -20,10 +20,10 @@ reference page, see
 [Generating Reference Pages for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/).
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * You need to have
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -42,10 +42,10 @@ information, see
 [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/) and
 [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Getting three repositories
 
@@ -248,15 +248,15 @@ topics will be visible in the
 [published documentation](/docs/home).
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Generating Reference Documentation for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/)
 * [Generating Reference Documentation for the Kubernetes API](/docs/home/contribute/generated-reference/kubernetes-api/)
 * [Generating Reference Documentation for the Kubernetes Federation API](/docs/home/contribute/generated-reference/federation-api/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

@@ -2,14 +2,14 @@
 title: Storage
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains how to install and configure persistent storage on a cluster.
-{% endcapture %}
-{% capture prerequisites %}
+{{% /capture %}}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Ceph Persistent Volumes
 
 The Canonical Distribution of Kubernetes allows you to connect with durable
@@ -86,6 +86,6 @@ To consume these Persistent Volumes, your pods will need an associated
 Persistent Volume Claim with them, and is outside the scope of this README. See the
 [Persistent Volumes](/docs/concepts/storage/persistent-volumes/)
 documentation for more information.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

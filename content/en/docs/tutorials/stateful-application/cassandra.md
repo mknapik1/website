@@ -4,7 +4,7 @@ reviewers:
 - ahmetb
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This tutorial shows you how to develop a native cloud [Cassandra](http://cassandra.apache.org/) deployment on Kubernetes. In this instance, a custom Cassandra `SeedProvider` enables Cassandra to discover new Cassandra nodes as they join the cluster.
 
 Deploying stateful distributed applications, like Cassandra, within a clustered environment can be challenging. StatefulSets greatly simplify this process. Please read about [StatefulSets](/docs/concepts/workloads/controllers/statefulset/)  for more information about the features used in this tutorial.
@@ -21,17 +21,17 @@ The docker image above is based on [debian-base](https://github.com/kubernetes/k
 | CASSANDRA_NUM_TOKENS  | 32               |
 | CASSANDRA_RPC_ADDRESS | 0.0.0.0          |
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 * Create and Validate a Cassandra headless [Services](/docs/concepts/services-networking/service/).
 * Use a [StatefulSet](/docs/concepts/workloads/controllers/statefulset/) to create a Cassandra ring.
 * Validate the [StatefulSet](/docs/concepts/workloads/controllers/statefulset/).
 * Modify the [StatefulSet](/docs/concepts/workloads/controllers/statefulset/).
 * Delete the [StatefulSet](/docs/concepts/workloads/controllers/statefulset/) and its [Pods](/docs/concepts/workloads/pods/pod/).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 To complete this tutorial, you should already have a basic familiarity with [Pods](/docs/concepts/workloads/pods/pod/), [Services](/docs/concepts/services-networking/service/), and [StatefulSets](/docs/concepts/workloads/controllers/statefulset/). In addition, you should:
 
 * [Install and Configure](/docs/tasks/tools/install-kubectl/) the `kubectl` command line
@@ -52,9 +52,9 @@ To avoid these errors, run minikube with:
 
     minikube start --memory 5120 --cpus=4
  
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 ## Creating a Cassandra Headless Service
 A Kubernetes [Service](/docs/concepts/services-networking/service/) describes a set of [Pods](/docs/concepts/workloads/pods/pod/) that perform the same task. 
 
@@ -186,9 +186,9 @@ Use `kubectl edit` to modify the size of a Cassandra StatefulSet.
        NAME        DESIRED   CURRENT   AGE
        cassandra   4         4         36m
       
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 Deleting or scaling a StatefulSet down does not delete the volumes associated with the StatefulSet. This ensures safety first: your data is more valuable than an auto purge of all related StatefulSet resources. 
 
 **Warning:** Depending on the storage class and reclaim policy, deleting the Persistent Volume Claims may cause the associated volumes to also be deleted. Never assume you’ll be able to access data if its volume claims are deleted.
@@ -206,13 +206,13 @@ Deleting or scaling a StatefulSet down does not delete the volumes associated wi
 
        kubectl delete service -l app=cassandra
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn how to [Scale a StatefulSet](/docs/tasks/run-application/scale-stateful-set/).
 * Learn more about the [KubernetesSeedProvider](https://github.com/kubernetes/examples/blob/master/cassandra/java/src/main/java/io/k8s/cassandra/KubernetesSeedProvider.java)
 * See more custom [Seed Provider Configurations](https://git.k8s.io/examples/cassandra/java/README.md)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

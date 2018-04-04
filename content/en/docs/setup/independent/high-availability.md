@@ -7,7 +7,7 @@ reviewers:
 title: Creating HA clusters with kubeadm
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This guide shows you how to install and set up a highly available Kubernetes cluster using kubeadm.
 
@@ -16,9 +16,9 @@ This document shows you how to perform setup tasks that kubeadm doesn't perform:
 **Note:** This guide is only one potential solution, and there are many ways to configure a highly available cluster. If a better solution works for you, please use it. If you find a better solution that can be adopted by the community, feel free to contribute it back.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 - Three machines that meet [kubeadm's minimum requirements](https://kubernetes.io/docs/setup/independent/install-kubeadm/#before-you-begin) for the masters
 - Three machines that meet [kubeadm's minimum requirements](https://kubernetes.io/docs/setup/independent/install-kubeadm/#before-you-begin) for the workers
@@ -28,9 +28,9 @@ This document shows you how to perform setup tasks that kubeadm doesn't perform:
 - Full network connectivity between all machines in the cluster (public or
    private network is fine)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Installing prerequisites on masters
 
@@ -217,9 +217,9 @@ Now that all the certificates have been generated, you will now install and set 
 
 {% capture choose %}
 Please select one of the tabs to see installation instructions for the respective way to run etcd.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture systemd %}
+{{% capture systemd %}}
 
 1. First you will install etcd binaries like so:
 
@@ -296,9 +296,9 @@ Please select one of the tabs to see installation instructions for the respectiv
    ```shell
    systemctl status etcd
    ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture static_pods %}
+{{% capture static_pods %}}
 
 **Note**: This is only supported on nodes that have the all dependencies for the kubelet installed. If you are hosting etcd on the master nodes, this has already been set up. If you are hosting etcd on dedicated nodes, you should either use systemd or run the [installation guide](/docs/setup/independent/install-kubeadm/) on each dedicated etcd machine.
 
@@ -377,7 +377,7 @@ Please select one of the tabs to see installation instructions for the respectiv
    * `<podname>` with the name of the node you're running on (e.g. `etcd0`, `etcd1` or `etcd2`)
    * `<etcd0-ip-address>`, `<etcd1-ip-address>` and `<etcd2-ip-address>` with the public IPv4s of the other machines that host etcd.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "etcd_mode" %}
 {% assign tab_names = "Choose one...,systemd,Static Pods" | split: ',' | compact %}
@@ -389,11 +389,11 @@ Please select one of the tabs to see installation instructions for the respectiv
 
 The next step is to create a Load Balancer that sits in front of your master nodes. How you do this depends on your environment; you could, for example, leverage a cloud provider Load Balancer, or set up your own using NGINX, keepalived, or HAproxy.
 
-{% capture choose %}
+{{% capture choose %}}
 Please select one of the tabs to see installation instructions for information on load balancing in the respective environment.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cloud %}
+{{% capture cloud %}}
 Some examples of cloud provider solutions are:
 
 * [AWS Elastic Load Balancer](https://aws.amazon.com/elasticloadbalancing/)
@@ -403,9 +403,9 @@ Some examples of cloud provider solutions are:
 You will need to ensure that the load balancer routes to **just `master0` on port 6443**. This is because kubeadm will perform health checks using the load balancer IP. Since `master0` is set up individually first, the other masters will not have running apiservers, which will result in kubeadm hanging indefinitely.
 
 If possible, use a smart load balancing algorithm like "least connections", and use health checks so unhealthy nodes can be removed from circulation. Most providers will provide these features.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture onsite %}
+{{% capture onsite %}}
 In an on-site environment there may not be a physical load balancer available. Instead, a virtual IP pointing to a healthy master node can be used. There are a number of solutions for this including keepalived, Pacemaker and probably many others, some with and some without load balancing.
 
 As an example we outline a simple setup based on keepalived. Depending on environment and requirements people may prefer different solutions. The configuration shown here provides an _active/passive_ failover without load balancing. If required, load balancing can by added quite easily by setting up HAProxy, NGINX or similar on the master nodes (not covered in this guide). 
@@ -474,7 +474,7 @@ As an example we outline a simple setup based on keepalived. Depending on enviro
 
 4. Restart keepalived. While no Kubernetes services are up yet it will log health check fails on all master nodes. This will stop as soon as the first master node has been bootstrapped.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "lb_mode" %}
 {% assign tab_names = "Choose one...,Cloud,On-Site" | split: ',' | compact %}

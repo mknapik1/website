@@ -2,16 +2,16 @@
 title: Access Clusters Using the Kubernetes API
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to access clusters using the Kubernetes API.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Accessing the cluster API
 
@@ -209,6 +209,6 @@ From within a Pod, the recommended ways to connect to the Kubernetes API are:
 In each case, the service account credentials of the Pod are used to communicate
 securely with the API server.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

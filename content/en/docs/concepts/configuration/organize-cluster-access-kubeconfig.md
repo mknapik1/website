@@ -2,7 +2,7 @@
 title: Organizing Cluster Access Using kubeconfig Files
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 Use kubeconfig files to organize information about clusters, users, namespaces, and
 authentication mechanisms. The `kubectl` command-line tool uses kubeconfig files to
@@ -22,10 +22,10 @@ variable or by setting the
 For step-by-step instructions on creating and specifying kubeconfig files, see
 [Configure Access to Multiple Clusters](/docs/tasks/access-application-cluster/configure-access-multiple-clusters).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Supporting multiple clusters, users, and authentication mechanisms
 
@@ -140,14 +140,14 @@ File references on the command line are relative to the current working director
 In `$HOME/.kube/config`, relative paths are stored relatively, and absolute paths
 are stored absolutely.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Configure Access to Multiple Clusters](/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 * [kubectl config](/docs/user-guide/kubectl/{{page.version}}/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

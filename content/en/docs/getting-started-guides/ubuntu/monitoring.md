@@ -2,15 +2,15 @@
 title: Monitoring
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to connect various logging solutions to a Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Connecting Datadog
 
 Datadog is a SaaS offering which includes support for a range of integrations, including Kubernetes and ETCD. While the solution is SAAS/Commercial, they include a Free tier which is supported with the following method. To deploy a full Kubernetes stack with Datadog out of the box, do:
@@ -139,6 +139,6 @@ juju configure nrpe-external-master nagios_master=255.255.255.255
 ```
 
 Once configured, connect nrpe-external-master as outlined above.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

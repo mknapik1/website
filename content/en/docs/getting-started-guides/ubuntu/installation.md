@@ -5,11 +5,11 @@ reviewers:
 title: Setting up Kubernetes with Juju
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Ubuntu 16.04 introduced the [Canonical Distribution of Kubernetes](https://www.ubuntu.com/cloud/kubernetes), a pure upstream distribution of Kubernetes designed for production usage. This page shows you how to deploy a cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 - A working [Juju client](https://jujucharms.com/docs/2.3/reference-install); this does not have to be a Linux machine, it can also be Windows or OSX.
 - A [supported cloud](#cloud-compatibility).
   - Bare Metal deployments are supported via [MAAS](http://maas.io). Refer to the [MAAS documentation](http://maas.io/docs/) for configuration instructions.
@@ -21,10 +21,10 @@ Ubuntu 16.04 introduced the [Canonical Distribution of Kubernetes](https://www.u
     - github.com
     - Access to an Ubuntu mirror (public or private)
   - Offline deployment prepared with [these](https://github.com/juju-solutions/bundle-canonical-kubernetes/wiki/Running-CDK-in-a-restricted-environment) instructions.
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 ## Deployment overview
 Out of the box the deployment comes with the following components on 9 machines:
 
@@ -279,9 +279,9 @@ juju switch
 juju destroy-controller $controllername --destroy-all-models
 ```
 This will shutdown and terminate all running instances on that cloud.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ## More Info
 
 The Ubuntu Kubernetes deployment uses open-source operations, or operations as code, known as charms. These charms are assembled from layers which keeps the code smaller and more focused on the operations of just Kubernetes and its components.
@@ -295,6 +295,6 @@ project on github.com:
  - [Main issue tracker](https://github.com/juju-solutions/bundle-canonical-kubernetes)
 
 Feature requests, bug reports, pull requests and feedback are appreciated.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

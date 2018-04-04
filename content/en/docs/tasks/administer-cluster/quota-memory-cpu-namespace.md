@@ -3,26 +3,26 @@ title: Configure Memory and CPU Quotas for a Namespace
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to set quotas for the total amount memory and CPU that
 can be used by all Containers running in a namespace. You specify quotas in a
 [ResourceQuota](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcequota-v1-core)
 object.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
 Each node in your cluster must have at least 1 GiB of memory.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create a namespace
 
@@ -144,9 +144,9 @@ Delete your namespace:
 kubectl delete namespace quota-mem-cpu-example
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 ### For cluster administrators
 
@@ -170,7 +170,7 @@ kubectl delete namespace quota-mem-cpu-example
 
 * [Configure Quality of Service for Pods](/docs/tasks/configure-pod-container/quality-service-pod/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

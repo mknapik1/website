@@ -4,13 +4,13 @@ reviewers:
 title: Pod Overview
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page provides an overview of `Pod`, the smallest deployable object in the Kubernetes object model.
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 ## Understanding Pods
 
 A *Pod* is the basic building block of Kubernetes--the smallest and simplest unit in the Kubernetes object model that you create or deploy. A Pod represents a running process on your cluster.
@@ -94,12 +94,12 @@ spec:
 
 Rather than specifying the current desired state of all replicas, pod templates are like cookie cutters. Once a cookie has been cut, the cookie has no relationship to the cutter. There is no "quantum entanglement". Subsequent changes to the template or even switching to a new template has no direct effect on the pods already created. Similarly, pods created by a replication controller may subsequently be updated directly. This is in deliberate contrast to pods, which do specify the current desired state of all containers belonging to the pod. This approach radically simplifies system semantics and increases the flexibility of the primitive.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about Pod behavior:
   * [Pod Termination](/docs/concepts/workloads/pods/pod/#termination-of-pods)
   * Other Pod Topics
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

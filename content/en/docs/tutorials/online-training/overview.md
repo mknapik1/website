@@ -2,19 +2,19 @@
 title: Overview of Kubernetes Online Training
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 Here are some of the sites that offer online training for Kubernetes:
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 * [Scalable Microservices with Kubernetes (Udacity)](https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615)
 
 * [Introduction to Kubernetes (edX)](https://www.edx.org/course/introduction-kubernetes-linuxfoundationx-lfs158x)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/concept.md %}

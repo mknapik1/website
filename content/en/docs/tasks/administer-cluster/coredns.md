@@ -7,16 +7,16 @@ min-kubernetes-server-version: v1.9
 
 {% include feature-state-beta.md %}
 
-{% capture overview %}
+{{% capture overview %}}
 This page describes how to enable CoreDNS instead of kube-dns for service
 discovery.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 {% include task-tutorial-prereqs.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Installing CoreDNS with kubeadm
 
@@ -45,14 +45,14 @@ up and running.
 This process will be modified for the GA release of this feature, such that an existing
 Corefile will not be overwritten.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 You can configure [CoreDNS](https://coredns.io) to support many more use cases than
 kube-dns by modifying the `Corefile`. For more information, see the
 [CoreDNS site](https://coredns.io/2017/05/08/custom-dns-entries-for-kubernetes/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

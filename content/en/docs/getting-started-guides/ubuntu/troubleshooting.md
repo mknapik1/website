@@ -2,14 +2,14 @@
 title: Troubleshooting
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This document with highlighting how to troubleshoot the deployment of a Kubernetes cluster, it will not cover debugging of workloads inside Kubernetes. 
-{% endcapture %}
-{% capture prerequisites %}
+{{% /capture %}}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Understanding Cluster Status
 
 Using `juju status` can give you some insight as to what's happening in a cluster:
@@ -175,6 +175,6 @@ This is caused by the API load balancer not forwarding ports in the context of t
 ## Logging and monitoring
 
 By default there is no log aggregation of the Kubernetes nodes, each node logs locally. Please read over the [logging](https://kubernetes.io/docs/getting-started-guides/ubuntu/logging/) page for more information.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

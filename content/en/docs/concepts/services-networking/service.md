@@ -465,11 +465,11 @@ In a split-horizon DNS environment you would need two services to be able to rou
 
 This can be achieved by adding the following annotations to the service based on cloud provider.
 
-{% capture default_tab %}
+{{% capture default_tab %}}
 Select one of the tabs.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture gcp %}
+{{% capture gcp %}}
 ```yaml
 [...]
 metadata:
@@ -480,9 +480,9 @@ metadata:
 ```
 Use `cloud.google.com/load-balancer-type: "internal"` for masters with version 1.7.0 to 1.7.3.
 For more information, see the [docs](https://cloud.google.com/kubernetes-engine/docs/internal-load-balancing).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture aws %}
+{{% capture aws %}}
 ```yaml
 [...]
 metadata:
@@ -491,9 +491,9 @@ metadata:
         service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
 [...]
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture azure %}
+{{% capture azure %}}
 ```yaml
 [...]
 metadata:
@@ -502,9 +502,9 @@ metadata:
         service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 [...]
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture openstack %}
+{{% capture openstack %}}
 ```yaml
 [...]
 metadata:
@@ -513,7 +513,7 @@ metadata:
         service.beta.kubernetes.io/openstack-internal-load-balancer: "true"
 [...]
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_names = 'Default,GCP,AWS,Azure,OpenStack' | split: ',' | compact %}
 {% assign tab_contents = site.emptyArray | push: default_tab | push: gcp | push: aws | push: azure | push: openstack %}

@@ -4,19 +4,19 @@ reviewers:
 title: Use Cilium for NetworkPolicy
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to use Cilium for NetworkPolicy.
 
 For background on Cilium, read the [Introduction to Cilium](https://cilium.readthedocs.io/en/latest/intro).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Deploying Cilium on Minikube for Basic Testing
 
 To get familiar with Cilium easily you can follow the
@@ -48,9 +48,9 @@ For detailed instructions around deploying Cilium for production, see:
 This documentation includes detailed requirements, instructions and example
 production DaemonSet files.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ##  Understanding Cilium components
 
 Deploying a cluster with Cilium adds Pods to the `kube-system` namespace. To see
@@ -79,14 +79,14 @@ includes an example DaemonSet which can be customized to point to this key-value
 store cluster. The simple ''all-in-one'' DaemonSet for minikube requires no such
 configuration because it automatically connects to the minikube's etcd instance.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 Once your cluster is running, you can follow the
 [Declare Network Policy](/docs/tasks/administer-cluster/declare-network-policy/)
 to try out Kubernetes NetworkPolicy with Cilium.
 Have fun, and if you have questions, contact us using the
 [Cilium Slack Channel](https://cilium.herokuapp.com/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

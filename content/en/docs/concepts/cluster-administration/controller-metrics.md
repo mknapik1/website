@@ -2,13 +2,13 @@
 title: Controller manager metrics
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Controller manager metrics provide important insight into the performance and health of
 the controller manager.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## What are controller manager metrics
 
 Controller manager metrics provide important insight into the performance and health of the controller manager.
@@ -43,6 +43,6 @@ The metrics are emitted in [prometheus format](https://prometheus.io/docs/instru
 In a production environment you may want to configure prometheus or some other metrics scraper
 to periodically gather these metrics and make them available in some kind of time series database.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

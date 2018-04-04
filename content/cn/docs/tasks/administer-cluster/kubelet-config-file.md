@@ -12,22 +12,22 @@ title: 通过配置文件设置 Kubelet 参数
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 {% include feature-state-alpha.md %}
 
 
 在 Kubernetes 1.8 版本上，除了可以通过命令行参数外，还可以通过保存在硬盘的配置文件设置 Kubelet 的配置子集。
 将来，大部分现存的命令行参数都将被废弃，取而代之以配置文件的方式提供参数，以简化节点部署过程。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 
 - 需要安装 1.8 版本或更高版本的 Kubelet 二进制文件。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 创建配置文件
@@ -47,9 +47,9 @@ title: 通过配置文件设置 Kubelet 参数
 
 启动 Kubelet 需要将其 `--init-config-dir` 标志设置为包含 `kubelet` 文件的文件夹路径。Kubelet 将从 `kubelet` 文件中读取由 `KubeletConfiguration` 定义的参数，而不是从参数相关的命令行标志中读取。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 
 ## 与动态 Kubelet 配置的关系
@@ -60,6 +60,6 @@ title: 通过配置文件设置 Kubelet 参数
 
 请注意，`--init-config-dir` 文件的布局结构镜像了 ConfigMap 中用于动态 Kubelet 配置的数据结构；文件命名和 ConfigMap 的 key 相同，文件的内容是 ConfigMap 中相同数据结构的 JSON 或 YAML 表现形式。虽然以后可能会出现更多，但目前只有 kubelet:KubeletConfiguration 配置对。更多信息请查阅  [重新配置活动集群节点的 Kubelet](/docs/tasks/administer-cluster/reconfigure-kubelet)。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

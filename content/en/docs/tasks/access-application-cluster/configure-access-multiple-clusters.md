@@ -3,7 +3,7 @@ title: Configure Access to Multiple Clusters
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure access to multiple clusters by using
 configuration files. After your clusters, users, and contexts are defined in
@@ -15,15 +15,15 @@ a *kubeconfig file*. This is a generic way of referring to configuration files.
 It does not mean that there is a file named `kubeconfig`.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 You need to have the [`kubectl`](/docs/tasks/tools/install-kubectl/) command-line tool installed.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Define clusters, users, and contexts
 
@@ -330,14 +330,14 @@ Return your `KUBECONFIG` environment variable to its original value. For example
 export KUBECONFIG=$KUBECONFIG_SAVED
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Organizing Cluster Access Using kubeconfig Files](/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 * [kubectl config](/docs/user-guide/kubectl/{{page.version}}/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}
 

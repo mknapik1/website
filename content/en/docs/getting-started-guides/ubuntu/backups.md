@@ -2,19 +2,19 @@
 title: Backups
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 The state of a Kubernetes cluster is kept in the etcd datastore.
 This page shows how to backup and restore the etcd shipped with
 the Canonical Distribution of Kubernetes. Backing up application specific data,
 normally stored in a persistent volume, is outside the scope of this
 document.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Snapshot etcd data
 
 The `snapshot` action of the etcd charm allows the operator to snapshot
@@ -113,9 +113,9 @@ juju run-action new-etcd/0 restore
 ```
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ## Known Limitations
 
 #### Loss of PKI warning
@@ -137,6 +137,6 @@ Etcd performs clustering during unit turn-up, and state is stored in Etcd itself
 During the snapshot restore phase, a new cluster ID is initialized, and peers
 are dropped from the snapshot state to enable snapshot restoration. Please
 follow the migration instructions above in the restore action description.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

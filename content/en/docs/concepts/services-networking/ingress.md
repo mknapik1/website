@@ -4,11 +4,11 @@ reviewers:
 title: Ingress
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% glossary_definition term_id="ingress" length="all" %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 __Terminology__
 
 Throughout this doc you will see a few terms that are sometimes used interchangeably elsewhere, that might cause confusion. This section attempts to clarify them.
@@ -297,6 +297,6 @@ You can expose a Service in multiple ways that don't directly involve the Ingres
 * Use [Service.Type=LoadBalancer](/docs/concepts/services-networking/service/#type-loadbalancer)
 * Use [Service.Type=NodePort](/docs/concepts/services-networking/service/#type-nodeport)
 * Use a [Port Proxy](https://git.k8s.io/contrib/for-demos/proxy-to-service)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

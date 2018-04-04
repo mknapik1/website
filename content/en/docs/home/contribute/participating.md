@@ -2,13 +2,13 @@
 title: Participating in SIG-DOCS
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 SIG-DOCS is one of the [special interest groups](https://github.com/kubernetes/community/blob/master/sig-list.md) within the Kubernetes project, focused on writing, updating, and maintaining the documentation for Kubernetes as a whole.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 SIG Docs welcomes content and reviews from all contributors. Anyone can open a pull request (PR), and anyone is welcome to comment on content or pull requests in progress.
 
@@ -88,9 +88,9 @@ The [Kubernetes website repository](https://github.com/kubernetes/website) has t
 
 These two plugins use the [OWNERS](https://github.com/kubernetes/website/blob/master/OWNERS) and [OWNERS_ALIASES](https://github.com/kubernetes/website/blob/master/OWNERS_ALIASES) files in our repo for configuration.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 For more information about contributing to the Kubernetes documentation, see:
 
 * Review the SIG Docs [Style Guide](/docs/home/contribute/style-guide/).
@@ -104,6 +104,6 @@ For more information about contributing to the Kubernetes documentation, see:
   * Learn how to [generate Reference Documentation for kubectl Commands](/docs/home/contribute/generated-reference/kubectl/)
   * Learn how to [generate Reference Documentation for the Kubernetes API](/docs/home/contribute/generated-reference/kubernetes-api/)
   * Learn how to [generate Reference Pages for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

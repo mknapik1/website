@@ -8,23 +8,23 @@ redirect_from:
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 
 本文旨在说明如何让一个 Pod 内的两个容器使用一个卷（Volume）进行通信。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 创建一个包含两个容器的 Pod
@@ -130,10 +130,10 @@ Pod 的配置文件如下：
 
     Hello from the debian container
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 
 ## 讨论
@@ -156,10 +156,10 @@ Pod 能有多个容器的主要原因是为了支持辅助应用（helper applic
 在本练习中的卷为 Pod 生命周期中的容器相互通信提供了一种方法。如果 Pod 被删除或者重建了，
 任何共享卷中的数据都会丢失。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 
@@ -180,7 +180,7 @@ Pod 能有多个容器的主要原因是为了支持辅助应用（helper applic
 
 * 参见 [Pod](/docs/api-reference/{{page.version}}/#pod-v1-core).
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

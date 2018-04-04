@@ -4,21 +4,21 @@ approvers:
 title: 使用 Romana 来提供 NetworkPolicy
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 本页展示怎么样使用 Romana 来提供 NetworkPolicy
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 
 完成 [kubeadm 入门指南](/docs/getting-started-guides/kubeadm/)中的步骤1、2和3
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 使用 kubeadm 安装 Romana
@@ -38,13 +38,13 @@ title: 使用 Romana 来提供 NetworkPolicy
 
 * NetworkPolicy API
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 Romana 安装完成之后，您可以通过 [NetworkPolicy 入门指南](/docs/getting-started-guides/network-policy/walkthrough)去尝试使用 Kubernetes NetworkPolicy
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -5,14 +5,14 @@ reviewers:
 - enisoc
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to install a
 [custom resource](/docs/concepts/api-extension/custom-resources/)
 into the Kubernetes API by creating a
 [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
@@ -20,9 +20,9 @@ into the Kubernetes API by creating a
 
 * Read about [custom resources](/docs/concepts/api-extension/custom-resources/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Create a CustomResourceDefinition
 
 When you create a new CustomResourceDefinition (CRD), the Kubernetes API Server
@@ -172,9 +172,9 @@ Error from server (NotFound): Unable to list "crontabs": the server could not fi
 
 If you later recreate the same CustomResourceDefinition, it will start out empty.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ## Advanced topics
 
 ### Finalizers
@@ -540,11 +540,11 @@ NAME                          AGE
 crontabs/my-new-cron-object   3s
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn how to [Migrate a ThirdPartyResource to CustomResourceDefinition](/docs/tasks/access-kubernetes-api/migrate-third-party-resource/).
 * See [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -2,15 +2,15 @@
 title: Installing kubeadm
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 <img src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png" align="right" width="150px">This page shows how to install the `kubeadm` toolbox.
 For information how to create a cluster with kubeadm once you have performed this installation process,
 see the [Using kubeadm to Create a Cluster](/docs/setup/independent/create-cluster-kubeadm/) page.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * One or more machines running one of:
   - Ubuntu 16.04+
@@ -27,9 +27,9 @@ see the [Using kubeadm to Create a Cluster](/docs/setup/independent/create-clust
 * Certain ports are open on your machines. See [here](/docs/setup/independent/install-kubeadm/#check-required-ports) for more details.
 * Swap disabled. You **MUST** disable swap in order for the kubelet to work properly. 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Verify the MAC address and product_uuid are unique for every node
 
@@ -116,9 +116,9 @@ add-apt-repository \
 apt-get update && apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 17.03 | head -1 | awk '{print $3}')
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture docker_centos %}
+{{% capture docker_centos %}}
 
 Install Docker using your operating system's bundled package:
 
@@ -127,9 +127,9 @@ yum install -y docker
 systemctl enable docker && systemctl start docker
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture docker_coreos %}
+{{% capture docker_coreos %}}
 
 Enable and start Docker:
 
@@ -137,7 +137,7 @@ Enable and start Docker:
 systemctl enable docker && systemctl start docker
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "docker_install" %}
 {% assign tab_names = "Ubuntu, Debian or HypriotOS;CentOS, RHEL or Fedora; Container Linux" | split: ';' | compact %}
@@ -170,7 +170,7 @@ but not vice versa.
 For more information on version skews, please read our 
 [version skew policy](/docs/setup/independent/create-cluster-kubeadm/#version-skew-policy).
 
-{% capture ubuntu %}
+{{% capture ubuntu %}}
 
 ```bash
 apt-get update && apt-get install -y apt-transport-https
@@ -182,9 +182,9 @@ apt-get update
 apt-get install -y kubelet kubeadm kubectl
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture centos %}
+{{% capture centos %}}
 
 ```bash
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
@@ -216,9 +216,9 @@ systemctl enable kubelet && systemctl start kubelet
     sysctl --system
     ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture coreos %}
+{{% capture coreos %}}
 
 Install CNI plugins (required for most pod network):
 
@@ -249,7 +249,7 @@ Enable and start `kubelet`:
 systemctl enable kubelet && systemctl start kubelet
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "k8s_install" %}
 {% assign tab_names = "Ubuntu, Debian or HypriotOS;CentOS, RHEL or Fedora;Container Linux" | split: ';' | compact %}
@@ -289,11 +289,11 @@ systemctl restart kubelet
 
 If you are running into difficulties with kubeadm, please consult our [troubleshooting docs](/docs/setup/independent/troubleshooting-kubeadm/).
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Using kubeadm to Create a Cluster](/docs/setup/independent/create-cluster-kubeadm/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% endcapture %}
 

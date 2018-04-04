@@ -2,7 +2,7 @@
 title: Troubleshooting kubeadm
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 As with any program, you might run into an error using or operating it. Below we have listed 
 common failure scenarios and have provided steps that will help you to understand and hopefully
@@ -21,7 +21,7 @@ If your problem is not listed below, please follow the following steps:
 If your cluster is in an error state, you may have trouble in the configuration if you see Pod statuses like `RunContainerError`,
 `CrashLoopBackOff` or `Error`. If this is the case, please read below.
 
-{% endcapture %}
+{{% /capture %}}
 
 #### `ebtables` or some similar executable not found during installation
 

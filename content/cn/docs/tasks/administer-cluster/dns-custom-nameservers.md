@@ -5,13 +5,13 @@ approvers:
 title: 在 Kubernetes 中配置私有 DNS 和上游域名服务器
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页展示了如何添加自定义私有 DNS 域（存根域）和上游域名服务器。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * {% include task-tutorial-prereqs.md %}
 
 
@@ -19,9 +19,9 @@ title: 在 Kubernetes 中配置私有 DNS 和上游域名服务器
 * Kubernetes 1.6 及其以上版本。
 * 集群必须配置使用 `kube-dns` 插件。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 
@@ -59,9 +59,9 @@ data:
 
 查看 [ConfigMap 选项](#configmap-options) 获取更多关于配置选项格式的详细信息。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 
 
@@ -156,6 +156,6 @@ metadata:
           [“172.16.0.1”]
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

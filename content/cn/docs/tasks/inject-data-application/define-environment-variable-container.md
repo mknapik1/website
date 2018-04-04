@@ -2,21 +2,21 @@
 title: 为容器设置环境变量
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页将展示如何为kubernetes Pod下的容器设置环境变量。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 为容器设置一个环境变量
 
@@ -58,15 +58,15 @@ title: 为容器设置环境变量
 
 1. 通过键入`exit`退出命令终端。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 有关环境变量的更多信息，请参阅[这里](/docs/tasks/configure-pod-container/environment-variable-expose-pod-information/)。
 * 有关如何通过环境变量来使用Secret，请参阅[这里](/docs/user-guide/secrets/#using-secrets-as-environment-variables)。
 * 关于[EnvVarSource](/docs/api-reference/{{page.version}}/#envvarsource-v1-core)资源的信息。
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

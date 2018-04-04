@@ -7,11 +7,11 @@ approvers:
 - jbeda
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page contains an overview of the Kubernetes API. 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 The REST API is the fundamental fabric of Kubernetes. All operations and communications between components are REST API calls handled by the API Server, including external user commands. Consequently, everything in the Kubernetes
 platform is treated as an API object and has a corresponding entry in the
 [API](/docs/reference/generated/kubernetes-api/{{page.version}}/).
@@ -93,6 +93,6 @@ DaemonSets, Deployments, HorizontalPodAutoscalers, Ingress, Jobs and ReplicaSets
 You can enable other extensions resources by setting `--runtime-config` on
 apiserver. `--runtime-config` accepts comma separated values. For example, to disable deployments and jobs, set
 `--runtime-config=extensions/v1beta1/deployments=false,extensions/v1beta1/jobs=false`
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

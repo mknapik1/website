@@ -4,15 +4,15 @@ reviewers:
 - chenopis
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" %}
 
 Use the [Service Catalog Installer](https://github.com/GoogleCloudPlatform/k8s-service-catalog#installation) tool to easily install or uninstall Service Catalog on your Kubernetes cluster. This CLI tool is installed as `sc` in your local environment.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * Understand the key concepts of [Service Catalog](/docs/concepts/service-catalog/).
 * Install [Go 1.6+](https://golang.org/dl/) and set the `GOPATH`.
 * Install the [cfssl](https://github.com/cloudflare/cfssl) tool needed for generating SSL artifacts.
@@ -22,10 +22,10 @@ Use the [Service Catalog Installer](https://github.com/GoogleCloudPlatform/k8s-s
 
         kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=<user-name>
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 ## Install `sc` in your local environment
 
 Install the `sc` CLI tool using the `go get` command:
@@ -64,14 +64,14 @@ If you would like to uninstall Service Catalog from your Kubernetes cluster usin
 sc uninstall
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * View [sample service brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers).
 * Explore the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog) project.
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

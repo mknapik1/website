@@ -10,14 +10,14 @@ reviewers:
 title: Running ZooKeeper, A CP Distributed System
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This tutorial demonstrates [Apache Zookeeper](https://zookeeper.apache.org) on 
 Kubernetes using [StatefulSets](/docs/concepts/workloads/controllers/statefulset/), 
 [PodDisruptionBudgets](/docs/concepts/workloads/pods/disruptions/#specifying-a-poddisruptionbudget), 
 and [PodAntiAffinity](/docs/user-guide/node-selection/#inter-pod-affinity-and-anti-affinity-beta-feature).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 Before starting this tutorial, you should be familiar with the following 
 Kubernetes concepts.
@@ -44,18 +44,18 @@ This tutorial assumes that your cluster is configured to dynamically provision
 PersistentVolumes. If your cluster is not configured to do so, you
 will have to manually provision three 20 GiB volumes prior to starting this 
 tutorial.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 After this tutorial, you will know the following.
 
 * How to deploy a ZooKeeper ensemble using StatefulSet.
 * How to consistently configure the ensemble using ConfigMaps.
 * How to spread the deployment of ZooKeeper servers in the ensemble.
 * How to use PodDisruptionBudgets to ensure service availability during planned maintenance.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ### ZooKeeper Basics
 
@@ -1170,13 +1170,13 @@ taking the node offline for maintenance, services that express a disruption budg
 budget respected. You should always allocate additional capacity for critical services so that 
 their Pods can be immediately rescheduled.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 * Use `kubectl uncordon` to uncordon all the nodes in your cluster.
 * You will need to delete the persistent storage media for the PersistentVolumes
 used in this tutorial. Follow the necessary steps, based on your environment, 
 storage configuration, and provisioning method, to ensure that all storage is 
 reclaimed.
-{% endcapture %}
+{{% /capture %}}
 {% include templates/tutorial.md %}

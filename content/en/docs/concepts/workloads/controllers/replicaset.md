@@ -6,7 +6,7 @@ reviewers:
 title: ReplicaSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 ReplicaSet is the next-generation Replication Controller. The only difference
 between a _ReplicaSet_ and a
@@ -15,9 +15,9 @@ the selector support. ReplicaSet supports the new set-based selector requirement
 as described in the [labels user guide](/docs/concepts/overview/working-with-objects/labels/#label-selectors)
 whereas a Replication Controller only supports equality-based selector requirements.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## How to use a ReplicaSet
 
@@ -232,6 +232,6 @@ machine-level function, such as machine monitoring or machine logging.  These po
 to a machine lifetime: the pod needs to be running on the machine before other pods start, and are
 safe to terminate when the machine is otherwise ready to be rebooted/shutdown.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

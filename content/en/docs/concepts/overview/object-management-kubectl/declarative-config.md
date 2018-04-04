@@ -2,15 +2,15 @@
 title: Declarative Management of Kubernetes Objects Using Configuration Files
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Kubernetes objects can be created, updated, and deleted by storing multiple
 object configuration files in a directory and using `kubectl apply` to
 recursively create and update those objects as needed. This method
 retains writes made to live objects without merging the changes
 back into the object configuration files.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Trade-offs
 
@@ -970,13 +970,13 @@ template:
 * Prior to Kubernetes 1.6, `kubectl apply` did not support operating on objects stored in a
   [custom resource](/docs/concepts/api-extension/custom-resources/).
   For these cluster versions, you should instead use [imperative object configuration](/docs/concepts/overview/object-management-kubectl/imperative-config/).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 - [Managing Kubernetes Objects Using Imperative Commands](/docs/concepts/overview/object-management-kubectl/imperative-command/)
 - [Imperative Management of Kubernetes Objects Using Configuration Files](/docs/concepts/overview/object-management-kubectl/imperative-config/)
 - [Kubectl Command Reference](/docs/user-guide/kubectl/{{page.version}}/)
 - [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

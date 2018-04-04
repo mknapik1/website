@@ -2,7 +2,7 @@
 title: Documentation Style Guide
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page gives writing style guidelines for the Kubernetes documentation.
 These are guidelines, not rules. Use your best judgment, and feel free to
 propose changes to this document in a pull request.
@@ -11,9 +11,9 @@ For additional information on creating new content for the Kubernetes
 docs, follow the instructions on
 [using page templates](/docs/home/contribute/page-templates/) and
 [creating a documentation pull request](/docs/home/contribute/create-pull-request/).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 **Note:** Kubernetes documentation uses [GitHub Flavored Markdown](https://github.github.com/gfm/) along with a few [local jekyll includes](/docs/home/contribute/includes/) to support glossary entries, tabs, and representing feature state.
 {: .note}
@@ -399,15 +399,15 @@ considered new in a few months.
     <tr><td>The Federation feature provides ...</td><td>The new Federation feature provides ...</td></tr>
 </table>
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn about [writing a new topic](/docs/home/contribute/write-new-topic/).
 * Learn about [using page templates](/docs/home/contribute/page-templates/).
 * Learn about [staging your changes](/docs/home/contribute/stage-documentation-changes/)
 * Learn about [creating a pull request](/docs/home/contribute/create-pull-request/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

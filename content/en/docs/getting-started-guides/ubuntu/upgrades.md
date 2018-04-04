@@ -2,11 +2,11 @@
 title: Upgrades
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page will outline how to manage and execute a Kubernetes upgrade.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This page assumes you have a working deployed cluster.
 
 **Warning:** You should always back up all your data before attempting an upgrade.
@@ -14,9 +14,9 @@ Don't forget to include the workload inside your cluster!
 Refer to the [backup documentation](/docs/getting-started-guides/ubuntu/backups).
 {: .warning}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Patch kubernetes upgrades for example 1.9.0 -> 1.9.1
 
 Clusters are transparently upgraded to the latest Kubernetes patch release.
@@ -156,6 +156,6 @@ Upgrading easyrsa should result in zero downtime as it is not a running service:
 
     juju upgrade-charm easyrsa
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

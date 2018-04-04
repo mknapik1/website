@@ -8,7 +8,7 @@ title: Advanced Topics
 track: "USERS › APPLICATION DEVELOPER › ADVANCED"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {: .note }
 This page assumes that you're familiar with core Kubernetes concepts, and are comfortable deploying your own apps. If not, you should review the [Intermediate App Developer](/docs/user-journeys/users/application-developer/intermediate/){:target="_blank"} topics first.
@@ -17,10 +17,10 @@ After checking out the current page and its linked sections, you should have a b
 * Advanced features that you can leverage in your application
 * The various ways of extending the Kubernetes API
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Deploy an application with advanced features
 
@@ -112,6 +112,6 @@ Congrats on completing the Application Developer user journey! You've covered th
 
 * If you are interested in learning more about the inner workings of Kubernetes (e.g. networking), consider checking out the [Cluster Operator journey](/docs/user-journeys/users/cluster-operator/foundational/){:target="_blank"}.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/user-journey-content.md %}

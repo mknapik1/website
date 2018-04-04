@@ -2,12 +2,12 @@
 title: Cloud Providers
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains how to manage Kubernetes running on a specific
 cloud provider.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 # AWS
 This section describes all the possible configurations which can
 be used when running Kubernetes on Amazon Web Services.
@@ -263,6 +263,6 @@ Kubernetes network plugin and should appear in the `[Router]` section of the
 
 [kubenet]: https://kubernetes.io/docs/concepts/cluster-administration/network-plugins/#kubenet
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

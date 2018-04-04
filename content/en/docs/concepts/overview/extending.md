@@ -7,7 +7,7 @@ reviewers:
 - chenopis
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 Kubernetes is highly configurable and extensible. As a result,
 there is rarely a need to fork or submit patches to the Kubernetes
@@ -21,10 +21,10 @@ Developers" term_id="platform-developer" %} or Kubernetes Project {{< glossary_t
 useful as an introduction to what extension points and patterns
 exist, and their trade-offs and limitations.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Overview
 
@@ -194,10 +194,10 @@ The scheduler also supports a
 that permits a webhook backend (scheduler extension) to filter and prioritize
 the nodes chosen for a pod.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Custom Resources](/docs/concepts/api-extension/custom-resources/)
 * Learn about [Dynamic admission control](/docs/admin/extensible-admission-controllers/)
@@ -208,7 +208,7 @@ the nodes chosen for a pod.
 * See examples of Automation
   * [List of Operators](https://github.com/coreos/awesome-kubernetes-extensions)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}
 

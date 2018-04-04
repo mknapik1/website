@@ -5,14 +5,14 @@ approvers:
 - jbeda
 title: Implementation details
 ---
-{% capture overview %}
+{{% capture overview %}}
 `kubeadm init` and `kubeadm join` together provides a nice user experience for creating a best-practice but bare Kubernetes cluster from scratch.
 However, it might not be obvious _how_ kubeadm does that.
 
 This document provide additional details on what happen under the hood, with the aim of sharing knowledge on Kubernetes cluster best practices.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Core design principles
 
 The cluster that `kubeadm init` and `kubeadm join` set up should be:
@@ -576,6 +576,6 @@ Please note that:
 
 1. To make dynamic kubelet configuration work, flag `--dynamic-config-dir=/var/lib/kubelet/config/dynamic` should be specified in `/etc/systemd/system/kubelet.service.d/10-kubeadm.conf`
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

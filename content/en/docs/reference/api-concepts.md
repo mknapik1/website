@@ -7,11 +7,11 @@ approvers:
 - liggitt
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page describes common concepts in the Kubernetes API. 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 The Kubernetes API is a resource-based (RESTful) programmatic interface provided via HTTP. It supports retrieving, creating,
 updating, and deleting primary resources via the standard HTTP verbs (POST, PUT, PATCH, DELETE, GET), includes additional subresources for many objects that allow fine grained authorization (such as binding a pod to a node), and can accept and serve those resources in different representations for convenience or efficiency. It also supports efficient change notifications on resources via "watches" and consistent lists to allow other components to effectively cache and synchronize the state of resources.
 
@@ -282,6 +282,6 @@ An encoded Protobuf message with the following IDL:
 
 Clients that receive a response in `application/vnd.kubernetes.protobuf` that does not match the expected prefix should reject the response, as future versions may need to alter the serialization format in an incompatible way and will do so by changing the prefix.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

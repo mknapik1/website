@@ -2,16 +2,16 @@
 title: Validation - End-to-end Testing
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page will outline how to ensure that a Juju-deployed Kubernetes
 cluster has stood up correctly and is ready to accept workloads.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## End-to-end testing
 
 End-to-end (e2e) tests for Kubernetes provide a mechanism to test end-to-end
@@ -160,7 +160,7 @@ When an upgrade is available, upgrade your deployment:
 
     juju upgrade-charm kubernetes-e2e
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}
 

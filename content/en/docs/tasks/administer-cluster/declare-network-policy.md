@@ -4,11 +4,11 @@ reviewers:
 - danwinship
 title: Declare Network Policy
 ---
-{% capture overview %}
+{{% capture overview %}}
 This document helps you get started using the Kubernetes [NetworkPolicy API](/docs/concepts/services-networking/network-policies/) to declare network policies that govern how pods communicate with each other.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 You'll need to have a Kubernetes cluster in place, with network policy support. There are a number of network providers that support NetworkPolicy, including:
 
 * [Calico](/docs/tasks/configure-pod-container/calico-network-policy/)
@@ -18,10 +18,10 @@ You'll need to have a Kubernetes cluster in place, with network policy support. 
 * [Weave Net](/docs/tasks/administer-cluster/weave-network-policy/)
 
 **Note**: The above list is sorted alphabetically by product name, not by recommendation or preference. This example is valid for a Kubernetes cluster using any of these providers.
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create an `nginx` deployment and expose it via a service
 
@@ -122,6 +122,6 @@ Hit enter for command prompt
 Connecting to nginx (10.100.0.16:80)
 / #
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -7,11 +7,11 @@ reviewers:
 title: ABAC Mode
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Attribute-based access control (ABAC) defines an access control paradigm whereby access rights are granted to users through the use of policies which combine attributes together.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Policy File Format
 
 For mode `ABAC`, also specify `--authorization-policy-file=SOME_FILENAME`.
@@ -151,5 +151,5 @@ file:
 
 The apiserver will need to be restarted to pickup the new policy lines.
 
-{% endcapture %}
+{{% /capture %}}
 {% include templates/concept.md %}

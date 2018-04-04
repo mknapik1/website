@@ -5,7 +5,7 @@ reviewers:
 title: Set Kubelet parameters via a config file
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% include feature-state-beta.md %}
 
 A subset of the Kubelet's configuration parameters may be
@@ -15,15 +15,15 @@ This functionality is considered beta in v1.10.
 Providing parameters via a config file is the recommended approach because
 it simplifies node deployment and configuration management.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 - A v1.10 or higher Kubelet binary must be installed for beta functionality.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create the config file
 
@@ -66,9 +66,9 @@ If `--config` is provided and the values are not specified via the command line,
 defaults for the `KubeletConfiguration` version apply.
 In the above example, this version is `kubelet.config.k8s.io/v1beta1`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Relationship to Dynamic Kubelet Config
 
@@ -76,6 +76,6 @@ If you are using the [Dynamic Kubelet Configuration](/docs/tasks/administer-clus
 feature, the combination of configuration provided via `--config` and any flags which override these values
 is considered the default "last known good" configuration by the automatic rollback mechanism.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

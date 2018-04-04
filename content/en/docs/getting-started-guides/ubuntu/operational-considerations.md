@@ -2,14 +2,14 @@
 title: Operational Considerations
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page gives recommendations and hints for people managing long lived clusters 
-{% endcapture %}
-{% capture prerequisites %}
+{{% /capture %}}
+{{% capture prerequisites %}}
 This page assumes you understand the basics of Juju and Kubernetes.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Managing Juju 
 
@@ -160,6 +160,6 @@ juju run-action kubernetes-worker/0 registry delete=true ingress=true
 ```
 
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

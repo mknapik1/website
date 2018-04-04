@@ -2,7 +2,7 @@
 title: Federated Horizontal Pod Autoscalers (HPA)
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% include feature-state-alpha.md %}
 
@@ -15,9 +15,9 @@ desired number of replicas of the target object are scaled across the registered
 instead of a single cluster. Also, the control plane keeps monitoring the status of each
 individual HPA in the federated clusters and ensures the workload replicas move where they are
 needed most by manipulating the min and max limits of the HPA objects in the federated clusters.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include federated-task-tutorial-prereqs.md %}
 * You are also expected to have a basic
@@ -29,9 +29,9 @@ federated API server. To use this feature, the user or the admin deploying the f
 plane needs to run the federated API server with option `--runtime-config=api/all=true` to
 enable all APIs, including alpha APIs. Additionally, the federated HPA only works
 when used with CPU utilization metrics.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Creating a federated HPA
 
@@ -172,6 +172,6 @@ the replicas move (or remain) in the cluster(s) which need them.
 
 For more information, see ["federated HPA design proposal"](https://github.com/kubernetes/community/pull/593).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

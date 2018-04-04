@@ -2,24 +2,24 @@
 title: Set up CoreDNS as DNS provider for Cluster Federation
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure and deploy CoreDNS to be used as the
 DNS provider for Cluster Federation.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Configure and deploy CoreDNS server
 * Bring up federation with CoreDNS as dns provider
 * Setup CoreDNS server in nameserver lookup chain
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * You need to have a running Kubernetes cluster (which is
 referenced as host cluster). Please see one of the
@@ -28,10 +28,10 @@ installation instructions for your platform.
 * Support for `LoadBalancer` services in member clusters of federation is
 mandatory to enable `CoreDNS` for service discovery across federated clusters.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Deploying CoreDNS and etcd charts
 
@@ -127,6 +127,6 @@ Replace `example.com` above with federation domain.
 
 Now the federated cluster is ready for cross-cluster service discovery!
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

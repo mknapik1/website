@@ -4,15 +4,15 @@ reviewers:
 title: Pod Preset
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page provides an overview of PodPresets, which are objects for injecting
 certain information into pods at creation time. The information can include
 secrets, volumes, volume mounts, and environment variables.
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 ## Understanding Pod Presets
 
 A `Pod Preset` is an API resource for injecting additional runtime requirements
@@ -73,12 +73,12 @@ In order to use Pod Presets in your cluster you must ensure the following:
 1.  You have defined your Pod Presets by creating `PodPreset` objects in the
     namespace you will use.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Injecting data into a Pod using PodPreset](/docs/tasks/inject-data-application/podpreset/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

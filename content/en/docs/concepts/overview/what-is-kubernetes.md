@@ -5,11 +5,11 @@ reviewers:
 title: What is Kubernetes?
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page is an overview of Kubernetes.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 Kubernetes is a portable, extensible open-source platform for managing
 containerized workloads and services, that facilitates both
 declarative configuration and automation. It has a large, rapidly
@@ -194,11 +194,11 @@ The name **Kubernetes** originates from Greek, meaning *helmsman* or
 is an abbreviation derived by replacing the 8 letters "ubernete" with
 "8".
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 *   Ready to [Get Started](/docs/setup/)?
 *   For more details, see the [Kubernetes Documentation](/docs/home/).
-{% endcapture %}
+{{% /capture %}}
 {% include templates/concept.md %}
 

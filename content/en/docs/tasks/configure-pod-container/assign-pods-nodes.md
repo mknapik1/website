@@ -2,18 +2,18 @@
 title: Assign Pods to Nodes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to assign a Kubernetes Pod to a particular node in a
 Kubernetes cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Add a label to a node
 
@@ -71,11 +71,11 @@ a `disktype=ssd` label.
         NAME     READY     STATUS    RESTARTS   AGE    IP           NODE
         nginx    1/1       Running   0          13s    10.200.0.4   worker0
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 Learn more about
 [labels and selectors](/docs/concepts/overview/working-with-objects/labels/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

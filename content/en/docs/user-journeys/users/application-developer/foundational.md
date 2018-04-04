@@ -8,16 +8,16 @@ title: Foundational
 track: "USERS › APPLICATION DEVELOPER › FOUNDATIONAL"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 If you're a developer looking to run applications on Kubernetes, this page and its linked topics can help you get started with the fundamentals. Though this page primarily describes development workflows, [the subsequent page in the series](/docs/home/?path=users&persona=app-developer&level=intermediate){:target="_blank"} covers more advanced, production setups.
 
 {: .note }
 **A quick note**<br>This app developer "user journey" is *not* a comprehensive overview of Kubernetes. It focuses more on *what* you develop, test, and deploy to Kubernetes, rather than *how* the underlying infrastructure works.<br><br>Though it's possible for a single person to manage both, in many organizations, it’s common to assign the latter to a dedicated {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}}.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 ## Get started with a cluster
 
 #### Web-based environment
@@ -226,7 +226,7 @@ If you feel fairly comfortable with the topics on this page and want to learn mo
 * [Intermediate App Developer](/docs/user-journeys/users/application-developer/intermediate/){:target="_blank"} - Dive deeper, with the next level of this journey.
 * [Foundational Cluster Operator](/docs/user-journeys/users/cluster-operator/foundational/){:target="_blank"} - Build breadth, by exploring other journeys.
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/user-journey-content.md %}

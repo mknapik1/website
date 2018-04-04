@@ -8,19 +8,19 @@ reviewers:
 title: Delete a StatefulSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This task shows you how to delete a StatefulSet.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * This task assumes you have an application running on your cluster represented by a StatefulSet.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Deleting a StatefulSet
 
@@ -77,12 +77,12 @@ In the example above, the Pods have the label `app=myapp`; substitute your own l
 
 If you find that some pods in your StatefulSet are stuck in the 'Terminating' or 'Unknown' states for an extended period of time, you may need to manually intervene to forcefully delete the pods from the apiserver. This is a potentially dangerous task. Refer to [Deleting StatefulSet Pods](/docs/tasks/manage-stateful-set/delete-pods/) for details.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Learn more about [force deleting StatefulSet Pods](/docs/tasks/run-application/force-delete-stateful-set-pod/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

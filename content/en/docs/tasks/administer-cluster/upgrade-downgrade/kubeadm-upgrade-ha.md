@@ -7,13 +7,13 @@ reviewers:
 title: Upgrading kubeadm HA clusters from 1.9.x to 1.9.y
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This guide is for upgrading `kubeadm` HA clusters from version 1.9.x to 1.9.y where `y > x`. The term "`kubeadm` HA clusters" refers to clusters of more than one master node created with `kubeadm`. To set up an HA cluster for Kubernetes version 1.9.x `kubeadm` requires additional manual steps. See [Creating HA clusters with kubeadm](/docs/setup/independent/high-availability/) for instructions on how to do this. The upgrade procedure described here targets clusters created following those very instructions. See [Upgrading/downgrading kubeadm clusters between v1.8 to v1.9](/docs/tasks/administer-cluster/kubeadm-upgrade-1-9/) for more instructions on how to create an HA cluster with `kubeadm`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 Before proceeding:
 
@@ -22,9 +22,9 @@ Before proceeding:
 - Note that `kubeadm upgrade` will not touch any of your workloads, only Kubernetes-internal components. As a best-practice you should back up anything important to you. For example, any application-level state, such as a database and application might depend on (like MySQL or MongoDB) should be backed up beforehand.
 - Read [Upgrading/downgrading kubeadm clusters between v1.8 to v1.9](/docs/tasks/administer-cluster/kubeadm-upgrade-1-9/) to learn about the relevant prerequisites.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Preparation
 
@@ -128,6 +128,6 @@ If the upgrade fails the situation afterwards depends on the phase in which thin
 
 2. If `/tmp/kubeadm upgrade apply` on one of the secondary masters failed you still have a working, upgraded cluster, but with the secondary masters in a somewhat undefined condition. You will have to find out what went wrong and join the secondaries manually. As mentioned above, sometimes upgrading one of the secondary masters fails waiting for the restarted static pods first, but succeeds when the operation is simply repeated after a little pause of one or two minutes. 
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

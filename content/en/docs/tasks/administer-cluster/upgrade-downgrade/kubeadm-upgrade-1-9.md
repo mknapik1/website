@@ -7,14 +7,14 @@ reviewers:
 title: Upgrading/downgrading kubeadm clusters between v1.8 to v1.9
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This guide is for upgrading `kubeadm` clusters from version 1.8.x to 1.9.x, as well as 1.8.x to 1.8.y and 1.9.x to 1.9.y where `y > x`.
 See also [upgrading kubeadm clusters from 1.7 to 1.8](/docs/tasks/administer-cluster/kubeadm-upgrade-1-8/) if you're on a 1.7 cluster currently.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 Before proceeding:
 
@@ -28,9 +28,9 @@ Before proceeding:
 
 Also, note that only one minor version upgrade is supported. For example, you can only upgrade from 1.8 to 1.9, not from 1.7 to 1.9.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Upgrading your control plane
 
@@ -256,6 +256,6 @@ you can run `kubeadm upgrade` again as it is idempotent and should eventually ma
 
 You can use `kubeadm upgrade` to change a running cluster with `x.x.x --> x.x.x` with `--force`, which can be used to recover from a bad state.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

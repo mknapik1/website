@@ -5,10 +5,10 @@ approvers:
 - jbeda
 title: kubeadm init
 ---
-{% capture overview %}
-{% endcapture %}
+{{% capture overview %}}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 {% include_relative generated/kubeadm_init.md %}
 
 ### Init workflow {#init-workflow}
@@ -443,12 +443,12 @@ it does not allow the root CA hash to be validated with
 `--discovery-token-ca-cert-hash` (since it's not generated when the nodes are
 provisioned). For details, see the [kubeadm join](kubeadm-join.md).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * [kubeadm join](kubeadm-join.md) to bootstrap a Kubernetes worker node and join it to the cluster
 * [kubeadm upgrade](kubeadm-upgrade.md) to upgrade a Kubernetes cluster to a newer version
 * [kubeadm reset](kubeadm-reset.md) to revert any changes made to this host by `kubeadm init` or `kubeadm join`
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

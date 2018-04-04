@@ -9,7 +9,7 @@ reviewers:
 title: StatefulSets
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 StatefulSet is the workload API object used to manage stateful applications.
 
@@ -17,9 +17,9 @@ StatefulSet is the workload API object used to manage stateful applications.
 {: .note}
 
 {% glossary_definition term_id="statefulset" length="all" %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Using StatefulSets
 
@@ -233,11 +233,11 @@ updates to its `.spec.template` will not be propagated to its Pods.
 In most cases you will not need to use a partition, but they are useful if you want to stage an
 update, roll out a canary, or perform a phased roll out.
 
-{% endcapture %}
-{% capture whatsnext %}
+{{% /capture %}}
+{{% capture whatsnext %}}
 
 * Follow an example of [deploying a stateful application](/docs/tutorials/stateful-application/basic-stateful-set/).
 * Follow an example of [deploying Cassandra with Stateful Sets](/docs/tutorials/stateful-application/cassandra/).
 
-{% endcapture %}
+{{% /capture %}}
 {% include templates/concept.md %}

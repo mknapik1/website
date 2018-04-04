@@ -5,12 +5,12 @@ reviewers:
 title: Cluster Administration Overview
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 The cluster administration overview is for anyone creating or administering a Kubernetes cluster.
 It assumes some familiarity with core Kubernetes [concepts](/docs/concepts/).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Planning a cluster
 
 See the guides in [Picking the Right Solution](/docs/setup/pick-right-solution/) for examples of how to plan, set up, and configure Kubernetes clusters. The solutions listed in this article are called *distros*.
@@ -69,6 +69,6 @@ If you are using a guide involving Salt, see [Configuring Kubernetes with Salt](
 
 * [Logging and Monitoring Cluster Activity](/docs/concepts/cluster-administration/logging/) explains how logging in Kubernetes works and how to implement it.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -2,7 +2,7 @@
 title: 通过环境变量将Pod信息呈现给容器
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 此页面显示了Pod如何使用环境变量把自己的信息呈现给pod中运行的容器。环境变量可以呈现pod的字段和容器字段。
 
@@ -10,17 +10,17 @@ title: 通过环境变量将Pod信息呈现给容器
 环境变量 和[DownwardAPIVolumeFiles](/docs/resources-reference/{{page.version}}/#downwardapivolumefile-v1-core).
 这两种呈现Pod和Container字段的方式都称为*Downward API*。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Downward API
 
@@ -135,9 +135,9 @@ kubectl logs dapi-envars-resourcefieldref
 67108864
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [给容器定义环境变量](/docs/tasks/configure-pod-container/define-environment-variable-container/)
 * [PodSpec](/docs/resources-reference/{{page.version}}/#podspec-v1-core)
@@ -147,7 +147,7 @@ kubectl logs dapi-envars-resourcefieldref
 * [ObjectFieldSelector](/docs/resources-reference/{{page.version}}/#objectfieldselector-v1-core)
 * [ResourceFieldSelector](/docs/resources-reference/{{page.version}}/#resourcefieldselector-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

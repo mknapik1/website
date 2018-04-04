@@ -6,12 +6,12 @@ redirect_from:
 - "/docs/concepts/abstractions/overview.html"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页说明了 Kubernetes 对象在 Kubernetes API 中是如何表示的，以及如何在 `.yaml` 格式的文件中表示。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 
 
@@ -88,11 +88,11 @@ deployment "nginx-deployment" created
 
 也需要提供对象的 `spec` 字段。对象 `spec` 的精确格式对每个 Kubernetes 对象来说是不同的，包含了特定于该对象的嵌套字段。[Kubernetes API 参考](/docs/api/)能够帮助我们找到任何我们想创建的对象的 spec 格式。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 了解最重要的基本 Kubernetes 对象，例如 [Pod](/docs/concepts/abstractions/pod/)。
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

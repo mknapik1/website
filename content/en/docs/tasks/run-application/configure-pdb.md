@@ -2,16 +2,16 @@
 title: Specifying a Disruption Budget for your Application
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to limit the number of concurrent disruptions
 that your application experiences, allowing for higher availability
 while permitting the cluster administrator to manage the clusters
 nodes.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * You are the owner of an application running on a Kubernetes cluster that requires
   high availability.
 * You should know how to deploy [Replicated Stateless Applications](/docs/tasks/run-application/run-stateless-application-deployment/)
@@ -19,9 +19,9 @@ nodes.
 * You should have read about [Pod Disruptions](/docs/concepts/workloads/pods/disruptions/).
 * You should confirm with your cluster owner or service provider that they respect
   Pod Disruption Budgets.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Protecting an Application with a PodDisruptionBudget
 
@@ -30,9 +30,9 @@ nodes.
 1. Create a PDB definition as a YAML file.
 1. Create the PDB object from the YAML file.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Identify an Application to Protect
 
@@ -226,6 +226,6 @@ You can use a selector which selects a subset or superset of the pods belonging 
 controller.  However, when there are multiple PDBs in a namespace, you must be careful not
 to create PDBs whose selectors overlap.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

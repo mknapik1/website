@@ -6,16 +6,16 @@ description: 使用 Kubernetes 设备插件框架来为 GPUs、 NICs、 FPGAs、
 
 {% include feature-state-alpha.md %}
 
-{% capture overview %}
+{{% capture overview %}}
 从1.8版本开始，Kubernetes 提供了一套
 [设备插件框架](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/resource-management/device-plugin.md)，
 使得供应商能够在不改动 Kubernetes 核心代码的情况下，向 kubelet 发布它们的资源。
 供应商可以实现一个手动或以 DaemonSet 形式部署的插件，而不是编写自定义的 Kubernetes 代码。
 插件的目标设备包括 GPUs、 高性能 NICs、 FPGAs、 InfiniBand
 和其他类似的可能需要供应商特定的初始化和设置的计算资源。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 设备插件注册
 
@@ -91,6 +91,6 @@ Kubernetes能够重新启动 Pods 。 否则就需要额外的设备插件故障
 设备插件实现的示例，参考
 [基于 COS 操作系统的 nvidia GPU 设备插件](https://github.com/GoogleCloudPlatform/container-engine-accelerators/tree/master/cmd/nvidia_gpu)。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

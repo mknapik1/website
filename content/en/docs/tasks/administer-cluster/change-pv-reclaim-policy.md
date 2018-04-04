@@ -2,18 +2,18 @@
 title: Change the Reclaim Policy of a PersistentVolume
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to change the reclaim policy of a Kubernetes
 PersistentVolume.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Why change reclaim policy of a PersistentVolume
 
@@ -64,9 +64,9 @@ the corresponding `PersistentVolume` is not be deleted. Instead, it is moved to 
     `default/claim3` has reclaim policy `Retain`. It will not be automatically
     deleted when a user deletes claim `default/claim3`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [PersistentVolumes](/docs/concepts/storage/persistent-volumes/).
 * Learn more about [PersistentVolumeClaims](/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims).
 
@@ -75,6 +75,6 @@ the corresponding `PersistentVolume` is not be deleted. Instead, it is moved to 
 * [PersistentVolume](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolume-v1-core)
 * [PersistentVolumeClaim](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaim-v1-core)
 * See the `persistentVolumeReclaimPolicy` field of [PersistentVolumeSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaim-v1-core).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

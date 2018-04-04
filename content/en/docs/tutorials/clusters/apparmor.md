@@ -4,7 +4,7 @@ reviewers:
 title: AppArmor
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% assign for_k8s_version="v1.4" %}{% include feature-state-beta.md %}
 
@@ -23,9 +23,9 @@ that AppArmor is not a silver bullet and can only do so much to protect against 
 application code. It is important to provide good, restrictive profiles, and harden your
 applications and cluster from other angles as well.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * See an example of how to load a profile on a node
 * Learn how to enforce the profile on a Pod
@@ -33,9 +33,9 @@ applications and cluster from other angles as well.
 * See what happens when a profile is violated
 * See what happens when a profile cannot be loaded
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 Make sure:
 
@@ -110,9 +110,9 @@ gke-test-default-pool-239f5d02-x1kf: kubelet is posting ready status. AppArmor e
 gke-test-default-pool-239f5d02-xwux: kubelet is posting ready status. AppArmor enabled
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Securing a Pod
 
@@ -428,15 +428,15 @@ Specifying the list of profiles Pod containers is allowed to specify:
   - Although an escaped comma is a legal character in a profile name, it cannot be explicitly
     allowed here.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Additional resources:
 
 * [Quick guide to the AppArmor profile language](http://wiki.apparmor.net/index.php/QuickProfileLanguage)
 * [AppArmor core policy reference](http://wiki.apparmor.net/index.php/ProfileLanguage)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

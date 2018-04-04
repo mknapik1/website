@@ -4,7 +4,7 @@ reviewers:
 - ahmetb
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This tutorial shows you how to deploy a WordPress site and a MySQL database using Minikube. Both applications use PersistentVolumes and PersistentVolumeClaims to store data. 
 
 A [PersistentVolume](/docs/concepts/storage/persistent-volumes/) (PV) is a piece of storage in the cluster that has been manually provisioned by an administrator, or dynamically provisioned by Kubernetes using a [StorageClass](/docs/concepts/storage/storage-classes).  A [PersistentVolumeClaim](/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) (PVC) is a request for storage by a user that can be fulfilled by a PV. PersistentVolumes and PersistentVolumeClaims are independent from Pod lifecycles and preserve data through restarting, rescheduling, and even deleting Pods.
@@ -15,18 +15,18 @@ A [PersistentVolume](/docs/concepts/storage/persistent-volumes/) (PV) is a piece
 **Note:** The files provided in this tutorial are using GA Deployment APIs and are specific to kubernetes version 1.9 and later. If you wish to use this tutorial with an earlier version of Kubernetes, please update the API version appropriately, or reference earlier versions of this tutorial.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 * Create PersistentVolumeClaims and PersistentVolumes
 * Create a Secret
 * Deploy MySQL
 * Deploy WordPress
 * Clean up
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %} 
 
@@ -36,9 +36,9 @@ Download the following configuration files:
 
 1. [wordpress-deployment.yaml](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/wordpress-deployment.yaml)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %} 
+{{% capture lessoncontent %}} 
 
 ## Create PersistentVolumeClaims and PersistentVolumes
 
@@ -165,9 +165,9 @@ The following manifest describes a single-instance WordPress Deployment and Serv
    **Warning:** Do not leave your WordPress installation on this page. If another user finds it, they can set up a website on your instance and use it to serve malicious content. <br/><br/>Either install WordPress by creating a username and password or delete your instance.
    {: .warning}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 
 1. Run the following command to delete your Secret:
 
@@ -182,15 +182,15 @@ The following manifest describes a single-instance WordPress Deployment and Serv
 
        kubectl delete pvc -l app=wordpress
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Introspection and Debugging](/docs/tasks/debug-application-cluster/debug-application-introspection/)
 * Learn more about [Jobs](/docs/concepts/workloads/controllers/jobs-run-to-completion/)
 * Learn more about [Port Forwarding](/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 * Learn how to [Get a Shell to a Container](/docs/tasks/debug-application-cluster/get-shell-running-container/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

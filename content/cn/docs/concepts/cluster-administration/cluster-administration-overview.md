@@ -6,12 +6,12 @@ approvers:
 title: 集群管理概述
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 集群管理概述面向任何创建和管理 Kubernetes 集群的读者人群。我们假设你对 [用户指南](/docs/user-guide/)中的概念有一些熟悉。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 规划集群
 
@@ -81,6 +81,6 @@ title: 集群管理概述
 
 * [记录和监控集群活动](/docs/concepts/cluster-administration/logging/) 阐述了Kubernetes 的日志如何工作以及怎样实现。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

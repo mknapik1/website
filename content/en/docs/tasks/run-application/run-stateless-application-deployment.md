@@ -3,30 +3,30 @@ title: Run a Stateless Application Using a Deployment
 min-kubernetes-server-version: v1.9
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to run an application using a Kubernetes Deployment object.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Create an nginx deployment.
 * Use kubectl to list information about the deployment.
 * Update the deployment.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Creating and exploring an nginx deployment
 
@@ -144,13 +144,13 @@ which in turn uses a ReplicaSet. Before the Deployment and ReplicaSet were
 added to Kubernetes, replicated applications were configured by using a
 [ReplicationController](/docs/concepts/workloads/controllers/replicationcontroller/).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

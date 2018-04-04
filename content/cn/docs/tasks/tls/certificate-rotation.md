@@ -5,19 +5,19 @@ approvers:
 title: 证书轮换
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本文展示如何在 kubelet 中启用并配置证书轮换。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * 要求 Kubernetes 1.8.0 或更高的版本
 
 * Kubelet 证书轮换在 1.8.0 版本中处于 beta 阶段, 这意味着该特性可能在没有通知的情况下发生变化。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 概述
 
@@ -59,6 +59,6 @@ Kubelet 会从 Kubernetes API 取回签署的证书，并将其写入磁盘，�
 会从 Kubernetes API 取回签署的证书，并将其写入磁盘。 然后它会更新与 Kubernetes API 
 的连接，使用新的证书重新连接到 Kubernetes API。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

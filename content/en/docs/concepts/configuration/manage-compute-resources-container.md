@@ -2,7 +2,7 @@
 title: Managing Compute Resources for Containers
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 When you specify a [Pod](/docs/concepts/workloads/pods/pod/), you can optionally specify how
 much CPU and memory (RAM) each Container needs. When Containers have resource
@@ -12,10 +12,10 @@ resources on a node can be handled in a specified manner. For more details about
 the difference between requests and limits, see
 [Resource QoS](https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Resource types
 
@@ -525,10 +525,10 @@ For example, on AWS, the capacity of a node is reported in
 cores. We plan to revise the definition of the cpu resource to allow for more
 consistency across providers and platforms.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Get hands-on experience [assigning Memory resources to containers and pods](/docs/tasks/configure-pod-container/assign-memory-resource/).
 
@@ -538,6 +538,6 @@ consistency across providers and platforms.
 
 * [ResourceRequirements](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcerequirements-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

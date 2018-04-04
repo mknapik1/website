@@ -2,23 +2,23 @@
 title: Expose Pod Information to Containers Through Environment Variables
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how a Pod can use environment variables to expose information
 about itself to Containers running in the Pod. Environment variables can expose
 Pod fields and Container fields.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## The Downward API
 
@@ -151,9 +151,9 @@ The output shows the values of selected environment variables:
 67108864
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Defining Environment Variables for a Container](/docs/tasks/inject-data-application/define-environment-variable-container/)
 * [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core)
@@ -163,7 +163,7 @@ The output shows the values of selected environment variables:
 * [ObjectFieldSelector](/docs/reference/generated/kubernetes-api/{{page.version}}/#objectfieldselector-v1-core)
 * [ResourceFieldSelector](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcefieldselector-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

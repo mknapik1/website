@@ -4,19 +4,19 @@ reviewers:
 - sttts
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This document describes how sysctls are used within a Kubernetes cluster.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Listing all Sysctl Parameters
 
@@ -119,9 +119,9 @@ metadata:
 spec:
   ...
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 **Warning**: Due to their nature of being _unsafe_, the use of _unsafe_ sysctls
 is at-your-own-risk and can lead to severe problems like wrong behavior of
@@ -161,6 +161,6 @@ spec:
  ...
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

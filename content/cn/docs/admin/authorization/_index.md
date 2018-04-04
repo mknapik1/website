@@ -7,13 +7,13 @@ approvers:
 title: 概述
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 学习有关 Kubernetes 授权的更多信息，包括有关使用支持的授权模块创建策略的详细信息。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 在 Kubernetes 里，您必须经过身份验证(登录)，才能授权您的请求(授予访问权限).。有关认证的信息，请参阅[访问控制概述](/docs/admin/access-the-api/)。
 
@@ -144,12 +144,12 @@ subjectaccessreview "" created
 
 从版本 1.3 开始，配置由 kube-up.sh 创建的集群，使得 ABAC 授权模块处于启用状态。但是，其输入文件最初设置为允许所有用户执行所有操作，集群管理员需要编辑该文件，或者配置不同的授权器来限制用户可以执行的操作。
 
-{% endcapture %}
-{% capture whatsnext %}
+{{% /capture %}}
+{{% capture whatsnext %}}
 
 * 要学习有关身份验证的更多信息，请参阅**身份验证**[控制访问 Kubernetes API](docs/admin/access-the-api/)。
 * 要了解有关入学管理的更多信息，请参阅[使用 Admission 控制器](docs/admin/admission-controllers/)。
 *
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -2,11 +2,11 @@
 title: Kubernetes on Ubuntu
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 There are multiple ways to run a Kubernetes cluster with Ubuntu. These pages explain how to deploy Kubernetes on Ubuntu on multiple public and private clouds, as well as bare metal.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Official Ubuntu Guides
 
 - [The Canonical Distribution of Kubernetes](https://www.ubuntu.com/cloud/kubernetes)
@@ -71,6 +71,6 @@ We're normally following the following Slack channels:
 - [sig-onprem](https://kubernetes.slack.com/messages/sig-onprem/)
 
 and we monitor the Kubernetes mailing lists.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

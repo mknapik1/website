@@ -4,12 +4,12 @@ reviewers:
 title: Kubernetes Components
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This document outlines the various binary components needed to
 deliver a functioning Kubernetes cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Master Components
 
 Master components provide the cluster's control plane. Master components make global decisions about the
@@ -106,6 +106,6 @@ about containers in a central database, and provides a UI for browsing that data
 A [Cluster-level logging](/docs/concepts/cluster-administration/logging/) mechanism is responsible for
 saving container logs to a central log store with search/browsing interface.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

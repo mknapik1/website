@@ -2,11 +2,11 @@
 title: Proxies in Kubernetes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains proxies used with Kubernetes.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Proxies
 
@@ -59,6 +59,6 @@ will typically ensure that the latter types are setup correctly.
 
 Proxies have replaced redirect capabilities.  Redirects have been deprecated.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

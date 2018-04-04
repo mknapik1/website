@@ -4,19 +4,19 @@ reviewers:
 title: Weave Net for NetworkPolicy
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to use Weave Net for NetworkPolicy.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 You need to have a Kubernetes cluster. Follow the [kubeadm getting started guide](/docs/getting-started-guides/kubeadm/) to bootstrap one.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Install the Weave Net addon
 
@@ -46,12 +46,12 @@ weave-net-pmw8w                         2/2       Running   0          9d       
 
 Each Node has a weave Pod, and all Pods are `Running` and `2/2 READY`. (`2/2` means that each Pod has `weave` and `weave-npc`.)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Once you have installed the Weave Net addon, you can follow the [Declare Network Policy](/docs/tasks/administer-cluster/declare-network-policy/) to try out Kubernetes NetworkPolicy. If you have any question, contact us at [#weave-community on Slack or Weave User Group](https://github.com/weaveworks/weave#getting-help).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

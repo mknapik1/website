@@ -2,7 +2,7 @@
 title: Hello Minikube
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 The goal of this tutorial is for you to turn a simple Hello World Node.js app
 into an application running on Kubernetes. The tutorial shows you how to
@@ -10,9 +10,9 @@ take code that you have developed on your machine, turn it into a Docker
 container image and then run that image on [Minikube](/docs/getting-started-guides/minikube).
 Minikube provides a simple way of running Kubernetes on your local machine for free.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Run a hello world Node.js application.
 * Deploy the application to Minikube.
@@ -20,9 +20,9 @@ Minikube provides a simple way of running Kubernetes on your local machine for f
 * Update the application image.
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * For OS X, you need [Homebrew](https://brew.sh) to install the `xhyve`
 driver.
@@ -33,9 +33,9 @@ driver.
 [Docker for Mac](https://docs.docker.com/engine/installation/mac/).
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Create a Minikube cluster
 
@@ -412,15 +412,15 @@ Optionally, delete the Minikube VM:
 minikube delete
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
 * Learn more about [Deploying applications](/docs/user-guide/deploying-applications/).
 * Learn more about [Service objects](/docs/concepts/services-networking/service/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

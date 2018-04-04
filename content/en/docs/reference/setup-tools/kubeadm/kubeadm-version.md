@@ -5,11 +5,11 @@ approvers:
 - jbeda
 title: kubeadm version 
 ---
-{% capture overview %}
-{% endcapture %}
+{{% capture overview %}}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 {% include_relative generated/kubeadm_version.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

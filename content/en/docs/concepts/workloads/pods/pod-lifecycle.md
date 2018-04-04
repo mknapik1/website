@@ -2,17 +2,17 @@
 title: Pod Lifecycle
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% comment %}Updated: 4/14/2015{% endcomment %}
 {% comment %}Edited and moved to Concepts section: 2/2/17{% endcomment %}
 
 This page describes the lifecycle of a Pod.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Pod phase
 
@@ -263,10 +263,10 @@ spec:
      * Node controller sets Pod `phase` to Failed.
      * If running under a controller, Pod is recreated elsewhere.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Get hands-on experience
   [attaching handlers to Container lifecycle events](/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/).
@@ -276,7 +276,7 @@ spec:
 
 * Learn more about [Container lifecycle hooks](/docs/concepts/containers/container-lifecycle-hooks/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}
 

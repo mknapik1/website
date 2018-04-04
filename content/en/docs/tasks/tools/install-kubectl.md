@@ -5,20 +5,20 @@ reviewers:
 title: Install and Set Up kubectl
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Use the Kubernetes command-line tool, [kubectl](/docs/user-guide/kubectl/), to deploy and manage applications on Kubernetes. Using kubectl, you can inspect cluster resources; create, delete, and update components; and look at your new cluster and bring up example apps.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 Use a version of kubectl that is the same version as your server or later. Using an older kubectl with a newer server might produce validation errors.
-{% endcapture %}
+{{% /capture %}}
 
 ## Install kubectl
 
 Here are a few methods to install kubectl.
 Pick the one that suits your environment best.
 
-{% capture steps %}
+{{% capture steps %}}
 ### Install kubectl binary via curl
 
 {% capture macos %}
@@ -43,9 +43,9 @@ Pick the one that suits your environment best.
     ```
     sudo mv ./kubectl /usr/local/bin/kubectl
     ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture linux %}
+{{% capture linux %}}
 1. Download the latest release with the command:
 
        curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
@@ -67,9 +67,9 @@ Pick the one that suits your environment best.
     ```
     sudo mv ./kubectl /usr/local/bin/kubectl
     ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture win %}
+{{% capture win %}}
 1. Download the latest release {{page.fullversion}} from [this link](https://storage.googleapis.com/kubernetes-release/release/{{page.fullversion}}/bin/windows/amd64/kubectl.exe).
 
     Or if you have `curl` installed, use this command:
@@ -80,7 +80,7 @@ Pick the one that suits your environment best.
 
 2. Add the binary in to your PATH.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_names = "macOS,Linux,Windows" | split: ',' | compact %}
 {% assign tab_contents = site.emptyArray | push: macos | push: linux | push: win %}
@@ -230,7 +230,7 @@ source <(kubectl completion zsh)
 ```
 
 {% endcapture %}
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 [Learn how to launch and expose your application.](/docs/tasks/access-application-cluster/service-access-application-cluster/)
-{% endcapture %}
+{{% /capture %}}
 {% include templates/task.md %}

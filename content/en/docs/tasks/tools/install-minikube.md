@@ -2,19 +2,19 @@
 title: Install Minikube
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to install Minikube.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 VT-x or AMD-v virtualization must be enabled in your computer's BIOS.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Install a Hypervisor
 
@@ -45,12 +45,12 @@ If you do not already have a hypervisor installed, install one now.
 * Install Minikube according to the instructions for the
 [latest release](https://github.com/kubernetes/minikube/releases).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Running Kubernetes Locally via Minikube](/docs/getting-started-guides/minikube/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

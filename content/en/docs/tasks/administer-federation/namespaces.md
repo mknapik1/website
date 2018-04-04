@@ -2,7 +2,7 @@
 title: Federated Namespaces
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This guide explains how to use Namespaces in Federation control plane.
 
 Namespaces in federation control plane (referred to as "federated Namespaces" in
@@ -10,18 +10,18 @@ this guide) are very similar to the traditional [Kubernetes
 Namespaces](/docs/concepts/overview/working-with-objects/namespaces/) providing the same functionality.
 Creating them in the federation control plane ensures that they are synchronized
 across all the clusters in federation.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include federated-task-tutorial-prereqs.md %}
 * You are also expected to have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [Namespaces](/docs/concepts/overview/working-with-objects/namespaces/) in particular.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Creating a Federated Namespace
 
@@ -82,6 +82,6 @@ corresponding Namespace and resources in those Namespaces from underlying cluste
 Users are expected to delete them manually.
 We intend to fix this in the future.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

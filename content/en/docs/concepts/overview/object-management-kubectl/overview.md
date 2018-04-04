@@ -2,13 +2,13 @@
 title: Kubernetes Object Management
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 The `kubectl` command-line tool supports several different ways to create and manage
 Kubernetes objects. This document provides an overview of the different
 approaches.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Management techniques
 
@@ -163,9 +163,9 @@ Disadvantages compared to imperative object configuration:
 - Declarative object configuration is harder to debug and understand results when they are unexpected.
 - Partial updates using diffs create complex merge and patch operations.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 - [Managing Kubernetes Objects Using Imperative Commands](/docs/concepts/overview/object-management-kubectl/imperative-command/)
 - [Managing Kubernetes Objects Using Object Configuration (Imperative)](/docs/concepts/overview/object-management-kubectl/imperative-config/)
 - [Managing Kubernetes Objects Using Object Configuration (Declarative)](/docs/concepts/overview/object-management-kubectl/declarative-config/)
@@ -174,6 +174,6 @@ Disadvantages compared to imperative object configuration:
 
 {% comment %}
 {% endcomment %}
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

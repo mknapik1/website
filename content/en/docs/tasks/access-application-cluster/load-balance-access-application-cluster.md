@@ -2,31 +2,31 @@
 title: Provide Load-Balanced Access to an Application in a Cluster
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to create a Kubernetes Service object that provides
 load-balanced access to an application running in a cluster.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Run two instances of a Hello World application
 * Create a Service object
 * Use the Service object to access the running application
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Creating a Service for an application running in two pods
 
@@ -105,14 +105,14 @@ As an alternative to using `kubectl expose`, you can use a
 to create a Service.
 
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Learn more about
 [connecting applications with services](/docs/concepts/services-networking/connect-applications-service/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}
 

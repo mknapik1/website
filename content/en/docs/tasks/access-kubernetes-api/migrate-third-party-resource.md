@@ -5,7 +5,7 @@ reviewers:
 - deads2k
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to migrate data stored in a ThirdPartyResource (TPR) to a
 [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions) (CRD).
 
@@ -20,9 +20,9 @@ The simplest way to migrate is to stop all clients that use a given TPR, then de
 start from scratch with a CRD.
 This page describes an optional process that eases the transition by migrating existing TPR data for
 you **on a best-effort basis**.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 {% include task-tutorial-prereqs.md %}
 
 * Make sure your Kubernetes cluster has a **master version of exactly 1.7.x** (any patch release),
@@ -35,9 +35,9 @@ you **on a best-effort basis**.
 * Be familiar with [CustomResourceDefinitions](/docs/concepts/api-extension/custom-resources/#customresourcedefinitions),
   which are a simple way to implement custom resources.
 * **Before performing a migration on real data, conduct a dry run by going through these steps in a test cluster.**
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Migrate TPR data
 
 1.  **Rewrite the TPR definition**
@@ -158,12 +158,12 @@ you **on a best-effort basis**.
     custom controllers and other watchers.
     These clients now access CRD data when they make requests on the same API endpoints
     that the TPR previously served.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [custom resources](/docs/concepts/api-extension/custom-resources/).
 * Learn more about [using CustomResourceDefinitions](/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/).
 * See [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

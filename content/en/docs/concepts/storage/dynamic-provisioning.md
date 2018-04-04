@@ -4,7 +4,7 @@ reviewers:
 title: Dynamic Volume Provisioning
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 Dynamic volume provisioning allows storage volumes to be created on-demand.
 Without dynamic provisioning, cluster administrators have to manually make
@@ -14,11 +14,11 @@ to represent them in Kubernetes. The dynamic provisioning feature eliminates
 the need for cluster administrators to pre-provision storage. Instead, it
 automatically provisions storage when it is requested by users.
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Background
 
@@ -119,6 +119,6 @@ Note that there can be at most one *default* storage class on a cluster, or
 a `PersistentVolumeClaim` without `storageClassName` explicitly specified cannot
 be created.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -4,14 +4,14 @@ approvers:
 title: 管理巨页（HugePages）
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% include feature-state-alpha.md %}
 
 作为 **alpha** 特性，Kubernetes 支持在 Pod 应用中使用预先分配的巨页（或称“大页面”，下文统称为“巨页”）。  本文描述了用户如何使用巨页，以及当前的限制。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 1. 为了使节点能够上报巨页容量，Kubernetes 节点必须预先分配巨页。
    每个节点只能预先分配一种特定规格的巨页。
@@ -19,9 +19,9 @@ title: 管理巨页（HugePages）
 
 节点会自动发现全部巨页资源，并作为可供调度的资源进行上报。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## API
 
@@ -64,6 +64,6 @@ spec:
 - 支持 ResourceQuota 。
 - 支持 LimitRange 。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

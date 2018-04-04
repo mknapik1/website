@@ -2,7 +2,7 @@
 title: Configure Liveness and Readiness Probes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure liveness and readiness probes for Containers.
 
@@ -17,15 +17,15 @@ accepting traffic. A Pod is considered ready when all of its Containers are read
 One use of this signal is to control which Pods are used as backends for Services.
 When a Pod is not ready, it is removed from Service load balancers.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Define a liveness command
 
@@ -285,9 +285,9 @@ and the Pod's `hostNetwork` field is true. Then `host`, under `httpGet`, should 
 to 127.0.0.1. If your pod relies on virtual hosts, which is probably the more common
 case, you should not use `host`, but rather set the `Host` header in `httpHeaders`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about
 [Container Probes](/docs/concepts/workloads/pods/pod-lifecycle/#container-probes).
@@ -298,6 +298,6 @@ case, you should not use `host`, but rather set the `Host` header in `httpHeader
 * [Container](/docs/reference/generated/kubernetes-api/{{page.version}}/#container-v1-core)
 * [Probe](/docs/reference/generated/kubernetes-api/{{page.version}}/#probe-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -2,16 +2,16 @@
 title: Using Source IP
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 Applications running in a Kubernetes cluster find and communicate with each
 other, and the outside world, through the Service abstraction. This document
 explains what happens to the source IP of packets sent to different types
 of Services, and how you can toggle this behavior according to your needs.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
@@ -37,18 +37,18 @@ $ kubectl run source-ip-app --image=k8s.gcr.io/echoserver:1.4
 deployment "source-ip-app" created
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Expose a simple application through various types of Services
 * Understand how each Service type handles source IP NAT
 * Understand the tradeoffs involved in preserving source IP
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Source IP for Services with Type=ClusterIP
 
@@ -314,9 +314,9 @@ Loadbalancers in the second category can leverage the feature described above
 by simply creating an HTTP health check pointing at the port stored in
 the `service.spec.healthCheckNodePort` field on the Service.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 
 Delete the Services:
 
@@ -330,11 +330,11 @@ Delete the Deployment, ReplicaSet and Pod:
 $ kubectl delete deployment source-ip-app
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [connecting applications via services](/docs/concepts/services-networking/connect-applications-service/)
 * Learn more about [loadbalancing](/docs/user-guide/load-balancer)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

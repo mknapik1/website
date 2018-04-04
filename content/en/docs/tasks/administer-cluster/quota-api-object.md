@@ -3,7 +3,7 @@ title: Configure Quotas for API Objects
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure quotas for API objects, including
 PersistentVolumeClaims and Services. A quota restricts the number of
@@ -12,17 +12,17 @@ You specify quotas in a
 [ResourceQuota](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcequota-v1-core)
 object.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create a namespace
 
@@ -139,9 +139,9 @@ Delete your namespace:
 kubectl delete namespace quota-object-example
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 ### For cluster administrators
 
@@ -166,7 +166,7 @@ kubectl delete namespace quota-object-example
 * [Configure Quality of Service for Pods](/docs/tasks/configure-pod-container/quality-service-pod/)
 
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

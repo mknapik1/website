@@ -5,7 +5,7 @@ approvers:
 title: Deployments
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 A _Deployment_ controller provides declarative updates for [Pods](/docs/concepts/workloads/pods/pod/) and
 [ReplicaSets](/docs/concepts/workloads/controllers/replicaset/).
@@ -15,10 +15,10 @@ You describe a _desired state_ in a Deployment object, and the Deployment contro
 **Note:** You should not manage ReplicaSets owned by a Deployment. All the use cases should be covered by manipulating the Deployment object. Consider opening an issue in the main Kubernetes repository if your use case is not covered below.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Use Case
 
@@ -930,6 +930,6 @@ it is created.
 in a similar fashion. But Deployments are recommended, since they are declarative, server side, and have
 additional features, such as rolling back to any previous revision even after the rolling update is done.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

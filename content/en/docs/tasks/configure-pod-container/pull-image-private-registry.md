@@ -2,23 +2,23 @@
 title: Pull an Image from a Private Registry
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to create a Pod that uses a Secret to pull an image from a
 private Docker registry or repository.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
 * To do this exercise, you need a
 [Docker ID](https://docs.docker.com/docker-id/) and password.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Log in to Docker
 
@@ -119,9 +119,9 @@ Create a Pod that uses your Secret, and verify that the Pod is running:
     kubectl create -f my-private-reg-pod.yaml
     kubectl get pod private-reg
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Secrets](/docs/concepts/configuration/secret/).
 * Learn more about [using a private registry](/docs/concepts/containers/images/#using-a-private-registry).
@@ -129,6 +129,6 @@ Create a Pod that uses your Secret, and verify that the Pod is running:
 * See [Secret](/docs/reference/generated/kubernetes-api/{{page.version}}/#secret-v1-core).
 * See the `imagePullSecrets` field of [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

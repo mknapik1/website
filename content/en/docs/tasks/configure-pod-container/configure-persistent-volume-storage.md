@@ -2,7 +2,7 @@
 title: Configure a Pod to Use a PersistentVolume for Storage
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure a Pod to use a PersistentVolumeClaim for storage.
 Here is a summary of the process:
@@ -15,9 +15,9 @@ bound to a suitable PersistentVolume.
 
 1. The user creates a Pod that uses the PersistentVolumeClaim as storage.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * You need to have a Kubernetes cluster that has only one Node, and the kubectl
 command-line tool must be configured to communicate with your cluster. If you
@@ -27,9 +27,9 @@ do not already have a single-node cluster, you can create one by using
 * Familiarize yourself with the material in
 [Persistent Volumes](/docs/concepts/storage/persistent-volumes/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create an index.html file on your Node
 
@@ -158,10 +158,10 @@ hostPath volume:
 
     Hello from Kubernetes storage
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Access control
 
@@ -190,10 +190,10 @@ each Container.
 PersistentVolume are not present on the Pod resource itself.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [PersistentVolumes](/docs/concepts/storage/persistent-volumes/).
 * Read the [Persistent Storage design document](https://git.k8s.io/community/contributors/design-proposals/storage/persistent-storage.md).
@@ -205,6 +205,6 @@ PersistentVolume are not present on the Pod resource itself.
 * [PersistentVolumeClaim](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaim-v1-core)
 * [PersistentVolumeClaimSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaimspec-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

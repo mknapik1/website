@@ -7,12 +7,12 @@ reviewers:
 title: Overview
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 Learn more about Kubernetes authorization, including details about creating
 policies using the supported authorization modules.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 In Kubernetes, you must be authenticated (logged in) before your request can be
 authorized (granted permission to access). For information about authentication,
 see [Accessing Control Overview](/docs/admin/accessing-the-api/).
@@ -157,11 +157,11 @@ The following flags can be used:
 You can choose more than one authorization module. Modules are checked in order
 so an earlier module has higher priority to allow or deny a request.
 
-{% endcapture %}
-{% capture whatsnext %}
+{{% /capture %}}
+{{% capture whatsnext %}}
 * To learn more about Authentication, see **Authentication** in [Controlling Access to the Kubernetes API](/docs/admin/accessing-the-api/).
 * To learn more about Admission Control, see [Using Admission Controllers](/docs/admin/admission-controllers/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}
 

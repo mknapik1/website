@@ -4,22 +4,22 @@ approvers:
 title: 对 DaemonSet 执行回滚
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本文展示了如何对 DaemonSet 执行回滚。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * DaemonSet 滚动升级历史和 DaemonSet 回滚特性仅在 Kubernetes 1.7 及以后版本的 `kubectl` 中支持。
 * 确保您了解如何 [对 DaemonSet 执行滚动升级](/docs/tasks/manage-daemon/update-daemon-set/)。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 对 DaemonSet 执行回滚
 
@@ -97,10 +97,10 @@ kubectl rollout status ds/<daemonset-name>
 daemonset "<daemonset-name>" successfully rolled out
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## 理解 DaemonSet 版本
 
@@ -133,6 +133,6 @@ NAME                               CONTROLLER                     REVISION   AGE
 
 * 查看 [DaemonSet 滚动升级故障排除](/docs/tasks/manage-daemon/update-daemon-set/#troubleshooting)。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

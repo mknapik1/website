@@ -33,6 +33,7 @@ _redirects
 
 TODO
 
+* See the includes.md
 * Check _headers
 * {{ page.cid }}" lang="en" class="{{ page.class }}
 * styles.css, just copied for now

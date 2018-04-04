@@ -2,11 +2,11 @@
 title: 联邦
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本页面阐明了为何以及如何使用联邦创建Kubernetes集群。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## 为何使用联邦
 
 联邦可以使多个集群的管理简单化。它提供了两个主要构件模块：
@@ -104,13 +104,13 @@ Kubernetes集群数量选择也许是一个相对静止的选择，因为对其�
 
 最后，如果你的集群需求超过一个Kubernetes集群推荐的最大节点数，那么你可能需要更多的集群。Kubernetes1.3版本支持多达1000个节点的集群规模。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * 进一步学习[联邦提案](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/multicluster/federation.md)。
 * 集群联邦参考该[配置指导](/docs/tutorials/federation/set-up-cluster-federation-kubefed/)。
 * 查看[Kubecon2016浅谈联邦](https://www.youtube.com/watch?v=pq9lbkmxpS8)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}
 

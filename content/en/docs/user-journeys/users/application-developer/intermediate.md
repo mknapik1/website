@@ -9,7 +9,7 @@ track: "USERS › APPLICATION DEVELOPER › INTERMEDIATE"
 ---
 {% assign reference_docs_url = '/docs/reference/generated/kubernetes-api/' | append: site.latest %}
 
-{% capture overview %}
+{{% capture overview %}}
 
 {: .note }
   This page assumes that you've experimented with Kubernetes before. At this point, you should have basic experience interacting with a Kubernetes cluster (locally with Minikube, or elsewhere), and using API objects like Deployments to run your applications.<br><br>If not, you should review the [Beginner App Developer](/docs/user-journeys/users/application-developer/foundational/){:target="_blank"} topics first.
@@ -19,10 +19,10 @@ After checking out the current page and its linked sections, you should have a b
 * What it takes to make a Kubernetes application production-ready
 * Community tools that can improve your development workflow
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## Learn additional workload patterns
 
@@ -152,6 +152,6 @@ In addition, [the Kubernetes blog](http://blog.kubernetes.io/){:target="_blank"}
 If you feel fairly comfortable with the topics on this page and want to learn more, check out the following user journeys:
 * [Advanced App Developer](/docs/user-journeys/users/application-developer/advanced/){:target="_blank"} - Dive deeper, with the next level of this journey.
 * [Foundational Cluster Operator](/docs/user-journeys/users/cluster-operator/foundational/){:target="_blank"} - Build breadth, by exploring other journeys.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/user-journey-content.md %}

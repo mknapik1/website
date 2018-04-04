@@ -7,12 +7,12 @@ reviewers:
 title: Safely Drain a Node while Respecting Application SLOs
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to safely drain a machine, respecting the application-level
 disruption SLOs you have specified using PodDisruptionBudget.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 This task assumes that you have met the following prerequisites:
 
@@ -24,9 +24,9 @@ This task assumes that you have met the following prerequisites:
      and [Configured PodDisruptionBudgets](/docs/tasks/run-application/configure-pdb/) for
      applications that need them.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Use `kubectl drain` to remove a node from service
 
@@ -150,12 +150,12 @@ In this case, there are two potential solutions:
 Kubernetes does not specify what the behavior should be in this case; it is up to the
 application owners and cluster owners to establish an agreement on behavior in these cases.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Follow steps to protect your application by [configuring a Pod Disruption Budget](/docs/tasks/run-application/configure-pdb/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

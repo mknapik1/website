@@ -2,32 +2,32 @@
 title: 运行一个单实例有状态应用
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本文介绍在Kubernetes中使用PersistentVolume和Deployment如何运行一个单实例有状态应用. 该应用是MySQL.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * 在环境中通过磁盘创建一个PersistentVolume.
 * 创建一个MySQL Deployment.
 * 在集群内以一个已知的DNS名将MySQL暴露给其他pods.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
 * 为了数据持久性我们将在环境上通过磁盘创建一个持久卷. 环境支持的类型见这里[here](/docs/user-guide/persistent-volumes/#types-of-persistent-volumes). 本篇文档将介绍 `GCEPersistentDisk` . `GCEPersistentDisk`卷只能工作在Google Compute Engine平台上.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## 在环境中设置一个磁盘
 
@@ -208,10 +208,10 @@ kubectl delete pv mysql-pv
 gcloud compute disks delete mysql-disk
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 了解更多Deployment对象请参考 [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
 
@@ -221,6 +221,6 @@ gcloud compute disks delete mysql-disk
 
 * 卷和持久卷请参考[Volumes](/docs/concepts/storage/volumes/) and [Persistent Volumes](/docs/concepts/storage/persistent-volumes/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

@@ -10,7 +10,7 @@ redirect_from:
 - "/docs/tasks/configure-pod-container/limit-range.html"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 
@@ -21,15 +21,15 @@ redirect_from:
 这个例子演示了如何限制 Kubernetes [Namespace](/docs/tasks/administer-cluster/namespaces-walkthrough/)，以此来控制每个 Pod 的最小/最大资源限额。
 另外，这个例子演示了当终端用户没有为 Pod 设置资源限额时，如何使用默认的资源限额。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 
@@ -217,9 +217,9 @@ $ kubectl get namespaces
 NAME            STATUS        AGE
 default         Active        12m
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 
 ## 设置资限额制的动机
@@ -245,14 +245,14 @@ default         Active        12m
 想要限制单个容器或 Pod 消耗资源总量的集群操作员，能够为每个 Kubernetes Namespace 定义可允许的范围。
 在没有任何明确指派的情况下，Kubernetes 系统能够使用默认的资源 *limits* 和 *requests*，如果需要的话，限制一个节点上的 Pod 的资源总量。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 * 查看 [LimitRange 设计文档](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/resource-management/admission_control_limit_range.md) 获取更多信息。
 * 查看 [资源](/docs/concepts/configuration/manage-compute-resources-container/) 获取关于 Kubernetes 资源模型的详细描述。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

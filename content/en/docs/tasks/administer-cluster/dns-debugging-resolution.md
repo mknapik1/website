@@ -5,17 +5,17 @@ approvers:
 title:  Debugging DNS Resolution
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page provides hints on diagnosing DNS problems.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * {% include task-tutorial-prereqs.md %}
 * Kubernetes version 1.6 and above.
 * The cluster must be configured to use the `kube-dns` addon.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ### Create a simple Pod to use as a test environment
 
@@ -192,6 +192,6 @@ for more details on Cluster Federation and multi-site support.
 ## What's next
 - [Autoscaling the DNS Service in a Cluster](/docs/tasks/administer-cluster/dns-horizontal-autoscaling/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

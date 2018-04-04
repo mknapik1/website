@@ -2,12 +2,12 @@
 title: Annotations
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 You can use Kubernetes annotations to attach arbitrary non-identifying metadata
 to objects. Clients such as tools and libraries can retrieve this metadata.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Attaching metadata to objects
 
 You can use either labels or annotations to attach metadata to Kubernetes
@@ -52,10 +52,10 @@ external database or directory, but that would make it much harder to produce
 shared client libraries and tools for deployment, management, introspection,
 and the like.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 Learn more about [Labels and Selectors](/docs/concepts/overview/working-with-objects/labels/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

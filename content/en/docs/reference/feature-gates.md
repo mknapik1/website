@@ -2,12 +2,12 @@
 title: Feature Gates
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page contains an overview of the various feature gates an administrator
 can specify on different Kubernetes components.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Overview
 
@@ -219,6 +219,6 @@ Each feature gate is designed for enabling/disabling a specific feature:
   enables the usage of [`local`](/docs/concepts/storage/volumes/#local) volume
   type when used together with the `PersistentLocalVolumes` feature gate.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

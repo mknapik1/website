@@ -2,32 +2,32 @@
 title: Use a Service to Access an Application in a Cluster
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to create a Kubernetes Service object that external
 clients can use to access an application running in a cluster. The Service
 provides load balancing for an application that has two running instances.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Run two instances of a Hello World application.
 * Create a Service object that exposes a node port.
 * Use the Service object to access the running application.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Creating a service for an application running in two pods
 
@@ -122,10 +122,10 @@ As an alternative to using `kubectl expose`, you can use a
 [service configuration file](/docs/concepts/services-networking/service/)
 to create a Service.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 
 To delete the Service, enter this command:
 
@@ -136,14 +136,14 @@ the Hello World application, enter this command:
 
     kubectl delete deployment hello-world
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Learn more about
 [connecting applications with services](/docs/concepts/services-networking/connect-applications-service/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}
 

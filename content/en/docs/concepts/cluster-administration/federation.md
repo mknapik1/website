@@ -2,12 +2,12 @@
 title: Federation
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains why and how to manage multiple Kubernetes clusters using
 federation.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## Why federation
 
 Federation makes it easy to manage multiple clusters. It does so by providing 2
@@ -165,14 +165,14 @@ Finally, if any of your clusters would need more than the maximum recommended nu
 you may need even more clusters.  Kubernetes v1.3 supports clusters up to 1000 nodes in size. Kubernetes v1.8 supports
 clusters up to 5000 nodes. See [Building Large Clusters](/docs/admin/cluster-large/) for more guidance.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about the [Federation
   proposal](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/multicluster/federation.md).
 * See this [setup guide](/docs/tutorials/federation/set-up-cluster-federation-kubefed/) for cluster federation.
 * See this [Kubecon2016 talk on federation](https://www.youtube.com/watch?v=pq9lbkmxpS8)
 * See this [Kubecon2017 Europe update on federation](https://www.youtube.com/watch?v=kwOvOLnFYck)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

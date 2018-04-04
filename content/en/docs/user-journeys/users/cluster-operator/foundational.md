@@ -8,12 +8,12 @@ title: Foundational
 track: "USERS › CLUSTER OPERATOR › FOUNDATIONAL"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 If you want to learn how to get started managing and operating a Kubernetes cluster, this page and the linked topics introduce you to the foundational concepts and tasks.
 This page introduces you to a Kubernetes cluster and key concepts to understand and manage it. The content focuses primarily on the cluster itself rather than the software running within the cluster.
 
-{% endcapture %}
+{{% /capture %}}
 
 <!-- Foundational
 Nodes, Pods, Networks, Deployments, Services, ConfigMaps, Secrets
@@ -21,7 +21,7 @@ Labels, Selectors, Annotations
 Metrics
 -->
 
-{% capture body %}
+{{% capture body %}}
 
 ## Get an overview of Kubernetes
 
@@ -93,6 +93,6 @@ Some additional resources for getting information about your cluster and how it 
   * [Deploying PHP Guestbook with Redis](/docs/tutorials/stateless-application/guestbook/)
   * [Expose an External IP address to access an application](/docs/tutorials/stateless-application/expose-external-ip-address/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/user-journey-content.md %}

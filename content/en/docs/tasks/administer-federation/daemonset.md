@@ -2,7 +2,7 @@
 title: Federated DaemonSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This guide explains how to use DaemonSets in a federation control plane.
 
 DaemonSets in the federation control plane ("Federated Daemonsets" in
@@ -10,18 +10,18 @@ this guide) are very similar to the traditional Kubernetes
 [DaemonSets](/docs/concepts/workloads/controllers/daemonset/) and provide the same functionality.
 Creating them in the federation control plane ensures that they are synchronized
 across all the clusters in federation.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include federated-task-tutorial-prereqs.md %}
 * You are also expected to have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [DaemonSets](/docs/concepts/workloads/controllers/daemonset/) in particular.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Creating a Federated Daemonset
 
@@ -72,6 +72,6 @@ For example, you can do that using kubectl by running:
 kubectl --context=federation-cluster delete daemonset mydaemonset
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

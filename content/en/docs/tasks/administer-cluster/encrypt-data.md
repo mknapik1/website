@@ -4,11 +4,11 @@ reviewers:
 title: Encrypting Secret Data at Rest
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to enable and configure encryption of secret data at rest.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
@@ -18,9 +18,9 @@ This page shows how to enable and configure encryption of secret data at rest.
 
 * Encryption at rest is alpha in 1.7.0 which means it may change without notice. Users may be required to decrypt their data prior to upgrading to 1.8.0.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Configuration and determining whether encryption at rest is already enabled
 
@@ -195,6 +195,6 @@ resources:
 and restart all `kube-apiserver` processes. Then run the command `kubectl get secrets --all-namespaces -o json | kubectl replace -f -`
 to force all secrets to be decrypted.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

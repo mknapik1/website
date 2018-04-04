@@ -4,7 +4,7 @@ reviewers:
 title: Upgrading kubeadm clusters from 1.6 to 1.7
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This guide is for upgrading kubeadm clusters from version 1.6.x to 1.7.x.
 Upgrades are not supported for clusters lower than 1.6, which is when kubeadm
@@ -17,13 +17,13 @@ resources after cluster setup will need to be reapplied after the upgrade. The
 upgrade will not disturb other static pod manifest files or objects outside the
 `kube-system` namespace.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 You need to have a Kubernetes cluster running version 1.6.x.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## On the master
 
@@ -90,6 +90,6 @@ You need to have a Kubernetes cluster running version 1.6.x.
 
        systemctl restart kubelet
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

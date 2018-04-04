@@ -2,7 +2,7 @@
 title: Federated Ingress
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains how to use Kubernetes Federated Ingress to deploy
 a common HTTP(S) virtual IP load balancer across a federated service running in
 multiple Kubernetes clusters.  As of v1.4, clusters hosted in Google
@@ -54,9 +54,9 @@ backing the Ingress in their cluster if it exists and is healthy, or the closest
 different cluster if it does not.  Note that this involves a network
 trip to the HTTP(s) load balancer, which resides outside your local
 Kubernetes cluster but inside the same GCP region.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This document assumes that you have a running Kubernetes Cluster
 Federation installation. If not, then see the
 [federation admin guide](/docs/admin/federation/) to learn how to
@@ -68,9 +68,9 @@ by Kelsey Hightower, are also available to help you.
 You must also have a basic
 [working knowledge of Kubernetes](/docs/setup/) in
 general, and [Ingress](/docs/concepts/services-networking/ingress/) in particular.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Creating a federated ingress
 
 You can create a federated ingress in any of the usual ways, for example, using kubectl:
@@ -295,11 +295,11 @@ Check that:
     delete any ingresses created before the cluster joined the
     federation (and had its GLBC reconfigured), and recreate them if
     necessary.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 *  If you need assistance, use one of the [support channels](/docs/tasks/debug-application-cluster/troubleshooting/) to seek assistance.
  *  For details about use cases that motivated this work, see
  [Federation proposal](https://git.k8s.io/community/contributors/design-proposals/multicluster/federation.md).
-{% endcapture %}
+{{% /capture %}}
 {% include templates/task.md %}

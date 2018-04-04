@@ -7,13 +7,13 @@ approvers:
 title: ABAC 模式
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 基于属性的访问控制（Attribute-based access control - ABAC）定义了访问控制范例，其中通过使用将属性组合在一起的策略来向用户授予访问权限。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## 策略文件格式
 
@@ -137,5 +137,5 @@ system:serviceaccount:<namespace>:default
 
 需要重新启动 apiserver 以获取新的策略行.
 
-{% endcapture %}
+{{% /capture %}}
 {% include templates/concept.md %}

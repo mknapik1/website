@@ -9,7 +9,7 @@ reviewers:
 title: Run a Replicated Stateful Application
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to run a replicated stateful application using a
 [StatefulSet](/docs/concepts/workloads/controllers/statefulset/) controller.
@@ -20,9 +20,9 @@ Note that **this is not a production configuration**.
 In particular, MySQL settings remain on insecure defaults to keep the focus
 on general patterns for running stateful applications in Kubernetes.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 * {% include default-storage-class-prereqs.md %}
@@ -35,18 +35,18 @@ on general patterns for running stateful applications in Kubernetes.
 * Some familiarity with MySQL helps, but this tutorial aims to present
   general patterns that should be useful for other systems.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Deploy a replicated MySQL topology with a StatefulSet controller.
 * Send MySQL client traffic.
 * Observe resistance to downtime.
 * Scale the StatefulSet up and down.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Deploy MySQL
 
@@ -476,9 +476,9 @@ kubectl delete pvc data-mysql-3
 kubectl delete pvc data-mysql-4
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 
 1. Cancel the `SELECT @@server_id` loop by pressing **Ctrl+C** in its terminal,
    or running the following from another terminal:
@@ -519,14 +519,14 @@ kubectl delete pvc data-mysql-4
    Some dynamic provisioners (such as those for EBS and PD) also release the
    underlying resources upon deleting the PersistentVolumes.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Look in the [Helm Charts repository](https://github.com/kubernetes/charts)
   for other stateful application examples.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}
 

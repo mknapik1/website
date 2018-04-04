@@ -2,21 +2,21 @@
 title: 为容器设置启动时要执行的命令及其入参
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页将展示如何为Kubernetes Pod下的容器设置启动时要执行的命令及其入参。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 创建Pod时为其下的容器设置启动时要执行的命令及其入参
 
@@ -113,16 +113,16 @@ title: 为容器设置启动时要执行的命令及其入参
 |     `[/ep-1]`      |   `[foo bar]`    |   `[/ep-2]`         |     `[zoo boo]`    | `[ep-2 zoo boo]` |
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 获取更多资讯可参考 [containers and commands](/docs/user-guide/containers/).
 * 获取更多资讯可参考 [configuring pods and containers](/docs/tasks/).
 * 获取更多资讯可参考 [running commands in a container](/docs/tasks/debug-application-cluster/get-shell-running-container/).
 * 参考 [Container](/docs/api-reference/{{page.version}}/#container-v1-core).
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

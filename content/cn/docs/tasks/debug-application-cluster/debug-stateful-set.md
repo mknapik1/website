@@ -2,21 +2,21 @@
 title: 调试StatefulSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 此任务展示如何调试StatefulSet。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 
 * 你需要有一个Kubernetes集群，通过必要的配置使kubectl命令行工具与您的集群进行通信。
 * 你应该有一个运行中的StatefulSet，以便用于调试。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 调试StatefulSet
 
@@ -66,12 +66,12 @@ spec:
 kubectl annotate pods <pod-name> pod.alpha.kubernetes.io/initialized="true" --overwrite
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 点击链接[调试init-container](/docs/tasks/troubleshoot/debug-init-containers/)，了解更多信息。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

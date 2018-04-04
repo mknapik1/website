@@ -4,11 +4,11 @@ reviewers:
 title: Init Containers
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page provides an overview of Init Containers, which are specialized
 Containers that run before app Containers and can contain utilities or setup
 scripts not present in an app image.
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
@@ -17,7 +17,7 @@ alongside the app `containers` array. The beta annotation value will still be re
 and overrides the PodSpec field value, however, they are deprecated in 1.6 and 1.7.
 In 1.8, the annotations are no longer supported and must be converted to the PodSpec field.
 
-{% capture body %}
+{{% capture body %}}
 ## Understanding Init Containers
 
 A [Pod](/docs/concepts/workloads/pods/pod-overview/) can have multiple Containers running
@@ -319,14 +319,14 @@ In Apiserver and Kubelet versions 1.8.0 or greater, support for the alpha and be
 is removed, requiring a conversion from the deprecated annotations to the
 `spec.initContainers` field.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Creating a Pod that has an Init Container](/docs/tasks/configure-pod-container/configure-pod-initialization/#creating-a-pod-that-has-an-init-container)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/concept.md %}

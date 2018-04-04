@@ -10,16 +10,16 @@ reviewers:
 title: Debug Init Containers
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to investigate problems related to the execution of
 Init Containers. The example command lines below refer to the Pod as
   `<pod-name>` and the Init Containers as `<init-container-1>` and
   `<init-container-2>`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
@@ -27,9 +27,9 @@ Init Containers. The example command lines below refer to the Pod as
   [Init Containers](/docs/concepts/abstractions/init-containers/).
 * You should have [Configured an Init Container](/docs/tasks/configure-pod-container/configure-pod-initialization/#creating-a-pod-that-has-an-init-container/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Checking the status of Init Containers
 
@@ -112,9 +112,9 @@ Init Containers that run a shell script print
 commands as they're executed. For example, you can do this in Bash by running
 `set -x` at the beginning of the script.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Understanding Pod status
 
@@ -130,7 +130,7 @@ Status | Meaning
 `Pending` | The Pod has not yet begun executing Init Containers.
 `PodInitializing` or `Running` | The Pod has already finished executing Init Containers.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}
 

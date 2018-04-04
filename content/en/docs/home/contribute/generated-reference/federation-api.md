@@ -2,15 +2,15 @@
 title: Generating Reference Documentation for Kubernetes Federation API
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to automatically generate reference pages for the
 Kubernetes Federation API.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * You need to have
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -28,10 +28,10 @@ Typically, this involves creating a fork of the repository. For more
 information, see
 [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Running the update-federation-api-docs.sh script
 
@@ -77,15 +77,15 @@ These files are published at
 * [Federation API extensions/v1beta1 Operations](https://kubernetes.io/docs/reference/federation/extensions/v1beta1/operations/)
 * [Federation API extensions/v1beta1 Definitions](https://kubernetes.io/docs/reference/federation/extensions/v1beta1/definitions/)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Generating Reference Documentation for the Kubernetes API](/docs/home/contribute/generated-reference/kubernetes-api/)
 * [Generating Reference Documentation for kubectl Commands](/docs/home/contribute/generated-reference/kubectl/)
 * [Generating Reference Pages for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

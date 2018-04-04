@@ -4,14 +4,14 @@ approvers:
 title: Pod Preset
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本文提供了 PodPreset 的概述。 在 pod 创建时，用户可以使用 `podpreset` 对象将特定信息注入
 pod 中，这些信息可以包括 secret、 卷、卷挂载和环境变量。
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 ## 理解 Pod Preset
 
 `Pod Preset` 是一种 API 资源，在 pod 创建时，用户可以用它将额外的运行时需求信息注入 pod。
@@ -59,12 +59,12 @@ Kubernetes 提供了准入控制器 (`PodPreset`)，该控制器被启用时，�
     配置项中包含 `PodPreset` 。
 1.  已经通过在相应的名字空间中创建 `PodPreset` 对象，定义了 Pod preset。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [使用 PodPreset 将信息注入 Pods](/docs/tasks/inject-data-application/podpreset/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

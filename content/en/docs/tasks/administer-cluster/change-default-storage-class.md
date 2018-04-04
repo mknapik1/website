@@ -2,19 +2,19 @@
 title: Change the default StorageClass
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to change the default Storage Class that is used to
 provision volumes for PersistentVolumeClaims that have no special requirements.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Why change the default storage class?
 
@@ -81,10 +81,10 @@ for details about addon manager and how to disable individual addons.
         standard         kubernetes.io/gce-pd
         gold (default)   kubernetes.io/gce-pd
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn more about [StorageClasses](/docs/concepts/storage/persistent-volumes/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -4,12 +4,12 @@ approvers:
 - ahmetb
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page contains an overview of the client libraries for using the Kubernetes
 API from various programming languages.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 To write applications using the [Kubernetes REST API](/docs/reference/api-overview/),
 you do not need to implement the API calls and request/response types yourself.
 You can use a client library for the programming language you are using.
@@ -61,6 +61,6 @@ their authors, not the Kubernetes team.
 | dotNet               | [https://github.com/tonnyeremin/kubernetes_gen](https://github.com/tonnyeremin/kubernetes_gen)
 | DotNet (RestSharp)   | [github.com/masroorhasan/Kubernetes.DotNet](https://github.com/masroorhasan/Kubernetes.DotNet)
 | Elixir               | [github.com/obmarg/kazan](https://github.com/obmarg/kazan/)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -5,17 +5,17 @@ reviewers:
 title: Images
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 You create your Docker image and push it to a registry before referring to it in a Kubernetes pod.
 
 The `image` property of a container supports the same syntax as the `docker` command does, including private registries and tags.
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Updating Images
 
@@ -321,6 +321,6 @@ common use cases and suggested solutions.
    - Generate registry credential for each tenant, put into secret, and populate secret to each tenant namespace.
    - The tenant adds that secret to imagePullSecrets of each namespace.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

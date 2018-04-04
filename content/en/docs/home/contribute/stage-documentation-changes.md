@@ -2,17 +2,17 @@
 title: Staging Your Documentation Changes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to stage content that you want to contribute
 to the Kubernetes documentation.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 Create a fork of the Kubernetes documentation repository as described in
 [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/).
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Staging a pull request
 
@@ -77,12 +77,12 @@ web server:
 **Note:** If you do not want Jekyll to interfere with your other globally installed gems, you can use `bundler`: <br /> <br /> ```gem install bundler``` <br /> ```bundle install``` <br /> ```bundler exec jekyll serve``` <br /> <br /> Regardless of whether you use `bundler` or not, your copy of the site will then be viewable at: http://localhost:4000
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn about [writing a new topic](/docs/home/contribute/write-new-topic/).
 * Learn about [using page templates](/docs/home/contribute/page-templates/).
 * Learn about [creating a pull request](/docs/home/contribute/create-pull-request/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -6,11 +6,11 @@ redirect_from:
 - "/docs/admin/cluster-components/"
 - "/docs/admin/cluster-components.html"
 ---
-{% capture overview %}
+{{% capture overview %}}
 本文档概述了 Kubernetes 所需的各种二进制组件, 用于提供齐全的功能。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Master 组件
 
@@ -119,6 +119,6 @@ supervisord 是一个轻量级的进程监控系统，可以用来保证 kubelet
 
 fluentd 是一个守护进程，它有助于提供[集群层面日志](#cluster-level-logging) 集群层面的日志。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -11,7 +11,7 @@ redirect_from:
 - "/docs/tasks/configure-pod-container/apply-resource-quota-limit.html"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 本示例展示了在一个 namespace 中控制资源用量的典型设置。
@@ -19,15 +19,15 @@ redirect_from:
 
 本文展示了以下资源的使用： [Namespace](/docs/admin/namespaces), [ResourceQuota](/docs/concepts/policy/resource-quotas/) 和  [LimitRange](/docs/tasks/configure-pod-container/limit-range/)。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 场景
 
@@ -391,9 +391,9 @@ Scopes 提供了一种来对任何配额文档追踪的资源集合进行细分�
 
 除 `BestEffort` 和 `NotBestEffort` scopes 之外，还有用于限制长时间运行和有时限 pods 的scopes。`Terminating` scope 将匹配任何 `spec.activeDeadlineSeconds` 不为 `nil` 的 pod。`NotTerminating` scope 将匹配任何 `spec.activeDeadlineSeconds` 为 `nil` 的 pod。这些 scopes 允许你基于 pods 在你集群中 node 上的预期持久程度来为它们指定配额。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## 总结
 
@@ -406,6 +406,6 @@ Scopes 提供了一种来对任何配额文档追踪的资源集合进行细分�
 
 可以基于服务质量或者在你集群中节点上的预期持久程度来分配配额。
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

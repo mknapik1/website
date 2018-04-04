@@ -2,22 +2,22 @@
 title: Set up placement policies in Federation
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to enforce policy-based placement decisions over Federated
 resources using an external policy engine.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 You need to have a running Kubernetes cluster (which is referenced as host
 cluster). Please see one of the [getting started](/docs/setup/)
 guides for installation instructions for your platform.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Deploying Federation and configuring an external policy engine
 
@@ -135,6 +135,6 @@ Inspect the ReplicaSet to confirm the appropriate annotations have been applied:
 
     kubectl --context=federation get rs nginx-pci -o jsonpath='{.metadata.annotations}'
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -3,19 +3,19 @@
 title: 改变默认 StorageClass
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本文展示了如何改变默认的 Storage Class，它用于为没有特殊需求的 PersistentVolumeClaims 配置 volumes。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 为什么要改变默认 storage class？
@@ -84,11 +84,11 @@ title: 改变默认 StorageClass
         standard         kubernetes.io/gce-pd
         gold (default)   kubernetes.io/gce-pd
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 了解更多关于  [StorageClasses](/docs/concepts/storage/persistent-volumes/)。
-  {% endcapture %}
+  {{% /capture %}}
 
 {% include templates/task.md %}

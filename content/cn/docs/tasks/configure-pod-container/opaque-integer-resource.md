@@ -2,26 +2,26 @@
 title: 给容器分配非透明整型资源
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页展示了如何给容器分配非透明整型资源。
 
 {% include feature-state-alpha.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
 在做这个练习之前，请在[给节点配置非透明整型资源](/docs/tasks/administer-cluster/opaque-integer-resource-node/)文档中进行练习，
 该文档介绍了在一个节点上配置dongle资源。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 给Pod分配非透明整型资源
 
@@ -115,9 +115,9 @@ oir-demo-2   0/1       Pending   0          6m
 kubectl delete pod oir-demo
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 ### 对于应用开发者
 
@@ -128,7 +128,7 @@ kubectl delete pod oir-demo
 
 * [给节点配置非透明整型资源](/docs/tasks/administer-cluster/opaque-integer-resource-node/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

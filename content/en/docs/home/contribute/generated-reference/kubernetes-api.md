@@ -2,15 +2,15 @@
 title: Generating Reference Documentation for the Kubernetes API
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to update the automatically generated reference docs for the
 Kubernetes API.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 You need to have these tools installed:
 
@@ -28,10 +28,10 @@ information, see
 [Creating a Documentation Pull Request](/docs/home/contribute/create-pull-request/) and
 [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## The big picture
 
@@ -362,15 +362,15 @@ to monitor your pull request until it has been merged.
 A few minutes after your pull request is merged, your changes will be visible
 in the [published reference documentation](/docs/reference/generated/kubernetes-api/v1.9/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [Generating Reference Docs for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/)
 * [Generating Reference Documentation for kubectl Commands](/docs/home/contribute/generated-reference/kubectl/)
 * [Generating Reference Documentation for the Kubernetes Federation API](/docs/home/contribute/generated-reference/federation-api/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

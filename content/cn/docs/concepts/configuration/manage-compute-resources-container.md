@@ -2,14 +2,14 @@
 title: Managing Compute Resources for Containers
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 当您定义 [Pod](/docs/user-guide/pods) 的时候可以选择为每个容器指定需要的 CPU 和内存（RAM）大小。当为容器指定了资源请求后，调度器就能够更好的判断出将容器调度到哪个节点上。如果您还为容器指定了资源限制，节点上的资源就可以按照指定的方式做竞争。关于资源请求和限制的不同点和更多资料请参考 [Resource QoS](https://git.k8s.io/community/contributors/design-proposals/resource-qos.md)。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture body %}
+{{% capture body %}}
 
 ## 资源类型
 
@@ -284,15 +284,15 @@ Kubernetes 通过支持通过多级别的 [服务质量](http://issue.k8s.io/168
 
 在 kubernetes 1.5 版本中，一个 CPU 单位在不同的云提供商和同一云提供商的不同机器类型中的意味都不同。例如，在 AWS 上，节点的容量报告为 [ECU](http://aws.amazon.com/ec2/faqs/)，而在 GCE 中报告为逻辑内核。我们计划修改 cpu 资源的定义，以便在不同的提供商和平台之间保持一致。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 - 获取将 [CPU 和内存资源分配给容器](/docs/tasks/configure-pod-container/assign-cpu-ram-container/) 的实践经验
 - [容器](/docs/api-reference/{{page.version}}/#container-v1-core)
 - [ResourceRequirements](/docs/resources-reference/{{page.version}}/#resourcerequirements-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}
 

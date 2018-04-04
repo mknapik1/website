@@ -2,34 +2,34 @@
 title: Run a Single-Instance Stateful Application
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows you how to run a single-instance stateful application
 in Kubernetes using a PersistentVolume and a Deployment. The
 application is MySQL.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 * Create a PersistentVolume referencing a disk in your environment.
 * Create a MySQL Deployment.
 * Expose MySQL to other pods in the cluster at a known DNS name.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
 * {% include default-storage-class-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 ## Deploy MySQL
 
@@ -172,10 +172,10 @@ PersistentVolume when it sees that you deleted the PersistentVolumeClaim.
 Some dynamic provisioners (such as those for EBS and PD) also release the
 underlying resource upon deleting the PersistentVolume.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
 
@@ -185,6 +185,6 @@ underlying resource upon deleting the PersistentVolume.
 
 * [Volumes](/docs/concepts/storage/volumes/) and [Persistent Volumes](/docs/concepts/storage/persistent-volumes/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

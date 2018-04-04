@@ -5,23 +5,23 @@ reviewers:
 title: Persistent Volume Claim Protection
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% assign for_k8s_version="v1.9" %}{% include feature-state-alpha.md %}
 
 As of Kubernetes 1.9, persistent volume claims (PVCs) that are in active use by a pod can be protected from pre-mature removal.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 - A v1.9 or higher Kubernetes must be installed.
 - As PVC Protection is a Kubernetes v1.9 alpha feature it must be enabled:
 1. [Admission controller](/docs/admin/admission-controllers/) must be started with the [PVC Protection plugin](/docs/admin/admission-controllers/#persistent-volume-claim-protection-alpha).
 2. All Kubernetes components must be started with the `PVCProtection` alpha features enabled.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## PVC Protection Verification
 
@@ -134,11 +134,11 @@ Events:
 -  Wait until the pod status is `Terminated` (either delete the pod or wait until it finishes). Afterwards, check that the PVC is removed.
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

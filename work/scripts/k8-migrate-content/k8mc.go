@@ -49,6 +49,9 @@ func main() {
 	// * Etc.
 	must(m.contentMigrate_Step2_Replacements())
 
+	// Copy in some content that failed in the steps above etc.
+	must(m.contentMigrate_Step3_Final())
+
 	if m.try {
 		m.printStats(os.Stdout)
 	}
@@ -118,11 +121,6 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
-	// Copy additional content files from the work dir.
-	if err := m.copyDir("work/content", "content"); err != nil {
-		return err
-	}
-
 	return nil
 }
 
@@ -181,6 +179,8 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 			return re.ReplaceAllString(s, `{{< glossary_tooltip text="$1" term_id="$2" >}}`), nil
 			return s, nil
 		},
+
+		replaceCaptures,
 	}
 
 	if err := m.applyContentFixers(contentFixers, "md$"); err != nil {
@@ -189,6 +189,26 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 
 	return nil
 
+}
+
+// TODO(bep) {% include templates/user-journey-content.md %} etc.
+
+func (m *mover) contentMigrate_Step3_Final() error {
+	// Copy additional content files from the work dir.
+	// This will in some cases revert changes made in previous steps, but
+	// these are intentional.
+
+	// These are new files.
+	if err := m.copyDir("work/content", "content"); err != nil {
+		return err
+	}
+
+	// These are just kept unchanged from the orignal. Needs manual handling.
+	if err := m.copyDir("work/content_preserved", "content"); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func (m *mover) applyContentFixers(fixers contentFixers, match string) error {
@@ -384,6 +404,12 @@ $1
 %s
 ---$2`, addition))
 
+}
+
+// TODO(bep) the below regexp seem to have missed some.
+func replaceCaptures(path, s string) (string, error) {
+	re := regexp.MustCompile(`(?s){% capture (.*?) %}(.*?){% endcapture %}`)
+	return re.ReplaceAllString(s, `{{% capture $1 %}}$2{{% /capture %}}`), nil
 }
 
 func stringsReplacer(old, new string) func(path, s string) (string, error) {

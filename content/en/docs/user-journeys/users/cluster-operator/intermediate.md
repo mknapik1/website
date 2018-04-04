@@ -8,13 +8,13 @@ title: Intermediate
 track: "USERS > CLUSTER OPERATOR > INTERMEDIATE"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 If you are a cluster operator looking to expand your grasp of Kubernetes, this page and its linked topics extend the information provided on the [foundational cluster operator page](/docs/user-journeys/users/cluster-operator/foundational). From this page you can get information on key Kubernetes tasks needed to manage a complete production cluster.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Work with ingress, networking, storage, and workloads
 
@@ -103,6 +103,6 @@ Cluster Administration:
 * [Debug Applications](/docs/tasks/debug-application-cluster/debug-application/)
 * [Using explorer to investigate your cluster](https://github.com/kubernetes/examples/blob/master/staging/explorer/README.md)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/user-journey-content.md %}

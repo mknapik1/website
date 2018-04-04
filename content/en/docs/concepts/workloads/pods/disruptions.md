@@ -6,7 +6,7 @@ reviewers:
 title: Disruptions
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This guide is for application owners who want to build
 highly available applications, and thus need to understand
 what types of Disruptions can happen to Pods.
@@ -14,11 +14,11 @@ what types of Disruptions can happen to Pods.
 It is also for Cluster Administrators who want to perform automated
 cluster actions, like upgrading and autoscaling clusters.
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Voluntary and Involuntary Disruptions
 
@@ -254,16 +254,16 @@ the nodes in your cluster, such as a node or system software upgrade, here are s
      disruptions largely overlaps with work to support autoscaling and tolerating
      involuntary disruptions.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Follow steps to protect your application by [configuring a Pod Disruption Budget](/docs/tasks/run-application/configure-pdb/).
 
 * Learn more about [draining nodes](/docs/tasks/administer-cluster/safely-drain-node/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/concept.md %}

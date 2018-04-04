@@ -2,11 +2,11 @@
 title: Scaling
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to horizontally scale master and worker nodes on a cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 This page assumes you have a working Juju deployed cluster.
 
 Any of the applications can be scaled out post-deployment. The charms
@@ -15,9 +15,9 @@ update the status messages with progress, so it is recommended to run.
 ```
 watch -c juju status --color
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Kubernetes masters
 
 The provided Kubernetes master nodes act as a control plane for the cluster.
@@ -83,6 +83,6 @@ For production deployments it is recommended to enable HA of the controller node
 Enabling HA results in 3 controller nodes, this should be sufficient for most use cases. 5 and 7 controller nodes are also supported for extra large deployments. 
     
 Refer to the [Juju HA controller documentation](https://jujucharms.com/docs/2.2/controllers-ha) for more information.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

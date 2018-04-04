@@ -3,14 +3,14 @@
 title: 使用 Source IP
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 Kubernetes 集群中运行的应用通过抽象的 Service 查找彼此，相互通信和连接外部世界。本文揭示了发送到不同类型 Services 的数据包源 IP 的内幕，你可以根据需求改变这个行为。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
@@ -37,19 +37,19 @@ $ kubectl run source-ip-app --image=k8s.gcr.io/echoserver:1.4
 deployment "source-ip-app" created
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture objectives %}
+{{% capture objectives %}}
 
 
 * 通过多种类型的 Services 暴露一个简单应用
 * 理解每种 Service 类型如何处理源 IP NAT
 * 理解保留源 IP 的折中
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture lessoncontent %}
+{{% capture lessoncontent %}}
 
 
 ## Type=ClusterIP 类型 Services 的 Source IP
@@ -301,9 +301,9 @@ __跨平台支持__
 第一类负载均衡器必须使用一种它和后端之间约定的协议来和真实的客户端 IP 通信，例如 HTTP [X-FORWARDED-FOR](https://en.wikipedia.org/wiki/X-Forwarded-For) 头，或者 [proxy 协议](http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt)。
 第二类负载均衡器可以通过简单的在保存于 Service 的 `service.spec.healthCheckNodePort` 字段上创建一个 HTTP 健康检查点来使用上面描述的特性。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture cleanup %}
+{{% capture cleanup %}}
 
 
 删除服务：
@@ -319,12 +319,12 @@ $ kubectl delete svc -l run=source-ip-app
 $ kubectl delete deployment source-ip-app
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 学习更多关于 [通过 services 连接应用](/docs/concepts/services-networking/connect-applications-service/)
 * 学习更多关于 [负载均衡](/docs/user-guide/load-balancer)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/tutorial.md %}

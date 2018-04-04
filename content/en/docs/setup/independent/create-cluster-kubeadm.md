@@ -7,7 +7,7 @@ reviewers:
 title: Using kubeadm to Create a Cluster
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 <img src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png" align="right" width="150px">**kubeadm** is a toolkit that helps you bootstrap a best-practice Kubernetes
 cluster in an easy, reasonably secure and extensible way. It also supports
@@ -73,9 +73,9 @@ timeframe; which also applies to `kubeadm`.
 | v1.8.x             | September 2017 | June 2018         |
 | v1.9.x             | December 2017  | September 2018    |
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 1. One or more machines running a deb/rpm-compatible OS, e.g. Ubuntu or CentOS
 1. 2 GB or more of RAM per machine (any less will leave little room for your
@@ -83,9 +83,9 @@ timeframe; which also applies to `kubeadm`.
 1. 2 CPUs or more on the master
 1. Full network connectivity between all machines in the cluster (public or
    private network is fine)
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Objectives
 
@@ -244,9 +244,9 @@ kubectl apply -f <add-on.yaml>
 
 {% capture choose %}
 Please select one of the tabs to see installation instructions for the respective third-party Pod Network Provider.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture calico %}
+{{% capture calico %}}
 
 Refer to the Calico documentation for a [kubeadm quickstart](https://docs.projectcalico.org/latest/getting-started/kubernetes/), a [kubeadm installation guide](http://docs.projectcalico.org/latest/getting-started/kubernetes/installation/hosted/kubeadm/), and other resources.
 
@@ -258,9 +258,9 @@ Refer to the Calico documentation for a [kubeadm quickstart](https://docs.projec
 ```shell
 kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture canal %}
+{{% capture canal %}}
 
 The official Canal set-up guide is [here](https://github.com/projectcalico/canal/tree/master/k8s-install).
 
@@ -273,9 +273,9 @@ The official Canal set-up guide is [here](https://github.com/projectcalico/canal
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/canal.yaml
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture flannel %}
+{{% capture flannel %}}
 
 **Note:**
 
@@ -292,9 +292,9 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documen
 
  - For more information about `flannel`, please see [here](https://github.com/coreos/flannel).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kube-router %}
+{{% capture kube-router %}}
 
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
@@ -306,9 +306,9 @@ Kube-router provides pod networking, network policy, and high-performing IP Virt
 
 For information on setting up Kubernetes cluster with Kube-router using kubeadm, please see official [setup guide](https://github.com/cloudnativelabs/kube-router/blob/master/Documentation/kubeadm.md).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture romana %}
+{{% capture romana %}}
 
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
@@ -321,9 +321,9 @@ The official Romana set-up guide is [here](https://github.com/romana/romana/tree
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/romana/romana/master/containerize/specs/romana-kubeadm.yml
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture weave_net %}
+{{% capture weave_net %}}
 
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
@@ -339,7 +339,7 @@ if they don't know their PodIP.
 export kubever=$(kubectl version | base64 | tr -d '\n')
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_names = "Choose one...,Calico,Canal,Flannel,Kube-router,Romana,Weave Net" | split: ',' | compact %}
 {% assign tab_contents = site.emptyArray | push: choose | push: calico | push: canal | push: flannel | push: kube-router | push: romana | push: weave_net %}

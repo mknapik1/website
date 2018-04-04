@@ -2,18 +2,18 @@
 title: Configure a Pod to Use a ConfigMap
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable. This page provides a series of usage examples demonstrating how to create ConfigMaps and configure Pods using data stored in ConfigMaps.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## Create a ConfigMap 
@@ -553,9 +553,9 @@ When a ConfigMap already being consumed in a volume is updated, projected keys a
 ConfigMap updates.
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Understanding ConfigMaps and Pods
 
@@ -604,11 +604,11 @@ data:
    **Note:** These are not commonly-used ways to create pods.
    {: .note}
    
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Follow a real world example of [Configuring Redis using a ConfigMap](/docs/tutorials/configuration/configure-redis-using-configmap/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

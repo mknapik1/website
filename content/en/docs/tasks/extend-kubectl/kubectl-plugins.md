@@ -5,23 +5,23 @@ reviewers:
 description: With kubectl plugins, you can extend the functionality of the kubectl command by adding new subcommands.
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% include feature-state-alpha.md %}
 
 This guide shows you how to install and write extensions for [kubectl](/docs/user-guide/kubectl/). Usually called *plugins* or *binary extensions*, this feature allows you to extend the default set of commands available in `kubectl` by adding new subcommands to perform new tasks and extend the set of features available in the main distribution of `kubectl`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 You need to have a working `kubectl` binary installed. Note that plugins were officially introduced as an alpha feature in the v1.8.0 release. So, while some parts of the plugins feature were already available in previous versions, a `kubectl` version of 1.8.0 or later is recommended.
 
 Until a GA version is released, plugins will only be available under the `kubectl plugin` subcommand.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Installing kubectl plugins
 
@@ -124,14 +124,14 @@ For example, `KUBECTL_PLUGINS_GLOBAL_FLAG_NAMESPACE`, `KUBECTL_PLUGINS_GLOBAL_FL
 
 * `KUBECTL_PLUGINS_LOCAL_FLAG_*`: One environment variable for every local flag declared in the `plugin.yaml` descriptor. For example, `KUBECTL_PLUGINS_LOCAL_FLAG_HEAT` in the preceding `targaryen` example.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Check the repository for [some more examples](https://github.com/kubernetes/kubernetes/tree/master/pkg/kubectl/plugins/examples) of plugins.
 * In case of any questions, feel free to reach out to the [CLI SIG team](https://github.com/kubernetes/community/tree/master/sig-cli).
 * Binary plugins is still an alpha feature, so this is the time to contribute ideas and improvements to the codebase. We're also excited to hear about what you're planning to implement with plugins, so [let us know](https://github.com/kubernetes/community/tree/master/sig-cli)!
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -4,13 +4,13 @@ reviewers:
 title: Configuration Best Practices
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This document highlights and consolidates configuration best practices that are introduced throughout the user guide, Getting Started documentation, and examples.
 
 This is a living document. If you think of something that is not on this list but might be useful to others, please don't hesitate to file an issue or submit a PR.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## General Configuration Tips
 
 - When defining configurations, specify the latest stable API version.
@@ -86,6 +86,6 @@ A desired state of an object is described by a Deployment, and if changes to tha
 
 - Use `kubectl run` and `kubectl expose` to quickly create single-container Deployments and Services. See [Use a Service to Access an Application in a Cluster](/docs/tasks/access-application-cluster/service-access-application-cluster/) for an example.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

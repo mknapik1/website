@@ -5,10 +5,10 @@ approvers:
 - jbeda
 title: kubeadm join
 ---
-{% capture overview %}
-{% endcapture %}
+{{% capture overview %}}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 {% include_relative generated/kubeadm_join.md %}
 
 ### The joining workflow
@@ -225,12 +225,12 @@ discoveryTokenCACertHashes:
 - <SHA-256 hash|string>
 discoveryTokenUnsafeSkipCAVerification: <bool>
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * [kubeadm init](kubeadm-init.md) to bootstrap a Kubernetes master node
 * [kubeadm token](kubeadm-token.md) to manage tokens for `kubeadm join`
 * [kubeadm reset](kubeadm-reset.md) to revert any changes made to this host by `kubeadm init` or `kubeadm join`
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

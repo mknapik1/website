@@ -2,17 +2,17 @@
 title: 使用 Secret 安全地分发凭证
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本文展示如何安全地将敏感数据（如密码和加密密钥）注入到 Pods 中。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 将 secret 数据转换为 base-64 形式
 
@@ -147,9 +147,9 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
         ...
         SECRET_PASSWORD=39528$vdg7Jb
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 了解更多关于 [Secrets](/docs/concepts/configuration/secret/)。
 * 了解 [Volumes](/docs/concepts/storage/volumes/)。
@@ -160,6 +160,6 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 * [Volume](/docs/api-reference/{{page.version}}/#volume-v1-core)
 * [Pod](/docs/api-reference/{{page.version}}/#pod-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

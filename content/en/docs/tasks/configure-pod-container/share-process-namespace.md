@@ -7,7 +7,7 @@ approvers:
 - dchen1107
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 {% include feature-state-alpha.md %}
 
@@ -19,18 +19,18 @@ You can use this feature to configure cooperating containers, such as a log
 handler sidecar container, or to troubleshoot container images that don't
 include debugging utilities like a shell.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
 A special **alpha** feature gate `PodShareProcessNamespace` must be set to true
 across the system: `--feature-gates=PodShareProcessNamespace=true`.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Configure a Pod
 
@@ -82,9 +82,9 @@ It's even possible to access another container image using the
         events {
             worker_connections  1024;
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Understanding Process Namespace Sharing
 
@@ -106,6 +106,6 @@ containers, though, so it's important to understand these differences:
    `/proc/$pid/root` link.** This makes debugging easier, but it also means
    that filesystem secrets are protected only by filesystem permissions.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -2,11 +2,11 @@
 title: Glossary and Terminology
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page explains some of the terminology used in deploying Kubernetes with Juju.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 
 **controller** - The management node of a cloud environment. Typically you have one controller per cloud region, or more in HA environments. The controller is responsible for managing all subsequent models in a given environment. It contains the Juju API server and its underlying database.
@@ -18,6 +18,6 @@ This page explains some of the terminology used in deploying Kubernetes with Juj
 **unit** - A given instance of a service. These may or may not use up a whole machine, and may be colocated on the same machine. So for example you might have a `kubernetes-worker`, and `etcd`, and `easyrsa` units running on a single machine, but they are three distinct units of different services.
 
 **machine** - A physical node, these can either be bare metal nodes, or virtual machines provided by a cloud.
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

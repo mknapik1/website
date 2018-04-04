@@ -5,18 +5,18 @@ reviewers:
 title: Customizing DNS Service
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page provides hints on configuring DNS Pod and guidance on customizing the
 DNS resolution process.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * {% include task-tutorial-prereqs.md %}
 * Kubernetes version 1.6 and above.
 * The cluster must be configured to use the `kube-dns` addon.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Introduction
 
@@ -94,9 +94,9 @@ their destination DNS servers:
 See [ConfigMap options](#configmap-options) for
 details about the configuration option format.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ### Impacts on Pods
 
@@ -186,6 +186,6 @@ data:
 ## What's next
 - [Debugging DNS Resolution](/docs/tasks/administer-cluster/dns-debugging-resolution/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

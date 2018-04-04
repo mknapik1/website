@@ -7,7 +7,7 @@ reviewers:
 title: Volumes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 On-disk files in a container are ephemeral, which presents some problems for
 non-trivial applications when running in containers.  First, when a container
@@ -18,11 +18,11 @@ Kubernetes `Volume` abstraction solves both of these problems.
 
 Familiarity with [pods](/docs/user-guide/pods) is suggested.
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Background
 
@@ -883,15 +883,15 @@ First ssh into ESX, then use the following command to create a VMDK:
 ```shell
 vmkfstools -c 2G /vmfs/volumes/DatastoreName/volumes/myDisk.vmdk
 ```
-{% endcapture %}
+{{% /capture %}}
 
-{% capture vdiskmanager %}
+{{% capture vdiskmanager %}}
 Use the following command to create a VMDK:
 
 ```shell
 vmware-vdiskmanager -c -t 0 -s 40GB -a lsilogic myDisk.vmdk
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_names = 'Create using vmkfstools,Create using vmware-vdiskmanager' | split: ',' | compact %}
 {% assign tab_contents = site.emptyArray | push: vmkfstools | push: vdiskmanager %}
@@ -1128,8 +1128,8 @@ $ sudo systemctl restart docker
 
 {% endcapture %}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Follow an example of [deploying WordPress and MySQL with Persistent Volumes](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

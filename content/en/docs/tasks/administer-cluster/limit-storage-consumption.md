@@ -2,7 +2,7 @@
 title: Limit Storage Consumption
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This example demonstrates an easy way to limit the amount of storage consumed in a namespace.
 
@@ -10,15 +10,15 @@ The following resources are used in the demonstration: [ResourceQuota](/docs/con
 [LimitRange](/docs/tasks/administer-cluster/memory-default-namespace/),
 and [PersistentVolumeClaim](/docs/concepts/storage/persistent-volumes/).
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Scenario: Limiting Storage Consumption
 
 The cluster-admin is operating a cluster on behalf of a user population and the admin wants to control
@@ -76,9 +76,9 @@ spec:
     requests.storage: "5Gi"
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Summary
 
@@ -86,6 +86,6 @@ A limit range can put a ceiling on how much storage is requested while a resourc
 consumed by a namespace through claim counts and cumulative storage capacity. The allows a cluster-admin to plan their
 cluster's storage budget without risk of any one project going over their allotment.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

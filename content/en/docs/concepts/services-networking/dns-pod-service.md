@@ -4,11 +4,11 @@ reviewers:
 - thockin
 title: DNS for Services and Pods
 ---
-{% capture overview %}
+{{% capture overview %}}
 This page provides an overview of DNS support by Kubernetes.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Introduction
 
@@ -241,13 +241,13 @@ search ns1.svc.cluster.local my.dns.search.suffix
 options ndots:2 edns0
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 For guidance on administering DNS configurations, check
 [Configure DNS Service](/docs/tasks/administer-cluster/dns-custom-nameservers/)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -5,10 +5,10 @@ approvers:
 - jbeda
 title: kubeadm reset 
 ---
-{% capture overview %}
-{% endcapture %}
+{{% capture overview %}}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 {% include_relative generated/kubeadm_reset.md %}
 
 ### External etcd clean up
@@ -22,11 +22,11 @@ etcdctl del "" --prefix
 ```
 
 See the [etcd documentation](https://github.com/coreos/etcd/tree/master/etcdctl) for more information.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * [kubeadm init](kubeadm-init.md) to bootstrap a Kubernetes master node
 * [kubeadm join](kubeadm-join.md) to bootstrap a Kubernetes worker node and join it to the cluster
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

@@ -10,20 +10,20 @@ reviewers:
 title: Scale a StatefulSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This page shows how to scale a StatefulSet.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * StatefulSets are only available in Kubernetes version 1.5 or later.
 * **Not all stateful applications scale nicely.** You need to understand your StatefulSets well before continuing. If you're unsure, remember that it might not be safe to scale your StatefulSets.
 * You should perform scaling only when you're sure that your stateful application
   cluster is completely healthy.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Use `kubectl` to scale StatefulSets
 
@@ -90,12 +90,12 @@ perform scaling only when you're sure that your stateful application cluster is
 completely healthy.
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 Learn more about [deleting a StatefulSet](/docs/tasks/manage-stateful-set/deleting-a-statefulset/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

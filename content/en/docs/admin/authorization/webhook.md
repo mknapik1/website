@@ -7,11 +7,11 @@ reviewers:
 title: Webhook Mode
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST. A web application implementing WebHooks will POST a message to a URL when certain things happen.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 When specified, mode `Webhook` causes Kubernetes to query an outside REST
 service when determining user privileges.
 
@@ -145,6 +145,6 @@ to the REST api.
 For further documentation refer to the authorization.v1beta1 API objects and
 [webhook.go](https://github.com/kubernetes/kubernetes/blob/{{page.githubbranch}}/staging/src/k8s.io/apiserver/plugin/pkg/authorizer/webhook/webhook.go).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

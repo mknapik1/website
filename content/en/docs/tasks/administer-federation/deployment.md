@@ -2,7 +2,7 @@
 title: Federated Deployment
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This guide explains how to use Deployments in the Federation control plane.
 
 Deployments in the federation control plane (referred to as "Federated Deployments" in
@@ -14,18 +14,18 @@ replicas exist across the registered clusters.
 **As of Kubernetes version 1.5, Federated Deployment is an Alpha feature. The core
 functionality of Deployment is present, but some features
 (such as full rollout compatibility) are still in development.**
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include federated-task-tutorial-prereqs.md %}
 * You should also have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [Deployments](/docs/concepts/workloads/controllers/deployment/) in particular.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 ## Creating a Federated Deployment
 
 The API for Federated Deployment is compatible with the
@@ -99,6 +99,6 @@ For example, you can do that using kubectl by running:
 kubectl --context=federation-cluster delete deployment mydep
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

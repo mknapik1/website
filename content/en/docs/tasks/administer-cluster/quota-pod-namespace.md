@@ -3,24 +3,24 @@ title: Configure a Pod Quota for a Namespace
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to set a quota for the total number of Pods that can run
 in a namespace. You specify quotas in a
 [ResourceQuota](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcequota-v1-core)
 object.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Create a namespace
 
@@ -105,9 +105,9 @@ Delete your namespace:
 kubectl delete namespace quota-pod-example
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 ### For cluster administrators
 
@@ -131,7 +131,7 @@ kubectl delete namespace quota-pod-example
 
 * [Configure Quality of Service for Pods](/docs/tasks/configure-pod-container/quality-service-pod/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

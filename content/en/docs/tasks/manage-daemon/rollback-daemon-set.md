@@ -4,24 +4,24 @@ reviewers:
 title: Performing a Rollback on a DaemonSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to perform a rollback on a DaemonSet. 
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * The DaemonSet rollout history and DaemonSet rollback features are only
   supported in `kubectl` in Kubernetes version 1.7 or later.
 * Make sure you know how to [perform a rolling update on a
   DaemonSet](/docs/tasks/manage-daemon/update-daemon-set/).
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Performing a Rollback on a DaemonSet
 
@@ -102,10 +102,10 @@ When the rollback is complete, the output is similar to this:
 daemonset "<daemonset-name>" successfully rolled out
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Understanding DaemonSet Revisions
 
@@ -149,6 +149,6 @@ have revision 1 and 2 in the system, and roll back from revision 2 to revision
 * See [troubleshooting DaemonSet rolling
   update](/docs/tasks/manage-daemon/update-daemon-set/#troubleshooting).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

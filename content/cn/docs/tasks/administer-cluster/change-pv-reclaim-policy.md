@@ -3,18 +3,18 @@ title: 更改 PersistentVolume 的回收策略
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 本文展示了如何更改 Kubernetes PersistentVolume 的回收策略。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 
 ## 为什么要更改 PersistentVolume 的回收策略
@@ -61,9 +61,9 @@ title: 更改 PersistentVolume 的回收策略
 
     在前面的输出中，你可以看到绑定到 claim `default/claim3` 的 volume 拥有的回收策略为 `Retain`。当用户删除 claim `default/claim3` 时，它不会被自动删除。
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * 了解更多关于 [PersistentVolumes](/docs/concepts/storage/persistent-volumes/)的信息。
 * 了解更多关于 [PersistentVolumeClaims](/docs/user-guide/persistent-volumes/#persistentvolumeclaims) 的信息。
@@ -75,6 +75,6 @@ title: 更改 PersistentVolume 的回收策略
 * [PersistentVolumeClaim](/docs/api-reference/{{page.version}}/#persistentvolumeclaim-v1-core)
 
 * 查阅  [PersistentVolumeSpec](/docs/api-reference/{{page.version}}/#persistentvolumeclaim-v1-core) 的 `persistentVolumeReclaimPolicy` 字段。
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

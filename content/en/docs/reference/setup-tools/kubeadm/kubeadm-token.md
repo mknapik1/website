@@ -5,7 +5,7 @@ approvers:
 - jbeda
 title: kubeadm token
 ---
-{% capture overview %}
+{{% capture overview %}}
 
 Bootstrap tokens are used for establishing bidirectional trust between a node joining 
 the cluster and a master node, as described in [authenticating with bootstrap tokens](/docs/admin/bootstrap-tokens/).
@@ -13,9 +13,9 @@ the cluster and a master node, as described in [authenticating with bootstrap to
 `kubeadm init` creates an initial token with a 24-hour TTL. The following commands allow you to manage 
 such a token and also to create and manage new ones.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 ## kubeadm token create {#cmd-token-create}
 {% include_relative generated/kubeadm_token_create.md %}
 
@@ -27,10 +27,10 @@ such a token and also to create and manage new ones.
 
 ## kubeadm token list {#cmd-token-list}
 {% include_relative generated/kubeadm_token_list.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * [kubeadm join](kubeadm-join.md) to bootstrap a Kubernetes worker node and join it to the cluster
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

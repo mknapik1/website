@@ -3,7 +3,7 @@ title: Create an External Load Balancer
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to create an External Load Balancer.
 
@@ -18,15 +18,15 @@ services externally-reachable URLs, load balance the traffic, terminate SSL etc.
 please check the [Ingress](/docs/concepts/services-networking/ingress/)
 documentation.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Configuration file
 
@@ -184,9 +184,9 @@ Known issues:
 * AWS: [kubernetes/kubernetes#35758](https://github.com/kubernetes/kubernetes/issues/35758)
 * Weave-Net: [weaveworks/weave/#2924](https://github.com/weaveworks/weave/issues/2924)
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## External Load Balancer Providers
 
@@ -212,6 +212,6 @@ Once the external load balancers provide weights, this functionality can be adde
 
 Internal pod to pod traffic should behave similar to ClusterIP services, with equal probability across all pods.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

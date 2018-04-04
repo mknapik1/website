@@ -5,15 +5,15 @@ reviewers:
 title: Container Environment Variables
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page describes the resources available to Containers in the Container environment. 
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Container environment
 
@@ -52,14 +52,14 @@ FOO_SERVICE_PORT=<the port the service is running on>
 Services have dedicated IP addresses and are available to the Container via DNS,
 if [DNS addon](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/) is enabled. 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Container lifecycle hooks](/docs/concepts/containers/container-lifecycle-hooks/).
 * Get hands-on experience
   [attaching handlers to Container lifecycle events](/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

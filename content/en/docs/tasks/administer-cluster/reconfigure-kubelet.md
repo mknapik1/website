@@ -5,7 +5,7 @@ reviewers:
 title: Reconfigure a Node's Kubelet in a Live Cluster
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% include feature-state-alpha.md %}
 As of Kubernetes 1.8, the new
 [Dynamic Kubelet Configuration](https://github.com/kubernetes/features/issues/281)
@@ -20,18 +20,18 @@ for system experts who have a strong understanding of how configuration changes
 will affect behavior. No documentation currently exists which plainly lists
 "safe to change" fields, but we plan to add it before this feature graduates
 from alpha.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 - A live Kubernetes cluster with both Master and Node at v1.8 or higher must be
 running, with the `DynamicKubeletConfig` feature gate enabled and the Kubelet's
 `--dynamic-config-dir` flag set to a writeable directory on the Node.
 This flag must be set to enable Dynamic Kubelet Configuration.
 - The kubectl command-line tool must be also v1.8 or higher, and must be
 configured to communicate with the cluster.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Reconfiguring the Kubelet on a Live Node in your Cluster
 
@@ -354,9 +354,9 @@ $ kubectl -n kube-system delete configmap ${NEW_CONFIG_MAP_NAME}
 Once the Node Authorizer is updated to do this automatically, you will
 be able to skip this step.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 ## Kubectl Patch Example
 As mentioned above, there are many ways to change a Node's configSource.
 Here is an example command that uses `kubectl patch`:
@@ -448,7 +448,7 @@ more error details by searching for the message or reason text.
     <td><p>False</p></td>
 </tr>
 </table>
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

@@ -2,12 +2,12 @@
 title: Reviewing Documentation Issues
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page explains how documentation issues are reviewed and prioritized for the [kubernetes/website](https://github.com/kubernetes/website){: target="_blank"} repository. The purpose is to provide a way to organize issues and make it easier to contribute to Kubernetes documentation. The following should be used as the standard way of prioritizing, labeling, and interacting with issues.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Categorizing issues
 Issues should be sorted into different buckets of work using the following labels and definitions. If an issue doesn't have enough information to identify a problem that can be researched, reviewed, or worked on (i.e. the issue doesn't fit into any of the categories below) you should close the issue with a comment explaining why it is being closed.
@@ -89,14 +89,14 @@ https://github.com/kubernetes/kubernetes/issues.
 If this is a documentation issue, please re-open this issue.
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * Learn about [writing a new topic](/docs/home/contribute/write-new-topic/).
 * Learn about [using page templates](/docs/home/contribute/page-templates/).
 * Learn about [staging your changes](/docs/home/contribute/stage-documentation-changes/).
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

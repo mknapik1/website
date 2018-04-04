@@ -2,7 +2,7 @@
 title: Configure a Pod to Use a Volume for Storage
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to configure a Pod to use a Volume for storage.
 
@@ -13,15 +13,15 @@ consistent storage that is independent of the Container, you can use a
 applications, such as key-value stores and databases. For example, Redis is a
 key-value cache and store.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Configure a volume for a Pod
 
@@ -92,9 +92,9 @@ of `Always`.
 
 1. In your shell, goto `/data/redis`, and verify that `test-file` is still there.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * See [Volume](/docs/reference/generated/kubernetes-api/{{page.version}}/#volume-v1-core).
 
@@ -106,6 +106,6 @@ GCE and EBS on EC2, which are preferred for critical data, and will handle
 details such as mounting and unmounting the devices on the nodes. See
 [Volumes](/docs/concepts/storage/volumes/) for more details.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

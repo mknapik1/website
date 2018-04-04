@@ -2,7 +2,7 @@
 title: Federated ConfigMap
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This guide explains how to use ConfigMaps in a Federation control plane.
 
@@ -11,18 +11,18 @@ ConfigMaps](/docs/tasks/configure-pod-container/configure-pod-configmap/) and pr
 Creating them in the federation control plane ensures that they are synchronized
 across all the clusters in federation.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * {% include federated-task-tutorial-prereqs.md %}
 * You should also have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [ConfigMaps](/docs/tasks/configure-pod-container/configure-pod-configmap/) in particular.
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Creating a Federated ConfigMap
 
@@ -80,6 +80,6 @@ corresponding ConfigMaps from underlying clusters.
 You must delete the underlying ConfigMaps manually.
 We intend to fix this in the future.
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

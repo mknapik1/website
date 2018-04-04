@@ -30,13 +30,13 @@ and behind the scene both use the same code.
 You can execute preflight checks both for the master node, like in `kubeadm init`, or for the worker node
 like in `kubeadm join`.
 
-{% capture preflight_master %}
+{{% capture preflight_master %}}
 {% include_relative generated/kubeadm_alpha_phase_preflight_master.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture preflight_node %}
+{{% capture preflight_node %}}
 {% include_relative generated/kubeadm_alpha_phase_preflight_node.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-preflight" %}
 {% assign tab_names = "master,node" | split: ',' | compact %}
@@ -48,33 +48,33 @@ like in `kubeadm join`.
 
 You can create all required certificates with the `all` subcommand or selectively create certificates.
 
-{% capture certs_all %}
+{{% capture certs_all %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_all.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_ca %}
+{{% capture certs_ca %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_ca.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_apiserver %}
+{{% capture certs_apiserver %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_apiserver.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_apiserver-kubelet-client %}
+{{% capture certs_apiserver-kubelet-client %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_apiserver-kubelet-client.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_sa %}
+{{% capture certs_sa %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_sa.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_front-proxy-ca %}
+{{% capture certs_front-proxy-ca %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_front-proxy-ca.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture certs_front-proxy-client %}
+{{% capture certs_front-proxy-client %}}
 {% include_relative generated/kubeadm_alpha_phase_certs_front-proxy-client.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-certs" %}
 {% assign tab_names = "all,ca,apiserver,apiserver-kubelet-client,sa,front-proxy-ca,front-proxy-client" | split: ',' | compact %}
@@ -87,29 +87,29 @@ You can create all required certificates with the `all` subcommand or selectivel
 You can create all required kubeconfig files with the `all` subcommand, or selectively create the files.
 Additionally, the `user` subcommand supports the creation of kubeconfig files for additional users.
 
-{% capture kubeconfig_all %}
+{{% capture kubeconfig_all %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_all.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kubeconfig_admin %}
+{{% capture kubeconfig_admin %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_admin.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kubeconfig_kubelet %}
+{{% capture kubeconfig_kubelet %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_kubelet.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kubeconfig_controller-manager %}
+{{% capture kubeconfig_controller-manager %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_controller-manager.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kubeconfig_scheduler %}
+{{% capture kubeconfig_scheduler %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_scheduler.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture kubeconfig_user %}
+{{% capture kubeconfig_user %}}
 {% include_relative generated/kubeadm_alpha_phase_kubeconfig_user.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-kubeconfig" %}
 {% assign tab_names = "all,admin,kubelet,controller-manager,scheduler,user" | split: ',' | compact %}
@@ -122,21 +122,21 @@ Additionally, the `user` subcommand supports the creation of kubeconfig files fo
 You can create all required static Pod files for the control plane components with the `all` subcommand, 
 or selectively create the files.
 
-{% capture controlplane_all %}
+{{% capture controlplane_all %}}
 {% include_relative generated/kubeadm_alpha_phase_controlplane_all.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture controlplane_apiserver %}
+{{% capture controlplane_apiserver %}}
 {% include_relative generated/kubeadm_alpha_phase_controlplane_apiserver.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture controlplane_controller-manager %}
+{{% capture controlplane_controller-manager %}}
 {% include_relative generated/kubeadm_alpha_phase_controlplane_controller-manager.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture controlplane_scheduler %}
+{{% capture controlplane_scheduler %}}
 {% include_relative generated/kubeadm_alpha_phase_controlplane_scheduler.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-controlplane" %}
 {% assign tab_names = "all,apiserver,controller-manager,scheduler" | split: ',' | compact %}
@@ -148,9 +148,9 @@ or selectively create the files.
 
 Use the following command to create a self-hosted, local etcd instance based on a static Pod file.
 
-{% capture etcd-local %}
+{{% capture etcd-local %}}
 {% include_relative generated/kubeadm_alpha_phase_etcd_local.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-etcd" %}
 {% assign tab_names = "etcd local" | split: ',' | compact %}
@@ -162,9 +162,9 @@ Use the following command to create a self-hosted, local etcd instance based on 
 
 Use the following command to label and taint the node with the `node-role.kubernetes.io/master=""` key-value pair.
 
-{% capture mark-master %}
+{{% capture mark-master %}}
 {% include_relative generated/kubeadm_alpha_phase_mark-master.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-mark-master" %}
 {% assign tab_names = "mark-master" | split: ',' | compact %}
@@ -178,25 +178,25 @@ Use the following actions to fully configure bootstrap tokens.
 You can fully configure bootstrap tokens with the `all` subcommand, 
 or selectively configure single elements.
 
-{% capture bootstrap-token_all %}
+{{% capture bootstrap-token_all %}}
 {% include_relative generated/kubeadm_alpha_phase_bootstrap-token_all.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture bootstrap-token_create %}
+{{% capture bootstrap-token_create %}}
 {% include_relative generated/kubeadm_alpha_phase_bootstrap-token_create.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture bootstrap-token_cluster-info %}
+{{% capture bootstrap-token_cluster-info %}}
 {% include_relative generated/kubeadm_alpha_phase_bootstrap-token_cluster-info.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture bootstrap-token_node_allow-auto-approve %}
+{{% capture bootstrap-token_node_allow-auto-approve %}}
 {% include_relative generated/kubeadm_alpha_phase_bootstrap-token_node_allow-auto-approve.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture bootstrap-token_node_allow-post-csrs %}
+{{% capture bootstrap-token_node_allow-post-csrs %}}
 {% include_relative generated/kubeadm_alpha_phase_bootstrap-token_node_allow-post-csrs.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-bootstrap-token" %}
 {% assign tab_names = "all,create,cluster-info,node allow-auto-approve,node allow-post-csrs" | split: ',' | compact %}
@@ -209,9 +209,9 @@ or selectively configure single elements.
 You can use this command to upload the kubeadm configuration to your cluster.
 Alternatively, you can use [kubeadm config](kubeadm-config.md).
 
-{% capture upload-config %}
+{{% capture upload-config %}}
 {% include_relative generated/kubeadm_alpha_phase_upload-config.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-upload-config" %}
 {% assign tab_names = "upload-config" | split: ',' | compact %}
@@ -226,17 +226,17 @@ install them selectively.
 
 Please note that if kubeadm is invoked with `--feature-gates=CoreDNS=true`,  [CoreDNS](https://coredns.io/) is installed instead of `kube-dns`.
 
-{% capture addon-all %}
+{{% capture addon-all %}}
 {% include_relative generated/kubeadm_alpha_phase_addon_all.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture addon-kube-proxy %}
+{{% capture addon-kube-proxy %}}
 {% include_relative generated/kubeadm_alpha_phase_addon_kube-proxy.md %}
-{% endcapture %}
+{{% /capture %}}
 
-{% capture addon-kube-dns %}
+{{% capture addon-kube-dns %}}
 {% include_relative generated/kubeadm_alpha_phase_addon_kube-dns.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-addon" %}
 {% assign tab_names = "all,kube-proxy,kube-dns" | split: ',' | compact %}
@@ -249,9 +249,9 @@ Please note that if kubeadm is invoked with `--feature-gates=CoreDNS=true`,  [Co
 **Caution:** Self-hosting is an alpha feature. See [kubeadm init](kubeadm-init.md) documentation for self-hosting limitations.
 {: .caution}
 
-{% capture self-hosting %}
+{{% capture self-hosting %}}
 {% include_relative generated/kubeadm_alpha_phase_selfhosting_convert-from-staticpods.md %}
-{% endcapture %}
+{{% /capture %}}
 
 {% assign tab_set_name = "tab-self-hosting" %}
 {% assign tab_names = "self-hosting" | split: ',' | compact %}

@@ -4,14 +4,14 @@ approvers:
 title: 调度 GPU
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 
 Kubernetes 提供对分布在节点上的 NVIDIA GPU 进行管理的**实验**支持。本页描述用户如何使用 GPU 以及当前使用的一些限制
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 
 1. Kubernetes 节点必须预先安装好 NVIDIA 驱动，否则，Kubelet 将检测不到可用的GPU信息；如果节点的 Capacity 属性中没有出现 NIVIDA GPU 的数量，有可能是驱动没有安装或者安装失败，请尝试重新安装
@@ -23,9 +23,9 @@ Kubernetes 提供对分布在节点上的 NVIDIA GPU 进行管理的**实验**�
 
 上述预备工作完成后，节点会自动发现它上面的 NVIDIA GPU，并将其作为可调度资源暴露
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## API
 
@@ -173,6 +173,6 @@ spec:
 
 - 类似访问 CUDA 库这种关键的可用性问题将得到解决
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

@@ -4,21 +4,21 @@ reviewers:
 title: Perform a Rolling Update on a DaemonSet
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to perform a rolling update on a DaemonSet. 
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 * The DaemonSet rolling update feature is only supported in Kubernetes version 1.6 or later.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## DaemonSet Update Strategy
 
@@ -191,16 +191,16 @@ master and nodes will make DaemonSet unable to detect the right rollout
 progress. 
 
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * See [Task: Performing a rollback on a
   DaemonSet](/docs/tasks/manage-daemon/rollback-daemon-set/)
 * See [Concepts: Creating a DaemonSet to adopt existing DaemonSet pods](/docs/concepts/workloads/controllers/daemonset/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

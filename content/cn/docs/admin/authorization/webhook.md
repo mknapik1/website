@@ -7,11 +7,11 @@ approvers:
 title: Webhook Mode
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 WebHook 是一种 HTTP 回调：某些条件下触发的 HTTP POST 请求；通过 HTTP POST 发送的简单事件通知。一个基于 web 应用实现的 WebHook 会在特定事件发生时把消息发送给特定的 URL 。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 具体来说，当在判断用户权限时，`Webhook` 模式会使 Kubernetes 查询外部的 REST 服务。
 
 ## 配置文件格式
@@ -137,6 +137,6 @@ contexts:
 更多信息可以参考 uthorization.v1beta1 API 对象和
 [webhook.go](https://git.k8s.io/kubernetes/staging/src/k8s.io/apiserver/plugin/pkg/authorizer/webhook/webhook.go).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

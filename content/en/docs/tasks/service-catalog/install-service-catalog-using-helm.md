@@ -4,15 +4,15 @@ reviewers:
 - chenopis
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 {% glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" %}  
 
 Use [Helm](https://helm.sh/) to install Service Catalog on your Kubernetes cluster. Up to date information on this process can be found at the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog/blob/master/docs/install.md) repo.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 * Understand the key concepts of [Service Catalog](/docs/concepts/service-catalog/).
 * Service Catalog requires a Kubernetes cluster running version 1.7 or higher.
 * You must have a Kubernetes cluster with cluster DNS enabled.
@@ -23,10 +23,10 @@ Use [Helm](https://helm.sh/) to install Service Catalog on your Kubernetes clust
     * Follow the [Helm install instructions](https://github.com/kubernetes/helm/blob/master/docs/install.md).
     * If you already have an appropriate version of Helm installed, execute `helm init` to install Tiller, the server-side component of Helm.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 ## Add the service-catalog Helm repository
 
 Once Helm is installed, add the *service-catalog* Helm repository to your local machine by executing the following command:
@@ -87,14 +87,14 @@ helm install svc-cat/catalog \
     --name catalog --namespace catalog
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 * View [sample service brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers).
 * Explore the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog) project.
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

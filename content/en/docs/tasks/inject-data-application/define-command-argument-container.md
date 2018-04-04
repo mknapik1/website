@@ -2,22 +2,22 @@
 title: Define a Command and Arguments for a Container
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to define commands and arguments when you run a container
 in a {% glossary_tooltip term_id="pod" %}.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Define a command and arguments when you create a Pod
 
@@ -125,16 +125,16 @@ Here are some examples:
 |     `[/ep-1]`      |   `[foo bar]`    |   `[/ep-2]`         |     `[zoo boo]`    | `[ep-2 zoo boo]` |
 
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [containers and commands](/docs/user-guide/containers/).
 * Learn more about [configuring pods and containers](/docs/tasks/).
 * Learn more about [running commands in a container](/docs/tasks/debug-application-cluster/get-shell-running-container/).
 * See [Container](/docs/reference/generated/kubernetes-api/{{page.version}}/#container-v1-core).
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

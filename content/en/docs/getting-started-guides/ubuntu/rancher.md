@@ -2,22 +2,22 @@
 title: Rancher Integration with Ubuntu Kubernetes
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 This repository explains how to deploy Rancher 2.0alpha on Canonical Kubernetes. 
 
 These steps are currently in alpha/testing phase and will most likely change. 
 
 The original documentation for this integration can be found at [https://github.com/CalvinHartwell/canonical-kubernetes-rancher/](https://github.com/CalvinHartwell/canonical-kubernetes-rancher/). 
 
-{% endcapture %}
-{% capture prerequisites %}
+{{% /capture %}}
+{{% capture prerequisites %}}
 To use this guide, you must have a working kubernetes cluster that was deployed using Canonical's juju. 
 
 The full instructions for deploying Kubernetes with juju can be found at [https://kubernetes.io/docs/getting-started-guides/ubuntu/installation/](https://kubernetes.io/docs/getting-started-guides/ubuntu/installation/).  
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 ## Deploying Rancher
 
 To deploy Rancher, we just need to run the Rancher container workload on-top of Kubernetes. Rancher provides their containers through dockerhub ([https://hub.docker.com/r/rancher/server/tags/](https://hub.docker.com/r/rancher/server/tags/)) and can be downloaded freely from the internet. 
@@ -355,6 +355,6 @@ You can remove Rancher from your cluster using kubectl. Deleting constructs in K
   # If you used the nodeport example change the yaml filename if you used the ingress example. 
   kubectl delete -f cdk-rancher-nodeport.yaml
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

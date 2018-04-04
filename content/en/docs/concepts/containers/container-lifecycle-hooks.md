@@ -5,16 +5,16 @@ reviewers:
 title: Container Lifecycle Hooks
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page describes how kubelet managed Containers can use the Container lifecycle hook framework
 to run code triggered by events during their management lifecycle.
 
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Overview
 
@@ -111,14 +111,14 @@ Events:
   1m         22s         2     {kubelet gke-test-cluster-default-pool-a07e5d30-siqd}    spec.containers{main}    Warning        FailedPostStartHook
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about the [Container environment](/docs/concepts/containers/container-environment-variables/).
 * Get hands-on experience
   [attaching handlers to Container lifecycle events](/docs/tasks/configure-pod-container/attach-handler-lifecycle-event/).
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

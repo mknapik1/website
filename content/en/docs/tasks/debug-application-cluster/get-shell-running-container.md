@@ -5,22 +5,22 @@ reviewers:
 title: Get a Shell to a Running Container
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to use `kubectl exec` to get a shell to a
 running Container.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Getting a shell to a Container
 
@@ -116,9 +116,9 @@ kubectl exec shell-demo ls /
 kubectl exec shell-demo cat /proc/1/mounts
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Opening a shell when a Pod has more than one Container
 
@@ -132,14 +132,14 @@ shell to the main-app Container.
 kubectl exec -it my-pod --container main-app -- /bin/bash
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * [kubectl exec](/docs/user-guide/kubectl/{{page.version}}/#exec)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

@@ -2,24 +2,24 @@
 title: Attach Handlers to Container Lifecycle Events
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 This page shows how to attach handlers to Container lifecycle events. Kubernetes supports
 the postStart and preStop events. Kubernetes sends the postStart event immediately
 after a Container is started, and it sends the preStop event immediately before the
 Container is terminated.
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## Define postStart and preStop handlers
 
@@ -54,11 +54,11 @@ The output shows the text written by the postStart handler:
 
     Hello from the postStart handler
 
-{% endcapture %}
+{{% /capture %}}
 
 
 
-{% capture discussion %}
+{{% capture discussion %}}
 
 ## Discussion
 
@@ -79,10 +79,10 @@ This means that the preStop hook is not invoked when the Pod is *completed*.
 This limitation is tracked in [issue #55087](https://github.com/kubernetes/kubernetes/issues/55807).
 {: .note}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 * Learn more about [Container lifecycle hooks](/docs/concepts/containers/container-lifecycle-hooks/).
 * Learn more about the [lifecycle of a Pod](/docs/concepts/workloads/pods/pod-lifecycle/).
@@ -94,6 +94,6 @@ This limitation is tracked in [issue #55087](https://github.com/kubernetes/kuber
 * [Container](/docs/reference/generated/kubernetes-api/{{page.version}}/#container-v1-core)
 * See `terminationGracePeriodSeconds` in [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core)
 
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/task.md %}

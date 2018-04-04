@@ -2,11 +2,11 @@
 title: 云供应商
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 本文介绍了如何管理运行在特定云供应商上的 Kubernetes 集群。
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 # AWS
 本节介绍在 Amazon Web Services 上运行 Kubernetes 时可以使用的所有配置。
 
@@ -103,6 +103,6 @@ Kubernetes 利用 OpenStack 服务目录对它知道如何使用的服务进行�
 [BlockStorage]
 bs-version=v2
 ```
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

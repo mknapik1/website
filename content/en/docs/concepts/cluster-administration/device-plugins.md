@@ -6,7 +6,7 @@ description: Use the Kubernetes device plugin framework to implement plugins for
 
 {% include feature-state-beta.md %}
 
-{% capture overview %}
+{{% capture overview %}}
 Starting in version 1.8, Kubernetes provides a
 [device plugin framework](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/resource-management/device-plugin.md)
 for vendors to advertise their resources to the kubelet without changing Kubernetes core code.
@@ -14,9 +14,9 @@ Instead of writing custom Kubernetes code, vendors can implement a device plugin
 be deployed manually or as a DaemonSet. The targeted devices include GPUs,
 High-performance NICs, FPGAs, InfiniBand, and other similar computing resources
 that may require vendor specific initialization and setup.
-{% endcapture %}
+{{% /capture %}}
 
-{% capture body %}
+{{% capture body %}}
 
 ## Device plugin registration
 
@@ -140,6 +140,6 @@ For examples of device plugin implementations, see:
 * The [NVIDIA GPU device plugin for COS base OS](https://github.com/GoogleCloudPlatform/container-engine-accelerators/tree/master/cmd/nvidia_gpu).
 * The [RDMA device plugin](https://github.com/hustcat/k8s-rdma-device-plugin)
 * The [Solarflare device plugin](https://github.com/vikaschoudhary16/sfc-device-plugin)
-{% endcapture %}
+{{% /capture %}}
 
 {% include templates/concept.md %}

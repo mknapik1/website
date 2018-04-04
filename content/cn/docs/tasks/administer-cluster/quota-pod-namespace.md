@@ -3,22 +3,22 @@ title: 配置命名空间下pod总数
 ---
 
 
-{% capture overview %}
+{{% capture overview %}}
 
 本文主要描述如何配置一个命名空间下可运行的pod总数。资源配额详细信息可查看：[资源配额](/docs/api-reference/v1.7/#resourcequota-v1-core)
 。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture prerequisites %}
+{{% capture prerequisites %}}
 
 {% include task-tutorial-prereqs.md %}
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture steps %}
+{{% capture steps %}}
 
 ## 创建一个命名空间
 
@@ -100,9 +100,9 @@ lastUpdateTime: 2017-07-07T20:57:05Z
 kubectl delete namespace quota-pod-example
 ```
 
-{% endcapture %}
+{{% /capture %}}
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 ### 对于集群管理
 
@@ -126,7 +126,7 @@ kubectl delete namespace quota-pod-example
 
 * [配置pod的QoS](/docs/tasks/configure-pod-container/quality-service-pod/)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/task.md %}

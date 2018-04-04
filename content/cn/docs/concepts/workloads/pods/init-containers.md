@@ -9,10 +9,10 @@ redirect_from:
 - "/docs/user-guide/pods/init-container.html"
 ---
 
-{% capture overview %}
+{{% capture overview %}}
 
 本页提供了 Init 容器的概览，它是一种专用的容器，在应用容器启动之前运行，并包括一些应用镜像中不存在的实用工具和安装脚本。
-{% endcapture %}
+{{% /capture %}}
 
 {:toc}
 
@@ -20,7 +20,7 @@ redirect_from:
 这个特性在 1.6 版本已经退出 beta 版本。Init 容器可以在 PodSpec 中同应用的 `containers` 数组一起来指定。
 beta 注解的值将仍然需要保留，并覆盖 PodSpec 字段值。
 
-{% capture body %}
+{{% capture body %}}
 
 
 ## 理解 Init 容器
@@ -315,16 +315,16 @@ Apiserver 版本为 1.6 或更高版本的集群，通过使用 `spec.initContai
 之前的版本可以使用 alpha 和 beta 注解支持 Init 容器。
 `spec.initContainers` 字段也被加入到 alpha 和 beta 注解中，所以 Kubernetes 1.3.0 版本或更高版本可以执行 Init 容器，并且 1.6 版本的 apiserver 能够安全的回退到 1.5.x 版本，而不会使存在的已创建 Pod 失去 Init 容器的功能。
 
-{% endcapture %}
+{{% /capture %}}
 
 
-{% capture whatsnext %}
+{{% capture whatsnext %}}
 
 
 
 * [创建具有 Init 容器的 Pod](/docs/tasks/configure-pod-container/configure-pod-initialization/#creating-a-pod-that-has-an-init-container)
 
-{% endcapture %}
+{{% /capture %}}
 
 
 {% include templates/concept.md %}
