@@ -11,13 +11,6 @@ ignoreFiles = [ "^OWNERS$", "README.md", "^node_modules$" ]
 contentDir = "content/en"
 
 # TODO(bep)
-[social]
-twitter = "kubernetesio"
-
-[params]
-description = "Production-Grade Container Orchestration"
-
-# TODO(bep)
 logo = "/images/favicon.png"
 
 [languages]
@@ -35,6 +28,14 @@ description = "Production-Grade Container Orchestration"
 languageName ="Chinese"
 weight = 2
 contentDir = "content/cn"
+
+
+# TODO(bep)
+[social]
+twitter = "kubernetesio"
+
+[params]
+description = "Production-Grade Container Orchestration"
 
 
 # TODO(bep) defaults?
