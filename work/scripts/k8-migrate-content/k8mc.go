@@ -13,6 +13,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/hacdias/fileutils"
 
@@ -106,6 +107,12 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 	if err := m.copyDir("docs", "content/en/docs"); err != nil {
 		return err
 	}
+
+	// Copy blog content to content/en
+	if err := m.copyDir("blog", "content/en/blog"); err != nil {
+		return err
+	}
+
 	// Copy Chinese content to content/cn
 	if err := m.copyDir("cn/docs", "content/cn/docs"); err != nil {
 		return err
@@ -118,6 +125,11 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 
 	// Create proper Hugo sections
 	if err := m.renameContentFiles("index\\.md$", "_index.md"); err != nil {
+		return err
+	}
+
+	// We are going to replce this later, but just make sure it gets the name correctly.
+	if err := m.renameContentFile("content/en/blog/index.html", "content/en/blog/_index.md"); err != nil {
 		return err
 	}
 
@@ -170,7 +182,7 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 		return err
 	}
 
-	contentFixers := contentFixers{
+	mainContentFixSet := contentFixers{
 		// This is a type, but it creates a breaking shortcode
 		// {{ "{% glossary_tooltip text=" }}"cluster" term_id="cluster" %}
 		func(path, s string) (string, error) {
@@ -186,7 +198,16 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 		replaceCaptures,
 	}
 
-	if err := m.applyContentFixers(contentFixers, "md$"); err != nil {
+	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {
+		return err
+	}
+
+	blogFixers := contentFixers{
+		// Makes proper YAML dates from "Friday, July 02, 2015" etc.
+		fixDates,
+	}
+
+	if err := m.applyContentFixers(blogFixers, ".*blog/.*md$"); err != nil {
 		return err
 	}
 
@@ -226,6 +247,12 @@ func (m *mover) applyContentFixers(fixers contentFixers, match string) error {
 		}
 		return nil
 	})
+}
+
+func (m *mover) renameContentFile(from, to string) error {
+	from = m.absFilename(from)
+	to = m.absFilename(to)
+	return os.Rename(from, to)
 }
 
 func (m *mover) renameContentFiles(match, renameTo string) error {
@@ -420,4 +447,26 @@ func stringsReplacer(old, new string) func(path, s string) (string, error) {
 		return strings.Replace(s, old, new, -1), nil
 	}
 
+}
+
+func fixDates(path, s string) (string, error) {
+	dateRe := regexp.MustCompile(`(date):\s*(.*)\s*\n`)
+
+	// Make text dates in front matter date into proper YAML dates.
+	var err error
+	s = dateRe.ReplaceAllStringFunc(s, func(s string) string {
+		m := dateRe.FindAllStringSubmatch(s, -1)
+		key, val := m[0][1], m[0][2]
+		var tt time.Time
+
+		tt, err = time.Parse("Monday, January 2, 2006", val)
+		if err != nil {
+			err = fmt.Errorf("%s: %s", key, err)
+			return ""
+		}
+
+		return fmt.Sprintf("%s: %s\n", key, tt.Format("2006-01-02"))
+	})
+
+	return s, err
 }

@@ -4,6 +4,7 @@ title = "Kubernetes"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+
 disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "robotsTXT"]
 
 ignoreFiles = [ "^OWNERS$", "README.md", "^node_modules$" ]
@@ -34,7 +35,13 @@ contentDir = "content/cn"
 [social]
 twitter = "kubernetesio"
 
+[permalinks]
+  blog = "/:section/:year/:month/:day/:slug/"
+
 [params]
+
+time_format_blog = "Monday, January 02, 2006"
+
 description = "Production-Grade Container Orchestration"
 
 

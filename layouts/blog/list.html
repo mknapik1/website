@@ -1,0 +1,4 @@
+{{ define "main" }}
+	{{ $p := index .Pages 0 }}
+	{{ $p.Render "main" }}
+{{ end }}
