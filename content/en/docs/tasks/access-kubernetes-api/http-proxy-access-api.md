@@ -78,7 +78,7 @@ Get a list of pods:
 {{% /capture %}}
 
 {{% capture whatsnext %}}
-Learn more about [kubectl proxy](/docs/user-guide/kubectl/{{page.version}}/#proxy).
+Learn more about [kubectl proxy](/docs/reference/generated/kubectl/kubectl-commands#proxy).
 {{% /capture %}}
 
 {% include templates/task.md %}
