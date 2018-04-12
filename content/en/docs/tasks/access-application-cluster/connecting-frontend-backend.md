@@ -1,5 +1,6 @@
 ---
 title: Connect a Front End to a Back End Using a Service
+weight: 70
 ---
 
 {{% capture overview %}}

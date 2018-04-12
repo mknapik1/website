@@ -6,6 +6,7 @@ reviewers:
 - janetkuo
 - smarterclayton
 title: Delete a StatefulSet
+weight: 70
 ---
 
 {{% capture overview %}}

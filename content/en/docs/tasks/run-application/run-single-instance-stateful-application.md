@@ -1,5 +1,7 @@
 ---
 title: Run a Single-Instance Stateful Application
+weight: 20
+weight: 20
 ---
 
 {{% capture overview %}}

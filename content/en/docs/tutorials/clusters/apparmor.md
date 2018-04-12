@@ -2,6 +2,7 @@
 reviewers:
 - stclair
 title: AppArmor
+weight: 10
 ---
 
 {{% capture overview %}}

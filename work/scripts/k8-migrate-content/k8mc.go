@@ -3,6 +3,7 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
 	"regexp"
 
@@ -14,6 +15,10 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/spf13/cast"
+
+	"gopkg.in/yaml.v2"
 
 	"github.com/hacdias/fileutils"
 
@@ -48,10 +53,13 @@ func main() {
 	// * Add menu config
 	// * Replace inline Liquid with shortcodes
 	// * Etc.
-	must(m.contentMigrate_Step2_Replacements())
+	must(m.contentMigrate_Replacements())
+
+	// Creates sections for Toc/Menus
+	must(m.contentMigrate_CreateSections())
 
 	// Copy in some content that failed in the steps above etc.
-	must(m.contentMigrate_Step3_Final())
+	must(m.contentMigrate_Final_Step())
 
 	if m.try {
 		m.printStats(os.Stdout)
@@ -93,10 +101,12 @@ type mover struct {
 	changeLogFromTo []string
 
 	projectRoot string
+
+	addedFiles map[string]bool
 }
 
 func newMigrator(root string) *mover {
-	return &mover{projectRoot: root}
+	return &mover{projectRoot: root, addedFiles: make(map[string]bool)}
 }
 
 func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
@@ -136,8 +146,167 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 	return nil
 }
 
-func (m *mover) contentMigrate_Step2_Replacements() error {
-	log.Println("Start Step 2 …")
+func (m *mover) contentMigrate_CreateSections() error {
+	log.Println("Start Create Sections Step …")
+
+	// Create sections from the root nodes (the Toc) in /data
+	//sectionsData := make(map[string]SectionFromData)
+
+	mm, err := m.readDataDir("", func() interface{} { return &SectionFromData{} })
+	if err != nil {
+		return err
+	}
+
+	for _, vi := range mm {
+		v := vi.(*SectionFromData)
+
+		for i, tocEntry := range v.Toc {
+			switch v := tocEntry.(type) {
+			case string:
+			case map[interface{}]interface{}:
+				if err := m.handleTocEntryRecursive(i, cast.ToStringMap(v)); err != nil {
+					return err
+				}
+			default:
+				panic("unknown type")
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (m *mover) readDataDir(name string, createMapEntry func() interface{}) (map[string]interface{}, error) {
+	dataDir := filepath.Join(m.absFilename("data"), name)
+	log.Println("Read data from", dataDir)
+	fd, err := os.Open(dataDir)
+	if err != nil {
+		return nil, err
+	}
+	defer fd.Close()
+	fis, err := fd.Readdir(-1)
+	if err != nil {
+		return nil, err
+	}
+
+	mm := make(map[string]interface{})
+
+	for _, fi := range fis {
+		if fi.IsDir() {
+			continue
+		}
+		name := fi.Name()
+		baseName := strings.TrimSuffix(name, filepath.Ext(name))
+		b, err := ioutil.ReadFile(filepath.Join(dataDir, name))
+		if err != nil {
+			return nil, err
+		}
+
+		to := createMapEntry()
+
+		if err := yaml.Unmarshal(b, to); err != nil {
+			return nil, err
+		}
+		mm[baseName] = to
+
+	}
+
+	return mm, nil
+}
+
+type SectionFromData struct {
+	Bigheader   string        `yaml:"bigheader"`
+	Abstract    string        `yaml:"abstract"`
+	LandingPage string        `yaml:"landing_page"`
+	Toc         []interface{} `yaml:"toc"`
+}
+
+func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) error {
+	title := cast.ToString(entry["title"])
+	//landingPage := cast.ToString(entry["landing_page"])
+
+	var sectionContentPageWritten bool
+
+	sectionWeight := (sidx + 1) * 10
+
+	if sect, found := entry["section"]; found {
+		for i, e := range sect.([]interface{}) {
+
+			switch v := e.(type) {
+			case string:
+				v = strings.TrimSpace(v)
+				if !strings.HasPrefix(v, "docs") {
+					log.Println("skip toc file:", v)
+					continue
+				}
+				if strings.HasSuffix(v, "index.md") {
+					continue
+				}
+
+				if strings.Contains(v, "generated") {
+					continue
+				}
+
+				// 1. Create a section content file if not already written
+				if !sectionContentPageWritten {
+					sectionContentPageWritten = true
+					// TODO(bep) cn?
+					force := false
+					relFilename := filepath.Join("content", "en", filepath.Dir(v), "_index.md")
+					if m.addedFiles[relFilename] {
+						log.Printf("WARNING: %q section already added. Ambigous?", relFilename)
+						// Use the title from the last owning folder for now.
+						paths := strings.Split(filepath.Dir(relFilename), string(os.PathSeparator))
+						title = paths[len(paths)-1]
+						title = strings.Replace(title, "-", " ", -1)
+						title = strings.Title(title)
+						force = true
+					}
+
+					if force || !m.checkRelFileExists(relFilename) {
+						m.addedFiles[relFilename] = true
+						filename := filepath.Join(m.absFilename(relFilename))
+						content := fmt.Sprintf(`---
+title: %q
+weight: %d
+toc_list: true
+---
+
+`, title, sectionWeight)
+
+						if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
+							return err
+						}
+					}
+
+				}
+
+				relFilename := filepath.Join("content", "en", v)
+				if !m.checkRelFileExists(relFilename) {
+					log.Println("content file in toc does not exist:", relFilename)
+					continue
+				}
+				// 2. Set a weight in the relevant content file to get proper ordering.
+				if err := m.replaceInFileRel(relFilename, addWeight((i+1)*10)); err != nil {
+					return err
+				}
+
+			case map[interface{}]interface{}:
+				mm := cast.ToStringMap(v)
+
+				if err := m.handleTocEntryRecursive(i, mm); err != nil {
+					return err
+				}
+			}
+		}
+	}
+
+	return nil
+}
+
+func (m *mover) contentMigrate_Replacements() error {
+	log.Println("Start Replacement Step …")
 
 	if m.try {
 		// The try flag is mainly to get the first step correct before we
@@ -217,7 +386,8 @@ func (m *mover) contentMigrate_Step2_Replacements() error {
 
 // TODO(bep) {% include templates/user-journey-content.md %} etc.
 
-func (m *mover) contentMigrate_Step3_Final() error {
+func (m *mover) contentMigrate_Final_Step() error {
+	log.Println("Start Final Step …")
 	// Copy additional content files from the work dir.
 	// This will in some cases revert changes made in previous steps, but
 	// these are intentional.
@@ -311,6 +481,16 @@ func (m *mover) absFilename(name string) string {
 		panic("path too short")
 	}
 	return abs
+}
+
+func (m *mover) checkRelFileExists(rel string) bool {
+	if _, err := os.Stat(m.absFilename(rel)); err != nil {
+		if !os.IsNotExist(err) {
+			panic(err)
+		}
+		return false
+	}
+	return true
 }
 
 func must(err error) {
@@ -413,11 +593,19 @@ func (m *mover) replaceInFile(filename string, replacer func(path string, conten
 	return m.handleFile(filename, false, fi, replacer)
 }
 
-func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
+/*func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
 	return func(path, s string) (string, error) {
 		return appendToFrontMatter(s, fmt.Sprintf(`menu:
   docsmain:
     weight: %d`, weight)), nil
+	}
+
+}*/
+
+func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return appendToFrontMatter(s, fmt.Sprintf(`main_menu: true
+weight: %d`, weight)), nil
 	}
 
 }
@@ -425,6 +613,12 @@ func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
 func addLinkTitle(title string) func(path, s string) (string, error) {
 	return func(path, s string) (string, error) {
 		return appendToFrontMatter(s, fmt.Sprintf("linkTitle: %q", title)), nil
+	}
+}
+
+func addWeight(weight int) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return appendToFrontMatter(s, fmt.Sprintf("weight: %d", weight)), nil
 	}
 }
 

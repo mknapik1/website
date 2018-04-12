@@ -1,5 +1,6 @@
 ---
 title: Federated Secrets
+weight: 150
 ---
 
 This guide explains how to use secrets in Federation control plane.

@@ -1,5 +1,6 @@
 ---
 title: Writing a New Topic
+weight: 40
 ---
 
 {{% capture overview %}}

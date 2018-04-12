@@ -1,5 +1,6 @@
 ---
 title: Glossary and Terminology
+weight: 140
 ---
 
 {{% capture overview %}}

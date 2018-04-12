@@ -117,6 +117,7 @@ rules:
 - apiGroups: ["certificates.k8s.io"]
   resources: ["certificatesigningrequests/selfnodeclient"]
   verbs: ["create"]
+weight: 80
 ---
 # A ClusterRole which instructs the CSR approver to approve a node requesting a
 # serving cert matching its client cert.

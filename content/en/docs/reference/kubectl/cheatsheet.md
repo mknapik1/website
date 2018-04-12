@@ -303,6 +303,7 @@ Output format | Description
 Kubectl verbosity is controlled with the `-v` or `--v` flags followed by an integer representing the log level. General Kubernetes logging conventions and the associated log levels are described [here](https://github.com/kubernetes/community/blob/master/contributors/devel/logging.md).
 
 Verbosity | Description
+weight: 70
 --------------| -----------
 `--v=0` | Generally useful for this to ALWAYS be visible to an operator.
 `--v=1` | A reasonable default log level if you don't want verbosity.

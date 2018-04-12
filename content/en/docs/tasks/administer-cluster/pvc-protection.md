@@ -3,6 +3,7 @@ reviewers:
 - msau42
 - jsafrane
 title: Persistent Volume Claim Protection
+weight: 360
 ---
 
 {{% capture overview %}}

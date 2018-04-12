@@ -1,5 +1,6 @@
 ---
 title: Garbage Collection
+weight: 60
 ---
 
 {{% capture overview %}}

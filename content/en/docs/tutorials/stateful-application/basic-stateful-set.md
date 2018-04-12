@@ -7,6 +7,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: StatefulSet Basics
+weight: 10
 ---
 
 {{% capture overview %}}

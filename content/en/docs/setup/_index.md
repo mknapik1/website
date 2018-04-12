@@ -5,9 +5,8 @@ reviewers:
 - mikedanese
 no_issue: true
 title: Setup
-menu:
-  docsmain:
-    weight: 30
+main_menu: true
+weight: 30
 ---
 
 This section provides instructions for installing Kubernetes and setting

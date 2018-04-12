@@ -3,6 +3,7 @@ reviewers:
 - mtaufen
 - dawnchen
 title: Reconfigure a Node's Kubelet in a Live Cluster
+weight: 230
 ---
 
 {{% capture overview %}}

@@ -1,5 +1,6 @@
 ---
 title: Configure Default Memory Requests and Limits for a Namespace
+weight: 10
 ---
 
 {{% capture overview %}}

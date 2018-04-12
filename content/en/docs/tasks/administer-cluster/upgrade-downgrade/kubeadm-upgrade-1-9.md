@@ -5,6 +5,7 @@ reviewers:
 - roberthbailey
 - jbeda
 title: Upgrading/downgrading kubeadm clusters between v1.8 to v1.9
+weight: 40
 ---
 
 {{% capture overview %}}

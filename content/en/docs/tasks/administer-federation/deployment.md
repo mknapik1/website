@@ -1,5 +1,6 @@
 ---
 title: Federated Deployment
+weight: 80
 ---
 
 {{% capture overview %}}

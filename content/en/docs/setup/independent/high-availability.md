@@ -5,6 +5,7 @@ reviewers:
 - errordeveloper
 - jbeda
 title: Creating HA clusters with kubeadm
+weight: 40
 ---
 
 {{% capture overview %}}

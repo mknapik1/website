@@ -7,6 +7,8 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Run a Replicated Stateful Application
+weight: 30
+weight: 30
 ---
 
 {{% capture overview %}}

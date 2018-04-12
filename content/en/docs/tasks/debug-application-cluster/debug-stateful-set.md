@@ -8,6 +8,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Debug a StatefulSet
+weight: 140
 ---
 
 {{% capture overview %}}

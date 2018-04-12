@@ -1,5 +1,6 @@
 ---
 title: Overview of Kubernetes Online Training
+weight: 10
 ---
 
 {{% capture overview %}}

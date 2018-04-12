@@ -1,5 +1,6 @@
 ---
 title: Specifying a Disruption Budget for your Application
+weight: 120
 ---
 
 {{% capture overview %}}

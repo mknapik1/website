@@ -3,6 +3,7 @@ reviewers:
 - mikedanese
 - thockin
 title: Container Lifecycle Hooks
+weight: 30
 ---
 
 {{% capture overview %}}

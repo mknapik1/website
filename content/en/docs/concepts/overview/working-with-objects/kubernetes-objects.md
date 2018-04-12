@@ -1,5 +1,6 @@
 ---
 title: Understanding Kubernetes Objects
+weight: 10
 ---
 
 {{% capture overview %}}

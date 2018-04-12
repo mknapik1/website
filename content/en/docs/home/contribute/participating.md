@@ -1,5 +1,6 @@
 ---
 title: Participating in SIG-DOCS
+weight: 20
 ---
 
 {{% capture overview %}}

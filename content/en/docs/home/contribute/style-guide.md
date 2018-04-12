@@ -161,6 +161,7 @@ For example, if you are writing a tutorial that is relevant to Kubernetes versio
 ---
 title: <your tutorial title here>
 min-kubernetes-server-version: v1.8
+weight: 80
 ---
 ```
 

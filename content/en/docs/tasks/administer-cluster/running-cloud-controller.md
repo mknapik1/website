@@ -4,6 +4,7 @@ reviewers:
 - thockin
 - wlan0
 title: Kubernetes Cloud Controller Manager
+weight: 290
 ---
 
 {% include feature-state-alpha.md %}

@@ -3,6 +3,7 @@ reviewers:
 - mtaufen
 - dawnchen
 title: Set Kubelet parameters via a config file
+weight: 240
 ---
 
 {{% capture overview %}}

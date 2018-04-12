@@ -2,6 +2,7 @@
 reviewers:
 - lavalamp
 title: Kubernetes Components
+weight: 20
 ---
 
 {{% capture overview %}}

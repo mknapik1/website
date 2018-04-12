@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm init
+weight: 20
 ---
 {{% capture overview %}}
 {{% /capture %}}

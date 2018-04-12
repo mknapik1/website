@@ -2,6 +2,7 @@
 reviewers:
 - bboreham
 title: Weave Net for NetworkPolicy
+weight: 50
 ---
 
 {{% capture overview %}}

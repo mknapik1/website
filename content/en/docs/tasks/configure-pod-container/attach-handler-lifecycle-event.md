@@ -1,5 +1,6 @@
 ---
 title: Attach Handlers to Container Lifecycle Events
+weight: 170
 ---
 
 {{% capture overview %}}

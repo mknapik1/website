@@ -2,6 +2,7 @@
 title: "Example: Deploying PHP Guestbook application with Redis"
 reviewers:
 - ahmetb
+weight: 20
 ---
 
 {{% capture overview %}}

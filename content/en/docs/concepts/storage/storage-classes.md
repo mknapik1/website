@@ -5,6 +5,7 @@ reviewers:
 - saad-ali
 - thockin
 title: Storage Classes
+weight: 30
 ---
 
 This document describes the concept of `StorageClass` in Kubernetes. Familiarity

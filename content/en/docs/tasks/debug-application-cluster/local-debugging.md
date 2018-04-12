@@ -1,5 +1,6 @@
 ---
 title: Developing and debugging services locally
+weight: 170
 ---
 
 {{% capture overview %}}

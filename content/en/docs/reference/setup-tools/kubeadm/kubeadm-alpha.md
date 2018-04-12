@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm alpha
+weight: 90
 ---
 `kubeadm alpha` provides a preview of a set of features made available for gathering feedback
  from the community. Please try it out and give us feedback!

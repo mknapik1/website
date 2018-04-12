@@ -1,5 +1,6 @@
 ---
 title: Set up placement policies in Federation
+weight: 40
 ---
 
 {{% capture overview %}}

@@ -7,6 +7,7 @@ notitle: true
 
 This folder will be used for all mentoring initiatives for Kubernetes.
 
+weight: 30
 ---
 ## Kubernetes Pilots
 

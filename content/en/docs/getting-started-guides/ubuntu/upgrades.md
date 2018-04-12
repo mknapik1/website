@@ -1,5 +1,6 @@
 ---
 title: Upgrades
+weight: 40
 ---
 
 {{% capture overview %}}

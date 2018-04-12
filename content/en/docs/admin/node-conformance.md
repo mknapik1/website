@@ -57,6 +57,7 @@ Kubernetes also provides node conformance test docker images for other
 architectures:
 
   Arch  |       Image       |
+weight: 30
 --------|:-----------------:|
  amd64  |  node-test-amd64  |
   arm   |    node-test-arm  |

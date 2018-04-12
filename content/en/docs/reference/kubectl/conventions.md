@@ -3,6 +3,7 @@ approvers:
 - bgrant0607
 - janetkuo
 title: kubectl Usage Conventions
+weight: 50
 ---
 
 * TOC

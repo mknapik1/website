@@ -2,6 +2,7 @@
 reviewers:
 - murali-reddy
 title: Use Kube-router for NetworkPolicy
+weight: 30
 ---
 
 {{% capture overview %}}

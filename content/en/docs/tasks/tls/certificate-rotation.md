@@ -3,6 +3,7 @@ reviewers:
 - jcbsmpsn
 - mikedanese
 title: Certificate Rotation
+weight: 20
 ---
 
 {{% capture overview %}}

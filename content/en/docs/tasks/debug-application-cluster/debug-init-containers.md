@@ -123,6 +123,7 @@ execution. The table below describes some example status values that you might
 see while debugging Init Containers.
 
 Status | Meaning
+weight: 90
 ------ | -------
 `Init:N/M` | The Pod has `M` Init Containers, and `N` have completed so far.
 `Init:Error` | An Init Container has failed to execute.

@@ -1,5 +1,6 @@
 ---
 title: Kubernetes Object Management
+weight: 10
 ---
 
 {{% capture overview %}}

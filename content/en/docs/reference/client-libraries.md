@@ -2,6 +2,7 @@
 title: Client Libraries
 approvers:
 - ahmetb
+weight: 20
 ---
 
 {{% capture overview %}}

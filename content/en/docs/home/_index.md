@@ -9,9 +9,8 @@ css: /css/style_user_journeys.css
 js: /js/user-journeys/home.js, https://use.fontawesome.com/4bcc658a89.js
 display_browse_numbers: true
 linkTitle: "Home"
-menu:
-  docsmain:
-    weight: 20
+main_menu: true
+weight: 20
 ---
 
 {% unless page.notitle %}

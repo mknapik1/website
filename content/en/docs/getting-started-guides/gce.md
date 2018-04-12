@@ -206,6 +206,7 @@ field values:
 
 
 IaaS Provider        | Config. Mgmt | OS     | Networking  | Docs                                              | Conforms | Support Level
+weight: 50
 -------------------- | ------------ | ------ | ----------  | ---------------------------------------------     | ---------| ----------------------------
 GCE                  | Saltstack    | Debian | GCE         | [docs](/docs/getting-started-guides/gce/)                                    |   | Project
 

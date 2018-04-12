@@ -1,12 +1,12 @@
 <div id="vendorStrip" class="light-text">
 	<ul>
 		{{ $p := . }}
-		{{ range .Site.Menus.docsmain }}
-		{{ $p.Scratch.Set "IsAncestor" false }}
-		{{ if ne .URL "/docs/" }}{{ with .Page }}{{ $p.Scratch.Set "IsAncestor" (.IsAncestor $p) }}{{ end }}{{ end }}
-		<li><a href="{{ .URL }}" {{if or ($p.Scratch.Get "IsAncestor") ($.IsMenuCurrent "docsmain" .) ($.HasMenuCurrent "docsmain" .) }} class="YAH"{{end}}>{{ .Name | upper }}</a></li>
-		{{ end }}
 		{{ $home := .Site.Home }}
+		{{ $docs := .Site.GetPage "section" "docs" }}
+		{{ range (where $docs.Sections ".Params.main_menu" true) }}
+		{{ $yah := $p.IsDescendant . }}
+		<li><a href="{{ .RelPermalink }}"{{ if $yah }} class="YAH"{{ end }}>{{ .LinkTitle | upper }}</a></li>
+		{{ end }}
 		{{ if gt (len $home.AllTranslations ) 1 }}
 		{{ end }}
 		{{ range $home.AllTranslations }}

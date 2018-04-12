@@ -1,5 +1,6 @@
 ---
 title: Configure Pod Initialization
+weight: 160
 ---
 
 {{% capture overview %}}

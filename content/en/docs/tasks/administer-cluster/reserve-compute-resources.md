@@ -37,6 +37,7 @@ on each node.
 |   (available for pods)  |
 |                         |
 |                         |
+weight: 180
 ---------------------------
 ```
 

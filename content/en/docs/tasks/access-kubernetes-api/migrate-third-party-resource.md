@@ -3,6 +3,7 @@ title: Migrate a ThirdPartyResource to CustomResourceDefinition
 reviewers:
 - enisoc
 - deads2k
+weight: 40
 ---
 
 {{% capture overview %}}

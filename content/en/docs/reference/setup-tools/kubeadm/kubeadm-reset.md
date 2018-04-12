@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm reset 
+weight: 60
 ---
 {{% capture overview %}}
 {{% /capture %}}

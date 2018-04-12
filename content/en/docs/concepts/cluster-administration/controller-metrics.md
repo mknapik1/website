@@ -1,5 +1,6 @@
 ---
 title: Controller manager metrics
+weight: 140
 ---
 
 {{% capture overview %}}

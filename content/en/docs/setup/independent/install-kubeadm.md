@@ -1,5 +1,7 @@
 ---
 title: Installing kubeadm
+weight: 30
+weight: 10
 ---
 
 {{% capture overview %}}

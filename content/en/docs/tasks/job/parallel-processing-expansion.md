@@ -143,6 +143,7 @@ spec:
         image: busybox
         command: ["sh", "-c", "echo Processing URL {{ url }} && sleep 5"]
       restartPolicy: Never
+weight: 10
 ---
 {%- endfor %}
 {% endraw %}

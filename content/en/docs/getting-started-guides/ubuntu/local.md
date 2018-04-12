@@ -1,5 +1,6 @@
 ---
 title: Local Kubernetes development with LXD
+weight: 150
 ---
 
 {{% capture overview %}}

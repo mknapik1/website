@@ -2,6 +2,7 @@
 reviewers:
 - pwittrock
 title: Deprecated Alternatives
+weight: 40
 ---
 
 # *Stop.  These guides are superseded by [Minikube](../minikube/).  They are only listed here for completeness.*

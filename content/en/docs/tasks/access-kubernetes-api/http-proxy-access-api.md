@@ -1,5 +1,6 @@
 ---
 title: Use an HTTP Proxy to Access the Kubernetes API
+weight: 10
 ---
 
 {{% capture overview %}}

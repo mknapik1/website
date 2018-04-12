@@ -1,5 +1,6 @@
 ---
 title: Federated DaemonSet
+weight: 70
 ---
 
 {{% capture overview %}}

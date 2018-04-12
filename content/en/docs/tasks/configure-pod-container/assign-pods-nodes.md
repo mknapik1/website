@@ -1,5 +1,6 @@
 ---
 title: Assign Pods to Nodes
+weight: 150
 ---
 
 {{% capture overview %}}

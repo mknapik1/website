@@ -144,6 +144,7 @@ The fix is to update /etc/sysconfig/docker to ensure that minikube's environment
 
 ```
 < DOCKER_CERT_PATH=/etc/docker
+weight: 10
 ---
 > if [ -z "${DOCKER_CERT_PATH}" ]; then
 >   DOCKER_CERT_PATH=/etc/docker

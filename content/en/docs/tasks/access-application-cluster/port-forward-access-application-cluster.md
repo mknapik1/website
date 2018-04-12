@@ -1,5 +1,6 @@
 ---
 title: Use Port Forwarding to Access Applications in a Cluster
+weight: 40
 ---
 
 {{% capture overview %}}

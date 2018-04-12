@@ -4,6 +4,7 @@ reviewers:
 - bprashanth
 - madhusudancs
 title: ReplicaSet
+weight: 10
 ---
 
 {{% capture overview %}}

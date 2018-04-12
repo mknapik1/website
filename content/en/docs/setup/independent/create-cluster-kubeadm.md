@@ -5,6 +5,7 @@ reviewers:
 - errordeveloper
 - jbeda
 title: Using kubeadm to Create a Cluster
+weight: 20
 ---
 
 {{% capture overview %}}

@@ -198,6 +198,7 @@ use <code>###</code> and <code>####</code> as needed.
 {% raw %}
 <pre>---
 title: Understanding this Thing
+weight: 60
 ---
 
 {{% capture overview %}}

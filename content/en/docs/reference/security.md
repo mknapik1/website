@@ -7,6 +7,7 @@ approvers:
 - erictune
 - philips
 - jessfraz
+weight: 20
 ---
 
 ## Security Announcements

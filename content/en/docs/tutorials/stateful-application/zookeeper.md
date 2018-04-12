@@ -8,6 +8,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Running ZooKeeper, A CP Distributed System
+weight: 60
 ---
 
 {{% capture overview %}}

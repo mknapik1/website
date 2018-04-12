@@ -1,5 +1,6 @@
 ---
 title: Reviewing Documentation Issues
+weight: 70
 ---
 
 {{% capture overview %}}

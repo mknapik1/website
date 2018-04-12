@@ -5,6 +5,7 @@ reviewers:
 - lavalamp
 - liggitt
 title: Managing Service Accounts
+weight: 60
 ---
 
 *This is a Cluster Administrator guide to service accounts.  It assumes knowledge of

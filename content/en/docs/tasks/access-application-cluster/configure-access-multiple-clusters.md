@@ -1,5 +1,6 @@
 ---
 title: Configure Access to Multiple Clusters
+weight: 30
 ---
 
 

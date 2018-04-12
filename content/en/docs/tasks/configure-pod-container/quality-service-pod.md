@@ -1,5 +1,6 @@
 ---
 title: Configure Quality of Service for Pods
+weight: 30
 ---
 
 

@@ -3,6 +3,7 @@ reviewers:
 - davidopp
 - lavalamp
 title: Cluster Administration Overview
+weight: 10
 ---
 
 {{% capture overview %}}

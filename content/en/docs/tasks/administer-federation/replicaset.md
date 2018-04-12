@@ -1,5 +1,6 @@
 ---
 title: Federated ReplicaSets
+weight: 140
 ---
 
 {{% capture overview %}}

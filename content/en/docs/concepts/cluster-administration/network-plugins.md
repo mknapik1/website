@@ -4,6 +4,8 @@ reviewers:
 - freehan
 - thockin
 title: Network Plugins
+weight: 10
+weight: 60
 ---
 
 * TOC

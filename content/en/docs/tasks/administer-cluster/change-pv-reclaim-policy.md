@@ -1,5 +1,6 @@
 ---
 title: Change the Reclaim Policy of a PersistentVolume
+weight: 250
 ---
 
 {{% capture overview %}}

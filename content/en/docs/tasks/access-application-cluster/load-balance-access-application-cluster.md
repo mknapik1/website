@@ -1,5 +1,6 @@
 ---
 title: Provide Load-Balanced Access to an Application in a Cluster
+weight: 50
 ---
 
 {{% capture overview %}}

@@ -1,5 +1,6 @@
 ---
 title: Federated ConfigMap
+weight: 60
 ---
 
 {{% capture overview %}}

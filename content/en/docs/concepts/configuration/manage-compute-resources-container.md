@@ -1,5 +1,6 @@
 ---
 title: Managing Compute Resources for Containers
+weight: 20
 ---
 
 {{% capture overview %}}

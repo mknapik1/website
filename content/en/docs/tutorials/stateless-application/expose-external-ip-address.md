@@ -1,5 +1,6 @@
 ---
 title: Exposing an External IP Address to Access an Application in a Cluster
+weight: 40
 ---
 
 {{% capture overview %}}

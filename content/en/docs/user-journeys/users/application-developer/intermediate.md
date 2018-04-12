@@ -6,6 +6,7 @@ css: /css/style_user_journeys.css, https://fonts.googleapis.com/icon?family=Mate
 js: https://use.fontawesome.com/4bcc658a89.js, https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js
 title: Intermediate
 track: "USERS › APPLICATION DEVELOPER › INTERMEDIATE"
+weight: 20
 ---
 {% assign reference_docs_url = '/docs/reference/generated/kubernetes-api/' | append: site.latest %}
 

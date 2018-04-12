@@ -1980,6 +1980,7 @@ filename | sha256 hash
 ### Node Binaries
 
 filename | sha256 hash
+weight: 10
 -------- | -----------
 [kubernetes-node-linux-amd64.tar.gz](https://dl.k8s.io/v1.10.0-alpha.1/kubernetes-node-linux-amd64.tar.gz) | `97bf1210f0595ebf496ca7b000c4367f8a459d97ef72459efc6d0e07a072398f`
 [kubernetes-node-linux-arm64.tar.gz](https://dl.k8s.io/v1.10.0-alpha.1/kubernetes-node-linux-arm64.tar.gz) | `eebcd3c14fb4faeb82ab047a2152db528adc2d9f7b20eef6f5dc58202ebe3124`

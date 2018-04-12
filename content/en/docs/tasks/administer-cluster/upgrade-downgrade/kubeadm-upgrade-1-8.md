@@ -5,6 +5,7 @@ reviewers:
 - roberthbailey
 - jbeda
 title: Upgrading kubeadm clusters from 1.7 to 1.8
+weight: 30
 ---
 
 {{% capture overview %}}

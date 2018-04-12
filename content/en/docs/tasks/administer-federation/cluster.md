@@ -1,5 +1,6 @@
 ---
 title: Federated Cluster
+weight: 50
 ---
 
 {{% capture overview %}}

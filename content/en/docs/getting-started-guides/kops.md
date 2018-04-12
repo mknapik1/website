@@ -1,5 +1,6 @@
 ---
 title: Installing Kubernetes on AWS with kops
+weight: 30
 ---
 
 ## Overview

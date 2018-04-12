@@ -3,6 +3,7 @@ reviewers:
 - bowei
 - zihongz
 title: Customizing DNS Service
+weight: 340
 ---
 
 {{% capture overview %}}

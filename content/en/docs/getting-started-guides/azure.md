@@ -3,6 +3,7 @@ reviewers:
 - colemickens
 - brendandburns
 title: Running Kubernetes on Azure
+weight: 30
 ---
 
 ## Azure Container Service

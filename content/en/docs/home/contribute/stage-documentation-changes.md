@@ -1,5 +1,6 @@
 ---
 title: Staging Your Documentation Changes
+weight: 50
 ---
 
 {{% capture overview %}}

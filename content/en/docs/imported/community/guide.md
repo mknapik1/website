@@ -2,6 +2,7 @@
 title: Kubernetes Contributor Guide
 owner: sig-contributor-experience
 notitle: true
+weight: 10
 ---
 
 # Kubernetes Contributor Guide

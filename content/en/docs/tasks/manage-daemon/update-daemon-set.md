@@ -2,6 +2,7 @@
 reviewers:
 - janetkuo
 title: Perform a Rolling Update on a DaemonSet
+weight: 10
 ---
 
 {{% capture overview %}}

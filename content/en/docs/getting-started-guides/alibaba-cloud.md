@@ -3,6 +3,7 @@ reviewers:
 - colemickens
 - brendandburns
 title: Running Kubernetes on Alibaba Cloud
+weight: 10
 ---
 
 ## Alibaba Cloud Container Service

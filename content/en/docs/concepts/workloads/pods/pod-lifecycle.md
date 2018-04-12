@@ -1,5 +1,6 @@
 ---
 title: Pod Lifecycle
+weight: 30
 ---
 
 {{% capture overview %}}

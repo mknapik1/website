@@ -1,6 +1,7 @@
 ---
 title: Update API Objects in Place Using kubectl patch
 description: Use kubectl patch to update Kubernetes API objects in place. Do a strategic merge patch or a JSON merge patch.
+weight: 40
 ---
 
 {{% capture overview %}}

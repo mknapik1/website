@@ -1,5 +1,6 @@
 ---
 title: Configure Minimum and Maximum CPU Constraints for a Namespace
+weight: 40
 ---
 
 

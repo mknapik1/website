@@ -1,5 +1,6 @@
 ---
 title: Configure a Pod to Use a Volume for Storage
+weight: 60
 ---
 
 {{% capture overview %}}

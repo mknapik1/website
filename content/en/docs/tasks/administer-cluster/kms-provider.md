@@ -2,6 +2,7 @@
 approvers:
 - smarterclayton
 title: Using a KMS provider for data encryption
+weight: 210
 ---
 {{% capture overview %}}
 This page shows how to configure a Key Management Service (KMS) provider and plugin to enable secret data encryption.

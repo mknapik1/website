@@ -1,4 +1,11 @@
 {{ define "content" }}
-    {{ partial "docs/browse.html" . }}
+    {{/* partial "docs/browse.html" . */}}
+    {{ if ge (len .Pages) 1 }}
+    {{ $page := index .Pages 0 }}
+    {{ $page.Content }}
+    {{ end }}
 {{ end }}
 
+{{ define "side-menu" }}
+{{ partial "docs/side-menu.html" . }}
+{{ end }}

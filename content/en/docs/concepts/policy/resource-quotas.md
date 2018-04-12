@@ -255,6 +255,7 @@ kubectl describe quota --namespace=myspace
 Name:                         test
 Namespace:                    myspace
 Resource                      Used  Hard
+weight: 10
 --------                      ----  ----
 count/deployments.extensions  1     2
 count/pods                    2     3

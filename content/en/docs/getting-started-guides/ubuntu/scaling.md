@@ -1,5 +1,6 @@
 ---
 title: Scaling
+weight: 50
 ---
 
 {{% capture overview %}}

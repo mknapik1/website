@@ -1,5 +1,6 @@
 ---
 title: Limit Storage Consumption
+weight: 270
 ---
 
 {{% capture overview %}}

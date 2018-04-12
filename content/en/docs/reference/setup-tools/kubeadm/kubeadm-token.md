@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm token
+weight: 70
 ---
 {{% capture overview %}}
 

@@ -1,5 +1,6 @@
 ---
 title: Installing Kubernetes On-premises/Cloud Providers with Kubespray
+weight: 40
 ---
 
 ## Overview

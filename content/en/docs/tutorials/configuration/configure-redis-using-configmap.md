@@ -3,6 +3,7 @@ reviewers:
 - eparis
 - pmorie
 title: Configuring Redis using a ConfigMap
+weight: 10
 ---
 
 {{% capture overview %}}

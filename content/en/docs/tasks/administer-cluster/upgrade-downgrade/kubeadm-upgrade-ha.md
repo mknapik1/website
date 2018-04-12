@@ -5,6 +5,7 @@ reviewers:
 - timothysc 
 - jbeda
 title: Upgrading kubeadm HA clusters from 1.9.x to 1.9.y
+weight: 50
 ---
 
 {{% capture overview %}}

@@ -92,6 +92,7 @@ probes have failed, and the containers have been killed and recreated.
 
 ```shell
 FirstSeen LastSeen    Count   From            SubobjectPath           Type        Reason      Message
+weight: 140
 --------- --------    -----   ----            -------------           --------    ------      -------
 37s       37s     1   {default-scheduler }                    Normal      Scheduled   Successfully assigned liveness-exec to worker0
 36s       36s     1   {kubelet worker0}   spec.containers{liveness}   Normal      Pulling     pulling image "k8s.gcr.io/busybox"

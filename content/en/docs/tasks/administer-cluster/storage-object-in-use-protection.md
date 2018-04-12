@@ -3,6 +3,7 @@ approvers:
 - msau42
 - jsafrane
 title: Storage Object in Use Protection
+weight: 370
 ---
 
 {{% capture overview %}}

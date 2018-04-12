@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm join
+weight: 30
 ---
 {{% capture overview %}}
 {{% /capture %}}
