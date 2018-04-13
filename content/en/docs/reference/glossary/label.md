@@ -1,0 +1,15 @@
+---
+title: Label
+id: label
+date: 2018-04-12
+full-link: /docs/concepts/overview/working-with-objects/labels
+tags:
+- fundamental
+short_description: >
+  Tags objects with identifying attributes that are meaningful and relevant to users.
+
+---
+
+Labels are key/value pairs that are attached to objects such as {{< glossary_tooltip text="Pods" term_id="pod" >}}. They are used to organize and to select subsets of objects.
+
+

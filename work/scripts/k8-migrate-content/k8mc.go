@@ -49,6 +49,8 @@ func main() {
 	// renaming of some files to match Hugo's standard.
 	must(m.contentMigrate_Step1_Basic_Copy_And_Rename())
 
+	must(m.contentMigrate_CreateGlossaryFromData())
+
 	// Do all replacements needed in the content files:
 	// * Add menu config
 	// * Replace inline Liquid with shortcodes
@@ -144,6 +146,76 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 	}
 
 	return nil
+}
+
+func (m *mover) contentMigrate_CreateGlossaryFromData() error {
+	mm, err := m.readDataDir("glossary", func() interface{} { return make(map[string]interface{}) })
+	if err != nil {
+		return err
+	}
+
+	glossaryDir := m.absFilename("content/en/docs/reference/glossary")
+
+	if err := os.MkdirAll(glossaryDir, os.FileMode(0755)); err != nil && !os.IsNotExist(err) {
+		return err
+	}
+
+	// Add a section index page.
+	filename := filepath.Join(glossaryDir, "_index.md")
+	if err := ioutil.WriteFile(filename, []byte(`---
+title: Glossary
+---
+
+`), os.FileMode(0755)); err != nil {
+		return err
+	}
+
+	for k, v := range mm {
+		if k == "_example" {
+			continue
+		}
+
+		// Create pages in content/en/docs/reference/glossary for every entry.
+
+		vv := cast.ToStringMap(v)
+
+		name := vv["name"]
+		id := vv["id"]
+		shortDesc := cast.ToString(vv["short-description"])
+		longDesc := cast.ToString(vv["long-description"])
+		fullLink := cast.ToString(vv["full-link"])
+		tags := cast.ToStringSlice(vv["tags"])
+		tagsStr := ""
+		for _, tag := range tags {
+			tagsStr = tagsStr + "- " + tag + "\n"
+		}
+		tagsStr = strings.TrimSpace(tagsStr)
+
+		filename := filepath.Join(glossaryDir, fmt.Sprintf("%s.md", k))
+
+		content := fmt.Sprintf(`---
+title: %s
+id: %s
+date: 2018-04-12
+full-link: %s
+tags:
+%s
+short_description: >
+  %s
+---
+
+%s
+
+`, name, id, fullLink, tagsStr, shortDesc, longDesc)
+
+		if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
+			return err
+		}
+
+	}
+
+	return nil
+
 }
 
 func (m *mover) contentMigrate_CreateSections() error {

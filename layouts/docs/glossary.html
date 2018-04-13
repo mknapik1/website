@@ -30,26 +30,26 @@
 	<span class="tag-option"><a id="deselect-all-tags" href="javascript:void(0)">Deselect all</a></span>
 </div>
 <p>Click on the <a href="javascript:void(0)" class="no-underline">[+]</a> indicators below to get a longer explanation for any particular term.</p>
-{{ $glossary_terms :=  sort .Site.Data.glossary "name" }}
-{{ $glossary_terms := where $glossary_terms "id" "!=" "_example" }}
+{{ $glossary_terms :=  (.Site.GetPage "section" "docs/reference/glossary").Pages.ByTitle }}
 <ul>
 	{{ range $glossary_terms }}
 	{{ $.Scratch.Set "tag_classes" "" }}
-	{{ range .tags }}
+	{{ range .Params.tags }}
 	{{ $.Scratch.Add "tag_classes" (printf "tag-%s " .)  }}
 	{{ end }}
-	{{ $term_identifier := (printf "term-%s") .id }}
+	{{ $term_identifier := (printf "term-%s") .Params.id }}
 	<li class="{{ $.Scratch.Get "tag_classes" }} hide" data-show-count="0">
 		<div id="{{ $term_identifier }}" class="term-anchor"></div>
 		<div>
-			<div class="term-name"><b>{{ .name }}</b><a href="{{ printf "#%s" $term_identifier }}" class="permalink hide">LINK</a></div>
-			{{ with .aka }}
+			<div class="term-name"><b>{{ .Title }}</b><a href="{{ printf "#%s" $term_identifier }}" class="permalink hide">LINK</a></div>
+			{{/* TODO(bep) aka */}}
+			{{ with .Params.aka }}
 			Also known as: <i>{{ delimit . ", " }}</i>
 			<br>
 			{{ end }}
-			<span class="preview-text">{{/* term.short-description | liquify | markdownify */}} <a href="javascript:void(0)" class="click-controller no-underline" data-target="{{/* term.id */}}">[+]</a></span>
-			<div id="{{ .id }}" class="hide">
-				{{ index . "long-description" | markdownify }}
+			<span class="preview-text">{{ .Params.short_description | markdownify }} <a href="javascript:void(0)" class="click-controller no-underline" data-target="{{ .Params.id }}">[+]</a></span>
+			<div id="{{ .Params.id }}" class="hide">
+				{{ .Content }}
 			</div>
 		</div>
 	</li>
