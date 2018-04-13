@@ -33,7 +33,7 @@
     {{ if eq $offset 1 }}
       <div class="browsecolumn">
     {{ end }}
-    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a><br>
+    <a href="{{ .RelPermalink }}">{{ printf "%02d - %s" (add $i 1) .LinkTitle }}</a><br>
     {{ if or (eq $offset $column_size) (eq (add $i 1) $num_pages)}}
       </div>
     {{ end }}
