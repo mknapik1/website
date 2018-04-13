@@ -163,7 +163,15 @@ func (m *mover) contentMigrate_CreateGlossaryFromData() error {
 	// Add a section index page.
 	filename := filepath.Join(glossaryDir, "_index.md")
 	if err := ioutil.WriteFile(filename, []byte(`---
-title: Glossary
+approvers:
+- chenopis
+- abiogenesis-now
+title: Standardized Glossary
+layout: glossary
+noedit: true
+default_active_tag: fundamental
+weight: 10
+toc_list: true
 ---
 
 `), os.FileMode(0755)); err != nil {
@@ -419,7 +427,9 @@ func (m *mover) contentMigrate_Replacements() error {
 	if err := m.replaceInFileRel(filepath.Join("content", "en/docs/home/_index.md"), stringsReplacer("layout: docsportal", "layout: docsportal_home")); err != nil {
 		return err
 	}
-	if err := m.replaceInFileRel(filepath.Join("content", "en/docs/reference/glossary.md"), stringsReplacer("title: Standardized Glossary", "title: Standardized Glossary\nlayout: glossary")); err != nil {
+
+	// This is replaced with a section content file
+	if err := os.Remove(m.absFilename(filepath.Join("content", "en/docs/reference/glossary.md"))); err != nil {
 		return err
 	}
 

@@ -33,6 +33,15 @@ TODO
 * OK customcss/js
 * .Params.version
 
+* Glossary:
+
+- Check default_active_tag
+- Check how to navigate to the "parent nodes" in menu
+
+All:
+
+- Check noedit
+
 
 In /data:
 

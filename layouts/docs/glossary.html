@@ -1,11 +1,8 @@
 {{ define "side-menu" }}
-<div id="docsToc">
-      <div class="pi-accordion">
-       {{/* TODO(bep) */}}
-      </div> <!-- /pi-accordion -->
-  <button class="push-menu-close-button" onclick="kub.toggleToc()"></button>
-</div> <!-- /docsToc -->
+{{ partial "docs/side-menu.html" . }}
 {{ end }}
+
+
 {{ define "content" }}
 <h1>{{ .Title }}</h1>
 <link href="{{ "css/glossary.css" | relURL }}" rel="stylesheet">
