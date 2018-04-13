@@ -4,7 +4,6 @@ title = "Kubernetes"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
-
 disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "robotsTXT"]
 
 ignoreFiles = [ "^OWNERS$", "README.md", "^node_modules$" ]
@@ -13,6 +12,10 @@ contentDir = "content/en"
 
 # TODO(bep)
 logo = "/images/favicon.png"
+
+[blackfriday]
+hrefTargetBlank = true
+fractions = false
 
 [languages]
 [languages.en]
