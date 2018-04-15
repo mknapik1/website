@@ -8,7 +8,6 @@
 		{{ block "hero" . }}
 		<!--  HERO  -->
 		<section id="hero" class="light-text">
-			{{/* TODO(bep) */}}
 			<h1>{{ .Params.bigheader | default .Title }}</h1>
 			<h5>{{ .Params.abstract }}</h5>
 			{{ partial "docs/top-menu.html" . }}

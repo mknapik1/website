@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html id="{{ .Params.cid }}" lang="en" class="{{ .Params.class }}">
 	<head>
-	{{ partial "head.html" . }}
+		{{ partial "head.html" . }}
 	</head>
 	<body>
 		{{ partial "header.html" . }}
 		{{ block "hero" . }}
 		<!--  HERO  -->
 		<section id="hero" class="light-text">
-			<h1>{{ block "hero-title" . }}{{ .Params.bigheader | default .Title }}{{ end }}</h1>
-			<h5>{{ .Params.abstract }}</h5>
-			{{ partial "docs/top-menu.html" . }}
+			<main>
+				<div id="headlineWrapper">
+					<h1>!!{{ block "hero-title" . }}{{ .Params.bigheader | default .Title }}{{ end }}</h1>
+					<h5>{{ .Params.abstract }}</h5>
+				</div>
+				<a href="/docs/tutorials/kubernetes-basics/" id="quickstartButton" class="button">Try Our Interactive Tutorials</a>
+			</main>
 		</section>
 		{{ end }}
 		<section id="encyclopedia">
-		{{ block "main" . }}{{ end }}
+			{{ block "main" . }}{{ end }}
 		</section>
 		{{ partialCached "footer.html" . }}
 		{{ partial "footer-scripts.html" . }}

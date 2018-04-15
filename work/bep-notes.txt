@@ -22,6 +22,7 @@ TODO
 * Nested tooltips in Glossary. Convert terms to content files? Would also solve the translation issue ...
 * Liquid inside data
 
+
 * See the includes.md
 * Check _headers
 * {{ page.cid }}" lang="en" class="{{ page.class }}
@@ -47,6 +48,7 @@ TODO
 
 All:
 
+- docs/tutorials/kubernetes-basics/index.html => _index.html + GetPage on home
 - Revise toc_list
 - Check noedit
 - Check params.current_version
