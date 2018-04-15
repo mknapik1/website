@@ -6,8 +6,13 @@
 {{ if not .Params.notitle }}
   <h1>{{ .Title }}</h1>
 {{ end }}
+{{ $p := . }}
+{{ with .Params.content_template }}
+{{ partial . $p }}
+{{ else }}
 {{ .TableOfContents }}
 {{ .Content }}
+{{ end }}
 {{ end }}
 
 {{ define "content-id" }}docsContent{{ end }}

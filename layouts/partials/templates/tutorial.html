@@ -1,0 +1,18 @@
+
+{{ partial "templates/block" (dict "page" . "block" "overview" "purpose" "states, in one or two sentences, the purpose of this document") }}
+
+{{ .TableOfContents }}
+
+{{ partial "templates/block" (dict "page" . "block" "overview" "heading" "Objectives" "purpose" "lists the objectives for this tutorial.") }}
+
+{{ partial "templates/block" (dict "page" . "block" "prerequisites" "heading" "Before you begin" "purpose" "lists action prerequisites and knowledge prerequisites.") }}
+
+{{ partial "templates/block" (dict "page" . "block" "lessoncontent" "purpose" "provides the lesson content for this tutorial.") }}
+
+
+{{ partial "templates/block" (dict "page" . "block" "cleanup" "heading" "Cleaning up" "optional" true ) }}
+
+
+{{ partial "templates/block" (dict "page" . "block" "whatsnext" "heading" "What's next" "optional" true ) }}
+
+
