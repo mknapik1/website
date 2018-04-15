@@ -1,14 +1,14 @@
 
 {{ partial "templates/block" (dict "page" . "block" "overview" "purpose" "states, in one or two sentences, the purpose of this document") }}
 
-{{ .TableOfContents }}
+<h2>TOC</h2>
+TODO(bep) The built-in TOC does not work in this case. {{ .TableOfContents }}..
 
 {{ partial "templates/block" (dict "page" . "block" "overview" "heading" "Objectives" "purpose" "lists the objectives for this tutorial.") }}
 
 {{ partial "templates/block" (dict "page" . "block" "prerequisites" "heading" "Before you begin" "purpose" "lists action prerequisites and knowledge prerequisites.") }}
 
 {{ partial "templates/block" (dict "page" . "block" "lessoncontent" "purpose" "provides the lesson content for this tutorial.") }}
-
 
 {{ partial "templates/block" (dict "page" . "block" "cleanup" "heading" "Cleaning up" "optional" true ) }}
 

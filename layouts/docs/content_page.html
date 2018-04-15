@@ -1,0 +1,11 @@
+<p><a href="/editdocs#{{ .Params.path }}" id="editPageButton">Edit This Page</a></p>
+{{ if not .Params.notitle }}
+<h1>{{ .Title }}</h1>
+{{ end }}
+{{ $p := . }}
+{{ with .Params.content_template }}
+{{ partial . $p }}
+{{ else }}
+{{ .TableOfContents }}
+{{ .Content }}
+{{ end }}

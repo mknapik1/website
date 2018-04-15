@@ -1,14 +1,13 @@
 {{ define "content" }}
 	 {{ with .Content }}
-	 {{ . }}
+	 {{ $.Render "content_page" }}
 	 {{ else }}
     {{ if ge (len .Pages) 1 }}
     {{ $page := index .Pages 0 }}
-    {{ $page.Content }}
+    {{ $page.Render "content_page" }}
     {{ end }}
     {{ end }}
 {{ end }}
-
 {{ define "side-menu" }}
 {{ partial "docs/side-menu.html" . }}
 {{ end }}
