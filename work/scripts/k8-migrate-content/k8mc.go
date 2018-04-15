@@ -45,6 +45,11 @@ func main() {
 		log.Println("trial mode on")
 	}
 
+	// Start fresh
+	if err := os.RemoveAll(m.absFilename("content")); err != nil {
+		log.Fatal(err)
+	}
+
 	// Copies the content files into the new Hugo content roots and do basic
 	// renaming of some files to match Hugo's standard.
 	must(m.contentMigrate_Step1_Basic_Copy_And_Rename())
@@ -446,6 +451,15 @@ func (m *mover) contentMigrate_Replacements() error {
 			return re.ReplaceAllString(s, `{{< glossary_tooltip text="$1" term_id="$2" >}}`), nil
 			return s, nil
 		},
+
+		// Code includes
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% include code.html language="(.*?)" file="(.*?)" %}`)
+			return re.ReplaceAllString(s, `{{< code language="$1" file="$2" >}}`), nil
+			return s, nil
+		},
+
+		//    {% include code.html language="yaml" file="guestbook/redis-master-deployment.yaml" ghlink="/docs/tutorials/stateless-application/guestbook/redis-master-deployment.yaml" %}
 
 		replaceCaptures,
 	}
