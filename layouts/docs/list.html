@@ -1,8 +1,11 @@
 {{ define "content" }}
-    {{/* partial "docs/browse.html" . */}}
+	 {{ with .Content }}
+	 {{ . }}
+	 {{ else }}
     {{ if ge (len .Pages) 1 }}
     {{ $page := index .Pages 0 }}
     {{ $page.Content }}
+    {{ end }}
     {{ end }}
 {{ end }}
 

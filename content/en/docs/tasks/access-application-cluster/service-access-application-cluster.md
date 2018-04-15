@@ -1,7 +1,7 @@
 ---
 title: Use a Service to Access an Application in a Cluster
-weight: 60
 weight: 30
+weight: 60
 ---
 
 {{% capture overview %}}

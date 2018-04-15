@@ -145,6 +145,10 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
+	if err := m.renameContentFiles("doc.*index\\.html$", "_index.html"); err != nil {
+		return err
+	}
+
 	// We are going to replce this later, but just make sure it gets the name correctly.
 	if err := m.renameContentFile("content/en/blog/index.html", "content/en/blog/_index.md"); err != nil {
 		return err
@@ -338,6 +342,7 @@ func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) 
 					// TODO(bep) cn?
 					force := false
 					relFilename := filepath.Join("content", "en", filepath.Dir(v), "_index.md")
+					relFilenameHTML := filepath.Join("content", "en", filepath.Dir(v), "_index.html")
 					if m.addedFiles[relFilename] {
 						log.Printf("WARNING: %q section already added. Ambigous?", relFilename)
 						// Use the title from the last owning folder for now.
@@ -350,7 +355,7 @@ func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) 
 
 					// TODO(bep) we need to turn the toc_list into toc_no_list (or something) because of the semantics of the children
 					// Which will be more complex logic here ... but doable?
-					if force || !m.checkRelFileExists(relFilename) {
+					if force || (!m.checkRelFileExists(relFilename) && !m.checkRelFileExists(relFilenameHTML)) {
 						m.addedFiles[relFilename] = true
 						filename := filepath.Join(m.absFilename(relFilename))
 						content := fmt.Sprintf(`---
@@ -532,6 +537,7 @@ func (m *mover) renameContentFiles(match, renameTo string) error {
 			targetFilename := filepath.Join(dir, renameTo)
 			m.logChange(path, targetFilename)
 			if !m.try {
+				fmt.Println(">>>", path, "to", targetFilename)
 				return os.Rename(path, targetFilename)
 			}
 		}
