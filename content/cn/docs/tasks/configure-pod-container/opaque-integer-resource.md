@@ -30,7 +30,7 @@ title: 给容器分配非透明整型资源
 
 下面是含有一个容器的Pod的配置文件:
 
-{% include code.html language="yaml" file="oir-pod.yaml" ghlink="/cn/docs/tasks/configure-pod-container/oir-pod.yaml" %}
+{{< code language="yaml" file="oir-pod.yaml" ghlink="/cn/docs/tasks/configure-pod-container/oir-pod.yaml" >}}
 
 在配置文件中，可以看到容器请求了3个dongles资源。
 
@@ -63,7 +63,7 @@ Requests:
 
 下面是含有一个容器的Pod的配置文件。该容器请求了两个dongles资源。
 
-{% include code.html language="yaml" file="oir-pod-2.yaml" ghlink="/docs/tasks/configure-pod-container/oir-pod-2.yaml" %}
+{{< code language="yaml" file="oir-pod-2.yaml" ghlink="/docs/tasks/configure-pod-container/oir-pod-2.yaml" >}}
 
 Kubernetes无法再满足两个dongles的请求，因为第一个Pod已经使用了四个可用dongles中的三个。
 

@@ -17,7 +17,7 @@ your pods. But there are a number of ways to get even more information about you
 
 For this example we'll use a Deployment to create two pods, similar to the earlier example.
 
-{% include code.html language="yaml" file="nginx-dep.yaml" ghlink="/docs/tasks/debug-application-cluster/nginx-dep.yaml" %}
+{{< code language="yaml" file="nginx-dep.yaml" ghlink="/docs/tasks/debug-application-cluster/nginx-dep.yaml" >}}
 
 Create deployment by running following command:
 

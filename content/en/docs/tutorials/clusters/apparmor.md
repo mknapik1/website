@@ -162,7 +162,7 @@ k8s-apparmor-example-deny-write (enforce)
 First, we need to load the profile we want to use onto our nodes. The profile we'll use simply
 denies all file writes:
 
-{% include code.html language="text" file="deny-write.profile" ghlink="/docs/tutorials/clusters/deny-write.profile" %}
+{{< code language="text" file="deny-write.profile" ghlink="/docs/tutorials/clusters/deny-write.profile" >}}
 
 Since we don't know where the Pod will be scheduled, we'll need to load the profile on all our
 nodes. For this example we'll just use SSH to install the profiles, but other approaches are
@@ -191,7 +191,7 @@ done
 
 Next, we'll run a simple "Hello AppArmor" pod with the deny-write profile:
 
-{% include code.html language="yaml" file="hello-apparmor-pod.yaml" ghlink="/docs/tutorials/clusters/hello-apparmor-pod.yaml" %}
+{{< code language="yaml" file="hello-apparmor-pod.yaml" ghlink="/docs/tutorials/clusters/hello-apparmor-pod.yaml" >}}
 
 ```shell
 $ kubectl create -f ./hello-apparmor-pod.yaml

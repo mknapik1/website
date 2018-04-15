@@ -185,7 +185,7 @@ $ alias kubectl-user='kubectl --as=system:serviceaccount:psp-example:fake-user -
 Define the example PodSecurityPolicy object in a file. This is a policy that
 simply prevents the creation of privileged pods.
 
-{% include code.html language="yaml" file="example-psp.yaml" ghlink="/docs/concepts/policy/example-psp.yaml" %}
+{{< code language="yaml" file="example-psp.yaml" ghlink="/docs/concepts/policy/example-psp.yaml" >}}
 
 And create it with kubectl:
 
@@ -346,13 +346,13 @@ podsecuritypolicy "example" deleted
 This is the least restricted policy you can create, equivalent to not using the
 pod security policy admission controller:
 
-{% include code.html language="yaml" file="privileged-psp.yaml" ghlink="/docs/concepts/policy/privileged-psp.yaml" %}
+{{< code language="yaml" file="privileged-psp.yaml" ghlink="/docs/concepts/policy/privileged-psp.yaml" >}}
 
 This is an example of a restrictive policy that requires users to run as an
 unprivileged user, blocks possible escalations to root, and requires use of
 several security mechanisms.
 
-{% include code.html language="yaml" file="restricted-psp.yaml" ghlink="/docs/concepts/policy/restricted-psp.yaml" %}
+{{< code language="yaml" file="restricted-psp.yaml" ghlink="/docs/concepts/policy/restricted-psp.yaml" >}}
 
 ## Policy Reference
 

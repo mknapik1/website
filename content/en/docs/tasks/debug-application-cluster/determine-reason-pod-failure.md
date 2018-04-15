@@ -34,7 +34,7 @@ In this exercise, you create a Pod that runs one container.
 The configuration file specifies a command that runs when
 the container starts.
 
-{% include code.html language="yaml" file="termination.yaml" ghlink="/docs/tasks/debug-application-cluster/termination.yaml" %}
+{{< code language="yaml" file="termination.yaml" ghlink="/docs/tasks/debug-application-cluster/termination.yaml" >}}
 
 1. Create a Pod based on the YAML configuration file:
 

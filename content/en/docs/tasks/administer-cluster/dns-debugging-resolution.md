@@ -22,7 +22,7 @@ This page provides hints on diagnosing DNS problems.
 
 Create a file named busybox.yaml with the following contents:
 
-{% include code.html language="yaml" file="busybox.yaml" ghlink="/docs/tasks/administer-cluster/busybox.yaml" %}
+{{< code language="yaml" file="busybox.yaml" ghlink="/docs/tasks/administer-cluster/busybox.yaml" >}}
 
 Then create a pod using this file and verify its status:
 

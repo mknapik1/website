@@ -39,7 +39,7 @@ nginx    1/1       Running   0          13s    10.200.0.4   worker0
 
 除了默认的样板内容，我们可以向 hosts 文件添加额外的条目，将 `foo.local`、 `bar.local` 解析为`127.0.0.1`，将 `foo.remote`、 `bar.remote` 解析为 `10.1.2.3`，我们可以在 `.spec.hostAliases` 下为 Pod 添加 HostAliases。
 
-{% include code.html language="yaml" file="hostaliases-pod.yaml" ghlink="/docs/concepts/services-networking/hostaliases-pod.yaml" %}
+{{< code language="yaml" file="hostaliases-pod.yaml" ghlink="/docs/concepts/services-networking/hostaliases-pod.yaml" >}}
 
 hosts 文件的内容看起来类似如下这样：
 

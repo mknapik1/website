@@ -38,7 +38,7 @@ kubectl create namespace quota-mem-cpu-example
 
 Here is the configuration file for a ResourceQuota object:
 
-{% include code.html language="yaml" file="quota-mem-cpu.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu.yaml" %}
+{{< code language="yaml" file="quota-mem-cpu.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu.yaml" >}}
 
 Create the ResourceQuota:
 
@@ -64,7 +64,7 @@ The ResourceQuota places these requirements on the quota-mem-cpu-example namespa
 
 Here is the configuration file for a Pod:
 
-{% include code.html language="yaml" file="quota-mem-cpu-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu-pod.yaml" %}
+{{< code language="yaml" file="quota-mem-cpu-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu-pod.yaml" >}}
 
 
 Create the Pod:
@@ -107,7 +107,7 @@ status:
 
 Here is the configuration file for a second Pod:
 
-{% include code.html language="yaml" file="quota-mem-cpu-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu-pod-2.yaml" %}
+{{< code language="yaml" file="quota-mem-cpu-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/quota-mem-cpu-pod-2.yaml" >}}
 
 In the configuration file, you can see that the Pod has a memory request of 700 MiB.
 Notice that the sum of the used memory request and this new memory

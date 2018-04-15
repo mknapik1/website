@@ -133,7 +133,7 @@ minikube dashboard
 The next step is to write the application. Save this code in a folder named `hellonode`
 with the filename `server.js`:
 
-{% include code.html language="js" file="server.js" ghlink="/docs/tutorials/stateless-application/server.js" %}
+{{< code language="js" file="server.js" ghlink="/docs/tutorials/stateless-application/server.js" >}}
 
 Run your application:
 
@@ -153,7 +153,7 @@ Create a file, also in the `hellonode` folder, named `Dockerfile`. A Dockerfile 
 the image that you want to build. You can build a Docker container image by extending an
 existing image. The image in this tutorial extends an existing Node.js image.
 
-{% include code.html language="conf" file="Dockerfile" ghlink="/docs/tutorials/stateless-application/Dockerfile" %}
+{{< code language="conf" file="Dockerfile" ghlink="/docs/tutorials/stateless-application/Dockerfile" >}}
 
 This recipe for the Docker image starts from the official Node.js LTS image
 found in the Docker registry, exposes port 8080, copies your `server.js` file

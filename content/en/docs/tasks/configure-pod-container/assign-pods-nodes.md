@@ -56,7 +56,7 @@ This pod configuration file describes a pod that has a node selector,
 `disktype: ssd`. This means that the pod will get scheduled on a node that has
 a `disktype=ssd` label.
 
-{% include code.html language="yaml" file="pod.yaml" ghlink="/docs/tasks/configure-pod-container/pod.yaml" %}
+{{< code language="yaml" file="pod.yaml" ghlink="/docs/tasks/configure-pod-container/pod.yaml" >}}
 
 1. Use the configuration file to create a pod that will get scheduled on your
    chosen node:

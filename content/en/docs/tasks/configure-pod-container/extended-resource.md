@@ -35,7 +35,7 @@ descriptive resource name.
 
 Here is the configuration file for a Pod that has one Container:
 
-{% include code.html language="yaml" file="extended-resource-pod.yaml" ghlink="/docs/tasks/configure-pod-container/extended-resource-pod.yaml" %}
+{{< code language="yaml" file="extended-resource-pod.yaml" ghlink="/docs/tasks/configure-pod-container/extended-resource-pod.yaml" >}}
 
 In the configuration file, you can see that the Container requests 3 dongles.
 
@@ -71,7 +71,7 @@ Requests:
 Here is the configuration file for a Pod that has one Container. The Container requests
 two dongles.
 
-{% include code.html language="yaml" file="extended-resource-pod-2.yaml" ghlink="/docs/tasks/configure-pod-container/extended-resource-pod-2.yaml" %}
+{{< code language="yaml" file="extended-resource-pod-2.yaml" ghlink="/docs/tasks/configure-pod-container/extended-resource-pod-2.yaml" >}}
 
 Kubernetes will not be able to satisfy the request for two dongles, because the first Pod
 used three of the four available dongles.

@@ -98,7 +98,7 @@ The following document describes a set of cross platform features exposed throug
 
 There are existing Kubernetes concepts that allow you to expose a single service (see [alternatives](#alternatives)), however you can do so through an Ingress as well, by specifying a *default backend* with no rules.
 
-{% include code.html language="yaml" file="ingress.yaml" ghlink="/docs/concepts/services-networking/ingress.yaml" %}
+{{< code language="yaml" file="ingress.yaml" ghlink="/docs/concepts/services-networking/ingress.yaml" >}}
 
 If you create it using `kubectl create -f` you should see:
 

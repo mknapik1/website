@@ -35,7 +35,7 @@ setting the `ownerReference` field.
 
 Here's a configuration file for a ReplicaSet that has three Pods:
 
-{% include code.html language="yaml" file="my-repset.yaml" ghlink="/docs/concepts/workloads/controllers/my-repset.yaml" %}
+{{< code language="yaml" file="my-repset.yaml" ghlink="/docs/concepts/workloads/controllers/my-repset.yaml" >}}
 
 If you create the ReplicaSet and then view the Pod metadata, you can see
 OwnerReferences field:

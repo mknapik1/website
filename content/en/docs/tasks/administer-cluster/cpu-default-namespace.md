@@ -34,7 +34,7 @@ kubectl create namespace default-cpu-example
 Here's the configuration file for a LimitRange object. The configuration specifies
 a default CPU request and a default CPU limit.
 
-{% include code.html language="yaml" file="cpu-defaults.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults.yaml" %}
+{{< code language="yaml" file="cpu-defaults.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults.yaml" >}}
 
 Create the LimitRange in the default-cpu-example namespace:
 
@@ -50,7 +50,7 @@ CPU limit of 1.
 Here's the configuration file for a Pod that has one Container. The Container
 does not specify a CPU request and limit.
 
-{% include code.html language="yaml" file="cpu-defaults-pod.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod.yaml" %}
+{{< code language="yaml" file="cpu-defaults-pod.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod.yaml" >}}
 
 Create the Pod.
 
@@ -84,7 +84,7 @@ containers:
 Here's the configuration file for a Pod that has one Container. The Container
 specifies a CPU limit, but not a request:
 
-{% include code.html language="yaml" file="cpu-defaults-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod-2.yaml" %}
+{{< code language="yaml" file="cpu-defaults-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod-2.yaml" >}}
 
 Create the Pod:
 
@@ -115,7 +115,7 @@ resources:
 Here's the configuration file for a Pod that has one Container. The Container
 specifies a CPU request, but not a limit:
 
-{% include code.html language="yaml" file="cpu-defaults-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod-3.yaml" %}
+{{< code language="yaml" file="cpu-defaults-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/cpu-defaults-pod-3.yaml" >}}
 
 Create the Pod:
 

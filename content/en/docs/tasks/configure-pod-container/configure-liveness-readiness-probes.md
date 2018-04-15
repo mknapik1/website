@@ -36,7 +36,7 @@ liveness probes to detect and remedy such situations.
 In this exercise, you create a Pod that runs a Container based on the
 `k8s.gcr.io/busybox` image. Here is the configuration file for the Pod:
 
-{% include code.html language="yaml" file="exec-liveness.yaml" ghlink="/docs/tasks/configure-pod-container/exec-liveness.yaml" %}
+{{< code language="yaml" file="exec-liveness.yaml" ghlink="/docs/tasks/configure-pod-container/exec-liveness.yaml" >}}
 
 In the configuration file, you can see that the Pod has a single Container.
 The `periodSeconds` field specifies that the kubelet should perform a liveness
@@ -121,7 +121,7 @@ Another kind of liveness probe uses an HTTP GET request. Here is the configurati
 file for a Pod that runs a container based on the `k8s.gcr.io/liveness`
 image.
 
-{% include code.html language="yaml" file="http-liveness.yaml" ghlink="/docs/tasks/configure-pod-container/http-liveness.yaml" %}
+{{< code language="yaml" file="http-liveness.yaml" ghlink="/docs/tasks/configure-pod-container/http-liveness.yaml" >}}
 
 In the configuration file, you can see that the Pod has a single Container.
 The `periodSeconds` field specifies that the kubelet should perform a liveness
@@ -179,7 +179,7 @@ kubelet will attempt to open a socket to your container on the specified port.
 If it can establish a connection, the container is considered healthy, if it
 can’t it is considered a failure.
 
-{% include code.html language="yaml" file="tcp-liveness-readiness.yaml" ghlink="/docs/tasks/configure-pod-container/tcp-liveness-readiness.yaml" %}
+{{< code language="yaml" file="tcp-liveness-readiness.yaml" ghlink="/docs/tasks/configure-pod-container/tcp-liveness-readiness.yaml" >}}
 
 As you can see, configuration for a TCP check is quite similar to an HTTP check.
 This example uses both readiness and liveness probes. The kubelet will send the

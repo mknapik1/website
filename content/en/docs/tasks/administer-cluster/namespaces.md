@@ -142,7 +142,7 @@ Let's create two new namespaces to hold our work.
 
 Use the file [`namespace-dev.json`](/docs/tasks/administer-cluster/namespace-dev.json) which describes a development namespace:
 
-{% include code.html language="json" file="namespace-dev.json" ghlink="/docs/tasks/administer-cluster/namespace-dev.json" %}
+{{< code language="json" file="namespace-dev.json" ghlink="/docs/tasks/administer-cluster/namespace-dev.json" >}}
 
 Create the development namespace using kubectl.
 

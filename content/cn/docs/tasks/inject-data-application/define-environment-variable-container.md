@@ -25,7 +25,7 @@ title: 为容器设置环境变量
 本示例中，将创建一个只包含单个容器的Pod。Pod的配置文件中设置环境变量的名称为`DEMO_GREETING`，
 其值为`"Hello from the environment"`。下面是Pod的配置文件内容:
 
-{% include code.html language="yaml" file="envars.yaml" ghlink="/docs/tasks/inject-data-application/envars.yaml" %}
+{{< code language="yaml" file="envars.yaml" ghlink="/docs/tasks/inject-data-application/envars.yaml" >}}
 
 1. 基于YAML文件创建一个Pod:
 

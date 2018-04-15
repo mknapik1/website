@@ -1,6 +1,6 @@
 ---
 title: "Admin"
-weight: 80
+weight: 30
 toc_list: true
 ---
 

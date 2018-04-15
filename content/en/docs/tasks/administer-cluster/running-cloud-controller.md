@@ -37,7 +37,7 @@ Successfully running cloud-controller-manager requires some changes to your clus
 * `kube-apiserver` SHOULD NOT run the `PersistentVolumeLabel` admission controller since the cloud controller manager takes over labeling persistent volumes. To prevent the PersistentVolumeLabel admission plugin from running in `kube-apiserver`, include the `PersistentVolumeLabel` as a listed value in the `--disable-admission-plugins` flag.
 * For the `cloud-controller-manager` to label persistent volumes, initializers will need to be enabled and an InitializerConifguration needs to be added to the system.  Follow [these instructions](/docs/admin/extensible-admission-controllers.md#enable-initializers-alpha-feature) to enable initializers.  Use the following YAML to create the InitializerConfiguration:
 
-{% include code.html language="yaml" file="persistent-volume-label-initializer-config.yaml" ghlink="/docs/tasks/administer-cluster/persistent-volume-label-initializer-config.yaml" %}
+{{< code language="yaml" file="persistent-volume-label-initializer-config.yaml" ghlink="/docs/tasks/administer-cluster/persistent-volume-label-initializer-config.yaml" >}}
 
 Keep in mind that setting up your cluster to use cloud controller manager will change your cluster behaviour in a few ways:
 
@@ -67,7 +67,7 @@ For cloud controller managers not in Kubernetes core, you can find the respectiv
 
 For providers already in Kubernetes core, you can run the in-tree cloud controller manager as a Daemonset in your cluster, use the following as a guideline:
 
-{% include code.html language="yaml" file="cloud-controller-manager-daemonset-example.yaml" ghlink="/docs/tasks/administer-cluster/cloud-controller-manager-daemonset-example.yaml" %}
+{{< code language="yaml" file="cloud-controller-manager-daemonset-example.yaml" ghlink="/docs/tasks/administer-cluster/cloud-controller-manager-daemonset-example.yaml" >}}
 
 
 ## Limitations

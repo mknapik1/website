@@ -59,7 +59,7 @@ example presented in the
 It creates a [Headless Service](/docs/concepts/services-networking/service/#headless-services), 
 `nginx`, to publish the IP addresses of Pods in the StatefulSet, `web`. 
 
-{% include code.html language="yaml" file="web.yaml" ghlink="/docs/tutorials/stateful-application/web.yaml" %}
+{{< code language="yaml" file="web.yaml" ghlink="/docs/tutorials/stateful-application/web.yaml" >}}
 
 Download the example above, and save it to a file named `web.yaml`
 
@@ -926,7 +926,7 @@ terminate all Pods in parallel, and not to wait for Pods to become Running
 and Ready or completely terminated prior to launching or terminating another 
 Pod.
 
-{% include code.html language="yaml" file="webp.yaml" ghlink="/docs/tutorials/stateful-application/webp.yaml" %}
+{{< code language="yaml" file="webp.yaml" ghlink="/docs/tutorials/stateful-application/webp.yaml" >}}
 
 Download the example above, and save it to a file named `webp.yaml`
 

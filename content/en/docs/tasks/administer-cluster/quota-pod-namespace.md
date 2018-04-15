@@ -36,7 +36,7 @@ kubectl create namespace quota-pod-example
 
 Here is the configuration file for a ResourceQuota object:
 
-{% include code.html language="yaml" file="quota-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod.yaml" %}
+{{< code language="yaml" file="quota-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod.yaml" >}}
 
 Create the ResourceQuota:
 
@@ -66,7 +66,7 @@ status:
 
 Here is the configuration file for a Deployment:
 
-{% include code.html language="yaml" file="quota-pod-deployment.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod-deployment.yaml" %}
+{{< code language="yaml" file="quota-pod-deployment.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod-deployment.yaml" >}}
 
 In the configuration file, `replicas: 3` tells Kubernetes to attempt to create three Pods, all running the same application.
 

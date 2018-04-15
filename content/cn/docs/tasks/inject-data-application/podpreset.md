@@ -19,15 +19,15 @@ title: 使用 PodPreset 将信息注入 Pods
 
 **用户提交的 pod spec：**
 
-{% include code.html language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" %}
+{{< code language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" >}}
 
 **Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" %}
+{{< code language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" >}}
 
 **通过准入控制器后的 Pod spec：**
 
-{% include code.html language="yaml" file="podpreset-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-merged.yaml" %}
+{{< code language="yaml" file="podpreset-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-merged.yaml" >}}
 
 ### 带有 `ConfigMap` 的 Pod Spec 示例
 
@@ -35,19 +35,19 @@ title: 使用 PodPreset 将信息注入 Pods
 
 **用户提交的 pod spec：**
 
-{% include code.html language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" %}
+{{< code language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" >}}
 
 **用户提交的 `ConfigMap`：**
 
-{% include code.html language="yaml" file="podpreset-configmap.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-configmap.yaml" %}
+{{< code language="yaml" file="podpreset-configmap.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-configmap.yaml" >}}
 
 **Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-allow-db.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-allow-db.yaml" %}
+{{< code language="yaml" file="podpreset-allow-db.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-allow-db.yaml" >}}
 
 **通过准入控制器后的 Pod spec：**
 
-{% include code.html language="yaml" file="podpreset-allow-db-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-allow-db-merged.yaml" %}
+{{< code language="yaml" file="podpreset-allow-db-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-allow-db-merged.yaml" >}}
 
 ### 带有 Pod Spec 的 ReplicaSet 示例
 
@@ -55,17 +55,17 @@ title: 使用 PodPreset 将信息注入 Pods
 
 **用户提交的 ReplicaSet：**
 
-{% include code.html language="yaml" file="podpreset-replicaset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-replicaset.yaml" %}
+{{< code language="yaml" file="podpreset-replicaset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-replicaset.yaml" >}}
 
 **Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" %}
+{{< code language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" >}}
 
 **通过准入控制器后的 Pod spec：**
 
 注意 ReplicaSet spec 没有改变，用户必须检查单独的 pod 来验证 PodPreset 已被应用。
 
-{% include code.html language="yaml" file="podpreset-replicaset-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-replicaset-merged.yaml" %}
+{{< code language="yaml" file="podpreset-replicaset-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-replicaset-merged.yaml" >}}
 
 ### 多 PodPreset 示例
 
@@ -73,19 +73,19 @@ title: 使用 PodPreset 将信息注入 Pods
 
 **用户提交的 pod spec：**
 
-{% include code.html language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" %}
+{{< code language="yaml" file="podpreset-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-pod.yaml" >}}
 
 **Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" %}
+{{< code language="yaml" file="podpreset-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-preset.yaml" >}}
 
 **另一个 Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-proxy.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-proxy.yaml" %}
+{{< code language="yaml" file="podpreset-proxy.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-proxy.yaml" >}}
 
 **通过准入控制器后的 Pod spec：**
 
-{% include code.html language="yaml" file="podpreset-multi-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-multi-merged.yaml" %}
+{{< code language="yaml" file="podpreset-multi-merged.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-multi-merged.yaml" >}}
 
 ### 冲突示例
 
@@ -93,15 +93,15 @@ title: 使用 PodPreset 将信息注入 Pods
 
 **用户提交的 pod spec：**
 
-{% include code.html language="yaml" file="podpreset-conflict-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-pod.yaml" %}
+{{< code language="yaml" file="podpreset-conflict-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-pod.yaml" >}}
 
 **Pod Preset 示例：**
 
-{% include code.html language="yaml" file="podpreset-conflict-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-preset.yaml" %}
+{{< code language="yaml" file="podpreset-conflict-preset.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-preset.yaml" >}}
 
 **因存在冲突，通过准入控制器后的 Pod spec 不会改变：**
 
-{% include code.html language="yaml" file="podpreset-conflict-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-pod.yaml" %}
+{{< code language="yaml" file="podpreset-conflict-pod.yaml" ghlink="/cn/docs/tasks/inject-data-application/podpreset-conflict-pod.yaml" >}}
 
 **如果运行 `kubectl describe...` 用户会看到以下事件：**
 

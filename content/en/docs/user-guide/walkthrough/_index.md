@@ -36,7 +36,7 @@ For more information, see [Pods](/docs/concepts/workloads/pods/pod/).
 
 The simplest pod definition describes the deployment of a single container.  For example, an nginx web server pod might be defined as:
 
-{% include code.html language="yaml" file="pod-nginx.yaml" ghlink="/docs/user-guide/walkthrough/pod-nginx.yaml" %}
+{{< code language="yaml" file="pod-nginx.yaml" ghlink="/docs/user-guide/walkthrough/pod-nginx.yaml" >}}
 
 A pod definition is a declaration of a _desired state_.  Desired state is a very important concept in the Kubernetes model.  Many things present a desired state to the system, and Kubernetes' ensures that the current state matches the desired state.  For example, when you create a pod and declare that the containers in it to be running. If the containers happen not to be running because of a program failure, Kubernetes continues to (re-)create the pod in order to drive the pod to the desired state. This process continues until you delete the pod.
 
@@ -107,7 +107,7 @@ volumeMounts:
 Here is an example of Redis pod definition with a persistent storage volume ([pod-redis.yaml](/docs/user-guide/walkthrough/pod-redis.yaml)):
 
 
-{% include code.html language="yaml" file="pod-redis.yaml" ghlink="/docs/user-guide/walkthrough/pod-redis.yaml" %}
+{{< code language="yaml" file="pod-redis.yaml" ghlink="/docs/user-guide/walkthrough/pod-redis.yaml" >}}
 
 Where:
 

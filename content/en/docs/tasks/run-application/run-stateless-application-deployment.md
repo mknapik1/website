@@ -36,7 +36,7 @@ You can run an application by creating a Kubernetes Deployment object, and you
 can describe a Deployment in a YAML file. For example, this YAML file describes
 a Deployment that runs the nginx:1.7.9 Docker image:
 
-{% include code.html language="yaml" file="deployment.yaml" ghlink="/docs/tasks/run-application/deployment.yaml" %}
+{{< code language="yaml" file="deployment.yaml" ghlink="/docs/tasks/run-application/deployment.yaml" >}}
 
 
 1. Create a Deployment based on the YAML file:
@@ -99,7 +99,7 @@ a Deployment that runs the nginx:1.7.9 Docker image:
 You can update the deployment by applying a new YAML file. This YAML file
 specifies that the deployment should be updated to use nginx 1.8.
 
-{% include code.html language="yaml" file="deployment-update.yaml" ghlink="/docs/tasks/run-application/deployment-update.yaml" %}
+{{< code language="yaml" file="deployment-update.yaml" ghlink="/docs/tasks/run-application/deployment-update.yaml" >}}
 
 1. Apply the new YAML file:
 
@@ -115,7 +115,7 @@ You can increase the number of pods in your Deployment by applying a new YAML
 file. This YAML file sets `replicas` to 4, which specifies that the Deployment
 should have four pods:
 
-{% include code.html language="yaml" file="deployment-scale.yaml" ghlink="/docs/tasks/run-application/deployment-scale.yaml" %}
+{{< code language="yaml" file="deployment-scale.yaml" ghlink="/docs/tasks/run-application/deployment-scale.yaml" >}}
 
 1. Apply the new YAML file:
 

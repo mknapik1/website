@@ -37,7 +37,7 @@ The following are typical use cases for Deployments:
 
 Here is an example Deployment. It creates a ReplicaSet to bring up three nginx Pods.
 
-{% include code.html language="yaml" file="nginx-deployment.yaml" ghlink="/docs/concepts/workloads/controllers/nginx-deployment.yaml" %}
+{{< code language="yaml" file="nginx-deployment.yaml" ghlink="/docs/concepts/workloads/controllers/nginx-deployment.yaml" >}}
 
 Run the example by downloading the example file and then running this command:
 

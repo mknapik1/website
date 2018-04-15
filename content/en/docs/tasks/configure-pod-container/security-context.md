@@ -48,7 +48,7 @@ in the Pod specification. The `securityContext` field is a
 The security settings that you specify for a Pod apply to all Containers in the Pod.
 Here is a configuration file for a Pod that has a `securityContext` and an `emptyDir` volume:
 
-{% include code.html language="yaml" file="security-context.yaml" ghlink="/docs/tasks/configure-pod-container/security-context.yaml" %}
+{{< code language="yaml" file="security-context.yaml" ghlink="/docs/tasks/configure-pod-container/security-context.yaml" >}}
 
 In the configuration file, the `runAsUser` field specifies that for any Containers in
 the Pod, the first process runs with user ID 1000. The `fsGroup` field specifies that
@@ -140,7 +140,7 @@ there is overlap. Container settings do not affect the Pod's Volumes.
 Here is the configuration file for a Pod that has one Container. Both the Pod
 and the Container have a `securityContext` field:
 
-{% include code.html language="yaml" file="security-context-2.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-2.yaml" %}
+{{< code language="yaml" file="security-context-2.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-2.yaml" >}}
 
 Create the Pod:
 
@@ -193,7 +193,7 @@ of the root user. To add or remove Linux capabilities for a Container, include t
 First, see what happens when you don't include a `capabilities` field.
 Here is configuration file that does not add or remove any Container capabilities:
 
-{% include code.html language="yaml" file="security-context-3.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-3.yaml" %}
+{{< code language="yaml" file="security-context-3.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-3.yaml" >}}
 
 Create the Pod:
 
@@ -255,7 +255,7 @@ that it has additional capabilities set.
 Here is the configuration file for a Pod that runs one Container. The configuration
 adds the `CAP_NET_ADMIN` and `CAP_SYS_TIME` capabilities:
 
-{% include code.html language="yaml" file="security-context-4.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-4.yaml" %}
+{{< code language="yaml" file="security-context-4.yaml" ghlink="/docs/tasks/configure-pod-container/security-context-4.yaml" >}}
 
 Create the Pod:
 

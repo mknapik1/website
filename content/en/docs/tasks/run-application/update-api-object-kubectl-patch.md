@@ -25,7 +25,7 @@ in this task demonstrate a strategic merge patch and a JSON merge patch.
 Here's the configuration file for a Deployment that has two replicas. Each replica
 is a Pod that has one container:
 
-{% include code.html language="yaml" file="deployment-patch-demo.yaml" ghlink="/docs/tasks/run-application/deployment-patch-demo.yaml" %}
+{{< code language="yaml" file="deployment-patch-demo.yaml" ghlink="/docs/tasks/run-application/deployment-patch-demo.yaml" >}}
 
 Create the Deployment:
 

@@ -453,9 +453,11 @@ func (m *mover) contentMigrate_Replacements() error {
 		},
 
 		// Code includes
+		// TODO(bep) ghlink looks superflous?
+		// {% include code.html file="frontend/frontend.conf" ghlink="/docs/tasks/access-application-cluster/frontend/frontend.conf" %}
 		func(path, s string) (string, error) {
-			re := regexp.MustCompile(`{% include code.html language="(.*?)" file="(.*?)" %}`)
-			return re.ReplaceAllString(s, `{{< code language="$1" file="$2" >}}`), nil
+			re := regexp.MustCompile(`{% include code.html(.*?)%}`)
+			return re.ReplaceAllString(s, `{{< code$1>}}`), nil
 			return s, nil
 		},
 

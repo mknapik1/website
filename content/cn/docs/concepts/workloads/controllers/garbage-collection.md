@@ -38,7 +38,7 @@ Kubernetes 垃圾收集器的角色是删除指定的对象，这些对象曾经
 
 这里有一个配置文件，表示一个具有 3 个 Pod 的 ReplicaSet：
 
-{% include code.html language="yaml" file="my-repset.yaml" ghlink="/docs/concepts/workloads/controllers/my-repset.yaml" %}
+{{< code language="yaml" file="my-repset.yaml" ghlink="/docs/concepts/workloads/controllers/my-repset.yaml" >}}
 
 
 

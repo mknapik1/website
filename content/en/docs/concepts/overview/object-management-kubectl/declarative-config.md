@@ -62,7 +62,7 @@ configuration file that was used to create the object.
 
 Here's an example of an object configuration file:
 
-{% include code.html language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" %}
+{{< code language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" >}}
 
 Create the object using `kubectl apply`:
 
@@ -134,7 +134,7 @@ kubectl apply -f <directory>/
 
 Here's an example configuration file:
 
-{% include code.html language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" %}
+{{< code language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" >}}
 
 Create the object using `kubectl apply`:
 
@@ -250,7 +250,7 @@ spec:
 Update the `simple_deployment.yaml` configuration file to change the image from
 `nginx:1.7.9` to `nginx:1.11.9`, and delete the `minReadySeconds` field:
 
-{% include code.html language="yaml" file="update_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/update_deployment.yaml" %}
+{{< code language="yaml" file="update_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/update_deployment.yaml" >}}
 
 Apply the changes made to the configuration file:
 
@@ -400,7 +400,7 @@ to calculate which fields should be deleted or set:
 
 Here's an example. Suppose this is the configuration file for a Deployment object:
 
-{% include code.html language="yaml" file="update_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/update_deployment.yaml" %}
+{{< code language="yaml" file="update_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/update_deployment.yaml" >}}
 
 Also, suppose this is the live configuration for the same Deployment object:
 
@@ -693,7 +693,7 @@ not specified when the object is created.
 
 Here's a configuration file for a Deployment. The file does not specify `strategy` or `selector`:
 
-{% include code.html language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" %}
+{{< code language="yaml" file="simple_deployment.yaml" ghlink="/docs/concepts/overview/object-management-kubectl/simple_deployment.yaml" >}}
 
 Create the object using `kubectl apply`:
 

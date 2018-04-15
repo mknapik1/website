@@ -25,7 +25,7 @@ container starts.
 
 Here is the configuration file for the Pod:
 
-{% include code.html language="yaml" file="init-containers.yaml" ghlink="/docs/tasks/configure-pod-container/init-containers.yaml" %}
+{{< code language="yaml" file="init-containers.yaml" ghlink="/docs/tasks/configure-pod-container/init-containers.yaml" >}}
 
 In the configuration file, you can see that the Pod has a Volume that the init
 container and the application container share.

@@ -28,7 +28,7 @@ running Container.
 In this exercise, you create a Pod that has one Container. The Container
 runs the nginx image. Here is the configuration file for the Pod:
 
-{% include code.html language="yaml" file="shell-demo.yaml" ghlink="/docs/tasks/debug-application-cluster/shell-demo.yaml" %}
+{{< code language="yaml" file="shell-demo.yaml" ghlink="/docs/tasks/debug-application-cluster/shell-demo.yaml" >}}
 
 Create the Pod:
 

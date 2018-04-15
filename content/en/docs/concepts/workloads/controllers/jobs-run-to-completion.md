@@ -27,7 +27,7 @@ A Job can also be used to run multiple pods in parallel.
 Here is an example Job config.  It computes π to 2000 places and prints it out.
 It takes around 10s to complete.
 
-{% include code.html language="yaml" file="job.yaml" ghlink="/docs/concepts/workloads/controllers/job.yaml" %}
+{{< code language="yaml" file="job.yaml" ghlink="/docs/concepts/workloads/controllers/job.yaml" >}}
 
 Run the example job by downloading the example file and then running this command:
 

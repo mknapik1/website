@@ -40,7 +40,7 @@ gcloud compute disks create --size=20GB mysql-disk
 
 接下来创建一个指向刚创建的 `mysql-disk`磁盘的PersistentVolume. 下面是一个PersistentVolume的配置文件，它指向上面创建的Compute Engine磁盘:
 
-{% include code.html language="yaml" file="gce-volume.yaml" ghlink="/docs/tasks/run-application/gce-volume.yaml" %}
+{{< code language="yaml" file="gce-volume.yaml" ghlink="/docs/tasks/run-application/gce-volume.yaml" >}}
 
 注意`pdName: mysql-disk` 这行与Compute Engine环境中的磁盘名称相匹配. 有关为其
 他环境编写PersistentVolume配置文件的详细信息，请参见持久卷[Persistent Volumes](/docs/concepts/storage/persistent-volumes/).
@@ -64,7 +64,7 @@ kubectl create -f https://k8s.io/docs/tasks/run-application/gce-volume.yaml
 注意: 在配置的yaml文件中定义密码的做法是不安全的. 具体安全解决方案请参考
 [Kubernetes Secrets](/docs/concepts/configuration/secret/).
 
-{% include code.html language="yaml" file="mysql-deployment.yaml" ghlink="/docs/tasks/run-application/mysql-deployment.yaml" %}
+{{< code language="yaml" file="mysql-deployment.yaml" ghlink="/docs/tasks/run-application/mysql-deployment.yaml" >}}
 
 
 1. 部署YAML文件中定义的内容:

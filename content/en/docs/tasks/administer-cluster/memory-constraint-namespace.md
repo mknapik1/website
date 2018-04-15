@@ -39,7 +39,7 @@ kubectl create namespace constraints-mem-example
 
 Here's the configuration file for a LimitRange:
 
-{% include code.html language="yaml" file="memory-constraints.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints.yaml" %}
+{{< code language="yaml" file="memory-constraints.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints.yaml" >}}
 
 Create the LimitRange:
 
@@ -84,7 +84,7 @@ Here's the configuration file for a Pod that has one Container. The Container ma
 specifies a memory request of 600 MiB and a memory limit of 800 MiB. These satisfy the
 minimum and maximum memory constraints imposed by the LimitRange.
 
-{% include code.html language="yaml" file="memory-constraints-pod.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod.yaml" %}
+{{< code language="yaml" file="memory-constraints-pod.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod.yaml" >}}
 
 Create the Pod:
 
@@ -126,7 +126,7 @@ kubectl delete pod constraints-mem-demo --namespace=constraints-mem-example
 Here's the configuration file for a Pod that has one Container. The Container specifies a
 memory request of 800 MiB and a memory limit of 1.5 GiB.
 
-{% include code.html language="yaml" file="memory-constraints-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-2.yaml" %}
+{{< code language="yaml" file="memory-constraints-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-2.yaml" >}}
 
 Attempt to create the Pod:
 
@@ -147,7 +147,7 @@ pods "constraints-mem-demo-2" is forbidden: maximum memory usage per Container i
 Here's the configuration file for a Pod that has one Container. The Container specifies a
 memory request of 200 MiB and a memory limit of 800 MiB.
 
-{% include code.html language="yaml" file="memory-constraints-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-3.yaml" %}
+{{< code language="yaml" file="memory-constraints-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-3.yaml" >}}
 
 Attempt to create the Pod:
 
@@ -170,7 +170,7 @@ pods "constraints-mem-demo-3" is forbidden: minimum memory usage per Container i
 Here's the configuration file for a Pod that has one Container. The Container does not
 specify a memory request, and it does not specify a memory limit.
 
-{% include code.html language="yaml" file="memory-constraints-pod-4.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-4.yaml" %}
+{{< code language="yaml" file="memory-constraints-pod-4.yaml" ghlink="/docs/tasks/administer-cluster/memory-constraints-pod-4.yaml" >}}
 
 Create the Pod:
 

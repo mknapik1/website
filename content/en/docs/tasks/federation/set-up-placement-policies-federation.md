@@ -32,7 +32,7 @@ received from the external policy engine.
 
 Shown below is an example ConfigMap for the Admission Controller:
 
-{% include code.html language="yaml" file="scheduling-policy-admission.yaml" ghlink="/docs/tasks/federation/scheduling-policy-admission.yaml" %}
+{{< code language="yaml" file="scheduling-policy-admission.yaml" ghlink="/docs/tasks/federation/scheduling-policy-admission.yaml" >}}
 
 The ConfigMap contains three files:
 
@@ -82,7 +82,7 @@ Create a Service in the host cluster to contact the external policy engine:
 
 Shown below is an example Service for OPA.
 
-{% include code.html language="yaml" file="policy-engine-service.yaml" ghlink="/docs/tasks/federation/policy-engine-service.yaml" %}
+{{< code language="yaml" file="policy-engine-service.yaml" ghlink="/docs/tasks/federation/policy-engine-service.yaml" >}}
 
 Create a Deployment in the host cluster with the Federation control plane:
 
@@ -90,7 +90,7 @@ Create a Deployment in the host cluster with the Federation control plane:
 
 Shown below is an example Deployment for OPA.
 
-{% include code.html language="yaml" file="policy-engine-deployment.yaml" ghlink="/docs/tasks/federation/policy-engine-deployment.yaml" %}
+{{< code language="yaml" file="policy-engine-deployment.yaml" ghlink="/docs/tasks/federation/policy-engine-deployment.yaml" >}}
 
 ## Configuring placement policies via ConfigMaps
 
@@ -103,7 +103,7 @@ Create the namespace if it does not already exist:
 
 Configure a sample policy to test the external policy engine:
 
-{% include code.html language="yaml" file="policy.rego" ghlink="/docs/tasks/federation/policy.rego" %}
+{{< code language="yaml" file="policy.rego" ghlink="/docs/tasks/federation/policy.rego" >}}
 
 Shown below is the command to create the sample policy:
 
@@ -126,7 +126,7 @@ Annotate one of the clusters to indicate that it is PCI certified.
 
 Deploy a Federated ReplicaSet to test the placement policy.
 
-{% include code.html language="yaml" file="replicaset-example-policy.yaml" ghlink="/docs/tasks/federation/replicaset-example-policy.yaml" %}
+{{< code language="yaml" file="replicaset-example-policy.yaml" ghlink="/docs/tasks/federation/replicaset-example-policy.yaml" >}}
 
 Shown below is the command to deploy a ReplicaSet that *does* match the policy.
 

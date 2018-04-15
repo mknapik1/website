@@ -29,7 +29,7 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
 这里是一个配置文件，可以用来创建存有用户名和密码的 Secret:
 
-{% include code.html language="yaml" file="secret.yaml" ghlink="/docs/tasks/inject-data-application/secret.yaml" %}
+{{< code language="yaml" file="secret.yaml" ghlink="/docs/tasks/inject-data-application/secret.yaml" >}}
 
 1. 创建 Secret
 
@@ -71,7 +71,7 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
 这里是一个可以用来创建 pod 的配置文件：
 
-{% include code.html language="yaml" file="secret-pod.yaml" ghlink="/docs/tasks/inject-data-application/secret-pod.yaml" %}
+{{< code language="yaml" file="secret-pod.yaml" ghlink="/docs/tasks/inject-data-application/secret-pod.yaml" >}}
 
 1. 创建 Pod：
 
@@ -117,7 +117,7 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
 这里是一个可以用来创建 pod 的配置文件：
 
-{% include code.html language="yaml" file="secret-envars-pod.yaml" ghlink="/docs/tasks/inject-data-application/secret-envars-pod.yaml" %}
+{{< code language="yaml" file="secret-envars-pod.yaml" ghlink="/docs/tasks/inject-data-application/secret-envars-pod.yaml" >}}
 
 1. 创建 Pod：
 

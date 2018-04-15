@@ -36,7 +36,7 @@ with your new arguments.
 In this exercise, you create a Pod that runs one container. The configuration
 file for the Pod defines a command and two arguments:
 
-{% include code.html language="yaml" file="commands.yaml" ghlink="/docs/tasks/inject-data-application/commands.yaml" %}
+{{< code language="yaml" file="commands.yaml" ghlink="/docs/tasks/inject-data-application/commands.yaml" >}}
 
 1. Create a Pod based on the YAML configuration file:
 

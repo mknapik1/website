@@ -39,7 +39,7 @@ kubectl create namespace constraints-cpu-example
 
 Here's the configuration file for a LimitRange:
 
-{% include code.html language="yaml" file="cpu-constraints.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints.yaml" %}
+{{< code language="yaml" file="cpu-constraints.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints.yaml" >}}
 
 Create the LimitRange:
 
@@ -89,7 +89,7 @@ Here's the configuration file for a Pod that has one Container. The Container ma
 specifies a CPU request of 500 millicpu and a CPU limit of 800 millicpu. These satisfy the
 minimum and maximum CPU constraints imposed by the LimitRange.
 
-{% include code.html language="yaml" file="cpu-constraints-pod.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod.yaml" %}
+{{< code language="yaml" file="cpu-constraints-pod.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod.yaml" >}}
 
 Create the Pod:
 
@@ -131,7 +131,7 @@ kubectl delete pod constraints-cpu-demo --namespace=constraints-cpu-example
 Here's the configuration file for a Pod that has one Container. The Container specifies a
 CPU request of 500 millicpu and a cpu limit of 1.5 cpu.
 
-{% include code.html language="yaml" file="cpu-constraints-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-2.yaml" %}
+{{< code language="yaml" file="cpu-constraints-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-2.yaml" >}}
 
 Attempt to create the Pod:
 
@@ -152,7 +152,7 @@ pods "constraints-cpu-demo-2" is forbidden: maximum cpu usage per Container is 8
 Here's the configuration file for a Pod that has one Container. The Container specifies a
 CPU request of 100 millicpu and a CPU limit of 800 millicpu.
 
-{% include code.html language="yaml" file="cpu-constraints-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-3.yaml" %}
+{{< code language="yaml" file="cpu-constraints-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-3.yaml" >}}
 
 Attempt to create the Pod:
 
@@ -173,7 +173,7 @@ pods "constraints-cpu-demo-4" is forbidden: minimum cpu usage per Container is 2
 Here's the configuration file for a Pod that has one Container. The Container does not
 specify a CPU request, and it does not specify a CPU limit.
 
-{% include code.html language="yaml" file="cpu-constraints-pod-4.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-4.yaml" %}
+{{< code language="yaml" file="cpu-constraints-pod-4.yaml" ghlink="/docs/tasks/administer-cluster/cpu-constraints-pod-4.yaml" >}}
 
 Create the Pod:
 

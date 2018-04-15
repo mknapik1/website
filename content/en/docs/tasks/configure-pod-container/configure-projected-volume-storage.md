@@ -21,7 +21,7 @@ In this exercise, you create username and password Secrets from local files. You
 
 Here is the configuration file for the Pod:
 
-{% include code.html language="yaml" file="projected-volume.yaml" ghlink="/docs/tasks/configure-pod-container/projected-volume.yaml" %}
+{{< code language="yaml" file="projected-volume.yaml" ghlink="/docs/tasks/configure-pod-container/projected-volume.yaml" >}}
 
 1. Create the Secrets:
 

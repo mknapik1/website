@@ -16,7 +16,7 @@ You've deployed your application and exposed it via a service. Now what? Kuberne
 
 Many applications require multiple resources to be created, such as a Deployment and a Service. Management of multiple resources can be simplified by grouping them together in the same file (separated by `---` in YAML). For example:
 
-{% include code.html language="yaml" file="nginx-app.yaml" ghlink="/docs/concepts/cluster-administration/nginx-app.yaml" %}
+{{< code language="yaml" file="nginx-app.yaml" ghlink="/docs/concepts/cluster-administration/nginx-app.yaml" >}}
 
 Multiple resources can be created the same way as a single resource:
 

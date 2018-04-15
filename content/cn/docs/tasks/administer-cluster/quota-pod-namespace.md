@@ -32,7 +32,7 @@ kubectl create namespace quota-pod-example
 
 下面是一个资源配额的配置文件：
 
-{% include code.html language="yaml" file="quota-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod.yaml" %}
+{{< code language="yaml" file="quota-pod.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod.yaml" >}}
 
 创建这个资源配额：
 
@@ -61,7 +61,7 @@ status:
 
 下面是一个Deployment的配置文件：
 
-{% include code.html language="yaml" file="quota-pod-deployment.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod-deployment.yaml" %}
+{{< code language="yaml" file="quota-pod-deployment.yaml" ghlink="/docs/tasks/administer-cluster/quota-pod-deployment.yaml" >}}
 
 在配置文件中， `replicas: 3` 告诉kubernetes尝试创建三个pods，且运行相同的应用。
 

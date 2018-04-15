@@ -50,7 +50,7 @@ provide valid `apiVersion` and `kind` values is treated as illegal.
 
 Some example audit policy files:
 
-{% include code.html language="yaml" file="audit-policy.yaml" ghlink="/docs/tasks/debug-application-cluster/audit-policy.yaml" %}
+{{< code language="yaml" file="audit-policy.yaml" ghlink="/docs/tasks/debug-application-cluster/audit-policy.yaml" >}}
 
 You can use a minimal audit policy file to log all requests at the `Metadata` level:
 

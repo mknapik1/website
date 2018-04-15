@@ -24,7 +24,7 @@ This guide uses a simple nginx server to demonstrate proof of concept. The same 
 
 We did this in a previous example, but let's do it once again and focus on the networking perspective. Create an nginx pod, and note that it has a container port specification:
 
-{% include code.html language="yaml" file="run-my-nginx.yaml" ghlink="/docs/concepts/services-networking/run-my-nginx.yaml" %}
+{{< code language="yaml" file="run-my-nginx.yaml" ghlink="/docs/concepts/services-networking/run-my-nginx.yaml" >}}
 
 This makes it accessible from any node in your cluster. Check the nodes the pod is running on:
 
@@ -63,7 +63,7 @@ service "my-nginx" exposed
 
 This is equivalent to `kubectl create -f` the following yaml:
 
-{% include code.html language="yaml" file="nginx-svc.yaml" ghlink="/docs/concepts/services-networking/nginx-svc.yaml" %}
+{{< code language="yaml" file="nginx-svc.yaml" ghlink="/docs/concepts/services-networking/nginx-svc.yaml" >}}
 
 This specification will create a Service which targets TCP port 80 on any Pod with the `run: my-nginx` label, and expose it on an abstracted Service port (`targetPort`: is the port the container accepts traffic on, `port`: is the abstracted Service port, which can be any port other pods use to access the Service). View [service API object](/docs/reference/generated/kubernetes-api/{{page.version}}/#service-v1-core) to see the list of supported fields in service definition.
 Check your Service:
@@ -215,7 +215,7 @@ nginxsecret           Opaque                                2         1m
 
 Now modify your nginx replicas to start an https server using the certificate in the secret, and the Service, to expose both ports (80 and 443):
 
-{% include code.html language="yaml" file="nginx-secure-app.yaml" ghlink="/docs/concepts/services-networking/nginx-secure-app.yaml" %}
+{{< code language="yaml" file="nginx-secure-app.yaml" ghlink="/docs/concepts/services-networking/nginx-secure-app.yaml" >}}
 
 Noteworthy points about the nginx-secure-app manifest:
 
@@ -241,7 +241,7 @@ Note how we supplied the `-k` parameter to curl in the last step, this is becaus
 so we have to tell curl to ignore the CName mismatch. By creating a Service we linked the CName used in the certificate with the actual DNS name used by pods during Service lookup.
 Let's test this from a pod (the same secret is being reused for simplicity, the pod only needs nginx.crt to access the Service):
 
-{% include code.html language="yaml" file="curlpod.yaml" ghlink="/docs/concepts/services-networking/curlpod.yaml" %}
+{{< code language="yaml" file="curlpod.yaml" ghlink="/docs/concepts/services-networking/curlpod.yaml" >}}
 
 ```shell
 $ kubectl create -f ./curlpod.yaml

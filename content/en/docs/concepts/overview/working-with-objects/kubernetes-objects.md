@@ -35,7 +35,7 @@ When you create an object in Kubernetes, you must provide the object spec that d
 
 Here's an example `.yaml` file that shows the required fields and object spec for a Kubernetes Deployment:
 
-{% include code.html language="yaml" file="nginx-deployment.yaml" ghlink="/docs/concepts/overview/working-with-objects/nginx-deployment.yaml" %}
+{{< code language="yaml" file="nginx-deployment.yaml" ghlink="/docs/concepts/overview/working-with-objects/nginx-deployment.yaml" >}}
 
 One way to create a Deployment using a `.yaml` file like the one above is to use the [`kubectl create`](/docs/user-guide/kubectl/{{page.version}}/#create) command in the `kubectl` command-line interface, passing the `.yaml` file as an argument. Here's an example:
 

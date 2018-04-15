@@ -36,7 +36,7 @@ kubectl create namespace default-mem-example
 Here's the configuration file for a LimitRange object. The configuration specifies
 a default memory request and a default memory limit.
 
-{% include code.html language="yaml" file="memory-defaults.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults.yaml" %}
+{{< code language="yaml" file="memory-defaults.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults.yaml" >}}
 
 Create the LimitRange in the default-mem-example namespace:
 
@@ -52,7 +52,7 @@ memory limit of 512 MiB.
 Here's the configuration file for a Pod that has one Container. The Container
 does not specify a memory request and limit.
 
-{% include code.html language="yaml" file="memory-defaults-pod.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod.yaml" %}
+{{< code language="yaml" file="memory-defaults-pod.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod.yaml" >}}
 
 Create the Pod.
 
@@ -92,7 +92,7 @@ kubectl delete pod default-mem-demo --namespace=default-mem-example
 Here's the configuration file for a Pod that has one Container. The Container
 specifies a memory limit, but not a request:
 
-{% include code.html language="yaml" file="memory-defaults-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod-2.yaml" %}
+{{< code language="yaml" file="memory-defaults-pod-2.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod-2.yaml" >}}
 
 Create the Pod:
 
@@ -123,7 +123,7 @@ resources:
 Here's the configuration file for a Pod that has one Container. The Container
 specifies a memory request, but not a limit:
 
-{% include code.html language="yaml" file="memory-defaults-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod-3.yaml" %}
+{{< code language="yaml" file="memory-defaults-pod-3.yaml" ghlink="/docs/tasks/administer-cluster/memory-defaults-pod-3.yaml" >}}
 
 Create the Pod:
 

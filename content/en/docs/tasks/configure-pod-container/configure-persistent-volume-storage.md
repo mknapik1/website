@@ -61,7 +61,7 @@ to set up
 
 Here is the configuration file for the hostPath PersistentVolume:
 
-{% include code.html language="yaml" file="task-pv-volume.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-volume.yaml" %}
+{{< code language="yaml" file="task-pv-volume.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-volume.yaml" >}}
 
 The configuration file specifies that the volume is at `/mnt/data` on the
 cluster's Node. The configuration also specifies a size of 10 gibibytes and
@@ -93,7 +93,7 @@ access for at least one Node.
 
 Here is the configuration file for the PersistentVolumeClaim:
 
-{% include code.html language="yaml" file="task-pv-claim.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-claim.yaml" %}
+{{< code language="yaml" file="task-pv-claim.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-claim.yaml" >}}
 
 Create the PersistentVolumeClaim:
 
@@ -129,7 +129,7 @@ The next step is to create a Pod that uses your PersistentVolumeClaim as a volum
 
 Here is the configuration file for the Pod:
 
-{% include code.html language="yaml" file="task-pv-pod.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-pod.yaml" %}
+{{< code language="yaml" file="task-pv-pod.yaml" ghlink="/docs/tasks/configure-pod-container/task-pv-pod.yaml" >}}
 
 Notice that the Pod's configuration file specifies a PersistentVolumeClaim, but
 it does not specify a PersistentVolume. From the Pod's point of view, the claim

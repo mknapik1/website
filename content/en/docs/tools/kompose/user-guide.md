@@ -7,8 +7,8 @@ title: Translate a Docker Compose File to Kubernetes Resources
 redirect_from:
 - "/docs/tools/kompose/"
 - "/docs/tools/kompose/index.html"
-weight: 200
 weight: 20
+weight: 200
 ---
 
 * TOC
