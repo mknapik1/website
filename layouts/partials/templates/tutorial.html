@@ -2,7 +2,7 @@
 {{ partial "templates/block" (dict "page" . "block" "overview" "purpose" "states, in one or two sentences, the purpose of this document") }}
 
 <h2>TOC</h2>
-TODO(bep) The built-in TOC does not work in this case. {{ .TableOfContents }}..
+TODO(bep) The built-in TOC does not work in this case. Add the below to a slice of dicts and create Toc from that. {{ .TableOfContents }}.
 
 {{ partial "templates/block" (dict "page" . "block" "overview" "heading" "Objectives" "purpose" "lists the objectives for this tutorial.") }}
 
@@ -11,7 +11,6 @@ TODO(bep) The built-in TOC does not work in this case. {{ .TableOfContents }}..
 {{ partial "templates/block" (dict "page" . "block" "lessoncontent" "purpose" "provides the lesson content for this tutorial.") }}
 
 {{ partial "templates/block" (dict "page" . "block" "cleanup" "heading" "Cleaning up" "optional" true ) }}
-
 
 {{ partial "templates/block" (dict "page" . "block" "whatsnext" "heading" "What's next" "optional" true ) }}
 

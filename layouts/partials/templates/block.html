@@ -1,12 +1,12 @@
 
-{{ $capture := printf "__cid_%s" .block }}
-{{ $block := .page.Scratch.Get $capture }}
-{{ if and (not $block) (not $.optional) }}
+{{- $capture := printf "__cid_%s" .block -}}
+{{- $block := .page.Scratch.Get $capture -}}
+{{- if and (not $block) (not $.optional) -}}
 {{ partial "templates/errorthrower.html" (dict "block" .block "heading" .heading "purpose" .purpose) . }}
-{{ end }} 
-{{ with $block -}}
-{{ with $.heading }}
+{{- end -}} 
+{{- with $block -}}
+{{- with $.heading }}
 <h2>{{ .}}</h2>
-{{ end }}
+{{ end -}}
 {{ . }}
-{{ end }}
+{{ end -}}

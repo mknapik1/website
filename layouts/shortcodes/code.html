@@ -1,1 +1,36 @@
-TODO(bep)
+
+{{ $file := .Get "file" }}
+{{ $language := .Get "language" }}
+{{ $ghlink := .Get "ghlink" }}
+{{/* TODO(bep) k8slink ? also ghlink https://raw.githubusercontent.com/kubernetes/kubernetes/blob/{{page.githubbranch}} */}}
+{{ $fileDir := path.Split $file }}
+{{ $bundlePath := path.Join .Page.Dir $fileDir.Dir }}
+{{ $bundle := .Site.GetPage "page" $bundlePath }}
+{{ if not $bundle }}
+{{ errorf "bundle with path %q not found"  $bundlePath }}
+{{ end }}
+{{ with $bundle }}
+{{ $resource := .Resources.GetMatch $fileDir.File }}
+{{ if not $resource }}
+{{ errorf "resource name %q not found in %q" $fileDir.File $bundlePath }}
+{{ end }}
+{{ with $resource }}
+<table class="includecode">
+    <thead>
+        <tr>
+            <th>
+                {{ with $ghlink }}<a href="{{ . }}" download="{{ $file }}">{{ end }}
+                    <code>{{ $file }} {{ $bundlePath }}</code>
+                {{ if $ghlink }}</a>{{ end }}
+                <img src="{{ "images/copycode.svg" | relURL }}" style="max-height:24px" onclick="copyCode('{{ $file }}')" title="Copy {{ $file }} to clipboard">
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ highlight $resource.Content $language "" }}  </td>
+        </tr>
+    </tbody>
+</table>
+{{ end }}
+{{ end }}

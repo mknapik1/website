@@ -13,6 +13,12 @@ contentDir = "content/en"
 # TODO(bep)
 logo = "/images/favicon.png"
 
+# Highlighting config.
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "manni"
+
 [blackfriday]
 hrefTargetBlank = true
 fractions = false
