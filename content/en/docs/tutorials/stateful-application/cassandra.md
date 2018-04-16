@@ -198,8 +198,9 @@ Use `kubectl edit` to modify the size of a Cassandra StatefulSet.
 {{% capture cleanup %}}
 Deleting or scaling a StatefulSet down does not delete the volumes associated with the StatefulSet. This ensures safety first: your data is more valuable than an auto purge of all related StatefulSet resources. 
 
+{{< warning >}}
 **Warning:** Depending on the storage class and reclaim policy, deleting the Persistent Volume Claims may cause the associated volumes to also be deleted. Never assume you’ll be able to access data if its volume claims are deleted.
-{: .warning}
+{{< /warning >}}
 
 1. Run the following commands to delete everything in a `StatefulSet`:
 

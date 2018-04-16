@@ -137,8 +137,9 @@ For volume plugins that support the `Delete` reclaim policy, deletion removes bo
 
 #### Recycle
 
+{{< warning >}}
 **Warning:** The `Recycle` reclaim policy is deprecated. Instead, the recommended approach is to use dynamic provisioning.
-{: .warning}
+{{< /warning >}}
 
 If supported by the underlying volume plugin, the `Recycle` reclaim policy performs a basic scrub (`rm -rf /thevolume/*`) on the volume and makes it available again for a new claim.
 

@@ -200,9 +200,10 @@ The upgrade procedure described in this document assumes that either:
    In this case, the upgrade procedure requires shutting down the
    etcd cluster. During the time the etcd cluster is shut down, the Kubernetes API Server will be read only.
 
+{{< warning >}}
 **Warning**: Deviations from the assumptions are untested by continuous
 integration, and deviations might create undesirable consequences. Additional information about operating an etcd cluster is available [from the etcd maintainers](https://github.com/coreos/etcd/tree/master/Documentation). 
-{: .warning}
+{{< /warning >}}
 
 ### Background
 
@@ -251,10 +252,11 @@ but the rollback tool has these limitations:
 
 * Rollback doesn’t preserve resource versions of objects stored in etcd.
 
+{{< warning >}}
 **Warning**: If the data is not kept in `application/json` format (see [Upgrade
 Procedure](#upgrade-procedure)), you will lose the option to roll back to etcd
 2.2.
-{: .warning}
+{{< /warning >}}
 
 The last bullet means that any component or user that has some logic
 depending on resource versions may require restart after etcd rollback. This

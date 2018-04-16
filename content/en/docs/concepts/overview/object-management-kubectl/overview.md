@@ -13,9 +13,10 @@ approaches.
 
 ## Management techniques
 
+{{< warning >}}
 **Warning:** A Kubernetes object should be managed using only one technique. Mixing
 and matching techniques for the same object results in undefined behavior.
-{: .warning}
+{{< /warning >}}
 
 | Management technique             | Operates on          |Recommended environment | Supported writers  | Learning curve |
 |----------------------------------|----------------------|------------------------|--------------------|----------------|
@@ -71,13 +72,14 @@ in YAML or JSON format.
 See the [API reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
 for more details on object definitions.
 
+{{< warning >}}
 **Warning:** The imperative `replace` command replaces the existing
 spec with the newly provided one, dropping all changes to the object missing from
 the configuration file.  This approach should not be used with resource
 types whose specs are updated independently of the configuration file.
 Services of type `LoadBalancer`, for example, have their `externalIPs` field updated
 independently from the configuration by the cluster.
-{: .warning}
+{{< /warning >}}
 
 ### Examples
 

@@ -346,8 +346,9 @@ a future version. To create a self-hosted cluster, pass the `--feature-gates=Sel
 flag to `kubeadm init`.
 {{< /caution >}}
 
+{{< warning >}}
 **Warning:** see self-hosted caveats and limitations.
-{: .warning}
+{{< /warning >}}
 
 #### Caveats
 

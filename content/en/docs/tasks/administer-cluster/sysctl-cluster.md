@@ -125,10 +125,11 @@ spec:
 
 {{% capture discussion %}}
 
+{{< warning >}}
 **Warning**: Due to their nature of being _unsafe_, the use of _unsafe_ sysctls
 is at-your-own-risk and can lead to severe problems like wrong behavior of
 containers, resource shortage or complete breakage of a node.
-{: .warning}
+{{< /warning >}}
 
 It is good practice to consider nodes with special sysctl settings as
 _tainted_ within a cluster, and only schedule pods onto them which need those

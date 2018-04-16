@@ -814,7 +814,7 @@ func replaceCaptures(path, s string) (string, error) {
 }
 
 // Introduce them little by little to test
-var callouts = regexp.MustCompile("note|caution")
+var callouts = regexp.MustCompile("note|caution|warning")
 
 func calloutsToShortCodes(path, s string) (string, error) {
 

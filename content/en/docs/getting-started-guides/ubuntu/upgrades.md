@@ -10,10 +10,11 @@ This page will outline how to manage and execute a Kubernetes upgrade.
 {{% capture prerequisites %}}
 This page assumes you have a working deployed cluster.
 
+{{< warning >}}
 **Warning:** You should always back up all your data before attempting an upgrade.
 Don't forget to include the workload inside your cluster!
 Refer to the [backup documentation](/docs/getting-started-guides/ubuntu/backups).
-{: .warning}
+{{< /warning >}}
 
 {{% /capture %}}
 

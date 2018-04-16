@@ -857,11 +857,12 @@ in the server logs, you can remove the ABAC authorizer.
 
 You can replicate a permissive policy using RBAC role bindings.
 
+{{< warning >}}
 **WARNING:** The following policy allows **ALL** service accounts to act as cluster administrators.
 Any application running in a container receives service account credentials automatically,
 and could perform any action against the API, including viewing secrets and modifying permissions.
 This is not a recommended policy.
-{: .warning}
+{{< /warning >}}
 
 ```
 kubectl create clusterrolebinding permissive-binding \
