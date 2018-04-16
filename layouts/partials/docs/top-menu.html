@@ -7,13 +7,6 @@
 		{{ $yah := $p.IsDescendant . }}
 		<li><a href="{{ .RelPermalink }}"{{ if $yah }} class="YAH"{{ end }}>{{ .LinkTitle | upper }}</a></li>
 		{{ end }}
-		{{ if gt (len $home.AllTranslations ) 1 }}
-		{{ end }}
-		{{ range $home.AllTranslations }}
-		{{ if ne $home.Language .Language }}
-		<li><a href="{{ .Permalink }}">{{ .Language.LanguageName | upper }}</a></li>
-		{{ end }}
-		{{ end }}
 	</ul>
 	<div id="searchBox">
 		<input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)" autofocus="autofocus">
