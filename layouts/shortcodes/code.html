@@ -5,16 +5,19 @@
 {{/* TODO(bep) k8slink ? also ghlink https://raw.githubusercontent.com/kubernetes/kubernetes/blob/{{page.githubbranch}} */}}
 {{ $fileDir := path.Split $file }}
 {{ $bundlePath := path.Join .Page.Dir $fileDir.Dir }}
-{{ $bundle := .Site.GetPage "page" $bundlePath | default (.Site.GetPage "section" $bundlePath) }}
-{{ if not $bundle }}
-{{ errorf "bundle with path %q not found"  $bundlePath }}
-{{ end }}
+{{ $bundle := .Site.GetPage "page" $bundlePath | default .Page.CurrentSection }}
 {{ with $bundle }}
 {{ $resource := .Resources.GetMatch $fileDir.File }}
+{{ with $resource }}{{ $.Scratch.Set "content" .Content }}{{ end }}
 {{ if not $resource }}
+{{/* Fall back to file reading. We should consider creating headless bundles of these. */}}
+{{ $resource := readFile (path.Join $.Page.Dir $file) }}
+{{ with $resource }}{{ $.Scratch.Set "content" . }}{{ end }}
+{{ if not $resource}}
 {{ errorf "resource name %q not found in %q" $fileDir.File $bundlePath }}
 {{ end }}
-{{ with $resource }}
+{{ end }}
+{{ with $.Scratch.Get "content" }}
 <table class="includecode">
     <thead>
         <tr>
@@ -28,7 +31,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>{{ highlight $resource.Content $language "" }}  </td>
+            <td>{{ highlight . $language "" }}  </td>
         </tr>
     </tbody>
 </table>
