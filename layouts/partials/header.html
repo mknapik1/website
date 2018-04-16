@@ -12,15 +12,12 @@
             <li><a href="/case-studies/">Case Studies</a></li>
             <li>
                 <a href="#">
-                    {{.Params.version}} <span class="ui-icon ui-icon-carat-1-s"></span>
+                    {{ .Site.Params.version }} <span class="ui-icon ui-icon-carat-1-s"></span>
                 </a>
                 <ul>
-                {{ range .Params.versions }}
-                    {{ if strings.Contains $.Params.versionedurl .version }}
-                    <li><a href="{{/* TODO(bep) version.url }}{{ .Params.versionedurl[version.version] */}}">{{ .version }}</a></li>
-                    {{ else }}
-                    <li><a href="{{/* version.url }}{{ .Params.url */}}">{{ .version }}</a></li>
-                    {{ end }}
+                {{ range .Site.Params.versions }}
+                    {{/* TODO(bep) versionedurl */}}
+                    <li><a href="{{  .url }}">{{ .version }}</a></li>
                 {{ end }}
                 </ul>
             </li>
