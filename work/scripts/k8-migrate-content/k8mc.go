@@ -466,9 +466,9 @@ func (m *mover) contentMigrate_Replacements() error {
 			return s, nil
 		},
 
-		//    {% include code.html language="yaml" file="guestbook/redis-master-deployment.yaml" ghlink="/docs/tutorials/stateless-application/guestbook/redis-master-deployment.yaml" %}
-
 		replaceCaptures,
+
+		// TODO(bep) calloutsToShortCodes,
 	}
 
 	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {
@@ -780,6 +780,57 @@ $1
 func replaceCaptures(path, s string) (string, error) {
 	re := regexp.MustCompile(`(?s){% capture (.*?) %}(.*?){% endcapture %}`)
 	return re.ReplaceAllString(s, `{{% capture $1 %}}$2{{% /capture %}}`), nil
+}
+
+func calloutsToShortCodes(path, s string) (string, error) {
+
+	// (?m)(\n\n)(^.*$)\n({:.*)
+	regexps := []string{`(?s)([\t ]*){:\s?\.([\w|-]*)\s?}(.*?)\s*\n\s*\n`, `(?s)([\t ]*){:\s?\.([\w|-]*)\s?}(.*?)\z`}
+
+	for i, re := range regexps {
+		calloutsRe := regexp.MustCompile(re)
+
+		s = calloutsRe.ReplaceAllStringFunc(s, func(s string) string {
+			m := calloutsRe.FindAllStringSubmatch(s, -1)
+			if len(m) > 0 {
+				first := m[0]
+				whitespace := first[1]
+				name, content := first[2], first[3]
+				name = strings.TrimSpace(name)
+				content = strings.TrimSpace(content)
+
+				// Block level markdown is superflous.
+				lines := strings.Split(content, "\n")
+				newContent := ""
+				for _, line := range lines {
+					l := strings.TrimSpace(line)
+					if strings.HasPrefix(l, ">") {
+						l = strings.TrimSpace(strings.TrimPrefix(l, ">"))
+						line = l
+					}
+
+					newContent += line + "\n"
+				}
+
+				newContent = strings.TrimSpace(newContent)
+
+				s = fmt.Sprintf(`%s{{< %s >}}
+%s
+{{< /%s >}}
+`, whitespace, name, newContent, name)
+
+				if i == 0 {
+					s += "\n"
+				}
+
+			}
+
+			return s
+		})
+
+	}
+	return s, nil
+
 }
 
 func stringsReplacer(old, new string) func(path, s string) (string, error) {
