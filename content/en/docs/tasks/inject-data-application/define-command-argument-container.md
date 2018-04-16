@@ -78,9 +78,10 @@ the techniques available for defining environment variables, including
 and
 [Secrets](/docs/concepts/configuration/secret/).
 
+{{< note >}}
 **Note:** The environment variable appears in parentheses, `"$(VAR)"`. This is
 required for the variable to be expanded in the `command` or `args` field.
-{: .note}
+{{< /note >}}
 
 ## Run a command in a shell
 

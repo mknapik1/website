@@ -12,9 +12,9 @@ weight: 10
 {{% capture overview %}}
 If you're a developer looking to run applications on Kubernetes, this page and its linked topics can help you get started with the fundamentals. Though this page primarily describes development workflows, [the subsequent page in the series](/docs/home/?path=users&persona=app-developer&level=intermediate){:target="_blank"} covers more advanced, production setups.
 
-{: .note }
+{{< note  >}}
 **A quick note**<br>This app developer "user journey" is *not* a comprehensive overview of Kubernetes. It focuses more on *what* you develop, test, and deploy to Kubernetes, rather than *how* the underlying infrastructure works.<br><br>Though it's possible for a single person to manage both, in many organizations, it’s common to assign the latter to a dedicated {{< glossary_tooltip text="cluster operator" term_id="cluster-operator" >}}.
-
+{{< /note  >}}
 {{% /capture %}}
 
 
@@ -47,9 +47,9 @@ Minikube can be installed locally, and runs a simple, single-node Kubernetes clu
 
    Minikube includes a Docker daemon, but if you're developing applications locally, you'll want an independent Docker instance to support your workflow. This allows you to create {{< glossary_tooltip text="containers" term_id="container" >}} and push them to a container registry.
 
-   {: .note }
+   {{< note  >}}
    Version 1.12 is recommended for full compatibility with Kubernetes, but a few other versions are tested and known to work.
-
+   {{< /note  >}}
 
 You can get basic information about your cluster with the commands `kubectl cluster-info` and `kubectl get nodes`. However, to get a good idea of what's really going on, you need to deploy an application to your cluster. This is covered in the next section.
 
@@ -133,9 +133,9 @@ To avoid having to unnecessarily rebuild your container images, you should decou
   </tr>
 </table>
 
-{: .note }
+{{< note  >}}
 If you have any data that you want to keep private, you should be using a Secret. Otherwise there is nothing stopping that data from being exposed to malicious users.
-
+{{< /note  >}}
 ## Understand basic Kubernetes architecture
 
 As an app developer, you don't need to know everything about the inner workings of Kubernetes, but you may find it helpful to understand it at a high level.

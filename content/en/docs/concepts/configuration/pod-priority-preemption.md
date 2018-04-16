@@ -79,19 +79,22 @@ with `globalDefault` set, the priority of Pods with no `priorityClassName` is ze
 The `description` field is an arbitrary string. It is meant to tell users of
 the cluster when they should use this PriorityClass.
 
+{{< note >}}
 **Note 1**: If you upgrade your existing cluster and enable this feature, the priority
 of your existing Pods will be considered to be zero.
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **Note 2**: Addition of a PriorityClass with `globalDefault` set to true does not
 change the priorities of existing Pods. The value of such a PriorityClass is used only
 for Pods created after the PriorityClass is added.
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **Note 3**: If you delete a PriorityClass, existing Pods that use the name of the
 deleted priority class remain unchanged, but you are not able to create more Pods
 that use the name of the deleted PriorityClass.
-{: .note}
+{{< /note >}}
 
 ### Example PriorityClass
 
@@ -198,12 +201,13 @@ the answer to this question is yes: "If all the Pods with lower priority than
 the pending Pod are removed from the Node, can the pending Pod be scheduled on
 the Node?"
 
+{{< note >}}
 **Note:** Preemption does not necessarily remove all lower-priority Pods. If the 
 pending Pod can be scheduled by removing fewer than all lower-priority Pods, then
 only a portion of the lower-priority Pods are removed. Even so, the answer to the
 preceding question must be yes. If the answer is no, the Node is not considered
 for preemption.
-{: .note}
+{{< /note >}}
 
 If a pending Pod has inter-pod affinity to one or more of the lower-priority Pods
 on the Node, the inter-Pod affinity rule cannot be satisfied in the absence of those

@@ -212,18 +212,20 @@ its `log_level` entry are mounted into the Pod at path "`/etc/config/log_level`"
 Note that this path is derived from the volume's `mountPath` and the `path`
 keyed with `log_level`.
 
+{{< note >}}
 **Note:** A container using a ConfigMap as a [subPath](#using-subpath) volume mount will not
 receive ConfigMap updates.
-{: .note}
+{{< /note >}}
 
 ### downwardAPI
 
 A `downwardAPI` volume is used to make downward API data available to applications.
 It mounts a directory and writes the requested data in plain text files.
 
+{{< note >}}
 **Note:** A container using Downward API as a [subPath](#using-subpath) volume mount will not
 receive Downward API updates.
-{: .note}
+{{< /note >}}
 
 See the [`downwardAPI` volume example](/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/)  for more details.
 
@@ -236,8 +238,9 @@ files in the `emptyDir` volume, though that volume can be mounted at the same
 or different paths in each container.  When a Pod is removed from a node for
 any reason, the data in the `emptyDir` is deleted forever.
 
+{{< note >}}
 **Note:** a container crashing does *NOT* remove a pod from a node, so the data in an `emptyDir` volume is safe across container crashes.
-{: .note}
+{{< /note >}}
 
 Some uses for an `emptyDir` are:
 
@@ -486,11 +489,12 @@ See the [iSCSI example](https://github.com/kubernetes/examples/tree/{{page.githu
 
 {% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
 
+{{< note >}}
 **Note:** The alpha PersistentVolume NodeAffinity annotation has been deprecated
 and will be removed in a future release. Existing PersistentVolumes using this
 annotation must be updated by the user to use the new PersistentVolume
 `NodeAffinity` field.
-{: .note}
+{{< /note >}}
 
 A `local` volume represents a mounted local storage device such as a disk,
 partition or directory.
@@ -558,10 +562,11 @@ the local volume lifecycle. Note that this provisioner does not support dynamic
 provisioning yet. For an example on how to run an external local provisioner,
 see the [local volume provisioner user guide](https://github.com/kubernetes-incubator/external-storage/tree/master/local-volume).
 
+{{< note >}}
 **Note:** The local PersistentVolume requires manual cleanup and deletion by the
 user if the external static provisioner is not used to manage the volume
 lifecycle.
-{: .note}
+{{< /note >}}
 
 ### nfs
 
@@ -680,9 +685,10 @@ parameters are nearly the same with two exceptions:
   volume source. However, as illustrated above, you can explicitly set the `mode`
   for each individual projection.
 
+{{< note >}}
 **Note:** A container using a projected volume source as a [subPath](#using-subpath) volume mount will not
 receive updates for those volume sources.
-{: .note}
+{{< /note >}}
 
 ### portworxVolume
 
@@ -804,9 +810,10 @@ non-volatile storage.
 **Important:** You must create a secret in the Kubernetes API before you can use it.
 {: .caution}
 
+{{< note >}}
 **Note:** A container using a Secret as a [subPath](#using-subpath) volume mount will not
 receive Secret updates.
-{: .note}
+{{< /note >}}
 
 Secrets are described in more detail [here](/docs/user-guide/secrets).
 
@@ -864,9 +871,10 @@ For more information including Dynamic Provisioning and Persistent Volume Claims
 
 ### vsphereVolume
 
+{{< note >}}
 **Prerequisite:** Kubernetes with vSphere Cloud Provider configured. For cloudprovider
 configuration please refer [vSphere getting started guide](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/).
-{: .note}
+{{< /note >}}
 
 A `vsphereVolume` is used to mount a vSphere VMDK Volume into your Pod.  The contents
 of a volume are preserved when it is unmounted. It supports both VMFS and VSAN datastore.

@@ -14,8 +14,9 @@ A [PersistentVolume](/docs/concepts/storage/persistent-volumes/) (PV) is a piece
 **Warning:**  This deployment is not suitable for production use cases, as it uses single instance WordPress and MySQL Pods. Consider using [WordPress Helm Chart](https://github.com/kubernetes/charts/tree/master/stable/wordpress) to deploy WordPress in production.
 {: .warning}
 
+{{< note >}}
 **Note:** The files provided in this tutorial are using GA Deployment APIs and are specific to kubernetes version 1.9 and later. If you wish to use this tutorial with an earlier version of Kubernetes, please update the API version appropriately, or reference earlier versions of this tutorial.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 
@@ -53,11 +54,13 @@ When a PersistentVolumeClaim is created, a PersistentVolume is dynamically provi
 **Warning:** In local clusters, the default StorageClass uses the `hostPath` provisioner.  `hostPath` volumes are only suitable for development and testing. With `hostPath` volumes, your data lives in `/tmp` on the node the Pod is scheduled onto and does not move between nodes. If a Pod dies and gets scheduled to another node in the cluster, or the node is rebooted, the data is lost.
 {: .warning}
 
+{{< note >}}
 **Note:** If you are bringing up a cluster that needs to use the `hostPath` provisioner, the `--enable-hostpath-provisioner` flag must be set in the `controller-manager` component.
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **Note:** If you have a Kubernetes cluster running on Google Kubernetes Engine, please follow [this guide](https://cloud.google.com/kubernetes-engine/docs/tutorials/persistent-disk).
-{: .note}
+{{< /note >}}
 
 ## Create a Secret for MySQL Password
 
@@ -67,8 +70,9 @@ A [Secret](/docs/concepts/configuration/secret/) is an object that stores a piec
 
        kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
        
+   {{< note >}}
    **Note:** Replace `YOUR_PASSWORD` with the password you want to apply.     
-   {: .note}
+   {{< /note >}}
    
 2. Verify that the Secret exists by running the following command:
 
@@ -79,8 +83,9 @@ A [Secret](/docs/concepts/configuration/secret/) is an object that stores a piec
        NAME                  TYPE                                  DATA      AGE
        mysql-pass                 Opaque                                1         42s
 
+   {{< note >}}
    **Note:** To protect the Secret from exposure, neither `get` nor `describe` show its contents. 
-   {: .note}
+   {{< /note >}}
 
 ## Deploy MySQL
 
@@ -96,8 +101,9 @@ The following manifest describes a single-instance MySQL Deployment. The MySQL c
 
        kubectl get pvc
 
+   {{< note >}}
    **Note:** It can take up to a few minutes for the PVs to be provisioned and bound.
-   {: .note}
+   {{< /note >}}
 
    The response should be like this:
 
@@ -108,8 +114,9 @@ The following manifest describes a single-instance MySQL Deployment. The MySQL c
 
        kubectl get pods
 
+   {{< note >}}
    **Note:** It can take up to a few minutes for the Pod's Status to be `RUNNING`.
-   {: .note}
+   {{< /note >}}
 
    The response should be like this:
 
@@ -130,8 +137,9 @@ The following manifest describes a single-instance WordPress Deployment and Serv
 
        kubectl get pvc
 
+   {{< note >}}
    **Note:** It can take up to a few minutes for the PVs to be provisioned and bound.
-   {: .note}
+   {{< /note >}}
 
    The response should be like this:
 
@@ -147,8 +155,9 @@ The following manifest describes a single-instance WordPress Deployment and Serv
        NAME        CLUSTER-IP   EXTERNAL-IP   PORT(S)        AGE
        wordpress   10.0.0.89    <pending>     80:32406/TCP   4m
 
+   {{< note >}}
    **Note:** Minikube can only expose Services through `NodePort`. <br/><br/>The `EXTERNAL-IP` is always `<pending>`.
-   {: .note}
+   {{< /note >}}
 
 4. Run the following command to get the IP Address for the WordPress Service:
 

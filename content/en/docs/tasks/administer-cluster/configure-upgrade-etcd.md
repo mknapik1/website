@@ -93,8 +93,9 @@ For example, consider key pairs `k8sclient.key` and `k8sclient.cert` that are tr
 
 Once etcd is configured correctly, only clients with valid certificates can access it. To give Kubernetes API server the access, configure it with the flags `--etcd-certfile=k8sclient.cert` and `--etcd-keyfile=k8sclient.key`.
 
+{{< note >}}
 **Note**: etcd authentication is not currently supported by Kubernetes. For more information, see the related issue [Support Basic Auth for Etcd v2](https://github.com/kubernetes/kubernetes/issues/23398).
-{: .note}
+{{< /note >}}
 
 ## Replacing a failed etcd member
 
@@ -261,6 +262,7 @@ includes that all clients using the watch API, which depends on
 resource versions. Since both the kubelet and kube-proxy use the watch API, a
 rollback might require restarting all Kubernetes components on all nodes.
 
+{{< note >}}
 **Note**: At the time of writing, both Kubelet and KubeProxy are using “resource
 version” only for watching (i.e. are not using resource versions for anything
 else). And both are using reflector and/or informer frameworks for watching
@@ -271,7 +273,7 @@ will be down for the period of rollback, all of node components should basically
 restart their watches and start from “now” when apiserver is back. And it will
 be back with new resource version. That would mean that restarting node
 components is not needed. But the assumptions here may not hold forever.
-{: .note}
+{{< /note >}}
 
 ### Design
 

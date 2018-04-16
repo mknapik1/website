@@ -36,16 +36,19 @@ CPU管理器定期通过 CRI 写入资源更新，以保证内存中 CPU 分配�
 
 `static` 策略针对具有整数型 CPU `requests` 的 pod ，它允许该类 pod 中的容器访问节点上的独占 CPU 资源。这种独占性是使用 [cpuset cgroup 控制器](https://www.kernel.org/doc/Documentation/cgroup-v1/cpusets.txt) 来实现的。
 
+{{< note >}}
 **注意:** 诸如容器运行时和 kubelet 本身的系统服务可以继续在这些独占 CPU 上运行。独占性仅针对其他 pod。
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **注意:** 该策略的 alpha 版本不保证 Kubelet 重启前后的静态独占性分配。
-{: .note}
+{{< /note >}}
 
 该策略管理一个共享 CPU 资源池，最初，该资源池包含节点上所有的 CPU 资源。可用的独占性 CPU 资源数量等于节点的 CPU 总量减去通过 `--kube-reserved` 或 `--system-reserved` 参数保留的 CPU 。通过这些参数预留的 CPU 是以整数方式，按物理内核 ID 升序从初始共享池获取的。 共享池是 `BestEffort` 和 `Burstable` pod 运行的 CPU 集合。`Guaranteed` pod 中的容器，如果声明了非整数值的 CPU `requests` ，也将运行在共享池的 CPU 上。只有 `Guaranteed` pod 中，指定了整数型 CPU `requests` 的容器，才会被分配独占 CPU 资源。
 
+{{< note >}}
 **注意:** 当启用 static 策略时，要求使用 `--kube-reserved` 和/或 `--system-reserved` 来保证预留的 CPU 值大于零。 这是因为零预留 CPU 值可能使得共享池变空。
-{: .note}
+{{< /note >}}
 
 当 `Guaranteed` pod 调度到节点上时，如果其容器符合静态分配要求，相应的 CPU 会被从共享池中移除，并放置到容器的 cpuset 中。因为这些容器所使用的 CPU 受到调度域本身的限制，所以不需要使用 CFS 配额来进行 CPU 的绑定。换言之，容器 cpuset  中的 CPU 数量与 pod 规格中指定的整数型 CPU `limit` 相等。这种静态分配增强了 CPU 亲和性，减少了 CPU 密集的工作负载在节流时引起的上下文切换。
 

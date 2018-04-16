@@ -23,15 +23,17 @@ Localizations must source from the English files for the [most recent major rele
 
     For example, the branch for Kubernetes v1.9 docs is `release-1.9`.
 
+{{< note >}}
 Source files reside in the `/docs/` directory.
-{: .note}
+{{< /note >}}
 
 ### Repository
 
 A l10n team will have a repository specifically dedicated to its work, for example: [kubernetes/kubernetes-docs-cn](https://github.com/kubernetes/kubernetes-docs-cn).
 
+{{< note >}}
 **Note:** To open a l10n repository, [contact the SIG docs lead](https://kubernetes.slack.com/messages/C1J0BPD2M) on Slack for assistance.
-{: .note}
+{{< /note >}}
 
 ### Project
 
@@ -77,5 +79,6 @@ Once a l10n meets requirements for workflow and minimum output, SIG docs will:
 - Work with the localization team to implement language selection on the website
 - Publicize availability through [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) channels.
 
+{{< note >}}
 **Note:** Implementation of language selection is pending Kubernetes' first completed localization project.
-{: .note}
+{{< /note >}}

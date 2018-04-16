@@ -170,9 +170,10 @@ following pod-specific DNS policies. These policies are specified in the
   settings are supposed to be provided using the `dnsConfig` field in the Pod Spec.
   See [DNS config](#dns-config) subsection below.
 
+{{< note >}}
 **NOTE:** "Default" is not the default DNS policy. If `dnsPolicy` is not
 explicitly specified, then “ClusterFirst” is used.
-{: .note}
+{{< /note >}}
 
 
 The example below shows a Pod with its DNS policy set to

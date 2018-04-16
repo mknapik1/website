@@ -336,10 +336,11 @@ However, it is using its local ttl-based cache for getting the current value of 
 As a result, the total delay from the moment when the secret is updated to the moment when new keys are
 projected to the pod can be as long as kubelet sync period + ttl of secrets cache in kubelet.
 
+{{< note >}}
 **Note:** A container using a Secret as a
 [subPath](/docs/concepts/storage/volumes#using-subpath) volume mount will not receive
 Secret updates.
-{: .note}
+{{< /note >}}
 
 #### Using Secrets as Environment Variables
 
@@ -748,5 +749,6 @@ Pod level](#use-case-secret-visible-to-one-container-in-a-pod).
    nodes that actually require them, to restrict the impact of a root exploit on a
    single node.
   
+{{< note >}}
 **Note:** As of 1.7 [encryption of secret data at rest is supported](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/).
-{: .note}
+{{< /note >}}

@@ -7,6 +7,7 @@ import (
 	"log"
 	"regexp"
 
+	"bufio"
 	"bytes"
 	"flag"
 	"fmt"
@@ -499,7 +500,7 @@ func (m *mover) contentMigrate_Replacements() error {
 
 		replaceCaptures,
 
-		// TODO(bep) calloutsToShortCodes,
+		calloutsToShortCodes,
 	}
 
 	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {
@@ -814,52 +815,76 @@ func replaceCaptures(path, s string) (string, error) {
 
 func calloutsToShortCodes(path, s string) (string, error) {
 
-	// (?m)(\n\n)(^.*$)\n({:.*)
-	regexps := []string{`(?s)([\t ]*){:\s?\.([\w|-]*)\s?}(.*?)\s*\n\s*\n`, `(?s)([\t ]*){:\s?\.([\w|-]*)\s?}(.*?)\z`}
+	// This contains callout examples that needs to be handled by hand.
+	// TODO(bep)
+	if strings.Contains(path, "style-guide") {
+		return s, nil
+	}
+	/*if !strings.Contains(path, "foundational") {
+		return s, nil
+	}*/
 
-	for i, re := range regexps {
-		calloutsRe := regexp.MustCompile(re)
+	if !strings.Contains(s, "{:") {
+		return s, nil
+	}
 
-		s = calloutsRe.ReplaceAllStringFunc(s, func(s string) string {
-			m := calloutsRe.FindAllStringSubmatch(s, -1)
-			if len(m) > 0 {
-				first := m[0]
-				whitespace := first[1]
-				name, content := first[2], first[3]
-				name = strings.TrimSpace(name)
-				content = strings.TrimSpace(content)
+	calloutRe := regexp.MustCompile(`(\s*){:\s*\.(.*)}`)
 
-				// Block level markdown is superflous.
-				lines := strings.Split(content, "\n")
-				newContent := ""
-				for _, line := range lines {
-					l := strings.TrimSpace(line)
-					if strings.HasPrefix(l, ">") {
-						l = strings.TrimSpace(strings.TrimPrefix(l, ">"))
-						line = l
-					}
+	var all strings.Builder
+	var current strings.Builder
 
-					newContent += line + "\n"
-				}
+	scanner := bufio.NewScanner(strings.NewReader(s))
+	pcounter := 0
+	var indent, shortcode string
+	isOpen := false
 
-				newContent = strings.TrimSpace(newContent)
+	for scanner.Scan() {
+		line := scanner.Text()
+		l := strings.TrimSpace(line)
+		if l == "" || l == "---" {
+			pcounter = 0
+		} else {
+			pcounter++
+		}
 
-				s = fmt.Sprintf(`%s{{< %s >}}
-%s
-{{< /%s >}}
-`, whitespace, name, newContent, name)
+		// Test with the notes
+		if strings.Contains(line, "{:") && strings.Contains(line, "note") {
+			// This may be the start or the end of a callout.
+			isStart := pcounter == 1
 
-				if i == 0 {
-					s += "\n"
-				}
-
+			m := calloutRe.FindStringSubmatch(line)
+			indent = m[1]
+			shortcode = m[2]
+			all.WriteString(fmt.Sprintf("%s{{< %s >}}\n", indent, shortcode))
+			if !isStart {
+				all.WriteString(current.String())
+				all.WriteString(fmt.Sprintf("%s{{< /%s >}}\n", indent, shortcode))
+				current.Reset()
+			} else {
+				isOpen = true
 			}
 
-			return s
-		})
+		} else {
+			current.WriteString(line)
+			if !isOpen || pcounter != 0 {
+				current.WriteRune('\n')
+			}
+			if pcounter == 0 {
+				if isOpen {
+					current.WriteString(fmt.Sprintf("%s{{< /%s >}}\n", indent, shortcode))
+					isOpen = false
+				}
+				all.WriteString(current.String())
+				current.Reset()
+			}
+
+		}
 
 	}
-	return s, nil
+
+	all.WriteString(current.String())
+
+	return all.String(), nil
 
 }
 

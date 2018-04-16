@@ -96,9 +96,10 @@ or more comments in the Kubernetes source code.
 
 ### Making changes to comments in the source code
 
+{{< note >}}
 **Note**: The following steps are an example, not a general procedure. Details 
 will be different in your situation.
-{: .note}
+{{< /note >}}
 
 Here's an example of editing a comment in the Kubernetes source code.
 
@@ -181,6 +182,7 @@ to monitor your pull request until it has been merged.
 [PR 57758](https://github.com/kubernetes/kubernetes/pull/57758)
 is an example of a pull request that fixes a typo in the Kubernetes source code.
 
+{{< note >}}
 **Note**: It can be tricky to determine the correct source file to be changed. In the
 preceding example, the authoritative source file is under the `staging` directory
 in the `kubernetes/kubernetes` repository. But in your situation,the `staging` directory
@@ -189,7 +191,7 @@ might not be the place to find the authoritative source. For guidance, check the
 [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/tree/master/staging)
 repository and in related repositories like
 [kubernetes/apiserver](https://github.com/kubernetes/apiserver/blob/master/README.md).
-{: .note}
+{{< /note >}}
 
 ### Cherry picking your commit into a release branch
 

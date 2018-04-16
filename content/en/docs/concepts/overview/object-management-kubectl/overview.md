@@ -131,12 +131,13 @@ operations to be taken on the files. Create, update, and delete operations
 are automatically detected per-object by `kubectl`. This enables working on
 directories, where different operations might be needed for different objects.
 
+{{< note >}}
 **Note:** Declarative object configuration retains changes made by other
 writers, even if the changes are not merged back to the object configuration file.
 This is possible by using the `patch` API operation to write only
 observed differences, instead of using the `replace`
 API operation to replace the entire object configuration.
-{: .note}
+{{< /note >}}
 
 ### Examples
 

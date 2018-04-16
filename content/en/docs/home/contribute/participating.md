@@ -57,8 +57,9 @@ Another reviewer or approver can remove a hold with the comment: `/hold cancel`.
 Approvers may skip further reviews for small pull requests if the proposed changes appear trivial and/or well-understood.
 An approver can indicate `/lgtm` or `/approve` in a PR comment to have a pull request merged, and all pull requests require at least one approver to provide their vote in order for the PR to be merged.
 
+{{< note  >}}
 **Note:** There is a special case when an approver uses the comment: `/lgtm`. In these cases, the automation will add both `lgtm` and `approve` tags, skipping any further review.
-+{: .note }
+{{< /note  >}}
 
 For PRs that require no review (typos or otherwise trivial changes), approvers can enter an `lgtm` comment, indicating no need for further review and flagging the PR with approval to merge.
 
@@ -77,9 +78,10 @@ For assignment of issues, pull requests, and to support PR approvals, the automa
 
 To volunteer as a reviewer or approver, make a pull request and add your Github handle to the relevant section in the [OWNERS file](https://github.com/kubernetes/community/blob/master/contributors/devel/owners.md).
 
+{{< note  >}}
 **Note:** Reviewers and approvers must meet requirements for participation.
 For more information, see the [Kubernetes community](https://github.com/kubernetes/community/blob/master/community-membership.md#membership) repository.
-{: .note }
+{{< /note  >}}
 
 Documentation for the [OWNERS](https://github.com/kubernetes/community/blob/master/contributors/devel/owners.md) explains how to maintain OWNERS for each repository that enables it.
 

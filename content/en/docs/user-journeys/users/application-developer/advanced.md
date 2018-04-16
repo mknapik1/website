@@ -11,9 +11,9 @@ weight: 30
 
 {{% capture overview %}}
 
-{: .note }
+{{< note  >}}
 This page assumes that you're familiar with core Kubernetes concepts, and are comfortable deploying your own apps. If not, you should review the [Intermediate App Developer](/docs/user-journeys/users/application-developer/intermediate/){:target="_blank"} topics first.
-
+{{< /note  >}}
 After checking out the current page and its linked sections, you should have a better understanding of the following:
 * Advanced features that you can leverage in your application
 * The various ways of extending the Kubernetes API
@@ -45,9 +45,9 @@ Below are some other, lesser-known ways of configuring your resources' Pods:
 
 #### Additional API Objects
 
-{: .note }
+{{< note  >}}
 Before setting up the following resources, check to see if they are the responsibility of your organization's {{< glossary_tooltip text="cluster operators" term_id="cluster-operator" >}}.
-
+{{< /note  >}}
 * **{{< glossary_tooltip text="Horizontal Pod Autoscaler (HPA)" term_id="horizontal-pod-autoscaler" >}}** - These resources are a great way to automate the process of scaling your application when CPU usage or other [custom metrics](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/custom-metrics-api.md){:target="_blank"} spike. [See an example](/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/){:target="_blank"} to understand how HPAs are set up.
 
 * **Federated cluster objects** - If you are running an application on multiple Kubernetes clusters using *federation*, you need to deploy the federated version of the standard Kubernetes API objects. For reference, check out the guides for setting up [Federated ConfigMaps](/docs/tasks/administer-federation/configmap/){:target="_blank"} and [Federated Deployments](/docs/tasks/administer-federation/deployment/){:target="_blank"}.
@@ -74,9 +74,9 @@ Before making any customizations, it's important that you understand the general
 
   These states are obtained from the Kubernetes API.
 
-  {: .note }
+  {{< note  >}}
   Not all Kubernetes objects need to have a Controller. Though Deployments trigger the cluster to make state changes, ConfigMaps act purely as storage.
-
+  {{< /note  >}}
 #### Create Custom Resources
 
 Based on the ideas above, you can define a new [Custom Resource](/docs/concepts/api-extension/custom-resources/#custom-resources){:target="_blank"} that is just as legitimate as a Deployment. For example, you might want to define a `Backup` object for periodic backups, if `CronJobs` don't provide all the functionality you need.

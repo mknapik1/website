@@ -80,10 +80,11 @@ CPU request and limit to the Container.
 
 * Verify that the Container specifies a CPU limit that is less than or equal to 800 millicpu.
 
+{{< note >}}
 **Note:** When creating a `LimitRange` object, you can specify limits on huge-pages
 or GPUs as well. However, when both `default` and `defaultRequest` are specified
 on these resources, the two values must be the same.
-{: .note}
+{{< /note >}}
 
 Here's the configuration file for a Pod that has one Container. The Container manifest
 specifies a CPU request of 500 millicpu and a CPU limit of 800 millicpu. These satisfy the

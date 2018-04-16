@@ -12,9 +12,9 @@ weight: 20
 
 {{% capture overview %}}
 
-{: .note }
+{{< note  >}}
   This page assumes that you've experimented with Kubernetes before. At this point, you should have basic experience interacting with a Kubernetes cluster (locally with Minikube, or elsewhere), and using API objects like Deployments to run your applications.<br><br>If not, you should review the [Beginner App Developer](/docs/user-journeys/users/application-developer/foundational/){:target="_blank"} topics first.
-
+{{< /note  >}}
 After checking out the current page and its linked sections, you should have a better understanding of the following:
 * Additional Kubernetes workload patterns, beyond Deployments
 * What it takes to make a Kubernetes application production-ready
@@ -37,9 +37,9 @@ Like Deployments, these API objects run indefinitely on a cluster until they are
 
 * **{{< glossary_tooltip text="StatefulSets" term_id="statefulset" >}}** - Like Deployments, StatefulSets allow you to specify that a certain number of replicas should be running for your application.
 
-  {: .note }
+  {{< note  >}}
   It's misleading to say that Deployments can't handle stateful workloads. Using {{< glossary_tooltip text="PersistentVolumes" term_id="persistent-volume" >}}, you can persist data beyond the lifecycle of any individual Pod in your Deployment.
-
+  {{< /note  >}}
      However, StatefulSets can provide stronger guarantees about "recovery" behavior than Deployments. StatefulSets maintain a sticky, stable identity for their Pods. The following table provides some concrete examples of what this might look like:
 
     | | Deployment | StatefulSet |

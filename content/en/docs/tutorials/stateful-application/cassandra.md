@@ -42,8 +42,9 @@ To complete this tutorial, you should already have a basic familiarity with [Pod
 
 * Have a supported Kubernetes Cluster running
 
+{{< note >}}
 **Note:** Please read the [getting started guides](/docs/setup/pick-right-solution/) if you do not already have a cluster.
-{: .note}
+{{< /note >}}
 
 ### Additional Minikube Setup Instructions
 
@@ -86,8 +87,9 @@ If anything else returns, the service was not successfully created. Read [Debug 
 
 The StatefulSet manifest, included below, creates a Cassandra ring that consists of three Pods.
 
+{{< note >}}
 **Note:** This example uses the default provisioner for Minikube. Please update the following StatefulSet for the cloud you are working with.
-{: .note}
+{{< /note >}}
 
 1. Update the StatefulSet if necessary.
 2. Create the Cassandra StatefulSet from the `cassandra-statefulset.yaml` file:
@@ -119,8 +121,9 @@ The StatefulSet manifest, included below, creates a Cassandra ring that consists
        cassandra-0   1/1       Running             0          1m
        cassandra-1   0/1       ContainerCreating   0          8s
 
+   {{< note >}}
    **Note:** It can take up to ten minutes for all three Pods to deploy. 
-   {: .note}
+   {{< /note >}}
 
     Once all Pods are deployed, the same command returns:
 
@@ -153,8 +156,9 @@ Use `kubectl edit` to modify the size of a Cassandra StatefulSet.
 
    This command opens an editor in your terminal. The line you need to change is the `replicas` field.
    
+   {{< note >}}
    **Note:** The following sample is an excerpt of the StatefulSet file.
-   {: .note}
+   {{< /note >}}
 
         # Please edit the object below. Lines beginning with a '#' will be ignored,
         # and an empty file will abort the edit. If an error occurs while saving this file will be

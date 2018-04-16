@@ -55,8 +55,9 @@ The following sysctls are supported in the _safe_ set:
 - `net.ipv4.ip_local_port_range`,
 - `net.ipv4.tcp_syncookies`.
 
+{{< note >}}
 **Note**: The example `net.ipv4.tcp_syncookies` is not namespaced on Linux kernel version 4.4 or lower.
-{: .note}
+{{< /note >}}
 
 This list will be extended in future Kubernetes versions when the kubelet
 supports better isolation mechanisms.

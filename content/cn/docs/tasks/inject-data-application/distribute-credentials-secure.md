@@ -35,8 +35,9 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
        kubectl create -f secret.yaml
 
+    {{< note >}}
     **注意：** 如果想要跳过 Base64 编码的步骤，可以使用 `kubectl create secret` 命令来创建 Secret：
-    {: .note}
+    {{< /note >}}
 
        kubectl create secret generic test-secret --from-literal=username='my-app' --from-literal=password='39528$vdg7Jb'
 

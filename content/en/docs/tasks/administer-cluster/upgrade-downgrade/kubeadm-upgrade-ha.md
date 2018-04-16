@@ -89,8 +89,9 @@ Next, manually upgrade your CNI provider
 
 Your Container Network Interface (CNI) provider may have its own upgrade instructions to follow. Check the [addons](/docs/concepts/cluster-administration/addons/) page to find your CNI provider and see if there are additional upgrade steps necessary.
 
+{{< note >}}
 **Note:** The `kubeadm upgrade apply` step has been known to fail when run initially on the secondary masters (timed out waiting for the restarted static pods to come up). It should succeed if retried after a minute or two.
-{: .note}
+{{< /note >}}
 
 ## Upgrade base software packages
 

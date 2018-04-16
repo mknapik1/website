@@ -14,8 +14,9 @@ This guide shows you how to install and set up a highly available Kubernetes clu
 
 This document shows you how to perform setup tasks that kubeadm doesn't perform: provision hardware; configure multiple systems; and load balancing.
 
+{{< note >}}
 **Note:** This guide is only one potential solution, and there are many ways to configure a highly available cluster. If a better solution works for you, please use it. If you find a better solution that can be adopted by the community, feel free to contribute it back.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 
@@ -117,9 +118,10 @@ For **Option 2**: you can skip to the next step. Any reference to `etcd0`, `etcd
    EOF
    ```
 
+   {{< note >}}
    **Optional:** You can modify `ca-csr.json` to add a section for `names`.
    See [the CFSSL wiki](https://github.com/cloudflare/cfssl/wiki/Creating-a-new-CSR) for an example.
-   {: .note}
+   {{< /note >}}
 
 1. Next, generate the CA certs like so:
 

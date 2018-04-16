@@ -78,8 +78,9 @@ Use a ConfigMap if any of the following apply:
 * Consumers of the file prefer to consume via file in a Pod or environment variable in a pod, rather than the Kubernetes API.
 * You want to perform rolling updates via Deployment, etc, when the file is updated.
 
+{{< note >}}
 **Note:** Use a [secret](/docs/concepts/configuration/secret/) for sensitive data, which is similar to a configMap but more secure.
-{: .note}
+{{< /note >}}
 
 Use a custom resource (CRD or Aggregated API) if most of the following apply:
 
@@ -117,8 +118,9 @@ Refer to the [Custom Controller example, which uses Custom Resources](https://gi
 for a demonstration of how to register a new custom resource, work with instances of your new resource type,
 and setup a controller to handle events.
 
+{{< note >}}
 **Note:** CRD is the successor to the deprecated *ThirdPartyResource* (TPR) API, and is available as of Kubernetes 1.7.
-{: .note}
+{{< /note >}}
 
 ## API server aggregation
 

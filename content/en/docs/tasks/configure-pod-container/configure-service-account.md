@@ -12,11 +12,12 @@ A service account provides an identity for processes that run in a Pod.
 *This is a user introduction to Service Accounts.  See also the
 [Cluster Admin Guide to Service Accounts](/docs/admin/service-accounts-admin/).*
 
+{{< note >}}
 **Note:** This document describes how service accounts behave in a cluster set up
 as recommended by the Kubernetes project.  Your cluster administrator may have
 customized the behavior in your cluster, in which case this documentation may
 not apply.
-{: .note}
+{{< /note >}}
 
 When you (a human) access the cluster (for example, using `kubectl`), you are
 authenticated by the apiserver as a particular User Account (currently this is
@@ -162,8 +163,9 @@ namespace:      7 bytes
 token:          ...
 ```
 
+{{< note >}}
 **Note:** The content of `token` is elided here.
-{: .note}
+{{< /note >}}
 
 ## Add ImagePullSecrets to a service account
 

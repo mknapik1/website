@@ -10,13 +10,14 @@ weight: 90
 
 ## Overview
 
+{{< note >}}
 **Note**: The preferred way to create a replicated application is to use a
 [Deployment](/docs/reference/generated/kubernetes-api/{{page.version}}/#deployment-v1beta1-apps),
 which in turn uses a
 [ReplicaSet](/docs/reference/generated/kubernetes-api/{{page.version}}/#replicaset-v1beta1-extensions).
 For more information, see
 [Running a Stateless Application Using a Deployment](/docs/tasks/run-application/run-stateless-application-deployment/).
-{: .note}
+{{< /note >}}
 
 To update a service without an outage, `kubectl` supports what is called [rolling update](/docs/user-guide/kubectl/{{page.version}}/#rolling-update), which updates one pod at a time, rather than taking down the entire service at the same time. See the [rolling update design document](https://git.k8s.io/community/contributors/design-proposals/cli/simple-rolling-update.md) for more information.
 

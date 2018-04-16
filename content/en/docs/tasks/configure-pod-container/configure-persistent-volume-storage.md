@@ -187,9 +187,10 @@ Pod’s security context are. Every GID, whether it originates from a Persistent
 annotation or the Pod’s specification, is applied to the first process run in
 each Container.
 
+{{< note >}}
 **Note**: When a Pod consumes a PersistentVolume, the GIDs associated with the
 PersistentVolume are not present on the Pod resource itself.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 

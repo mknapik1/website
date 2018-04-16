@@ -40,9 +40,10 @@ Kubernetes 提供了准入控制器 (`PodPreset`)，该控制器被启用时，�
 修改 pod spec。 对于 `Env`、 `EnvFrom` 和 `VolumeMounts` 的改动， Kubernetes 修改 pod 
 中所有容器的规格，对于卷的改动，Kubernetes 修改 Pod spec。
 
+{{< note >}}
 **注意：** Pod Preset 能够在适当的时候修改 Pod spec 的 `spec.containers` 字段，
 但是不会应用于 `initContainers` 字段。
-{: .note}
+{{< /note >}}
 
 ### 为特定 Pod 禁用 Pod Preset
 

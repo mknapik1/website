@@ -82,8 +82,9 @@ except in the number of min and max replicas. The federation control plane ensur
 max replicas on the federated HPA object, and the sum of minimum replicas will be greater
 than or equal to the minimum specified on the federated HPA object. 
 
+{{< note >}}
 **Note:** A particular cluster cannot have a minimum replica sum of 0.
-{: .note}
+{{< /note >}}
 
 ### Spreading HPA min and max replicas in underlying clusters
 

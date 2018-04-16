@@ -67,9 +67,10 @@ title: 为容器设置启动时要执行的命令及其入参
 与
 [Secrets](/docs/concepts/configuration/secret/).
 
+{{< note >}}
 **注意：** 环境变量需要加上括号，类似于`"$(VAR)"`。这是在`command` 
 或 `args`字段使用变量的格式要求。
-{: .note}
+{{< /note >}}
 
 ## 通过shell来执行命令
 

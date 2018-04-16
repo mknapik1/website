@@ -62,12 +62,13 @@ admission control plugins:
 kube-apiserver --enable-admission-plugins=NamespaceLifecyle,LimitRanger ...
 ```
 
+{{< note >}}
 **Note**: Depending on the way your Kubernetes cluster is deployed and how the
 API server is started, you may need to apply the settings in different ways.
 For example, you may have to modify the systemd unit file if the API server is
 deployed as a systemd service, you may modify the manifest file for the API
 server if Kubernetes is deployed in a self-hosted way.
-{: .note}
+{{< /note >}}
 
 ## How do I turn off an admission controller?
 
@@ -476,15 +477,17 @@ This admission controller has the following behavior:
   1. Evaluate the pod's node selector against the namespace-specific whitelist defined the plugin configuration file.
      Conflicts result in rejection.
 
+{{< note >}}
 **Note:** `PodTolerationRestriction` is more versatile and powerful than `PodNodeSelector` and can encompass the scenarios supported by `PodNodeSelector`.
-{: .note}
+{{< /note >}}
 
 ### PersistentVolumeClaimResize
 
+{{< note >}}
 This admission controller implements additional validations for checking incoming `PersistentVolumeClaim` resize requests.
 **Note:** Support for volume resizing is available as an alpha feature. Admins must set the feature gate `ExpandPersistentVolumes`
 to `true` to enable resizing.
-{: .note}
+{{< /note >}}
 
 After enabling the `ExpandPersistentVolumes` feature gate, enabling the `PersistentVolumeClaimResize` admission
 controller is recommended, too. This admission controller prevents resizing of all claims by default unless a claim's `StorageClass`

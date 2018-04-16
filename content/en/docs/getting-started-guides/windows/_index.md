@@ -1,8 +1,9 @@
 ---
 title: Using Windows Server Containers in Kubernetes
 ---
+{{< note >}}
 **Note:** These instructions were recently updated based on Windows Server platform enhancements and the Kubernetes v1.9 release
-{: .note}
+{{< /note >}}
 
 Kubernetes version 1.5 introduced Alpha support for Windows Server Containers based on the Windows Server 2016 operating system. With the release of Windows Server version 1709 and using Kubernetes v1.9 users are able to deploy a Kubernetes cluster either on-premises or in a private/public cloud using a number of different network topologies and CNI plugins. Some key feature improvements for Windows Server Containers on Kubernetes include:
 - Improved support for pods! Shared network namespace (compartment) with multiple Windows Server containers (shared kernel)
@@ -13,8 +14,9 @@ Kubernetes version 1.5 introduced Alpha support for Windows Server Containers ba
 
 The Kubernetes control plane (API Server, Scheduler, Controller Manager, etc) continue to run on Linux, while the kubelet and kube-proxy can be run on Windows Server 2016 or later
 
+{{< note >}}
 **Note:** Windows Server Containers on Kubernetes is a Beta feature in Kubernetes v1.9
-{: .note}
+{{< /note >}}
 
 ## Get Windows Binaries
 We recommend using the release binaries that can be found at [https://github.com/kubernetes/kubernetes/releases/latest](https://github.com/kubernetes/kubernetes/releases/latest). Under the CHANGELOG you can find the Node Binaries link for Windows-amd64, which will include kubeadm, kubectl, kubelet and kube-proxy.

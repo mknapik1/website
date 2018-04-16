@@ -11,10 +11,11 @@ configuration files. After your clusters, users, and contexts are defined in
 one or more configuration files, you can quickly switch between clusters by using the
 `kubectl config use-context` command.
 
+{{< note >}}
 **Note:** A file that is used to configure access to a cluster is sometimes called
 a *kubeconfig file*. This is a generic way of referring to configuration files.
 It does not mean that there is a file named `kubeconfig`.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 

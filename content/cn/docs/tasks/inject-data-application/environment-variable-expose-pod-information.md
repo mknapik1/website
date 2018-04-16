@@ -41,8 +41,9 @@ title: 通过环境变量将Pod信息呈现给容器
 这个配置文件中，你可以看到五个环境变量。`env`字段是一个[EnvVars](/docs/resources-reference/{{page.version}}/#envvar-v1-core)类型的数组。
 数组中第一个元素指定`MY_NODE_NAME`这个环境变量从Pod的`spec.nodeName`字段获取变量值。同样，其它环境变量也是从Pod的字段获取它们的变量值。
 
+{{< note >}}
 **注意:** 本示例中的字段是Pod字段，不是Pod中容器的字段。
-{: .note}
+{{< /note >}}
 
 创建Pod：
 

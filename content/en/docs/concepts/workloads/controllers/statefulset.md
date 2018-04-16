@@ -13,8 +13,9 @@ title: StatefulSets
 
 StatefulSet is the workload API object used to manage stateful applications.
 
+{{< note >}}
 **Note:** StatefulSets are stable (GA) in 1.9.
-{: .note}
+{{< /note >}}
 
 {% glossary_definition term_id="statefulset" length="all" %}
 {{% /capture %}}

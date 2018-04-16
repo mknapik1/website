@@ -7,6 +7,7 @@ title: Generating Reference Documentation for kubectl Commands
 This page shows how to automatically generate reference pages for the
 commands provided by the `kubectl` tool.
 
+{{< note >}}
 **Note:**
 This topic shows how to generate reference documentation for
 [kubectl commands](/docs/reference/generated/kubectl/kubectl-commands)
@@ -18,7 +19,7 @@ This topic does not show how to generate the
 options reference page. For instructions on how to generate the kubectl options
 reference page, see
 [Generating Reference Pages for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/).
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 
@@ -129,11 +130,12 @@ on how to do this, see
 
 Monitor your cherry-pick pull request until it is merged into the release branch.
 
+{{< note >}}
 **Note:**
 Proposing a cherry pick requires that you have permission to set a label and a
 milestone in your pull request. If you don’t have those permissions, you will
 need to work with someone who can set the label and milestone for you.
-{: .note}
+{{< /note >}}
 
 ## Editing Makefile
 

@@ -38,8 +38,9 @@ title: 通过文件将Pod信息呈现给容器
 第一个元素指示Pod的`metadata.labels`字段的值保存在名为`labels`的文件中。
 第二个元素指示Pod的`annotations`字段的值保存在名为`annotations`的文件中。
 
+{{< note >}}
 **注意:** 本示例中的字段是Pod字段，不是Pod中容器的字段。 
-{: .note}
+{{< /note >}}
 
 创建Pod：
 
@@ -181,8 +182,9 @@ kubectl exec -it kubernetes-downwardapi-volume-example-2 -- sh
 * Pod的标签
 * Pod的注释
 
+{{< note >}}
 **Note:** 如果容器未指定CPU和memory limits，则Downward API默认为节点可分配值。
-{: .note}
+{{< /note >}}
 
 ## 投射密钥到指定路径并且指定文件权限
 

@@ -81,8 +81,9 @@ First you need to upgrade the masters:
 
     juju upgrade-charm kubernetes-master
 
+{{< note >}}
 **Note:** Always upgrade the masters before the workers.
-{: .note}
+{{< /note >}}
 
 Once the latest charm is deployed, the channel for Kubernetes can be selected by issuing the following:
 

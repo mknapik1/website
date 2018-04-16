@@ -93,10 +93,11 @@ For example, with kubectl:
 kubectl --context=federation-cluster delete job myjob
 ```
 
+{{< note >}}
 **Note:** Deleting a federated job will not delete the
 corresponding jobs from underlying clusters.
 You must delete the underlying jobs manually.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 

@@ -65,9 +65,10 @@ Pod:
 
 1. To exit the shell, enter `exit`.
 
+{{< note >}}
 **Note:** The environment variables set using the `env` or `envFrom` field
 will override any environment variables specified in the container image.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 

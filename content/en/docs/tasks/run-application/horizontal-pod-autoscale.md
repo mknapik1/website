@@ -130,12 +130,13 @@ the global HPA settings exposed as flags for the `kube-controller-manager` compo
   upscale operation can be performed after the current one has completed.
   The default value is 3 minutes (`3m0s`).
 
+{{< note >}}
 **Note**: When tuning these parameter values, a cluster operator should be aware of
 the possible consequences. If the delay (cooldown) value is set too long, there
 could be complaints that the Horizontal Pod Autoscaler is not responsive to workload
 changes. However, if the delay value is set too short, the scale of the replicas set
 may keep thrashing as usual.
-{: .note}
+{{< /note >}}
 
 ## Support for multiple metrics
 

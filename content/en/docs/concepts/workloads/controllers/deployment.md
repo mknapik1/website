@@ -13,8 +13,9 @@ A _Deployment_ controller provides declarative updates for [Pods](/docs/concepts
 
 You describe a _desired state_ in a Deployment object, and the Deployment controller changes the actual state to the desired state at a controlled rate. You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments.
 
+{{< note >}}
 **Note:** You should not manage ReplicaSets owned by a Deployment. All the use cases should be covered by manipulating the Deployment object. Consider opening an issue in the main Kubernetes repository if your use case is not covered below.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 
@@ -53,10 +54,11 @@ In this example:
   [Docker Hub](https://hub.docker.com/) image at version 1.7.9.
 * The Deployment opens port 80 for use by the Pods.
 
+{{< note >}}
 **Note:** `matchLabels` is a map of {key,value} pairs. A single {key,value} in the `matchLabels` map 
 is equivalent to an element of `matchExpressions`, whose key field is "key", the operator is "In",
 and the values array contains only "value". The requirements are ANDed.
-{: .note}
+{{< /note >}}
 
 The `template` field contains the following instructions:
 
@@ -71,10 +73,11 @@ To create this Deployment, run the following command:
 kubectl create -f https://raw.githubusercontent.com/kubernetes/website/master/docs/concepts/workloads/controllers/nginx-deployment.yaml
 ```
 
+{{< note >}}
 **Note:** You can append `--record` to this command to record the current command in the annotations of
 the created or updated resource. This is useful for future review, such as investigating which
 commands were executed in each Deployment revision.
-{: .note}
+{{< /note >}}
 
 Next, run `kubectl get deployments`. The output is similar to the following:
 
@@ -139,14 +142,16 @@ nginx-deployment-2035384211-qqcnn   1/1       Running   0          18s       app
 
 The created ReplicaSet ensures that there are three `nginx` Pods running at all times.
 
+{{< note >}}
 **Note:** You must specify an appropriate selector and Pod template labels in a Deployment (in this case,
 `app: nginx`). Do not overlap labels or selectors with other controllers (including other Deployments and StatefulSets). Kubernetes doesn't stop you from overlapping, and if multiple controllers have overlapping selectors those controllers might conflict and behave unexpectedly.
-{: .note}
+{{< /note >}}
 
 ### Pod-template-hash label
 
+{{< note >}}
 **Note:** Do not change this label.
-{: .note}
+{{< /note >}}
 
 The `pod-template-hash` label is added by the Deployment controller to every ReplicaSet that a Deployment creates or adopts.
 
@@ -155,9 +160,10 @@ and in any existing Pods that the ReplicaSet might have.
 
 ## Updating a Deployment
 
+{{< note >}}
 **Note:** A Deployment's rollout is triggered if and only if the Deployment's pod template (that is, `.spec.template`)
 is changed, for example if the labels or container images of the template are updated. Other updates, such as scaling the Deployment, do not trigger a rollout.
-{: .note}
+{{< /note >}}
 
 Suppose that we now want to update the nginx Pods to use the `nginx:1.9.1` image
 instead of the `nginx:1.7.9` image.
@@ -298,8 +304,9 @@ It is generally discouraged to make label selector updates and it is suggested t
 In any case, if you need to perform a label selector update, exercise great caution and make sure you have grasped
 all of the implications.
 
+{{< note >}}
 **Note:** In API version `apps/v1`, a Deployment's label selector is immutable after it gets created.
-{: .note}
+{{< /note >}}
 
 * Selector additions require the pod template labels in the Deployment spec to be updated with the new label too,
 otherwise a validation error is returned. This change is a non-overlapping one, meaning that the new selector does
@@ -316,13 +323,14 @@ Sometimes you may want to rollback a Deployment; for example, when the Deploymen
 By default, all of the Deployment's rollout history is kept in the system so that you can rollback anytime you want
 (you can change that by modifying revision history limit).
 
+{{< note >}}
 **Note:** A Deployment's revision is created when a Deployment's rollout is triggered. This means that the
 new revision is created if and only if the Deployment's pod template (`.spec.template`) is changed,
 for example if you update the labels or container images of the template. Other updates, such as scaling the Deployment,
 do not create a Deployment revision, so that we can facilitate simultaneous manual- or auto-scaling.
 This means that when you roll back to an earlier revision, only the Deployment's pod template part is
 rolled back.
-{: .note}
+{{< /note >}}
 
 Suppose that we made a typo while updating the Deployment, by putting the image name as `nginx:1.91` instead of `nginx:1.9.1`:
 
@@ -363,12 +371,13 @@ nginx-deployment-3066724191-08mng   0/1       ImagePullBackOff   0          6s
 nginx-deployment-3066724191-eocby   0/1       ImagePullBackOff   0          6s
 ```
 
+{{< note >}}
 **Note:** The Deployment controller will stop the bad rollout automatically, and will stop scaling up the new
 ReplicaSet. This depends on the rollingUpdate parameters (`maxUnavailable` specifically) that you have specified.
 Kubernetes by default sets the value to 1 and `spec.replicas` to 1 so if you haven't cared about setting those
 parameters, your Deployment can have 100% unavailability by default! This will be fixed in Kubernetes in a future
 version.
-{: .note}
+{{< /note >}}
 
 ```shell
 $ kubectl describe deployment
@@ -640,8 +649,9 @@ nginx-2142116321   0         0         0         2m
 nginx-3926361531   3         3         3         28s
 ```
 
+{{< note >}}
 **Note:** You cannot rollback a paused Deployment until you resume it.
-{: .note}
+{{< /note >}}
 
 ## Deployment status
 
@@ -712,15 +722,17 @@ attributes to the Deployment's `status.conditions`:
 
 See the [Kubernetes API conventions](https://git.k8s.io/community/contributors/devel/api-conventions.md#typical-status-properties) for more information on status conditions.
 
+{{< note >}}
 **Note:** Kubernetes will take no action on a stalled Deployment other than to report a status condition with
 `Reason=ProgressDeadlineExceeded`. Higher level orchestrators can take advantage of it and act accordingly, for
 example, rollback the Deployment to its previous version.
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **Note:** If you pause a Deployment, Kubernetes does not check progress against your specified deadline. You can
 safely pause a Deployment in the middle of a rollout and resume without triggering the condition for exceeding the
 deadline.
-{: .note}
+{{< /note >}}
 
 You may experience transient errors with your Deployments, either due to a low timeout that you have set or
 due to any other kind of error that can be treated as transient. For example, let's suppose you have
@@ -821,9 +833,10 @@ You can set `.spec.revisionHistoryLimit` field in a Deployment to specify how ma
 this Deployment you want to retain. The rest will be garbage-collected in the background. By default,
 all revision history will be kept. In a future version, it will default to switch to 2.
 
+{{< note >}}
 **Note:** Explicitly setting this field to 0, will result in cleaning up all the history of your Deployment
 thus that Deployment will not be able to roll back.
-{: .note}
+{{< /note >}}
 
 ## Use Cases
 
@@ -871,10 +884,11 @@ A Deployment may terminate Pods whose labels match the selector if their templat
 from `.spec.template` or if the total number of such Pods exceeds `.spec.replicas`. It brings up new
 Pods with `.spec.template` if the number of Pods is less than the desired number.
 
+{{< note >}}
 **Note:** You should not create other pods whose labels match this selector, either directly, by creating
 another Deployment, or by creating another controller such as a ReplicaSet or a ReplicationController. If you
 do so, the first Deployment thinks that it created these other pods. Kubernetes does not stop you from doing this.
-{: .note}
+{{< /note >}}
 
 If you have multiple controllers that have overlapping selectors, the controllers will fight with each
 other and won't behave correctly.

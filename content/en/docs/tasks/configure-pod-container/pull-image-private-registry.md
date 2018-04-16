@@ -45,8 +45,9 @@ The output contains a section similar to this:
         }
     }
 
+{{< note >}}
 **Note:** If you use a Docker credentials store, you won't see that `auth` entry but a `credsStore` entry with the name of the store as value.
-{: .note}
+{{< /note >}}
 
 ## Create a Secret in the cluster that holds your authorization token
 

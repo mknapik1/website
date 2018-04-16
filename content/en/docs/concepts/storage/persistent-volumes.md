@@ -75,8 +75,9 @@ Once a user has a claim and that claim is bound, the bound PV belongs to the use
 {% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
 The purpose of the Storage Object in Use Protection feature is to ensure that Persistent Volume Claims (PVCs) in active use by a pod and Persistent Volume (PVs) that are bound to PVCs are not removed from the system as this may result in data loss.
 
+{{< note >}}
 **Note:** PVC is in active use by a pod when the pod status is `Pending` and the pod is assigned to a node or the pod status is `Running`.
-{: .note}
+{{< /note >}}
 
 When the [Storage Object in Use Protection beta feature](/docs/tasks/administer-cluster/storage-object-in-use-protection/) is enabled, if a user deletes a PVC in active use by a pod, the PVC is not removed immediately. PVC removal is postponed until the PVC is no longer actively used by any pods, and also if admin deletes a PV that is bound to a PVC, the PV is not removed immediately. PV removal is postponed until the PV is not bound to a PVC any more.
 
@@ -209,8 +210,9 @@ resizing to take place. Also, file system resizing is only supported for followi
 * XFS
 * Ext3, Ext4
 
+{{< note >}}
 **Note:** Expanding EBS volumes is a time consuming operation. Also, there is a per-volume quota of one modification every 6 hours.
-{: .note}
+{{< /note >}}
 
 
 ## Types of Persistent Volumes
@@ -275,8 +277,9 @@ Currently, storage size is the only resource that can be set or requested.  Futu
 
 Prior to v1.9, the default behavior for all volume plugins was to create a filesystem on the persistent volume. With v1.9, the user can specify a `volumeMode` which will now support raw block devices in addition to file systems. Valid values for `volumeMode` are "Filesystem" or "Block". If left unspecified, `volumeMode` defaults to "Filesystem" internally. This is an optional API parameter. 
 
+{{< note >}}
 **Note:** This feature is alpha in v1.9 and may change in the future. 
-{: .note}
+{{< /note >}}
 
 ### Access Modes
 
@@ -347,8 +350,9 @@ Currently, only NFS and HostPath support recycling. AWS EBS, GCE PD, Azure Disk,
 
 A Kubernetes administrator can specify additional mount options for when a Persistent Volume is mounted on a node.
 
+{{< note >}}
 **Note:** Not all Persistent volume types support mount options.
-{: .note}
+{{< /note >}}
 
 The following volume types support mount options:
 
@@ -464,8 +468,9 @@ When a PVC specifies a `selector` in addition to requesting a `StorageClass`,
 the requirements are ANDed together: only a PV of the requested class and with
 the requested labels may be bound to the PVC.
 
+{{< note >}}
 **Note:** Currently, a PVC with a non-empty `selector` can't have a PV dynamically provisioned for it.
-{: .note}
+{{< /note >}}
 
 In the past, the annotation `volume.beta.kubernetes.io/storage-class` was used instead
 of `storageClassName` attribute. This annotation is still working, however
@@ -554,8 +559,9 @@ spec:
         claimName: block-pvc
 ```
 
+{{< note >}}
 **Note:** When adding a raw block device for a Pod, we specify the device path in the container instead of a mount path.
-{: .note}
+{{< /note >}}
 
 ### Binding Block Volumes
 
@@ -575,8 +581,9 @@ Volume binding matrix for statically provisioned volumes:
 |   Filesystem  | Block           | NO BIND          |
 |   Filesystem  | unspecified     | BIND             |
 
+{{< note >}}
 **Note:** Only statically provisioned volumes are supported for alpha release. Administrators should take care to consider these values when working with raw block devices.
-{: .note}
+{{< /note >}}
 
 ## Writing Portable Configuration
 

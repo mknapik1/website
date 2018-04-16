@@ -47,9 +47,10 @@ The first element specifies that the value of the Pod's
 The second element specifies that the value of the Pod's `annotations`
 field should be stored in a file named `annotations`.
 
+{{< note >}}
 **Note:** The fields in this example are Pod fields. They are not
 fields of the Container in the Pod.
-{: .note}
+{{< /note >}}
 
 Create the Pod:
 
@@ -136,10 +137,11 @@ written to a new temporary directory, and the `..data` symlink is updated
 atomically using
 [rename(2)](http://man7.org/linux/man-pages/man2/rename.2.html).
 
+{{< note >}}
 **Note:** A container using Downward API as a
 [subPath](/docs/concepts/storage/volumes/#using-subpath) volume mount will not
 receive Downward API updates.
-{: .note}
+{{< /note >}}
 
 Exit the shell:
 
@@ -212,9 +214,10 @@ DownwardAPIVolumeFiles.
 * The Pod's labels
 * The Pod's annotations
 
+{{< note >}}
 **Note:** If CPU and memory limits are not specified for a Container, the
 Downward API defaults to the node allocatable value for CPU and memory.
-{: .note}
+{{< /note >}}
 
 ## Project keys to specific paths and file permissions
 

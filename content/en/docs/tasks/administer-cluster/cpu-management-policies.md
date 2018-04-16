@@ -64,12 +64,14 @@ The `static` policy allows containers in `Guaranteed` pods with integer CPU
 `requests` access to exclusive CPUs on the node. This exclusivity is enforced
 using the [cpuset cgroup controller](https://www.kernel.org/doc/Documentation/cgroup-v1/cpusets.txt).
 
+{{< note >}}
 **Note:** System services such as the container runtime and the kubelet itself can continue to run on these exclusive CPUs.  The exclusivity only extends to other pods.
-{: .note}
+{{< /note >}}
 
+{{< note >}}
 **Note:** The alpha version of this policy does not guarantee static
 exclusive allocations across Kubelet restarts.
-{: .note}
+{{< /note >}}
 
 This policy manages a shared pool of CPUs that initially contains all CPUs in the
 node. The amount of exclusively allocatable CPUs is equal to the total
@@ -82,11 +84,12 @@ CPU `requests` also run on CPUs in the shared pool. Only containers that are
 both part of a `Guaranteed` pod and have integer CPU `requests` are assigned
 exclusive CPUs.
 
+{{< note >}}
 **Note:** The kubelet requires a CPU reservation greater than zero be made
 using either `--kube-reserved` and/or `--system-reserved` when the static
 policy is enabled. This is because zero CPU reservation would allow the shared
 pool to become empty.
-{: .note}
+{{< /note >}}
 
 As `Guaranteed` pods whose containers fit the requirements for being statically
 assigned are scheduled to the node, CPUs are removed from the shared pool and

@@ -376,8 +376,9 @@ metadata:
 
 ## Configure all key-value pairs in a ConfigMap as Pod environment variables 
 
+   {{< note >}}
    **Note:** This functionality is available to users running Kubernetes v1.6 and later.
-   {: .note}
+   {{< /note >}}
 
 1. Create a ConfigMap containing multiple key-value pairs. 
 
@@ -549,10 +550,11 @@ basis. The [Secrets](/docs/concepts/configuration/secret/#using-secrets-as-files
 
 When a ConfigMap already being consumed in a volume is updated, projected keys are eventually updated as well. Kubelet is checking whether the mounted ConfigMap is fresh on every periodic sync. However, it is using its local ttl-based cache for getting the current value of the ConfigMap. As a result, the total delay from the moment when the ConfigMap is updated to the moment when new keys are projected to the pod can be as long as kubelet sync period + ttl of ConfigMaps cache in kubelet.
 
+{{< note >}}
 **Note:** A container using a ConfigMap as a
 [subPath](/docs/concepts/storage/volumes/#using-subpath) volume will not receive
 ConfigMap updates.
-{: .note}
+{{< /note >}}
 
 {{% /capture %}}
 
@@ -562,8 +564,9 @@ ConfigMap updates.
 
 The ConfigMap API resource stores configuration data as key-value pairs. The data can be consumed in pods or provide the configurations for system components such as controllers. ConfigMap is similar to [Secrets](/docs/concepts/configuration/secret/), but provides a means of working with strings that don't contain sensitive information. Users and system components alike can store configuration data in ConfigMap.
 
+{{< note >}}
 **Note:** ConfigMaps should reference properties files, not replace them. Think of the ConfigMap as representing something similar to the Linux `/etc` directory and its contents. For example, if you create a [Kubernetes Volume](/docs/concepts/storage/volumes/) from a ConfigMap, each data item in the ConfigMap is represented by an individual file in the volume.
-{: .note}
+{{< /note >}}
 
 The ConfigMap's `data` field contains the configuration data. As shown in the example below, this can be simple -- like individual properties defined using `--from-literal` -- or complex -- like configuration files or JSON blobs defined using `--from-file`.
 
@@ -602,8 +605,9 @@ data:
 1. Kubelet doesn't support the use of ConfigMaps for pods not found on the API server. 
    This includes pods created via the Kubelet's --manifest-url flag, --config flag, or the Kubelet REST API.
    
+   {{< note >}}
    **Note:** These are not commonly-used ways to create pods.
-   {: .note}
+   {{< /note >}}
    
 {{% /capture %}}
 
