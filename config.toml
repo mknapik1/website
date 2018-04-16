@@ -17,7 +17,7 @@ logo = "/images/favicon.png"
 pygmentsCodeFences = true
 pygmentsUseClasses = false
 # See https://help.farbox.com/pygments.html
-pygmentsStyle = "manni"
+pygmentsStyle = "emacs"
 
 [blackfriday]
 hrefTargetBlank = true
