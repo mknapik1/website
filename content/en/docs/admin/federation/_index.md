@@ -4,6 +4,7 @@ reviewers:
 - mml
 - nikhiljindal
 title: (Deprecated) Using `federation-up` and `deploy.sh`
+toc_hide: true
 ---
 
 ## The mechanisms explained in this doc to setup federation are deprecated. [`kubefed`](/docs/tasks/federation/set-up-cluster-federation-kubefed/) is now the recommended way to deploy federation.

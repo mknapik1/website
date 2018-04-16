@@ -2,6 +2,7 @@
 title: Service Catalog
 reviewers:
 - chenopis
+toc_hide: true
 ---
 
 {{% capture overview %}}

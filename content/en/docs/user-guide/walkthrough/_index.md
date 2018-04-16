@@ -3,6 +3,7 @@ reviewers:
 - eparis
 - mikedanese
 title: Kubernetes 101
+toc_hide: true
 ---
 
 ## Kubectl CLI and Pods

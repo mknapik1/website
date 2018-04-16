@@ -1,5 +1,6 @@
 ---
 title: Fine Parallel Processing Using a Work Queue
+toc_hide: true
 ---
 
 * TOC

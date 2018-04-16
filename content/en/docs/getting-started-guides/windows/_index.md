@@ -327,6 +327,7 @@ data:
   example.property.1: hello
   example.property.2: world
 
+toc_hide: true
 ---
 
 apiVersion: v1

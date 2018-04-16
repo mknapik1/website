@@ -110,10 +110,11 @@ type mover struct {
 	projectRoot string
 
 	addedFiles map[string]bool
+	tocDirs    map[string]bool
 }
 
 func newMigrator(root string) *mover {
-	return &mover{projectRoot: root, addedFiles: make(map[string]bool)}
+	return &mover{projectRoot: root, addedFiles: make(map[string]bool), tocDirs: make(map[string]bool)}
 }
 
 func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
@@ -262,6 +263,37 @@ func (m *mover) contentMigrate_CreateSections() error {
 
 	}
 
+	// Mark any section not in ToC with a flag
+	if err := m.doWithContentFile("en/docs", func(path string, info os.FileInfo) error {
+		contenRoot := filepath.Join(m.projectRoot, "content")
+		if !info.IsDir() {
+			if strings.HasPrefix(info.Name(), "_index") {
+				dir, _ := filepath.Split(path)
+				dir = strings.TrimPrefix(dir, contenRoot)
+				dir = strings.TrimPrefix(dir, string(os.PathSeparator)+"en"+string(os.PathSeparator))
+				dir = strings.TrimSuffix(dir, string(os.PathSeparator))
+
+				if !m.tocDirs[dir] {
+					show := false
+					for k, _ := range m.tocDirs {
+						if strings.HasPrefix(k, dir) {
+							show = true
+							break
+						}
+					}
+					if !show {
+						if err := m.replaceInFile(path, addKeyValue("toc_hide", true)); err != nil {
+							return err
+						}
+					}
+				}
+			}
+		}
+		return nil
+	}); err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -336,13 +368,16 @@ func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) 
 					continue
 				}
 
+				dir := filepath.Dir(v)
+				m.tocDirs[dir] = true
+
 				// 1. Create a section content file if not already written
 				if !sectionContentPageWritten {
 					sectionContentPageWritten = true
 					// TODO(bep) cn?
 					force := false
-					relFilename := filepath.Join("content", "en", filepath.Dir(v), "_index.md")
-					relFilenameHTML := filepath.Join("content", "en", filepath.Dir(v), "_index.html")
+					relFilename := filepath.Join("content", "en", dir, "_index.md")
+					relFilenameHTML := filepath.Join("content", "en", dir, "_index.html")
 					if m.addedFiles[relFilename] {
 						log.Printf("WARNING: %q section already added. Ambigous?", relFilename)
 						// Use the title from the last owning folder for now.
@@ -353,15 +388,12 @@ func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) 
 						force = true
 					}
 
-					// TODO(bep) we need to turn the toc_list into toc_no_list (or something) because of the semantics of the children
-					// Which will be more complex logic here ... but doable?
 					if force || (!m.checkRelFileExists(relFilename) && !m.checkRelFileExists(relFilenameHTML)) {
 						m.addedFiles[relFilename] = true
 						filename := filepath.Join(m.absFilename(relFilename))
 						content := fmt.Sprintf(`---
 title: %q
 weight: %d
-toc_list: true
 ---
 
 `, title, sectionWeight)
@@ -542,7 +574,6 @@ func (m *mover) renameContentFiles(match, renameTo string) error {
 			targetFilename := filepath.Join(dir, renameTo)
 			m.logChange(path, targetFilename)
 			if !m.try {
-				fmt.Println(">>>", path, "to", targetFilename)
 				return os.Rename(path, targetFilename)
 			}
 		}
@@ -762,9 +793,9 @@ func addWeight(weight int) func(path, s string) (string, error) {
 	}
 }
 
-func addKeyValue(key, value string) func(path, s string) (string, error) {
+func addKeyValue(key string, value interface{}) func(path string, s string) (string, error) {
 	return func(path, s string) (string, error) {
-		return appendToFrontMatter(s, fmt.Sprintf("%s: %s", key, value)), nil
+		return appendToFrontMatter(s, fmt.Sprintf("%s: %v", key, value)), nil
 	}
 }
 
