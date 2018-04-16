@@ -180,8 +180,7 @@ title: Standardized Glossary
 layout: glossary
 noedit: true
 default_active_tag: fundamental
-weight: 10
-toc_list: true
+weight: 5
 ---
 
 `), os.FileMode(0755)); err != nil {
