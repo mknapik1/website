@@ -3,6 +3,7 @@ reviewers:
 - eparis
 - pmorie
 title: Configuring Redis using a ConfigMap
+content_template: templates/tutorial
 weight: 10
 ---
 
@@ -123,4 +124,4 @@ You can follow the steps below to configure a Redis cache using data stored in a
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

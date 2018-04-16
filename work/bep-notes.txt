@@ -54,7 +54,7 @@ All:
 - Revise toc_list
 - Check noedit
 - Check params.current_version
-- headless bundle for all the includes
+- OK headless bundle for all the includes
 
 
 

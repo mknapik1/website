@@ -484,6 +484,11 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	// Handle the tutorial includes
+	if err := m.replaceStringWithFrontMatter("{% include templates/tutorial.md %}", "content_template", "templates/tutorial"); err != nil {
+		return err
+	}
+
 	return nil
 
 }
@@ -707,6 +712,36 @@ func (m *mover) replaceInFile(filename string, replacer func(path string, conten
 
 }*/
 
+func (m *mover) replaceStringWithFrontMatter(matcher, key, val string) error {
+
+	matcherRe := regexp.MustCompile(matcher)
+
+	err := m.doWithContentFile("", func(path string, info os.FileInfo) error {
+		if info != nil && !info.IsDir() {
+			if !m.try {
+				b, err := ioutil.ReadFile(path)
+				if err != nil {
+					return err
+				}
+				if matcherRe.Match(b) {
+					if err := m.replaceInFile(path, addKeyValue(key, val)); err != nil {
+						return err
+					}
+					if err := m.replaceInFile(path, func(path, s string) (string, error) {
+						return matcherRe.ReplaceAllString(s, ""), nil
+					}); err != nil {
+						return err
+					}
+				}
+
+			}
+		}
+		return nil
+	})
+
+	return err
+
+}
 func addToDocsMainMenu(weight int) func(path, s string) (string, error) {
 	return func(path, s string) (string, error) {
 		return appendToFrontMatter(s, fmt.Sprintf(`main_menu: true
@@ -724,6 +759,12 @@ func addLinkTitle(title string) func(path, s string) (string, error) {
 func addWeight(weight int) func(path, s string) (string, error) {
 	return func(path, s string) (string, error) {
 		return appendToFrontMatter(s, fmt.Sprintf("weight: %d", weight)), nil
+	}
+}
+
+func addKeyValue(key, value string) func(path, s string) (string, error) {
+	return func(path, s string) (string, error) {
+		return appendToFrontMatter(s, fmt.Sprintf("%s: %s", key, value)), nil
 	}
 }
 

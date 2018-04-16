@@ -1,5 +1,6 @@
 ---
 title: 使用Deployment运行一个无状态应用
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -140,4 +141,4 @@ title: 使用Deployment运行一个无状态应用
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

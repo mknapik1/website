@@ -2,6 +2,7 @@
 title: Example Tutorial Template
 reviewers:
 - chenopis
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -63,4 +64,4 @@ Here's something interesting about the code you ran in the preceding steps.
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

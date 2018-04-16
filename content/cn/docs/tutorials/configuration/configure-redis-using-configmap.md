@@ -3,6 +3,7 @@ approvers:
 - eparis
 - pmorie
 title: 使用ConfigMap来配置Redis
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -123,4 +124,4 @@ title: 使用ConfigMap来配置Redis
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

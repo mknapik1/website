@@ -108,7 +108,7 @@ variables:</p>
 <p>Then include templates/tutorial.md like this:</p>
 
 {% raw %}<pre>...
-{% include templates/tutorial.md %}</pre>{% endraw %}
+</pre>{% endraw %}
 
 <p>In the <code>lessoncontent</code> section, use <code>##</code> to start with a level-two heading. For subheadings,
 use <code>###</code> and <code>####</code> as needed.
@@ -160,7 +160,7 @@ Here's something interesting about the code you ran in the preceding steps.
 * See this [related tutorial](...).
 {{% /capture %}}
 
-{% include templates/tutorial.md %}</pre>
+</pre>
 {% endraw %}
 
 <p>Here's an example of a published topic that uses the tutorial template:</p>
@@ -198,6 +198,7 @@ use <code>###</code> and <code>####</code> as needed.
 {% raw %}
 <pre>---
 title: Understanding this Thing
+content_template: templates/tutorial
 weight: 60
 ---
 

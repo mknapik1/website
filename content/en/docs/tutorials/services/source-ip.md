@@ -1,5 +1,6 @@
 ---
 title: Using Source IP
+content_template: templates/tutorial
 weight: 10
 ---
 
@@ -338,4 +339,4 @@ $ kubectl delete deployment source-ip-app
 * Learn more about [loadbalancing](/docs/user-guide/load-balancer)
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

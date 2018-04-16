@@ -1,5 +1,6 @@
 ---
 title: Hello Minikube
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -423,4 +424,4 @@ minikube delete
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

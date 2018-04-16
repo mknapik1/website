@@ -1,5 +1,6 @@
 ---
 title: Run a Single-Instance Stateful Application
+content_template: templates/tutorial
 weight: 20
 weight: 20
 ---
@@ -189,4 +190,4 @@ underlying resource upon deleting the PersistentVolume.
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

@@ -2,6 +2,7 @@
 title: "Example: Deploying Cassandra with Stateful Sets"
 reviewers:
 - ahmetb
+content_template: templates/tutorial
 weight: 50
 ---
 
@@ -216,4 +217,4 @@ Deleting or scaling a StatefulSet down does not delete the volumes associated wi
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

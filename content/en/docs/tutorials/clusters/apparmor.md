@@ -2,6 +2,7 @@
 reviewers:
 - stclair
 title: AppArmor
+content_template: templates/tutorial
 weight: 10
 ---
 
@@ -440,4 +441,4 @@ Additional resources:
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

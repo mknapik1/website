@@ -7,6 +7,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Run a Replicated Stateful Application
+content_template: templates/tutorial
 weight: 30
 weight: 30
 ---
@@ -530,5 +531,5 @@ kubectl delete pvc data-mysql-4
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+
 

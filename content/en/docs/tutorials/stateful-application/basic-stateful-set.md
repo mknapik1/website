@@ -7,6 +7,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: StatefulSet Basics
+content_template: templates/tutorial
 weight: 10
 ---
 
@@ -1039,4 +1040,4 @@ storage configuration, and provisioning method, to ensure that all storage is
 reclaimed.
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

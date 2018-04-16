@@ -1,5 +1,6 @@
 ---
 title: Set up CoreDNS as DNS provider for Cluster Federation
+content_template: templates/tutorial
 weight: 30
 ---
 
@@ -130,4 +131,4 @@ Now the federated cluster is ready for cross-cluster service discovery!
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

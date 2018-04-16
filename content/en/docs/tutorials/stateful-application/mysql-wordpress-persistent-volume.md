@@ -2,6 +2,7 @@
 title: "Example: Deploying WordPress and MySQL with Persistent Volumes"
 reviewers:
 - ahmetb
+content_template: templates/tutorial
 weight: 40
 ---
 
@@ -194,4 +195,4 @@ The following manifest describes a single-instance WordPress Deployment and Serv
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

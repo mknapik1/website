@@ -1,5 +1,6 @@
 ---
 title: 使用 Service 把前端连接到后端
+content_template: templates/tutorial
 ---
 
 
@@ -220,4 +221,4 @@ curl http://<EXTERNAL-IP>
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

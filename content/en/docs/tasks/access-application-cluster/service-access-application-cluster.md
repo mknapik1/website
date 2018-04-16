@@ -1,5 +1,6 @@
 ---
 title: Use a Service to Access an Application in a Cluster
+content_template: templates/tutorial
 weight: 30
 weight: 60
 ---
@@ -147,5 +148,5 @@ Learn more about
 [connecting applications with services](/docs/concepts/services-networking/connect-applications-service/).
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+
 

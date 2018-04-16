@@ -8,6 +8,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Running ZooKeeper, A CP Distributed System
+content_template: templates/tutorial
 weight: 60
 ---
 
@@ -1180,4 +1181,4 @@ used in this tutorial. Follow the necessary steps, based on your environment,
 storage configuration, and provisioning method, to ensure that all storage is 
 reclaimed.
 {{% /capture %}}
-{% include templates/tutorial.md %}
+

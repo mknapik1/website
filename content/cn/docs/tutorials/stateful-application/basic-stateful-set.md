@@ -7,6 +7,7 @@ approvers:
 - kow3ns
 - smarterclayton
 title: StatefulSet基本使用
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -1104,4 +1105,4 @@ kubectl delete svc nginx
 你需要删除本教程中用到的 PersistentVolumes 的持久化存储媒体。基于你的环境、存储配置和提供方式，按照必须的步骤保证回收所有的存储。
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: 运行一个单实例有状态应用
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -223,4 +224,4 @@ gcloud compute disks delete mysql-disk
 
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

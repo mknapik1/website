@@ -1,5 +1,6 @@
 ---
 title: Exposing an External IP Address to Access an Application in a Cluster
+content_template: templates/tutorial
 weight: 40
 ---
 
@@ -156,6 +157,6 @@ Learn more about
 [connecting applications with services](/docs/concepts/services-networking/connect-applications-service/).
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+
 
 

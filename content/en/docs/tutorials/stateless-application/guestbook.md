@@ -2,6 +2,7 @@
 title: "Example: Deploying PHP Guestbook application with Redis"
 reviewers:
 - ahmetb
+content_template: templates/tutorial
 weight: 20
 ---
 
@@ -298,4 +299,4 @@ Deleting the Deployments and Services also deletes any running Pods. Use labels 
 * Read more about [Managing Resources](/docs/concepts/cluster-administration/manage-deployment/#using-labels-effectively)
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+

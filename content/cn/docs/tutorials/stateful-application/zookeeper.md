@@ -9,6 +9,7 @@ approvers:
 - smarterclayton
 
 title: 运行 ZooKeeper， 一个 CP 分布式系统
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -1171,4 +1172,4 @@ node "kubernetes-minion-group-ixsl" uncordoned
 * 使用 `kubectl uncordon` 解除你集群中所有节点的隔离。
 * 你需要删除在本教程中使用的 PersistentVolumes 的持久存储媒介。请遵循必须的步骤，基于你的环境、存储配置和准备方法，保证回收所有的存储。
 {{% /capture %}}
-{% include templates/tutorial.md %}
+

@@ -1,6 +1,7 @@
 ---
 
 title: 使用 Source IP
+content_template: templates/tutorial
 ---
 
 {{% capture overview %}}
@@ -327,4 +328,4 @@ $ kubectl delete deployment source-ip-app
 * 学习更多关于 [负载均衡](/docs/user-guide/load-balancer)
 {{% /capture %}}
 
-{% include templates/tutorial.md %}
+
