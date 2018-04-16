@@ -1,21 +1,23 @@
 
+{{ $p := .Page }}
 {{ $file := .Get "file" }}
 {{ $language := .Get "language" }}
 {{ $ghlink := .Get "ghlink" }}
 {{/* TODO(bep) k8slink ? also ghlink https://raw.githubusercontent.com/kubernetes/kubernetes/blob/{{page.githubbranch}} */}}
 {{ $fileDir := path.Split $file }}
 {{ $bundlePath := path.Join .Page.Dir $fileDir.Dir }}
-{{ $bundle := .Site.GetPage "page" $bundlePath | default .Page.CurrentSection }}
-{{ with $bundle }}
-{{ $resource := .Resources.GetMatch $fileDir.File }}
-{{ with $resource }}{{ $.Scratch.Set "content" .Content }}{{ end }}
-{{ if not $resource }}
-{{/* Fall back to file reading. We should consider creating headless bundles of these. */}}
-{{ $resource := readFile (path.Join $.Page.Dir $file) }}
+{{/* First assume this is a bundle and the file is inside it. */}}
+{{ $resource := $p.Resources.GetMatch (printf "**%s*" $fileDir.File) }}
+{{ with $resource }}
+{{ $.Scratch.Set "content" .Content }}
+{{ else }}
+{{/* Read the file relative to the content root. */}}
+{{ $filename := path.Join $p.Dir $file }}
+{{ $resource := readFile $filename}}
 {{ with $resource }}{{ $.Scratch.Set "content" . }}{{ end }}
-{{ if not $resource}}
-{{ errorf "resource name %q not found in %q" $fileDir.File $bundlePath }}
 {{ end }}
+{{ if not ($.Scratch.Get "content") }}
+{{ errorf "[%s] %q not found in %q" $p.Site.Language.Lang $fileDir.File $bundlePath }}
 {{ end }}
 {{ with $.Scratch.Get "content" }}
 <table class="includecode">
@@ -35,5 +37,4 @@
         </tr>
     </tbody>
 </table>
-{{ end }}
 {{ end }}
