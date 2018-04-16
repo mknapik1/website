@@ -125,11 +125,12 @@ If you destroy the leader - identified with the `*` text next to the unit number
 all TLS pki will be lost. No PKI migration occurs outside
 of the units requesting and registering the certificates.
 
+{{< caution >}}
 **Caution:**  Mismanaging this configuration will result in locking yourself
 out of the cluster, and can potentially break existing deployments in very
 strange ways relating to x509 validation of certificates, which affects both
 servers and clients.
-{: .caution}
+{{< /caution >}}
 
 #### Restoring from snapshot on a scaled cluster
 

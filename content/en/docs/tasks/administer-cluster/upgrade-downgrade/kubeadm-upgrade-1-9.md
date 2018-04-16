@@ -24,8 +24,9 @@ Before proceeding:
 - `kubeadm upgrade` now allows you to upgrade etcd. `kubeadm upgrade` will also upgrade of etcd to 3.1.10 as part of upgrading from v1.8 to v1.9 by default. This is due to the fact that etcd 3.1.10 is the officially validated etcd version for Kubernetes v1.9. The upgrade is handled automatically by kubeadm for you.
 - Note that `kubeadm upgrade` will not touch any of your workloads, only Kubernetes-internal components. As a best-practice you should back up what's important to you. For example, any app-level state, such as a database an app might depend on (like MySQL or MongoDB) must be backed up beforehand.
 
+{{< caution >}}
 **Caution:** All the containers will get restarted after the upgrade, due to container spec hash value gets changed.
-{: .caution}
+{{< /caution >}}
 
 Also, note that only one minor version upgrade is supported. For example, you can only upgrade from 1.8 to 1.9, not from 1.7 to 1.9.
 
@@ -46,10 +47,11 @@ curl -sSL https://dl.k8s.io/release/${VERSION}/bin/linux/${ARCH}/kubeadm > /usr/
 chmod a+rx /usr/bin/kubeadm
 ```
 
+{{< caution >}}
 **Caution:** Upgrading the `kubeadm` package on your system prior to upgrading the control plane causes a failed upgrade. 
 Even though `kubeadm` ships in the Kubernetes repositories, it's important to install `kubeadm` manually. The kubeadm 
 team is working on fixing this limitation. 
-{: .caution}
+{{< /caution >}}
 
 Verify that this download of kubeadm works and has the expected version:
 

@@ -6,9 +6,10 @@ approvers:
 title: kubeadm alpha
 weight: 90
 ---
+{{< caution >}}
 `kubeadm alpha` provides a preview of a set of features made available for gathering feedback
  from the community. Please try it out and give us feedback!
-{: .caution}
+{{< /caution >}}
 
 In v1.8.0, kubeadm introduced the `kubeadm alpha phase` command with the aim of making kubeadm more modular. This modularity enables you to invoke atomic sub-steps of the bootstrap process; you can let kubeadm do some parts and fill in yourself where you need customizations.
 
@@ -247,8 +248,9 @@ Please note that if kubeadm is invoked with `--feature-gates=CoreDNS=true`,  [Co
 
 ## kubeadm alpha phase self-hosting {#cmd-phase-self-hosting}
 
+{{< caution >}}
 **Caution:** Self-hosting is an alpha feature. See [kubeadm init](kubeadm-init.md) documentation for self-hosting limitations.
-{: .caution}
+{{< /caution >}}
 
 {{% capture self-hosting %}}
 {% include_relative generated/kubeadm_alpha_phase_selfhosting_convert-from-staticpods.md %}

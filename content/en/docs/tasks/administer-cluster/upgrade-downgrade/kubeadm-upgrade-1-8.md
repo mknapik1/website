@@ -36,6 +36,7 @@ You have to carry out the following steps by executing these commands on your ma
 
 1. Install the most recent version of `kubeadm` using `curl` like so:
 
+{{< caution >}}
 ```shell
 export VERSION=$(curl -sSL https://dl.k8s.io/release/stable.txt) # or manually specify a released Kubernetes version
 export ARCH=amd64 # or: arm, arm64, ppc64le, s390x
@@ -47,7 +48,7 @@ upgrading the control plane causes a failed upgrade. Even though
 `kubeadm` is shipped in the Kubernetes repositories, it's important 
 to install `kubeadm` manually. The kubeadm team is working on fixing
 this limitation. 
-{: .caution}
+{{< /caution >}}
 
 Verify that this download of kubeadm works, and has the expected version:
 

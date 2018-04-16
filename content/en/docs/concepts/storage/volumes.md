@@ -104,8 +104,9 @@ volume are preserved and the volume is merely unmounted.  This means that an
 EBS volume can be pre-populated with data, and that data can be "handed off"
 between pods.
 
+{{< caution >}}
 **Important:** You must create an EBS volume using `aws ec2 create-volume` or the AWS API before you can use it.
-{: .caution}
+{{< /caution >}}
 
 There are some restrictions when using an `awsElasticBlockStore` volume:
 
@@ -168,8 +169,9 @@ unmounted.  This means that a CephFS volume can be pre-populated with data, and
 that data can be "handed off" between pods.  CephFS can be mounted by multiple
 writers simultaneously.
 
+{{< caution >}}
 **Important:** You must have your own Ceph server running with the share exported before you can use it.
-{: .caution}
+{{< /caution >}}
 
 See the [CephFS example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/cephfs/) for more details.
 
@@ -283,8 +285,9 @@ You can specify single or multiple target World Wide Names using the parameter
 `targetWWNs` in your volume configuration. If multiple WWNs are specified,
 targetWWNs expect that those WWNs are from multi-path connections.
 
+{{< caution >}}
 **Important:** You must configure FC SAN Zoning to allocate and mask those LUNs (volumes) to the target WWNs beforehand so that Kubernetes hosts can access them.
-{: .caution}
+{{< /caution >}}
 
 See the [FC example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/fibre_channel) for more details.
 
@@ -299,8 +302,9 @@ CLI or by using the Flocker API. If the dataset already exists it will be
 reattached by Flocker to the node that the pod is scheduled. This means data
 can be "handed off" between pods as required.
 
+{{< caution >}}
 **Important:** You must have your own Flocker installation running before you can use it.
-{: .caution}
+{{< /caution >}}
 
 See the [Flocker example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/flocker) for more details.
 
@@ -312,8 +316,9 @@ Disk](http://cloud.google.com/compute/docs/disks) into your pod.  Unlike
 preserved and the volume is merely unmounted.  This means that a PD can be
 pre-populated with data, and that data can be "handed off" between pods.
 
+{{< caution >}}
 **Important:** You must create a PD using `gcloud` or the GCE API or UI before you can use it.
-{: .caution}
+{{< /caution >}}
 
 There are some restrictions when using a `gcePersistentDisk`:
 
@@ -397,8 +402,9 @@ means that a glusterfs volume can be pre-populated with data, and that data can
 be "handed off" between pods.  GlusterFS can be mounted by multiple writers
 simultaneously.
 
+{{< caution >}}
 **Important:** You must have your own GlusterFS installation running before you can use it.
-{: .caution}
+{{< /caution >}}
 
 See the [GlusterFS example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/glusterfs) for more details.
 
@@ -474,8 +480,9 @@ contents of an `iscsi` volume are preserved and the volume is merely
 unmounted.  This means that an iscsi volume can be pre-populated with data, and
 that data can be "handed off" between pods.
 
+{{< caution >}}
 **Important:** You must have your own iSCSI server running with the volume created before you can use it.
-{: .caution}
+{{< /caution >}}
 
 A feature of iSCSI is that it can be mounted as read-only by multiple consumers
 simultaneously.  This means that you can pre-populate a volume with your dataset
@@ -577,8 +584,9 @@ unmounted.  This means that an NFS volume can be pre-populated with data, and
 that data can be "handed off" between pods.  NFS can be mounted by multiple
 writers simultaneously.
 
+{{< caution >}}
 **Important:** You must have your own NFS server running with the share exported before you can use it.
-{: .caution}
+{{< /caution >}}
 
 See the [NFS example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/nfs) for more details.
 
@@ -721,9 +729,10 @@ spec:
       fsType: "<fs-type>"
 ```
 
+{{< caution >}}
 **Important:** Make sure you have an existing PortworxVolume with name `pxvol`
 before using it in the pod.
-{: .caution}
+{{< /caution >}}
 
 More details and examples can be found [here](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/portworx/README.md).
 
@@ -732,9 +741,10 @@ More details and examples can be found [here](https://github.com/kubernetes/exam
 A `quobyte` volume allows an existing [Quobyte](http://www.quobyte.com) volume to
 be mounted into your pod.
 
+{{< caution >}}
 **Important:** You must have your own Quobyte setup running with the volumes
 created before you can use it.
-{: .caution}
+{{< /caution >}}
 
 See the [Quobyte example](https://github.com/kubernetes/examples/tree/{{page.githubbranch}}/staging/volumes/quobyte) for more details.
 
@@ -747,8 +757,9 @@ a `rbd` volume are preserved and the volume is merely unmounted.  This
 means that a RBD volume can be pre-populated with data, and that data can
 be "handed off" between pods.
 
+{{< caution >}}
 **Important:** You must have your own Ceph installation running before you can use RBD.
-{: .caution}
+{{< /caution >}}
 
 A feature of RBD is that it can be mounted as read-only by multiple consumers
 simultaneously.  This means that you can pre-populate a volume with your dataset
@@ -766,9 +777,10 @@ plugin allows deployed pods to access existing ScaleIO
 volumes (or it can dynamically provision new volumes for persistent volume claims, see
 [ScaleIO Persistent Volumes](/docs/concepts/storage/persistent-volumes/#scaleio)).
 
+{{< caution >}}
 **Important:** You must have an existing ScaleIO cluster already setup and
 running with the volumes created before you can use them.
-{: .caution}
+{{< /caution >}}
 
 The following is an example pod configuration with ScaleIO:
 
@@ -807,8 +819,9 @@ use by pods without coupling to Kubernetes directly.  `secret` volumes are
 backed by tmpfs (a RAM-backed filesystem) so they are never written to
 non-volatile storage.
 
+{{< caution >}}
 **Important:** You must create a secret in the Kubernetes API before you can use it.
-{: .caution}
+{{< /caution >}}
 
 {{< note >}}
 **Note:** A container using a Secret as a [subPath](#using-subpath) volume mount will not
@@ -832,11 +845,12 @@ At its core, StorageOS provides block storage to containers, accessible via a fi
 The StorageOS container requires 64-bit Linux and has no additional dependencies.
 A free developer license is available.
 
+{{< caution >}}
 **Important:** You must run the StorageOS container on each node that wants to
 access StorageOS volumes or that will contribute storage capacity to the pool.
 For installation instructions, consult the
 [StorageOS documentation](https://docs.storageos.com).
-{: .caution}
+{{< /caution >}}
 
 ```yaml
 apiVersion: v1
@@ -879,8 +893,9 @@ configuration please refer [vSphere getting started guide](https://vmware.github
 A `vsphereVolume` is used to mount a vSphere VMDK Volume into your Pod.  The contents
 of a volume are preserved when it is unmounted. It supports both VMFS and VSAN datastore.
 
+{{< caution >}}
 **Important:** You must create VMDK using one of the following method before using with POD.
-{: .caution}
+{{< /caution >}}
 
 #### Creating a VMDK volume
 
@@ -1113,12 +1128,13 @@ Its values are:
    This mode is equal to `rshared` mount propagation as described in the
    [Linux kernel documentation](https://www.kernel.org/doc/Documentation/filesystems/sharedsubtree.txt)
 
+{{< caution >}}
 **Caution:** `Bidirectional` mount propagation can be dangerous. It can damage
 the host operating system and therefore it is allowed only in privileged
 Containers. Familiarity with Linux kernel behavior is strongly recommended.
 In addition, any volume mounts created by Containers in Pods must be destroyed
 (unmounted) by the Containers on termination.
-{: .caution}
+{{< /caution >}}
 
 ### Configuration
 Before mount propagation can work properly on some deployments (CoreOS, 

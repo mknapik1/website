@@ -813,6 +813,9 @@ func replaceCaptures(path, s string) (string, error) {
 	return re.ReplaceAllString(s, `{{% capture $1 %}}$2{{% /capture %}}`), nil
 }
 
+// Introduce them little by little to test
+var callouts = regexp.MustCompile("note|caution")
+
 func calloutsToShortCodes(path, s string) (string, error) {
 
 	// This contains callout examples that needs to be handled by hand.
@@ -848,7 +851,7 @@ func calloutsToShortCodes(path, s string) (string, error) {
 		}
 
 		// Test with the notes
-		if strings.Contains(line, "{:") && strings.Contains(line, "note") {
+		if strings.Contains(line, "{:") && callouts.MatchString(line) {
 			// This may be the start or the end of a callout.
 			isStart := pcounter == 1
 
