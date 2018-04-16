@@ -1,17 +1,26 @@
 
+
 {{ partial "templates/block" (dict "page" . "block" "overview" "purpose" "states, in one or two sentences, the purpose of this document") }}
 
-<h2>TOC</h2>
-TODO(bep) The built-in TOC does not work in this case. Add the below to a slice of dicts and create Toc from that. {{ .TableOfContents }}.
+{{ .Scratch.Set "blocks" slice }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "objectives" "heading" "Objectives" "purpose" "lists the objectives for this tutorial.") }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "prerequisites" "heading" "Before you begin" "purpose" "lists action prerequisites and knowledge prerequisites.")  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "lessoncontent" "purpose" "provides the lesson content for this tutorial.")  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "cleanup" "heading" "Cleaning up" "optional" true )  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "whatsnext" "heading" "What's next" "optional" true )  }}
 
-{{ partial "templates/block" (dict "page" . "block" "overview" "heading" "Objectives" "purpose" "lists the objectives for this tutorial.") }}
+{{ $blocks := .Scratch.Get "blocks" }}
+{{/* The built-in ToC in Blackfriday only works for the Markdown it render itself. */}}
+<ul id="markdown-toc">
+{{ range $blocks }}
+{{ if .heading }}
+<li><a href="#{{ .heading | anchorize }}">{{.heading }}</a></li>
+{{ end }}
+{{ end }}
+</ul>
+{{ range $i, $e := $blocks }}
+{{ partial "templates/block" . }}
+{{ end }}
 
-{{ partial "templates/block" (dict "page" . "block" "prerequisites" "heading" "Before you begin" "purpose" "lists action prerequisites and knowledge prerequisites.") }}
-
-{{ partial "templates/block" (dict "page" . "block" "lessoncontent" "purpose" "provides the lesson content for this tutorial.") }}
-
-{{ partial "templates/block" (dict "page" . "block" "cleanup" "heading" "Cleaning up" "optional" true ) }}
-
-{{ partial "templates/block" (dict "page" . "block" "whatsnext" "heading" "What's next" "optional" true ) }}
 
 
