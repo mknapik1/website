@@ -35,6 +35,8 @@ TODO
 * .Params.version
 * Check for index.md files
 
+
+* Style code highlight
 * Language dropdown left to version, right
 * Check capture
 * Case studies, partners etc.

@@ -5,7 +5,7 @@
 {{/* TODO(bep) k8slink ? also ghlink https://raw.githubusercontent.com/kubernetes/kubernetes/blob/{{page.githubbranch}} */}}
 {{ $fileDir := path.Split $file }}
 {{ $bundlePath := path.Join .Page.Dir $fileDir.Dir }}
-{{ $bundle := .Site.GetPage "page" $bundlePath }}
+{{ $bundle := .Site.GetPage "page" $bundlePath | default (.Site.GetPage "section" $bundlePath) }}
 {{ if not $bundle }}
 {{ errorf "bundle with path %q not found"  $bundlePath }}
 {{ end }}
