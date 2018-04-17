@@ -22,8 +22,6 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"github.com/hacdias/fileutils"
-
-	"github.com/olekukonko/tablewriter"
 )
 
 func main() {
@@ -35,16 +33,8 @@ func main() {
 	}
 
 	m := newMigrator(filepath.Join(pwd, "../../../"))
-	flag.BoolVar(&m.try, "try", false, "trial run, no updates")
 
 	flag.Parse()
-
-	// During development.
-	m.try = false
-
-	if m.try {
-		log.Println("trial mode on")
-	}
 
 	// Start fresh
 	if err := os.RemoveAll(m.absFilename("content")); err != nil {
@@ -68,10 +58,6 @@ func main() {
 
 	// Copy in some content that failed in the steps above etc.
 	must(m.contentMigrate_Final_Step())
-
-	if m.try {
-		m.printStats(os.Stdout)
-	}
 
 	log.Println("Done.")
 
@@ -103,14 +89,8 @@ var (
 )
 
 type mover struct {
-	// Test run.
-	try bool
-
-	changeLogFromTo []string
-
 	projectRoot string
 
-	//addedFiles map[string]bool
 	tocDirs map[string]tocDir
 }
 
@@ -420,13 +400,6 @@ func (m *mover) handleTocEntryRecursive(sidx, level int, entry map[string]interf
 func (m *mover) contentMigrate_Replacements() error {
 	log.Println("Start Replacement Step …")
 
-	if m.try {
-		// The try flag is mainly to get the first step correct before we
-		// continue.
-		m.logChange("All content files", "Replacements")
-		return nil
-	}
-
 	// Adjust link titles
 	linkTitles := []keyVal{
 		keyVal{"en/docs/home/_index.md", "Home"},
@@ -545,10 +518,8 @@ func (m *mover) applyContentFixers(fixers contentFixers, match string) error {
 	re := regexp.MustCompile(match)
 	return m.doWithContentFile("", func(path string, info os.FileInfo) error {
 		if !info.IsDir() && re.MatchString(path) {
-			if !m.try {
-				if err := m.replaceInFile(path, fixers.fix); err != nil {
-					return err
-				}
+			if err := m.replaceInFile(path, fixers.fix); err != nil {
+				return err
 			}
 		}
 		return nil
@@ -567,10 +538,7 @@ func (m *mover) renameContentFiles(match, renameTo string) error {
 		if !info.IsDir() && re.MatchString(path) {
 			dir := filepath.Dir(path)
 			targetFilename := filepath.Join(dir, renameTo)
-			m.logChange(path, targetFilename)
-			if !m.try {
-				return os.Rename(path, targetFilename)
-			}
+			return os.Rename(path, targetFilename)
 		}
 
 		return nil
@@ -586,20 +554,11 @@ func (m *mover) doWithContentFile(subfolder string, f func(path string, info os.
 
 func (m *mover) copyDir(from, to string) error {
 	from, to = m.absFromTo(from, to)
-
-	m.logChange(from, to)
-	if m.try {
-		return nil
-	}
 	return fileutils.CopyDir(from, to)
 }
 
 func (m *mover) moveDir(from, to string) error {
 	from, to = m.absFromTo(from, to)
-	m.logChange(from, to)
-	if m.try {
-		return nil
-	}
 
 	if err := os.RemoveAll(to); err != nil {
 		return err
@@ -633,20 +592,6 @@ func must(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
-}
-
-func (m *mover) printStats(w io.Writer) {
-	table := tablewriter.NewWriter(w)
-	for i := 0; i < len(m.changeLogFromTo); i += 2 {
-		table.Append([]string{m.changeLogFromTo[i], m.changeLogFromTo[i+1]})
-	}
-	table.SetHeader([]string{"From", "To"})
-	table.SetBorder(false)
-	table.Render()
-}
-
-func (m *mover) logChange(from, to string) {
-	m.changeLogFromTo = append(m.changeLogFromTo, from, to)
 }
 
 func (m *mover) openOrCreateTargetFile(target string, info os.FileInfo) (io.ReadWriteCloser, error) {
@@ -744,22 +689,19 @@ func (m *mover) replaceStringWithFrontMatter(matcher, key, val string) error {
 
 	err := m.doWithContentFile("", func(path string, info os.FileInfo) error {
 		if info != nil && !info.IsDir() {
-			if !m.try {
-				b, err := ioutil.ReadFile(path)
-				if err != nil {
+			b, err := ioutil.ReadFile(path)
+			if err != nil {
+				return err
+			}
+			if matcherRe.Match(b) {
+				if err := m.replaceInFile(path, addKeyValue(key, val)); err != nil {
 					return err
 				}
-				if matcherRe.Match(b) {
-					if err := m.replaceInFile(path, addKeyValue(key, val)); err != nil {
-						return err
-					}
-					if err := m.replaceInFile(path, func(path, s string) (string, error) {
-						return matcherRe.ReplaceAllString(s, ""), nil
-					}); err != nil {
-						return err
-					}
+				if err := m.replaceInFile(path, func(path, s string) (string, error) {
+					return matcherRe.ReplaceAllString(s, ""), nil
+				}); err != nil {
+					return err
 				}
-
 			}
 		}
 		return nil
