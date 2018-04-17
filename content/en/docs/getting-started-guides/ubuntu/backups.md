@@ -1,6 +1,5 @@
 ---
 title: Backups
-weight: 30
 ---
 
 {{% capture overview %}}

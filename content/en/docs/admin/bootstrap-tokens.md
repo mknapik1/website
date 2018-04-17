@@ -2,7 +2,6 @@
 reviewers:
 - jbeda
 title: Authenticating with Bootstrap Tokens
-weight: 30
 ---
 
 * TOC

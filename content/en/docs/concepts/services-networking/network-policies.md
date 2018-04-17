@@ -4,7 +4,6 @@ reviewers:
 - caseydavenport
 - danwinship
 title: Network Policies
-weight: 50
 ---
 
 * TOC

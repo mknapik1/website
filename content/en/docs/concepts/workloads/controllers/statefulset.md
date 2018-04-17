@@ -137,7 +137,6 @@ Here are some examples of choices for Cluster Domain, Service name,
 StatefulSet name, and how that affects the DNS names for the StatefulSet's Pods.
 
 Cluster Domain | Service (ns/name) | StatefulSet (ns/name)  | StatefulSet Domain  | Pod DNS | Pod Hostname |
-weight: 40
 -------------- | ----------------- | ----------------- | -------------- | ------- | ------------ |
  cluster.local | default/nginx     | default/web       | nginx.default.svc.cluster.local | web-{0..N-1}.nginx.default.svc.cluster.local | web-{0..N-1} |
  cluster.local | foo/nginx         | foo/web           | nginx.foo.svc.cluster.local     | web-{0..N-1}.nginx.foo.svc.cluster.local     | web-{0..N-1} |

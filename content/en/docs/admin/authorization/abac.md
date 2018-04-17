@@ -5,7 +5,6 @@ reviewers:
 - deads2k
 - liggitt
 title: ABAC Mode
-weight: 20
 ---
 
 {{% capture overview %}}

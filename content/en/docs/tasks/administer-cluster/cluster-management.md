@@ -3,7 +3,6 @@ reviewers:
 - lavalamp
 - thockin
 title: Cluster Management
-weight: 100
 ---
 
 * TOC

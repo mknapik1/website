@@ -2,7 +2,6 @@
 reviewers:
 - erictune
 title: Pod Overview
-weight: 10
 ---
 
 {{% capture overview %}}

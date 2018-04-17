@@ -199,7 +199,6 @@ use <code>###</code> and <code>####</code> as needed.
 <pre>---
 title: Understanding this Thing
 content_template: templates/tutorial
-weight: 60
 ---
 
 {{% capture overview %}}

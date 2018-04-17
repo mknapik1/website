@@ -1,7 +1,6 @@
 ---
 reviewers:
 title: Pods
-weight: 20
 ---
 
 * TOC

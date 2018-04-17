@@ -3,7 +3,6 @@ reviewers:
 - bgrant0607
 - mikedanese
 title: What is Kubernetes?
-weight: 10
 ---
 
 {{% capture overview %}}

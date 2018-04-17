@@ -1,6 +1,5 @@
 ---
 title: Assign Memory Resources to Containers and Pods
-weight: 10
 ---
 
 {{% capture overview %}}

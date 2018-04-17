@@ -4,7 +4,6 @@ approvers:
 - luxas
 - jbeda
 title: Implementation details
-weight: 100
 ---
 {{% capture overview %}}
 `kubeadm init` and `kubeadm join` together provides a nice user experience for creating a best-practice but bare Kubernetes cluster from scratch.

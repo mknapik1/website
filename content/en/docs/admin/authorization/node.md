@@ -5,7 +5,6 @@ reviewers:
 - liggitt
 - ericchiang
 title: Using Node Authorization
-weight: 40
 ---
 
 * TOC

@@ -5,7 +5,6 @@ reviewers:
 - foxish
 - smarterclayton
 title: Force Delete StatefulSet Pods
-weight: 80
 ---
 
 {{% capture overview %}}

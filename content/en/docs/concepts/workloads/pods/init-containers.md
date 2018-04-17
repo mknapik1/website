@@ -164,7 +164,6 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 9376
-weight: 40
 ---
 kind: Service
 apiVersion: v1

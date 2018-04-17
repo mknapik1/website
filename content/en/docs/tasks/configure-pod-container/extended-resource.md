@@ -1,6 +1,5 @@
 ---
 title: Assign Extended Resources to a Container
-weight: 50
 ---
 
 {{% capture overview %}}

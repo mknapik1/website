@@ -1,6 +1,5 @@
 ---
 title: List All Container Images Running in a Cluster
-weight: 100
 ---
 
 {{% capture overview %}}

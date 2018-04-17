@@ -4,7 +4,6 @@ reviewers:
 - roberthbailey
 - liggitt
 title: Master-Node communication
-weight: 20
 ---
 
 * TOC

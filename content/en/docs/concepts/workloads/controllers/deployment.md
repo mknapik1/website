@@ -3,7 +3,6 @@ reviewers:
 - bgrant0607
 - janetkuo
 title: Deployments
-weight: 30
 ---
 
 {{% capture overview %}}

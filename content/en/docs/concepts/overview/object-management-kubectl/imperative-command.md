@@ -1,6 +1,5 @@
 ---
 title: Managing Kubernetes Objects Using Imperative Commands
-weight: 20
 ---
 
 {{% capture overview %}}

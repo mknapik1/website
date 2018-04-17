@@ -1,6 +1,5 @@
 ---
 title: Feature Gates
-weight: 10
 ---
 
 {{% capture overview %}}

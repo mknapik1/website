@@ -3,7 +3,6 @@ reviewers:
 - erictune
 - thockin
 title: Images
-weight: 10
 ---
 
 {{% capture overview %}}

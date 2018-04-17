@@ -5,7 +5,6 @@ reviewers:
 - justinsb
 - directxman12
 title: Horizontal Pod Autoscaler Walkthrough
-weight: 110
 ---
 
 * TOC

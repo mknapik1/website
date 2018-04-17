@@ -1,5 +1,5 @@
 ---
-title: "Cluster Administration"
-weight: 100
+title: "Compute, Storage, and Networking Extensions"
+weight: 30
 ---
 

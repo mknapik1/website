@@ -1,6 +1,5 @@
 ---
 title: Security Considerations
-weight: 90
 ---
 
 {{% capture overview %}}

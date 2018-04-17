@@ -3,7 +3,6 @@ title: Custom Resources
 reviewers:
 - enisoc
 - deads2k
-weight: 20
 ---
 
 {{% capture overview %}}

@@ -2,7 +2,6 @@
 reviewers:
 - chrismarino
 title: Romana for NetworkPolicy
-weight: 40
 ---
 
 {{% capture overview %}}

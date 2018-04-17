@@ -1,6 +1,5 @@
 ---
 title: Determine the Reason for Pod Failure
-weight: 80
 ---
 
 {{% capture overview %}}

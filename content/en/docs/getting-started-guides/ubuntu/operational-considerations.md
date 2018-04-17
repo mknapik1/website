@@ -1,6 +1,5 @@
 ---
 title: Operational Considerations
-weight: 130
 ---
 
 {{% capture overview %}}

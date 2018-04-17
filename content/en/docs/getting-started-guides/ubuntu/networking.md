@@ -1,6 +1,5 @@
 ---
 title: Networking
-weight: 80
 ---
 
 {{% capture overview %}}

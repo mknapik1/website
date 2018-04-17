@@ -3,7 +3,6 @@ reviewers:
 - caesarxuchao
 - mikedanese
 title: Get a Shell to a Running Container
-weight: 30
 ---
 
 {{% capture overview %}}

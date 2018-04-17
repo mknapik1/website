@@ -1,6 +1,5 @@
 ---
 title: Advertise Extended Resources for a Node
-weight: 90
 ---
 
 

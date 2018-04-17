@@ -1,6 +1,5 @@
 ---
 title: Expose Pod Information to Containers Through Files
-weight: 40
 ---
 
 {{% capture overview %}}

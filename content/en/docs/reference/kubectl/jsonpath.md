@@ -51,7 +51,6 @@ Given the input:
 ```
 
 Function | Description        | Example            | Result
-weight: 60
 ---------|--------------------|--------------------|------------------
 text     | the plain text     | kind is {.kind}    | kind is List
 @        | the current object | {@}                | the same as input

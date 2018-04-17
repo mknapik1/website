@@ -1,6 +1,5 @@
 ---
 title: Federated Jobs
-weight: 120
 ---
 
 {{% capture overview %}}

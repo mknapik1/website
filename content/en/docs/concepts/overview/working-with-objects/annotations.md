@@ -1,6 +1,5 @@
 ---
 title: Annotations
-weight: 50
 ---
 
 {{% capture overview %}}

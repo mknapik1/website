@@ -4,7 +4,6 @@ reviewers:
 - foxish
 - davidopp
 title: Disruptions
-weight: 60
 ---
 
 {{% capture overview %}}

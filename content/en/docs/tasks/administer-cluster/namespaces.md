@@ -3,7 +3,6 @@ reviewers:
 - derekwaynecarr
 - janetkuo
 title: Share a Cluster with Namespaces
-weight: 110
 ---
 
 {{% capture overview %}}

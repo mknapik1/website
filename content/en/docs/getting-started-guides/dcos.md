@@ -2,7 +2,6 @@
 reviewers:
 - smugcloud
 title: Kubernetes on DCOS
-weight: 40
 ---
 
 Mesosphere provides an easy option to provision Kubernetes onto [DC/OS](https://mesosphere.com/product/), offering:

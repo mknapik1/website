@@ -2,8 +2,6 @@
 title: Run a Stateless Application Using a Deployment
 min-kubernetes-server-version: v1.9
 content_template: templates/tutorial
-weight: 10
-weight: 10
 ---
 
 {{% capture overview %}}

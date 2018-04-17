@@ -1,6 +1,5 @@
 ---
 title: Monitoring
-weight: 70
 ---
 
 {{% capture overview %}}

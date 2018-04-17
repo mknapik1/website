@@ -1,6 +1,5 @@
 ---
 title: Pull an Image from a Private Registry
-weight: 130
 ---
 
 {{% capture overview %}}

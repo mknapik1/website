@@ -610,7 +610,6 @@ metadata:
   name: dotfile-secret
 data:
   .secret-file: dmFsdWUtMg0KDQo=
-weight: 50
 ---
 kind: Pod
 apiVersion: v1

@@ -1,6 +1,5 @@
 ---
 title: Configure Default CPU Requests and Limits for a Namespace
-weight: 20
 ---
 
 {{% capture overview %}}

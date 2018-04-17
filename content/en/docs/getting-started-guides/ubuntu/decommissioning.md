@@ -1,6 +1,5 @@
 ---
 title: Decommissioning
-weight: 120
 ---
 
 {{% capture overview %}}

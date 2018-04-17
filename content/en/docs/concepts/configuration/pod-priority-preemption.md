@@ -3,7 +3,6 @@ reviewers:
 - davidopp
 - wojtek-t
 title: Pod Priority and Preemption
-weight: 70
 ---
 
 {{% capture overview %}}

@@ -5,7 +5,6 @@ reviewers:
 - saad-ali
 - thockin
 title: Volumes
-weight: 10
 ---
 
 {{% capture overview %}}

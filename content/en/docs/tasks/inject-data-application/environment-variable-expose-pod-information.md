@@ -1,6 +1,5 @@
 ---
 title: Expose Pod Information to Containers Through Environment Variables
-weight: 30
 ---
 
 {{% capture overview %}}

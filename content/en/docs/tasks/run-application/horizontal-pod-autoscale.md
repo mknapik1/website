@@ -4,7 +4,6 @@ reviewers:
 - jszczepkowski
 - directxman12
 title: Horizontal Pod Autoscaler
-weight: 100
 ---
 
 * TOC

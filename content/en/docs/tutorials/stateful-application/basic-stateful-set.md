@@ -8,7 +8,6 @@ reviewers:
 - smarterclayton
 title: StatefulSet Basics
 content_template: templates/tutorial
-weight: 10
 ---
 
 {{% capture overview %}}

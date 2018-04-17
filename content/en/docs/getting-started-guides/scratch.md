@@ -878,7 +878,6 @@ If you run into trouble, please see the section on [troubleshooting](/docs/getti
 
 
 IaaS Provider        | Config. Mgmt | OS     | Networking  | Docs                                              | Conforms | Support Level
-weight: 30
 -------------------- | ------------ | ------ | ----------  | ---------------------------------------------     | ---------| ----------------------------
 any                  | any          | any    | any         | [docs](/docs/getting-started-guides/scratch/)                                |          | Community ([@erictune](https://github.com/erictune))
 

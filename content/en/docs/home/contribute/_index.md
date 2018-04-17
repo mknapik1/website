@@ -1,5 +1,5 @@
 ---
 title: "Contributing to the Kubernetes Docs"
-weight: 30
+weight: 40
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Federated Horizontal Pod Autoscalers (HPA)
-weight: 100
 ---
 
 {{% capture overview %}}

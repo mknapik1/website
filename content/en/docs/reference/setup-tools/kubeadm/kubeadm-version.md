@@ -4,7 +4,6 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm version 
-weight: 80
 ---
 {{% capture overview %}}
 {{% /capture %}}

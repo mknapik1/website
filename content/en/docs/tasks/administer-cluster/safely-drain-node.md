@@ -5,7 +5,6 @@ reviewers:
 - foxish
 - kow3ns
 title: Safely Drain a Node while Respecting Application SLOs
-weight: 150
 ---
 
 {{% capture overview %}}

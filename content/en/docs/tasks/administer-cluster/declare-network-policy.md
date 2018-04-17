@@ -3,7 +3,6 @@ reviewers:
 - caseydavenport
 - danwinship
 title: Declare Network Policy
-weight: 200
 ---
 {{% capture overview %}}
 This document helps you get started using the Kubernetes [NetworkPolicy API](/docs/concepts/services-networking/network-policies/) to declare network policies that govern how pods communicate with each other.

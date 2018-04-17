@@ -2,7 +2,6 @@
 reviewers:
 - mikedanese
 title: Configuring kubelet Garbage Collection
-weight: 80
 ---
 
 * TOC

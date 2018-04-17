@@ -74,7 +74,6 @@ read that resource will fail until it is deleted or a valid decryption key is pr
 ### Providers:
 
 Name | Encryption | Strength | Speed | Key Length | Other Considerations
-weight: 70
 -----|------------|----------|-------|------------|---------------------
 `identity` | None | N/A | N/A | N/A | Resources written as-is without encryption. When set as the first provider, the resource will be decrypted as new values are written.
 `aescbc` | AES-CBC with PKCS#7 padding | Strongest | Fast | 32-byte | The recommended choice for encryption at rest but may be slightly slower than `secretbox`.

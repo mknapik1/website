@@ -5,7 +5,6 @@ reviewers:
 - ericchiang
 - destijl
 title: Securing a Cluster
-weight: 50
 ---
 
 {{% capture overview %}}

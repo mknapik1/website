@@ -2,7 +2,6 @@
 reviewers:
 - jessfraz
 title: Inject Information into Pods Using a PodPreset
-weight: 60
 ---
 
 You can use a `podpreset` object to inject information like secrets, volume

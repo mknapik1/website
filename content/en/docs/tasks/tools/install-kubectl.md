@@ -3,7 +3,6 @@ reviewers:
 - bgrant0607
 - mikedanese
 title: Install and Set Up kubectl
-weight: 10
 ---
 
 {{% capture overview %}}

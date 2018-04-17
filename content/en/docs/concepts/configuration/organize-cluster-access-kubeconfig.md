@@ -1,6 +1,5 @@
 ---
 title: Organizing Cluster Access Using kubeconfig Files
-weight: 60
 ---
 
 {{% capture overview %}}

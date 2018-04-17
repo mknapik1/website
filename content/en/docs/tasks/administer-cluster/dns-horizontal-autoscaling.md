@@ -1,6 +1,5 @@
 ---
 title: Autoscale the DNS Service in a Cluster
-weight: 130
 ---
 
 {{% capture overview %}}

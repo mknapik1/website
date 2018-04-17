@@ -2,7 +2,6 @@
 reviewers:
 - mikedanese
 title: Configuration Best Practices
-weight: 10
 ---
 
 {{% capture overview %}}

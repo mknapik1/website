@@ -4,7 +4,6 @@ reviewers:
 - kevin-wangzefeng
 - bsalamat
 title: Taints and Tolerations
-weight: 40
 ---
 
 Node affinity, described [here](/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature),

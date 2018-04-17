@@ -67,7 +67,6 @@ For the sake of efficiency, limit upstream contributions to a single pull reques
 All localizations must include the following documentation at a minimum:
 
 Description | URLs
-weight: 100
 -----|-----
 Home | [All heading and subheading URLs](https://kubernetes.io/docs/home/)
 Setup | [All heading and subheading URLs](https://kubernetes.io/docs/setup/)

@@ -3,7 +3,6 @@ approvers:
 - bowei
 - zihongz
 title:  Debugging DNS Resolution
-weight: 350
 ---
 
 {{% capture overview %}}

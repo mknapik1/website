@@ -2,7 +2,6 @@
 reviewers:
 - jessfraz
 title: Pod Preset
-weight: 50
 ---
 
 {{% capture overview %}}

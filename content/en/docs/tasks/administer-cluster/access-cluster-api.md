@@ -1,6 +1,5 @@
 ---
 title: Access Clusters Using the Kubernetes API
-weight: 30
 ---
 
 {{% capture overview %}}

@@ -2,7 +2,6 @@
 reviewers:
 - bprashanth
 title: Services
-weight: 10
 ---
 
 Kubernetes [`Pods`](/docs/concepts/workloads/pods/pod/) are mortal. They are born and when they die, they

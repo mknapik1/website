@@ -2,7 +2,6 @@
 title: Install Service Catalog using SC
 reviewers:
 - chenopis
-weight: 80
 ---
 
 {{% capture overview %}}

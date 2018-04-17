@@ -1,6 +1,5 @@
 ---
 title: Configure a Pod to Use a PersistentVolume for Storage
-weight: 70
 ---
 
 {{% capture overview %}}

@@ -1,6 +1,5 @@
 ---
 title: Cloud Providers
-weight: 30
 ---
 
 {{% capture overview %}}

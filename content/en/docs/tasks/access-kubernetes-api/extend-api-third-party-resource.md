@@ -3,7 +3,6 @@ reviewers:
 - enisoc
 - IanLewis
 title: Extend the Kubernetes API with ThirdPartyResources
-weight: 30
 ---
 
 {% assign for_k8s_version="1.7" %}{% include feature-state-deprecated.md %}

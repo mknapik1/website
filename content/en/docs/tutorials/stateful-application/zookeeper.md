@@ -9,7 +9,6 @@ reviewers:
 - smarterclayton
 title: Running ZooKeeper, A CP Distributed System
 content_template: templates/tutorial
-weight: 60
 ---
 
 {{% capture overview %}}

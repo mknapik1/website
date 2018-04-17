@@ -2,7 +2,6 @@
 reviewers:
 - janetkuo
 title: Performing a Rollback on a DaemonSet
-weight: 20
 ---
 
 {{% capture overview %}}

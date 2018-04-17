@@ -2,7 +2,6 @@
 reviewers:
 - janetkuo
 title: Perform Rolling Update Using a Replication Controller
-weight: 90
 ---
 
 * TOC

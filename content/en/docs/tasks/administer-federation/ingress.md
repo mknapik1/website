@@ -1,6 +1,5 @@
 ---
 title: Federated Ingress
-weight: 110
 ---
 
 {{% capture overview %}}

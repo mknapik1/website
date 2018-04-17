@@ -4,7 +4,6 @@ reviewers:
 - erictune
 - lavalamp
 title: Controlling Access to the Kubernetes API
-weight: 10
 ---
 
 Users [access the API](/docs/user-guide/accessing-the-cluster) using `kubectl`,

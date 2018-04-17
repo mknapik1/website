@@ -18,7 +18,6 @@ editor:
   name: "@jbeda"
 creation-date: 2017-08-22
 status: implementable
-weight: 40
 ---
 
 # Kubernetes Enhancement Proposal Process

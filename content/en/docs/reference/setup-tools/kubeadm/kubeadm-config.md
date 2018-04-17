@@ -4,7 +4,6 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm config
-weight: 50
 ---
 {{% capture overview %}}
 Beginning with v1.8.0, kubeadm uploads the configuration of your cluster to a ConfigMap called 

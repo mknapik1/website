@@ -677,7 +677,6 @@ rules:
   resources: ["clusterroles"]
   verbs: ["bind"]
   resourceNames: ["admin","edit","view"]
-weight: 30
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding

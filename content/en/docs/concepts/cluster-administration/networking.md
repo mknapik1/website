@@ -2,7 +2,6 @@
 reviewers:
 - thockin
 title: Cluster Networking
-weight: 50
 ---
 
 Kubernetes approaches networking somewhat differently than Docker does by

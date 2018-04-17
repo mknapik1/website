@@ -1,6 +1,5 @@
 ---
 title: Certificates
-weight: 20
 ---
 
 * TOC

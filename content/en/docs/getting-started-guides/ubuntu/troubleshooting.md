@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting
-weight: 110
 ---
 
 {{% capture overview %}}

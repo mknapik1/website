@@ -67,7 +67,6 @@ DELETE    | delete
 The resource and subresource is determined from the incoming request's path:
 
 Kubelet API  | resource | subresource
-weight: 30
 -------------|----------|------------
 /stats/\*     | nodes    | stats
 /metrics/\*   | nodes    | metrics

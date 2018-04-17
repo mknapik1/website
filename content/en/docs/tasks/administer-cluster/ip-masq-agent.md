@@ -1,6 +1,5 @@
 ---
 title: IP Masquerade Agent User Guide
-weight: 330
 ---
 
 {{% capture overview %}}

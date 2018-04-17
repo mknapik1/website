@@ -1,6 +1,5 @@
 ---
 title: Creating a Documentation Pull Request
-weight: 30
 ---
 
 {{% capture overview %}}

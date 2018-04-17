@@ -3,7 +3,6 @@ reviewers:
 - bprashanth
 - janetkuo
 title: ReplicationController
-weight: 20
 ---
 
 {{% capture overview %}}

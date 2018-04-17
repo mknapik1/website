@@ -1,6 +1,5 @@
 ---
 title: Federated Namespaces
-weight: 130
 ---
 
 {{% capture overview %}}

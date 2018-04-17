@@ -1,6 +1,5 @@
 ---
 title: Create an External Load Balancer
-weight: 80
 ---
 
 

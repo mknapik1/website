@@ -2,7 +2,6 @@
 reviewers:
 - danwent
 title: Use Cilium for NetworkPolicy
-weight: 20
 ---
 
 {{% capture overview %}}

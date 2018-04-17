@@ -3,7 +3,6 @@ title: "Example: Deploying PHP Guestbook application with Redis"
 reviewers:
 - ahmetb
 content_template: templates/tutorial
-weight: 20
 ---
 
 {{% capture overview %}}

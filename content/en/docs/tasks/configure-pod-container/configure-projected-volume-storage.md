@@ -3,7 +3,6 @@ reviewers:
 - jpeeler
 - pmorie
 title: Configure a Pod to Use a Projected Volume for Storage
-weight: 80
 ---
 
 {{% capture overview %}}

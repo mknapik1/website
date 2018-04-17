@@ -269,7 +269,6 @@ spec:
       protocol: TCP
   selector:
     app: rancher
-weight: 170
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress

@@ -1,6 +1,5 @@
 ---
 title: Install Minikube
-weight: 20
 ---
 
 {{% capture overview %}}

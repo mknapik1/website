@@ -2,7 +2,6 @@
 title: Using Sysctls in a Kubernetes Cluster
 reviewers:
 - sttts
-weight: 60
 ---
 
 {{% capture overview %}}

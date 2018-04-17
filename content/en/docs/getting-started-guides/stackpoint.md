@@ -2,7 +2,6 @@
 reviewers:
 - baldwinspc
 title: Running Kubernetes on Multiple Clouds with Stackpoint.io
-weight: 70
 ---
 
 * TOC

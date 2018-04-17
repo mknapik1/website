@@ -2,7 +2,6 @@
 title: Install Service Catalog using Helm
 reviewers:
 - chenopis
-weight: 70
 ---
 
 {{% capture overview %}}

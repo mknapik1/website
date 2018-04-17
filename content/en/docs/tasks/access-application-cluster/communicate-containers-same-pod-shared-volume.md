@@ -1,6 +1,5 @@
 ---
 title: Communicate Between Containers in the Same Pod Using a Shared Volume
-weight: 110
 ---
 
 {{% capture overview %}}

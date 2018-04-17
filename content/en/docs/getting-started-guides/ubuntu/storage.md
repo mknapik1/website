@@ -1,6 +1,5 @@
 ---
 title: Storage
-weight: 100
 ---
 
 {{% capture overview %}}

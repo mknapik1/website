@@ -1,6 +1,5 @@
 ---
 title: Federation
-weight: 90
 ---
 
 {{% capture overview %}}

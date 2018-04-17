@@ -115,7 +115,6 @@ spec:
       - sleep
       - "3600"
     name: busybox
-weight: 20
 ---
 apiVersion: v1
 kind: Pod

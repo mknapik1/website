@@ -1,5 +1,5 @@
 ---
 title: "Stateless Applications"
-weight: 80
+weight: 90
 ---
 

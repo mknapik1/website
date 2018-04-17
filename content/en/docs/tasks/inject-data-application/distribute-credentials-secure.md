@@ -1,6 +1,5 @@
 ---
 title: Distribute Credentials Securely Using Secrets
-weight: 50
 ---
 
 {{% capture overview %}}

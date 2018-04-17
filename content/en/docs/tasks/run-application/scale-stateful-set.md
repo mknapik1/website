@@ -8,7 +8,6 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Scale a StatefulSet
-weight: 60
 ---
 
 {{% capture overview %}}

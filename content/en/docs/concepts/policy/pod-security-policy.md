@@ -3,7 +3,6 @@ reviewers:
 - pweil-
 - tallclair
 title: Pod Security Policies
-weight: 20
 ---
 
 {% include feature-state-beta.md %}

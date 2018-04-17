@@ -3,7 +3,6 @@ title: "Example: Deploying WordPress and MySQL with Persistent Volumes"
 reviewers:
 - ahmetb
 content_template: templates/tutorial
-weight: 40
 ---
 
 {{% capture overview %}}

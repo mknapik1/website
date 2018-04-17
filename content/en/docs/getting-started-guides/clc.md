@@ -1,6 +1,5 @@
 ---
 title: Running Kubernetes on CenturyLink Cloud
-weight: 40
 ---
 
 * TOC

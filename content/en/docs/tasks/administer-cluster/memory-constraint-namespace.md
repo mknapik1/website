@@ -1,6 +1,5 @@
 ---
 title: Configure Minimum and Maximum Memory Constraints for a Namespace
-weight: 30
 ---
 
 

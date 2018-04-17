@@ -1,6 +1,5 @@
 ---
 title: Configure Memory and CPU Quotas for a Namespace
-weight: 60
 ---
 
 

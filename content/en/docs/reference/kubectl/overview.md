@@ -143,7 +143,6 @@ kubectl [command] [TYPE] [NAME] -o=<output_format>
 Depending on the `kubectl` operation, the following output formats are supported:
 
 Output format | Description
-weight: 10
 --------------| -----------
 `-o=custom-columns=<spec>` | Print a table using a comma separated list of [custom columns](#custom-columns).
 `-o=custom-columns-file=<filename>` | Print a table using the [custom columns](#custom-columns) template in the `<filename>` file.

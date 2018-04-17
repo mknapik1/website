@@ -4,7 +4,6 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm upgrade
-weight: 40
 ---
 {{% capture overview %}}
 `kubeadm upgrade` is a user-friendly command that wraps complex upgrading logic behind one command, with support

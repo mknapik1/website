@@ -5,7 +5,6 @@ reviewers:
 - deads2k
 - liggitt
 title: Webhook Mode
-weight: 50
 ---
 
 {{% capture overview %}}

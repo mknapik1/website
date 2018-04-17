@@ -1,5 +1,5 @@
 ---
-title: "Admin"
-weight: 30
+title: "Custom Solutions"
+weight: 100
 ---
 

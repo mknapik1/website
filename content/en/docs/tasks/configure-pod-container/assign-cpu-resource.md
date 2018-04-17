@@ -1,6 +1,5 @@
 ---
 title: Assign CPU Resources to Containers and Pods
-weight: 20
 ---
 
 {{% capture overview %}}

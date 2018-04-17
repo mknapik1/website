@@ -1,6 +1,5 @@
 ---
 title: Logging
-weight: 160
 ---
 
 {{% capture overview %}}

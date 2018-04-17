@@ -1,5 +1,5 @@
 ---
-title: "Getting Started Guides"
-weight: 20
+title: "Independent Solutions"
+weight: 50
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Change the default StorageClass
-weight: 280
 ---
 
 {{% capture overview %}}

@@ -1,6 +1,5 @@
 ---
 title: Proxies in Kubernetes
-weight: 130
 ---
 
 {{% capture overview %}}

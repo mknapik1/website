@@ -110,12 +110,12 @@ type mover struct {
 
 	projectRoot string
 
-	addedFiles map[string]bool
-	tocDirs    map[string]bool
+	//addedFiles map[string]bool
+	tocDirs map[string]tocDir
 }
 
 func newMigrator(root string) *mover {
-	return &mover{projectRoot: root, addedFiles: make(map[string]bool), tocDirs: make(map[string]bool)}
+	return &mover{projectRoot: root, tocDirs: make(map[string]tocDir)}
 }
 
 func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
@@ -241,7 +241,6 @@ func (m *mover) contentMigrate_CreateSections() error {
 	log.Println("Start Create Sections Step …")
 
 	// Create sections from the root nodes (the Toc) in /data
-	//sectionsData := make(map[string]SectionFromData)
 
 	mm, err := m.readDataDir("", func() interface{} { return &SectionFromData{} })
 	if err != nil {
@@ -255,14 +254,34 @@ func (m *mover) contentMigrate_CreateSections() error {
 			switch v := tocEntry.(type) {
 			case string:
 			case map[interface{}]interface{}:
-				if err := m.handleTocEntryRecursive(i, cast.ToStringMap(v)); err != nil {
+				if err := m.handleTocEntryRecursive(i, 1, cast.ToStringMap(v)); err != nil {
 					return err
 				}
 			default:
 				panic("unknown type")
 			}
 		}
+	}
 
+	for _, v := range m.tocDirs {
+		dir := v.dir
+		relFilename := filepath.Join("content", "en", dir, "_index.md")
+		relFilenameHTML := filepath.Join("content", "en", dir, "_index.html")
+
+		// Create a section file if not already there.
+		if !m.checkRelFileExists(relFilename) && !m.checkRelFileExists(relFilenameHTML) {
+			filename := filepath.Join(m.absFilename(relFilename))
+			content := fmt.Sprintf(`---
+title: %q
+weight: %d
+---
+
+`, v.title, v.weight)
+
+			if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
+				return err
+			}
+		}
 	}
 
 	// Mark any section not in ToC with a flag
@@ -275,7 +294,7 @@ func (m *mover) contentMigrate_CreateSections() error {
 				dir = strings.TrimPrefix(dir, string(os.PathSeparator)+"en"+string(os.PathSeparator))
 				dir = strings.TrimSuffix(dir, string(os.PathSeparator))
 
-				if !m.tocDirs[dir] {
+				if _, ok := m.tocDirs[dir]; !ok {
 					show := false
 					for k, _ := range m.tocDirs {
 						if strings.HasPrefix(k, dir) {
@@ -344,16 +363,19 @@ type SectionFromData struct {
 	Toc         []interface{} `yaml:"toc"`
 }
 
-func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) error {
+type tocDir struct {
+	title  string
+	dir    string
+	weight int
+}
+
+func (m *mover) handleTocEntryRecursive(sidx, level int, entry map[string]interface{}) error {
+
 	title := cast.ToString(entry["title"])
-	//landingPage := cast.ToString(entry["landing_page"])
-
-	var sectionContentPageWritten bool
-
-	sectionWeight := (sidx + 1) * 10
 
 	if sect, found := entry["section"]; found {
 		for i, e := range sect.([]interface{}) {
+			sectionWeight := (sidx + 1 + i) * 10
 
 			switch v := e.(type) {
 			case string:
@@ -371,56 +393,21 @@ func (m *mover) handleTocEntryRecursive(sidx int, entry map[string]interface{}) 
 				}
 
 				dir := filepath.Dir(v)
-				m.tocDirs[dir] = true
+				_, found := m.tocDirs[dir]
 
-				// 1. Create a section content file if not already written
-				if !sectionContentPageWritten {
-					sectionContentPageWritten = true
-					// TODO(bep) cn?
-					force := false
-					relFilename := filepath.Join("content", "en", dir, "_index.md")
-					relFilenameHTML := filepath.Join("content", "en", dir, "_index.html")
-					if m.addedFiles[relFilename] {
-						log.Printf("WARNING: %q section already added. Ambigous?", relFilename)
-						// Use the title from the last owning folder for now.
-						paths := strings.Split(filepath.Dir(relFilename), string(os.PathSeparator))
-						title = paths[len(paths)-1]
-						title = strings.Replace(title, "-", " ", -1)
-						title = strings.Title(title)
-						force = true
+				if !found {
+					m.tocDirs[dir] = tocDir{
+						weight: sectionWeight,
+						title:  title,
+						dir:    dir,
 					}
-
-					if force || (!m.checkRelFileExists(relFilename) && !m.checkRelFileExists(relFilenameHTML)) {
-						m.addedFiles[relFilename] = true
-						filename := filepath.Join(m.absFilename(relFilename))
-						content := fmt.Sprintf(`---
-title: %q
-weight: %d
----
-
-`, title, sectionWeight)
-
-						if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
-							return err
-						}
-					}
-
-				}
-
-				relFilename := filepath.Join("content", "en", v)
-				if !m.checkRelFileExists(relFilename) {
-					log.Println("content file in toc does not exist:", relFilename)
-					continue
-				}
-				// 2. Set a weight in the relevant content file to get proper ordering.
-				if err := m.replaceInFileRel(relFilename, addWeight((i+1)*10)); err != nil {
-					return err
 				}
 
 			case map[interface{}]interface{}:
 				mm := cast.ToStringMap(v)
 
-				if err := m.handleTocEntryRecursive(i, mm); err != nil {
+				level = level + 1
+				if err := m.handleTocEntryRecursive(i, level, mm); err != nil {
 					return err
 				}
 			}

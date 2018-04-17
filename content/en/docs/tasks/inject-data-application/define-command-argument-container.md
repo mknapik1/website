@@ -1,6 +1,5 @@
 ---
 title: Define a Command and Arguments for a Container
-weight: 10
 ---
 
 {{% capture overview %}}
