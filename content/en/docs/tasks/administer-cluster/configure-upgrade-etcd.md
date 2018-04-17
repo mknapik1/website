@@ -6,7 +6,7 @@ title: Operating etcd clusters for Kubernetes
 weight: 80
 ---
 
-{% glossary_definition term_id="etcd" length="all" prepend="etcd is a "%}
+{{< glossary_definition term_id="etcd" length="all" prepend="etcd is a ">}}
 
 <!-- TODO(mml): Write this doc.
 

@@ -14,10 +14,10 @@ See the [identifiers design doc](https://git.k8s.io/community/contributors/desig
 
 ## Names
 
-{% glossary_definition term_id="name" length="all" %}
+{{< glossary_definition term_id="name" length="all" >}}
 
 By convention, the names of Kubernetes resources should be up to maximum length of 253 characters and consist of lower case alphanumeric characters, `-`, and `.`, but certain resources have more specific restrictions.
 
 ## UIDs
 
-{% glossary_definition term_id="uid" length="all" %}
+{{< glossary_definition term_id="uid" length="all" >}}

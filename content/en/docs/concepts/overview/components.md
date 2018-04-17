@@ -23,19 +23,19 @@ the same machine, and do not run user containers on this machine. See
 
 ### kube-apiserver
 
-{% glossary_definition term_id="kube-apiserver" length="all" %}
+{{< glossary_definition term_id="kube-apiserver" length="all" >}}
 
 ### etcd
 
-{% glossary_definition term_id="etcd" length="all" %}
+{{< glossary_definition term_id="etcd" length="all" >}}
 
 ### kube-scheduler
 
-{% glossary_definition term_id="kube-scheduler" length="all" %}
+{{< glossary_definition term_id="kube-scheduler" length="all" >}}
 
 ### kube-controller-manager
 
-{% glossary_definition term_id="kube-controller-manager" length="all" %}
+{{< glossary_definition term_id="kube-controller-manager" length="all" >}}
 
 These controllers include:
 
@@ -66,7 +66,7 @@ Node components run on every node, maintaining running pods and providing the Ku
 
 ### kubelet
 
-{% glossary_definition term_id="kubelet" length="all" %}
+{{< glossary_definition term_id="kubelet" length="all" >}}
 
 ### kube-proxy
 

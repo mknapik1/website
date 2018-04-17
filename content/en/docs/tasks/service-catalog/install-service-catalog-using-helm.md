@@ -6,7 +6,7 @@ weight: 70
 ---
 
 {{% capture overview %}}
-{% glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" %}  
+{{< glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" >}}  
 
 Use [Helm](https://helm.sh/) to install Service Catalog on your Kubernetes cluster. Up to date information on this process can be found at the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog/blob/master/docs/install.md) repo.
 

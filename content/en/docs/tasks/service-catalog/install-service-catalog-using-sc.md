@@ -6,7 +6,7 @@ weight: 80
 ---
 
 {{% capture overview %}}
-{% glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" %}
+{{< glossary_definition term_id="service-catalog" length="all" prepend="Service Catalog is" >}}
 
 Use the [Service Catalog Installer](https://github.com/GoogleCloudPlatform/k8s-service-catalog#installation) tool to easily install or uninstall Service Catalog on your Kubernetes cluster. This CLI tool is installed as `sc` in your local environment.
 

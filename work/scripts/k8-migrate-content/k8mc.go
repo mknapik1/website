@@ -489,6 +489,12 @@ func (m *mover) contentMigrate_Replacements() error {
 			return s, nil
 		},
 
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% glossary_definition(.*?)%}`)
+			return re.ReplaceAllString(s, `{{< glossary_definition$1>}}`), nil
+			return s, nil
+		},
+
 		// Code includes
 		// TODO(bep) ghlink looks superflous?
 		// {% include code.html file="frontend/frontend.conf" ghlink="/docs/tasks/access-application-cluster/frontend/frontend.conf" %}
