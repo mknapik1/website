@@ -1,10 +1,9 @@
 {{ define "content" }}
-    {{/* .Content TODO(bep) */}}
     {{ if not .Params.notitle }}
 	 <h1>{{ .Title }}</h1>
     {{ end }}
     {{ template "docs-portal-user-journey" . }}
-    {{ partial "docs/browse.html" .Parent }}
+    {{ partial "docs/browse.html" (where .Parent.Sections ".Params.main_menu" true) }}
 {{ end }}
 
 {{ define "docs-portal-user-journey" }}

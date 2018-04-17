@@ -4,10 +4,8 @@
     <a name="browsedocs">Browse Docs</a>
   </div>
 <div class="browsedocs">
-{{/* assign sections = "setup,concepts,tasks,tutorials,reference,docs-home" | split: "," TODO(bep) */}}
+{{ range . }}
 {{ template "docs-browse-section"  . }}
-{{ range .Sections }}
-{{ template "docs-browse-section"  .}}
 {{ end }}
 </div><!-- end browsedocs -->
 
@@ -17,19 +15,14 @@
   <div class="docstitle">
     <h3><a href="{{ .RelPermalink }}">{{ .Params.bigheader | default .Title }}</a></h3>
   </div>
+  {{ $pages := .Pages | union .Sections }}
+  {{ if ge (len $pages) 1 }}
   <div class="pages">
-  {{ $num_pages := len .Pages }}
+  {{ $num_pages := len $pages }}
   {{ if gt $num_pages 0 }}
   {{ $column_size :=  (div $num_pages 3) | math.Ceil | int | default 1 }}
-  {{  range $i, $e := .Pages  }}
+  {{  range $i, $e := $pages.ByWeight }}
     {{ $offset := mod $i $column_size |  add 1 }}
-    {{/* TODO(bep) 
-    {{ if .Params.display_browse_numbers }}
-      {{ assign browse_number = i | prepend: "0" | slice: -2, 2 | append: " - " }}
-    {{ else }}
-      {{ assign browse_number = "" }}
-    {{ end }}
-    */}}
     {{ if eq $offset 1 }}
       <div class="browsecolumn">
     {{ end }}
@@ -40,5 +33,6 @@
   {{ end }}
   {{ end }}
   </div><!-- end pages -->
+  {{ end }}
 </div><!-- end browsesection -->
 {{ end }}
