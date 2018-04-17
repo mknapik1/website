@@ -1,5 +1,6 @@
 ---
 title: Change the default StorageClass
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -87,4 +88,4 @@ for details about addon manager and how to disable individual addons.
 * Learn more about [StorageClasses](/docs/concepts/storage/persistent-volumes/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

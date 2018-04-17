@@ -5,6 +5,7 @@ reviewers:
 - lavalamp
 - cheftako
 - chenopis
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -210,6 +211,6 @@ the nodes chosen for a pod.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+
 
 

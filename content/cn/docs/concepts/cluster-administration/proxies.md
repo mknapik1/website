@@ -1,5 +1,6 @@
 ---
 title: Kubernetes 中的代理
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -60,4 +61,4 @@ Kubernetes 用户通常只需要关心前两种类型的代理，集群管理员
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

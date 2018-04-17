@@ -2,6 +2,7 @@
 approvers:
 - janetkuo
 title: 对 DaemonSet 执行回滚
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -135,4 +136,4 @@ NAME                               CONTROLLER                     REVISION   AGE
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

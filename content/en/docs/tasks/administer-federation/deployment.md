@@ -1,5 +1,6 @@
 ---
 title: Federated Deployment
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -101,4 +102,4 @@ kubectl --context=federation-cluster delete deployment mydep
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

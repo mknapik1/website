@@ -1,5 +1,6 @@
 ---
 title: Access Clusters Using the Kubernetes API
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -211,4 +212,4 @@ securely with the API server.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -269,6 +269,7 @@ spec:
       protocol: TCP
   selector:
     app: rancher
+content_template: templates/task
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -357,4 +358,4 @@ You can remove Rancher from your cluster using kubectl. Deleting constructs in K
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

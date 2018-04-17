@@ -6,6 +6,7 @@ redirect_from:
 - "/docs/user-guide/garbage-collection/"
 - "/docs/user-guide/garbage-collection.html"
 
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -177,4 +178,4 @@ kubectl delete replicaset my-repset --cascade=false
 {{% /capture %}}
 
 
-{% include templates/concept.md %}
+

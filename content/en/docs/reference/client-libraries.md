@@ -2,6 +2,7 @@
 title: Client Libraries
 approvers:
 - ahmetb
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -63,4 +64,4 @@ their authors, not the Kubernetes team.
 | Elixir               | [github.com/obmarg/kazan](https://github.com/obmarg/kazan/)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

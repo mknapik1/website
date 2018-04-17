@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm init
+content_template: templates/concept
 ---
 {{% capture overview %}}
 {{% /capture %}}
@@ -454,4 +455,4 @@ provisioned). For details, see the [kubeadm join](kubeadm-join.md).
 * [kubeadm reset](kubeadm-reset.md) to revert any changes made to this host by `kubeadm init` or `kubeadm join`
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

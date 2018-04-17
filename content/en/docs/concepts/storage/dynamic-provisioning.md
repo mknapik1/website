@@ -2,6 +2,7 @@
 reviewers:
 - saad-ali
 title: Dynamic Volume Provisioning
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -121,4 +122,4 @@ be created.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

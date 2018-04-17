@@ -2,6 +2,7 @@
 title: Install Service Catalog using SC
 reviewers:
 - chenopis
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -74,4 +75,4 @@ sc uninstall
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

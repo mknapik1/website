@@ -1,5 +1,6 @@
 ---
 title: Validation - End-to-end Testing
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -164,5 +165,5 @@ When an upgrade is available, upgrade your deployment:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

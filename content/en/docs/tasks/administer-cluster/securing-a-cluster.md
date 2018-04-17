@@ -5,6 +5,7 @@ reviewers:
 - ericchiang
 - destijl
 title: Securing a Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -223,4 +224,4 @@ page for more on how to report vulnerabilities.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

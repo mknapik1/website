@@ -2,6 +2,7 @@
 reviewers:
 - janetkuo
 title: Perform a Rolling Update on a DaemonSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -203,4 +204,4 @@ progress.
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

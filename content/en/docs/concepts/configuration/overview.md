@@ -2,6 +2,7 @@
 reviewers:
 - mikedanese
 title: Configuration Best Practices
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -89,4 +90,4 @@ A desired state of an object is described by a Deployment, and if changes to tha
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

@@ -4,6 +4,7 @@ reviewers:
 - lavalamp
 - cheftako
 - chenopis
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -53,5 +54,5 @@ Alternatively, you can use an existing 3rd party solution, such as [apiserver-bu
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

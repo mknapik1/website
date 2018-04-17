@@ -1,5 +1,6 @@
 ---
 title: 配置对多集群的访问
+content_template: templates/task
 ---
 
 
@@ -313,5 +314,5 @@ export KUBECONFIG=$KUBECONFIG_SAVED
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

@@ -36,7 +36,7 @@ variables:</p>
 <p>Then include templates/task.md like this:</p>
 
 {% raw %}<pre>...
-{% include templates/task.md %}</pre>{% endraw %}
+</pre>{% endraw %}
 
 <p>In the <code>steps</code> section, use <code>##</code> to start with a level-two heading. For subheadings,
 use <code>###</code> and <code>####</code> as needed. Similarly, if you choose to have a <code>discussion</code> section,
@@ -76,7 +76,7 @@ Here's an interesting thing to know about the steps you just did.
 * See this [related task](...).
 {{% /capture %}}
 
-{% include templates/task.md %}</pre>
+</pre>
 {% endraw %}
 
 <p>Here's an example of a published topic that uses the task template:</p>
@@ -188,7 +188,7 @@ variables:</p>
 <p>Then include templates/concept.md like this:</p>
 
 {% raw %}<pre>...
-{% include templates/concept.md %}</pre>{% endraw %}
+</pre>{% endraw %}
 
 <p>In the <code>body</code> section, use <code>##</code> to start with a level-two heading. For subheadings,
 use <code>###</code> and <code>####</code> as needed.
@@ -199,6 +199,8 @@ use <code>###</code> and <code>####</code> as needed.
 <pre>---
 title: Understanding this Thing
 content_template: templates/tutorial
+content_template: templates/concept
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -220,7 +222,7 @@ To use ...
 * See this [related task](...).
 {{% /capture %}}
 
-{% include templates/concept.md %}</pre>
+</pre>
 {% endraw %}
 
 <p>Here's an example of a published topic that uses the concept template:</p>

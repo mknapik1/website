@@ -3,6 +3,7 @@ approvers:
 - bowei
 - zihongz
 title:  Debugging DNS Resolution
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -194,4 +195,3 @@ for more details on Cluster Federation and multi-site support.
 
 {{% /capture %}}
 
-{% include templates/task.md %}

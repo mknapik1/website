@@ -1,5 +1,6 @@
 ---
 title: Kubernetes on Ubuntu
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -73,4 +74,4 @@ We're normally following the following Slack channels:
 and we monitor the Kubernetes mailing lists.
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

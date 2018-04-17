@@ -1,5 +1,6 @@
 ---
 title: Pull an Image from a Private Registry
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -132,4 +133,4 @@ Create a Pod that uses your Secret, and verify that the Pod is running:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

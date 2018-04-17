@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm token
+content_template: templates/concept
 ---
 {{% capture overview %}}
 
@@ -33,4 +34,4 @@ such a token and also to create and manage new ones.
 * [kubeadm join](kubeadm-join.md) to bootstrap a Kubernetes worker node and join it to the cluster
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

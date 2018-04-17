@@ -1,5 +1,6 @@
 ---
 title: Federated Namespaces
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -84,4 +85,4 @@ We intend to fix this in the future.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

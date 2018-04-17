@@ -1,5 +1,6 @@
 ---
 title: Networking
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -59,4 +60,4 @@ how large your cluster will potentially scale.  Class A IP ranges with /24 are
 a good option.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

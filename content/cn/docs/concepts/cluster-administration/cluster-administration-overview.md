@@ -4,6 +4,7 @@ approvers:
 - lavalamp
 
 title: 集群管理概述
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -83,4 +84,4 @@ title: 集群管理概述
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

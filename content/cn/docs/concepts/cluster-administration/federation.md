@@ -1,5 +1,6 @@
 ---
 title: 联邦
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -112,5 +113,5 @@ Kubernetes集群数量选择也许是一个相对静止的选择，因为对其�
 * 查看[Kubecon2016浅谈联邦](https://www.youtube.com/watch?v=pq9lbkmxpS8)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+
 

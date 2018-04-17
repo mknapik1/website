@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm reset 
+content_template: templates/concept
 ---
 {{% capture overview %}}
 {{% /capture %}}
@@ -29,4 +30,3 @@ See the [etcd documentation](https://github.com/coreos/etcd/tree/master/etcdctl)
 * [kubeadm join](kubeadm-join.md) to bootstrap a Kubernetes worker node and join it to the cluster
 {{% /capture %}}
 
-{% include templates/concept.md %}

@@ -1,5 +1,6 @@
 ---
 title: Federated Jobs
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -100,4 +101,4 @@ You must delete the underlying jobs manually.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

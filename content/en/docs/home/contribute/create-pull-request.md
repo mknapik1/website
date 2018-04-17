@@ -1,5 +1,6 @@
 ---
 title: Creating a Documentation Pull Request
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -105,4 +106,4 @@ Once your pull request is created, a Kubernetes reviewer will take responsibilit
 * Learn about [staging your changes](/docs/home/contribute/stage-documentation-changes/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

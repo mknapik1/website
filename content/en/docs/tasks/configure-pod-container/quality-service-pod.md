@@ -1,5 +1,6 @@
 ---
 title: Configure Quality of Service for Pods
+content_template: templates/task
 ---
 
 
@@ -262,6 +263,6 @@ kubectl delete namespace qos-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

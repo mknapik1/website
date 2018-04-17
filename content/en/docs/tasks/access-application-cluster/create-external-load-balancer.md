@@ -1,5 +1,6 @@
 ---
 title: Create an External Load Balancer
+content_template: templates/task
 ---
 
 
@@ -215,4 +216,4 @@ Internal pod to pod traffic should behave similar to ClusterIP services, with eq
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: Developing and debugging services locally
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -57,4 +58,4 @@ For further reading, visit the [Telepresence website](https://www.telepresence.i
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -4,6 +4,7 @@ reviewers:
 - foxish
 - davidopp
 title: Disruptions
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -266,4 +267,4 @@ the nodes in your cluster, such as a node or system software upgrade, here are s
 {{% /capture %}}
 
 
-{% include templates/concept.md %}
+

@@ -2,6 +2,7 @@
 reviewers:
 - murali-reddy
 title: Use Kube-router for NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -21,4 +22,4 @@ The Kube-router Addon comes with a Network Policy Controller that watches Kubern
 Once you have installed the Kube-router addon, you can follow the [Declare Network Policy](/docs/tasks/administer-cluster/declare-network-policy/) to try out Kubernetes NetworkPolicy.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -8,6 +8,7 @@ approvers:
 - kow3ns
 - smarterclayton
 title: 弹缩StatefulSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -86,4 +87,4 @@ StatefulSet的扩容/缩容操作. 一些分布式数据库在节点加入和同
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

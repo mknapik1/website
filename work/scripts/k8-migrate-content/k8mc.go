@@ -489,6 +489,16 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	// Handle the concept includes
+	if err := m.replaceStringWithFrontMatter("{% include templates/concept.md %}", "content_template", "templates/concept"); err != nil {
+		return err
+	}
+
+	// Handle the task includes
+	if err := m.replaceStringWithFrontMatter("{% include templates/task.md %}", "content_template", "templates/task"); err != nil {
+		return err
+	}
+
 	return nil
 
 }

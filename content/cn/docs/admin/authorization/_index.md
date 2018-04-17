@@ -117,6 +117,7 @@ kubectl create --v=8 -f -  << __EOF__
 }
 __EOF__
 
+content_template: templates/concept
 --- snip lots of output ---
 
 I0913 08:12:31.362873   27425 request.go:908] Response Body: {"kind":"SubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"creationTimestamp":null},"spec":{"resourceAttributes":{"namespace":"kittensandponies","verb":"GET","group":"unicorn.example.org","resource":"pods"},"user":"jane","group":["group1","group2"],"extra":{"scopes":["openid","profile"]}},"status":{"allowed":true}}
@@ -152,4 +153,4 @@ subjectaccessreview "" created
 *
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

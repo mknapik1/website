@@ -2,6 +2,7 @@
 reviewers:
 - chrismarino
 title: Romana for NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -38,4 +39,4 @@ Once your have installed Romana, you can follow the [Declare Network Policy](/do
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

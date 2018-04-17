@@ -1,5 +1,6 @@
 ---
 title: Configure a Pod to Use a Volume for Storage
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -108,4 +109,4 @@ details such as mounting and unmounting the devices on the nodes. See
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

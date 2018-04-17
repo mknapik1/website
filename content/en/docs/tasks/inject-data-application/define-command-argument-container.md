@@ -1,5 +1,6 @@
 ---
 title: Define a Command and Arguments for a Container
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -138,4 +139,4 @@ Here are some examples:
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

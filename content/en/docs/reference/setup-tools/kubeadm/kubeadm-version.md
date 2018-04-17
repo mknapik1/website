@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm version 
+content_template: templates/concept
 ---
 {{% capture overview %}}
 {{% /capture %}}
@@ -12,4 +13,4 @@ title: kubeadm version
 {% include_relative generated/kubeadm_version.md %}
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

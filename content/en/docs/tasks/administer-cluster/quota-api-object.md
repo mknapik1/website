@@ -1,5 +1,6 @@
 ---
 title: Configure Quotas for API Objects
+content_template: templates/task
 ---
 
 
@@ -169,6 +170,6 @@ kubectl delete namespace quota-object-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

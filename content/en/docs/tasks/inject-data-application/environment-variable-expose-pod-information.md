@@ -1,5 +1,6 @@
 ---
 title: Expose Pod Information to Containers Through Environment Variables
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -167,5 +168,5 @@ The output shows the values of selected environment variables:
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 

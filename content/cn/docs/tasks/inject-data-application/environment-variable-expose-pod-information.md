@@ -1,5 +1,6 @@
 ---
 title: 通过环境变量将Pod信息呈现给容器
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -151,4 +152,4 @@ kubectl logs dapi-envars-resourcefieldref
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

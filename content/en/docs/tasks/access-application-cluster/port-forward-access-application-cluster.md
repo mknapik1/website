@@ -1,5 +1,6 @@
 ---
 title: Use Port Forwarding to Access Applications in a Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -137,4 +138,4 @@ Learn more about [kubectl port-forward](/docs/user-guide/kubectl/{{page.version}
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

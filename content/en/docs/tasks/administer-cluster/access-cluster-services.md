@@ -1,5 +1,6 @@
 ---
 title: Access Services Running on Clusters
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -109,4 +110,4 @@ You may be able to put an apiserver proxy URL into the address bar of a browser.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

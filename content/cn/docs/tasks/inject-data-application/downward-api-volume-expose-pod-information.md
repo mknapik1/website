@@ -1,5 +1,6 @@
 ---
 title: 通过文件将Pod信息呈现给容器
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -208,4 +209,4 @@ kubectl exec -it kubernetes-downwardapi-volume-example-2 -- sh
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

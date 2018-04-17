@@ -1,5 +1,6 @@
 ---
 title: Change the Reclaim Policy of a PersistentVolume
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -77,4 +78,4 @@ the corresponding `PersistentVolume` is not be deleted. Instead, it is moved to 
 * See the `persistentVolumeReclaimPolicy` field of [PersistentVolumeSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaim-v1-core).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

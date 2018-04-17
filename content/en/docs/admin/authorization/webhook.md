@@ -5,6 +5,7 @@ reviewers:
 - deads2k
 - liggitt
 title: Webhook Mode
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -147,4 +148,4 @@ For further documentation refer to the authorization.v1beta1 API objects and
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

@@ -2,6 +2,7 @@
 approvers:
 - jessfraz
 title: Pod Preset
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -68,4 +69,4 @@ Kubernetes 提供了准入控制器 (`PodPreset`)，该控制器被启用时，�
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: 给容器分配非透明整型资源
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -131,7 +132,7 @@ kubectl delete pod oir-demo
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 
 

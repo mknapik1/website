@@ -1,5 +1,6 @@
 ---
 title: Managing Compute Resources for Containers
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -294,5 +295,5 @@ Kubernetes 通过支持通过多级别的 [服务质量](http://issue.k8s.io/168
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+
 

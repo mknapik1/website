@@ -1,5 +1,6 @@
 ---
 title: Use an HTTP Proxy to Access the Kubernetes API
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -81,4 +82,4 @@ Get a list of pods:
 Learn more about [kubectl proxy](/docs/reference/generated/kubectl/kubectl-commands#proxy).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

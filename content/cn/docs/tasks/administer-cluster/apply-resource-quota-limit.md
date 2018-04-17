@@ -374,6 +374,7 @@ Namespace:          quota-scopes
 Scopes:             NotBestEffort
  * Matches all pods that do not have best effort quality of service.
 Resource            Used  Hard
+content_template: templates/task
 --------            ----  ----
 limits.cpu          400m  2
 limits.memory       1Gi   2Gi
@@ -408,4 +409,4 @@ Scopes 提供了一种来对任何配额文档追踪的资源集合进行细分�
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -115,6 +115,7 @@ spec:
       - sleep
       - "3600"
     name: busybox
+content_template: templates/concept
 ---
 apiVersion: v1
 kind: Pod
@@ -251,4 +252,4 @@ For guidance on administering DNS configurations, check
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

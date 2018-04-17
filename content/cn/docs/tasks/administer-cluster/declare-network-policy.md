@@ -3,6 +3,7 @@ approvers:
 - caseydavenport
 - danwinship
 title: 声明网络策略
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -144,4 +145,4 @@ Connecting to nginx (10.100.0.16:80)
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

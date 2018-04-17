@@ -1,5 +1,6 @@
 ---
 title: Decommissioning
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -76,4 +77,4 @@ $
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

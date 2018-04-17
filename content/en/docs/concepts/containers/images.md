@@ -3,6 +3,7 @@ reviewers:
 - erictune
 - thockin
 title: Images
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -323,4 +324,4 @@ common use cases and suggested solutions.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

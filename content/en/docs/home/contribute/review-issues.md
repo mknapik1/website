@@ -1,5 +1,6 @@
 ---
 title: Reviewing Documentation Issues
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -99,4 +100,4 @@ If this is a documentation issue, please re-open this issue.
 * Learn about [staging your changes](/docs/home/contribute/stage-documentation-changes/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

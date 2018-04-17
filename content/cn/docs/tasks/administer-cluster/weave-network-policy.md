@@ -68,6 +68,7 @@ spec:
   containers:
   - name: pod1
     image: nginx
+content_template: templates/task
 ---
 kind: Pod
 apiVersion: v1
@@ -115,4 +116,4 @@ Weave 网络插件安装完成之后，您可以通过 [NetworkPolicy 入门指�
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

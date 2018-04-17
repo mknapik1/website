@@ -3,6 +3,7 @@ approvers:
 - bowei
 - zihongz
 title: 在 Kubernetes 中配置私有 DNS 和上游域名服务器
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -158,4 +159,4 @@ metadata:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

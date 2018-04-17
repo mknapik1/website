@@ -1,5 +1,6 @@
 ---
 title: Operational Considerations
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -162,4 +163,4 @@ juju run-action kubernetes-worker/0 registry delete=true ingress=true
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

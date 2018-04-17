@@ -2,6 +2,7 @@
 reviewers:
 - danwent
 title: Use Cilium for NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -89,4 +90,4 @@ Have fun, and if you have questions, contact us using the
 [Cilium Slack Channel](https://cilium.herokuapp.com/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

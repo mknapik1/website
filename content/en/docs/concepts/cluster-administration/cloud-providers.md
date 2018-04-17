@@ -1,5 +1,6 @@
 ---
 title: Cloud Providers
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -265,4 +266,4 @@ Kubernetes network plugin and should appear in the `[Router]` section of the
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

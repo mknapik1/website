@@ -1,5 +1,6 @@
 ---
 title: Local Kubernetes development with LXD
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -66,5 +67,5 @@ Or if you've already run this once it'll create a new config file as shown in th
     
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

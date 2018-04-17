@@ -3,6 +3,7 @@ reviewers:
 - bprashanth
 - janetkuo
 title: ReplicationController
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -277,4 +278,4 @@ Read [Run Stateless AP Replication Controller](/docs/tutorials/stateless-applica
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

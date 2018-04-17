@@ -3,6 +3,7 @@ title: Migrate a ThirdPartyResource to CustomResourceDefinition
 reviewers:
 - enisoc
 - deads2k
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -166,4 +167,4 @@ you **on a best-effort basis**.
 * See [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

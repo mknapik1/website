@@ -5,6 +5,7 @@ reviewers:
 - roberthbailey
 - jbeda
 title: Upgrading/downgrading kubeadm clusters between v1.8 to v1.9
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -260,4 +261,4 @@ You can use `kubeadm upgrade` to change a running cluster with `x.x.x --> x.x.x`
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

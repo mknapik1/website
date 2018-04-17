@@ -2,6 +2,7 @@
 title: Install Service Catalog using Helm
 reviewers:
 - chenopis
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -98,4 +99,4 @@ helm install svc-cat/catalog \
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

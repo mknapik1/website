@@ -4,6 +4,7 @@ title: 访问集群上运行的服务
 redirect_from:
 - "/docs/user-guide/accessing-the-cluster/"
 - "/docs/user-guide/accessing-the-cluster.html"
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -107,4 +108,4 @@ $ kubectl cluster-info
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

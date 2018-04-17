@@ -1,5 +1,6 @@
 ---
 title: Scaling
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -85,4 +86,3 @@ Enabling HA results in 3 controller nodes, this should be sufficient for most us
 Refer to the [Juju HA controller documentation](https://jujucharms.com/docs/2.2/controllers-ha) for more information.
 {{% /capture %}}
 
-{% include templates/task.md %}

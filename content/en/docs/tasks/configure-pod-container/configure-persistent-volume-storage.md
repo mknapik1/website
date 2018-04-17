@@ -1,5 +1,6 @@
 ---
 title: Configure a Pod to Use a PersistentVolume for Storage
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -208,4 +209,4 @@ PersistentVolume are not present on the Pod resource itself.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

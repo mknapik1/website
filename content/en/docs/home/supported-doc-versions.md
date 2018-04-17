@@ -1,5 +1,6 @@
 ---
 title: Supported Versions of the Kubernetes Documentation
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -26,4 +27,4 @@ The current version is
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

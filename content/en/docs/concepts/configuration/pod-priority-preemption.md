@@ -3,6 +3,7 @@ reviewers:
 - davidopp
 - wojtek-t
 title: Pod Priority and Preemption
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -241,4 +242,4 @@ and cross Node preemption will not be considered a blocker for Beta or GA.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

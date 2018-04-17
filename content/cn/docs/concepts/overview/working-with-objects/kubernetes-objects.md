@@ -4,6 +4,7 @@ title: 理解 Kubernetes 对象
 redirect_from:
 - "/docs/concepts/abstractions/overview/"
 - "/docs/concepts/abstractions/overview.html"
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -95,4 +96,4 @@ deployment "nginx-deployment" created
 * 了解最重要的基本 Kubernetes 对象，例如 [Pod](/docs/concepts/abstractions/pod/)。
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

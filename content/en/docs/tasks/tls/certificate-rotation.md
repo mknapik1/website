@@ -3,6 +3,7 @@ reviewers:
 - jcbsmpsn
 - mikedanese
 title: Certificate Rotation
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -78,4 +79,4 @@ Kubernetes API to reconnect using the new certificate.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

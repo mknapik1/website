@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: Implementation details
+content_template: templates/concept
 ---
 {{% capture overview %}}
 `kubeadm init` and `kubeadm join` together provides a nice user experience for creating a best-practice but bare Kubernetes cluster from scratch.
@@ -578,4 +579,4 @@ Please note that:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

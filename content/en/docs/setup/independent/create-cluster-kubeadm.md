@@ -5,6 +5,7 @@ reviewers:
 - errordeveloper
 - jbeda
 title: Using kubeadm to Create a Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -556,4 +557,4 @@ If you are running into difficulties with kubeadm, please consult our [troublesh
 
 {% endcapture %}
 
-{% include templates/task.md %}
+

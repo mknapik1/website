@@ -1,5 +1,6 @@
 ---
 title: Configure Default Memory Requests and Limits for a Namespace
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -188,4 +189,4 @@ it can be allowed to run in a namespace that is restricted by a quota.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,6 +1,7 @@
 ---
 
 title: 改变默认 StorageClass
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -91,4 +92,4 @@ title: 改变默认 StorageClass
 * 了解更多关于  [StorageClasses](/docs/concepts/storage/persistent-volumes/)。
   {{% /capture %}}
 
-{% include templates/task.md %}
+

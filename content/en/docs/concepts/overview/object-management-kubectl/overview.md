@@ -1,5 +1,6 @@
 ---
 title: Kubernetes Object Management
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -180,4 +181,4 @@ Disadvantages compared to imperative object configuration:
 {% endcomment %}
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

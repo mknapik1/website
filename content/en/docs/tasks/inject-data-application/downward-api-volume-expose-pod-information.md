@@ -1,5 +1,6 @@
 ---
 title: Expose Pod Information to Containers Through Files
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -250,5 +251,5 @@ inject the Pod's name into the well-known environment variable.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

@@ -1,5 +1,6 @@
 ---
 title: Annotations
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -58,4 +59,4 @@ and the like.
 Learn more about [Labels and Selectors](/docs/concepts/overview/working-with-objects/labels/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

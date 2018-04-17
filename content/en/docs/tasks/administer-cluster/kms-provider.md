@@ -2,6 +2,7 @@
 approvers:
 - smarterclayton
 title: Using a KMS provider for data encryption
+content_template: templates/task
 ---
 {{% capture overview %}}
 This page shows how to configure a Key Management Service (KMS) provider and plugin to enable secret data encryption.
@@ -178,4 +179,4 @@ kubectl get secrets --all-namespaces -o json | kubectl replace -f -
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

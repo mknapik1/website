@@ -1,5 +1,6 @@
 ---
 title: Storage
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -88,4 +89,4 @@ Persistent Volume Claim with them, and is outside the scope of this README. See 
 documentation for more information.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

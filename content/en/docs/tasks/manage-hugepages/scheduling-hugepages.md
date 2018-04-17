@@ -2,6 +2,7 @@
 reviewers:
 - derekwaynecarr
 title: Manage HugePages
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -78,4 +79,4 @@ token.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

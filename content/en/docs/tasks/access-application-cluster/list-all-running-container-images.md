@@ -1,5 +1,6 @@
 ---
 title: List All Container Images Running in a Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -119,4 +120,4 @@ kubectl get pods --all-namespaces -o go-template --template="{{range .items}}{{r
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

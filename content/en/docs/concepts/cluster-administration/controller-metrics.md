@@ -1,5 +1,6 @@
 ---
 title: Controller manager metrics
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -45,4 +46,4 @@ to periodically gather these metrics and make them available in some kind of tim
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

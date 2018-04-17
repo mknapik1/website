@@ -1,5 +1,6 @@
 ---
 title: Writing a New Topic
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -140,4 +141,4 @@ image format is SVG.
 * Learn about [creating a pull request](/docs/home/contribute/create-pull-request/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: Generating Reference Documentation for the Kubernetes API
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -375,4 +376,4 @@ in the [published reference documentation](/docs/reference/generated/kubernetes-
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

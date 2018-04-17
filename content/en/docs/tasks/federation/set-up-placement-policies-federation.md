@@ -1,5 +1,6 @@
 ---
 title: Set up placement policies in Federation
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -137,4 +138,4 @@ Inspect the ReplicaSet to confirm the appropriate annotations have been applied:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

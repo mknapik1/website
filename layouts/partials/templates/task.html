@@ -1,0 +1,25 @@
+
+
+{{ partial "templates/block" (dict "page" . "block" "overview" "purpose" "states, in one or two sentences, the purpose of this document") }}
+
+{{ .Scratch.Set "blocks" slice }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "prerequisites" "heading" "Before you begin" "purpose" "lists action prerequisites and knowledge prerequisites.")  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "steps" "purpose" "lists a sequence of numbered steps that accomplish the task.'")  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "discussion" "optional" true )  }}
+{{ .Scratch.Add "blocks" (dict "page" . "block" "whatsnext" "heading" "What's next" "optional" true )  }}
+
+{{ $blocks := .Scratch.Get "blocks" }}
+{{/* The built-in ToC in Blackfriday only works for the Markdown it render itself. */}}
+<ul id="markdown-toc">
+{{ range $blocks }}
+{{ if .heading }}
+<li><a href="#{{ .heading | anchorize }}">{{.heading }}</a></li>
+{{ end }}
+{{ end }}
+</ul>
+{{ range $i, $e := $blocks }}
+{{ partial "templates/block" . }}
+{{ end }}
+
+
+

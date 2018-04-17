@@ -2,6 +2,7 @@
 reviewers:
 - caseydavenport
 title: Use Calico for NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -49,4 +50,3 @@ To get a local single-host Calico cluster in fifteen minutes using kubeadm, refe
 Once your cluster is running, you can follow the [Declare Network Policy](/docs/tasks/administer-cluster/declare-network-policy/) to try out Kubernetes NetworkPolicy.
 {{% /capture %}}
 
-{% include templates/task.md %}

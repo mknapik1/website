@@ -1,5 +1,6 @@
 ---
 title: Assign Memory Resources to Containers and Pods
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -371,4 +372,4 @@ kubectl delete namespace mem-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

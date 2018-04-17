@@ -3,6 +3,7 @@ reviewers:
 - mtaufen
 - dawnchen
 title: Reconfigure a Node's Kubelet in a Live Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -451,4 +452,4 @@ more error details by searching for the message or reason text.
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

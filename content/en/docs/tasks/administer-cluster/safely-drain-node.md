@@ -5,6 +5,7 @@ reviewers:
 - foxish
 - kow3ns
 title: Safely Drain a Node while Respecting Application SLOs
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -158,4 +159,4 @@ application owners and cluster owners to establish an agreement on behavior in t
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

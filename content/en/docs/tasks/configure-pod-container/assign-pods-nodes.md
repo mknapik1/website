@@ -1,5 +1,6 @@
 ---
 title: Assign Pods to Nodes
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -78,4 +79,4 @@ Learn more about
 [labels and selectors](/docs/concepts/overview/working-with-objects/labels/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

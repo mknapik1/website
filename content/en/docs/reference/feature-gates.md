@@ -1,5 +1,6 @@
 ---
 title: Feature Gates
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -222,4 +223,4 @@ Each feature gate is designed for enabling/disabling a specific feature:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

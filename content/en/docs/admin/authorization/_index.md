@@ -58,6 +58,7 @@ used and whether or not the request acts on an individual resource or a
 collection of resources:
 
 HTTP verb | request verb
+content_template: templates/concept
 ----------|---------------
 POST      | create
 GET, HEAD | get (for individual resources), list (for collections)
@@ -163,7 +164,7 @@ so an earlier module has higher priority to allow or deny a request.
 * To learn more about Admission Control, see [Using Admission Controllers](/docs/admin/admission-controllers/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+
 
 ## Privilege escalation via pod creation
 

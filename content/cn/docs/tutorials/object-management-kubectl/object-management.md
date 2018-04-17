@@ -1,5 +1,6 @@
 ---
 title: Kubernetes 对象管理
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -149,4 +150,4 @@ kubectl apply -R -f configs/
  {% endcomment %}
  {{% /capture %}}
 
- {% include templates/concept.md %}
+ 

@@ -4,6 +4,7 @@ reviewers:
 - lavalamp
 - cheftako
 - chenopis
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -48,5 +49,5 @@ If you are not running kube-proxy on a host running the API server, then you mus
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

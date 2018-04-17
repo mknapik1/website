@@ -1,5 +1,6 @@
 ---
 title: Limit Storage Consumption
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -88,4 +89,4 @@ cluster's storage budget without risk of any one project going over their allotm
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

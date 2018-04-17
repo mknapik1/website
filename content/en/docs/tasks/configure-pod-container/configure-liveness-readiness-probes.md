@@ -92,6 +92,7 @@ probes have failed, and the containers have been killed and recreated.
 
 ```shell
 FirstSeen LastSeen    Count   From            SubobjectPath           Type        Reason      Message
+content_template: templates/task
 --------- --------    -----   ----            -------------           --------    ------      -------
 37s       37s     1   {default-scheduler }                    Normal      Scheduled   Successfully assigned liveness-exec to worker0
 36s       36s     1   {kubelet worker0}   spec.containers{liveness}   Normal      Pulling     pulling image "k8s.gcr.io/busybox"
@@ -300,4 +301,4 @@ case, you should not use `host`, but rather set the `Host` header in `httpHeader
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: Declarative Management of Kubernetes Objects Using Configuration Files
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -979,4 +980,4 @@ template:
 - [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: Backups
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -140,4 +141,4 @@ are dropped from the snapshot state to enable snapshot restoration. Please
 follow the migration instructions above in the restore action description.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

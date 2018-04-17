@@ -1,5 +1,6 @@
 ---
 title: 使用 Secret 安全地分发凭证
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -163,4 +164,4 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

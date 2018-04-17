@@ -1,5 +1,6 @@
 ---
 title: Generating Reference Documentation for kubectl Commands
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -261,4 +262,4 @@ topics will be visible in the
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

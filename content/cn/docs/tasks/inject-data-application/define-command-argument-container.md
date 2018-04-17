@@ -1,5 +1,6 @@
 ---
 title: 为容器设置启动时要执行的命令及其入参
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -126,4 +127,4 @@ title: 为容器设置启动时要执行的命令及其入参
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

@@ -2,6 +2,7 @@
 reviewers:
 - erictune
 title: Pod Overview
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -103,4 +104,4 @@ Rather than specifying the current desired state of all replicas, pod templates 
   * Other Pod Topics
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

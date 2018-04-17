@@ -1,5 +1,6 @@
 ---
 title: Advertise Extended Resources for a Node
+content_template: templates/task
 ---
 
 
@@ -206,4 +207,4 @@ kubectl describe node <your-node-name> | grep dongle
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

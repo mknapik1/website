@@ -1,5 +1,6 @@
 ---
 title: Configure Access to Multiple Clusters
+content_template: templates/task
 ---
 
 
@@ -340,5 +341,5 @@ export KUBECONFIG=$KUBECONFIG_SAVED
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

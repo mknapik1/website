@@ -2,6 +2,7 @@
 title: 概念模板示例
 approvers:
 - chenopis
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -33,4 +34,4 @@ Kubernetes 提供 ...
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

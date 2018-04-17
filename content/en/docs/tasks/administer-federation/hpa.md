@@ -1,5 +1,6 @@
 ---
 title: Federated Horizontal Pod Autoscalers (HPA)
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -175,4 +176,4 @@ For more information, see ["federated HPA design proposal"](https://github.com/k
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

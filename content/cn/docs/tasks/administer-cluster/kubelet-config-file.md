@@ -9,6 +9,7 @@ cn-reviwers:
 - zjj2wry
 - chentao1596
 title: 通过配置文件设置 Kubelet 参数
+content_template: templates/task
 ---
 
 
@@ -62,4 +63,4 @@ title: 通过配置文件设置 Kubelet 参数
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

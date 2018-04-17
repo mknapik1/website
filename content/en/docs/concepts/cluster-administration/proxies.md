@@ -1,5 +1,6 @@
 ---
 title: Proxies in Kubernetes
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -61,4 +62,4 @@ Proxies have replaced redirect capabilities.  Redirects have been deprecated.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

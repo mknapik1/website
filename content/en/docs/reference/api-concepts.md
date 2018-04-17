@@ -5,6 +5,7 @@ approvers:
 - smarterclayton
 - lavalamp
 - liggitt
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -284,4 +285,4 @@ Clients that receive a response in `application/vnd.kubernetes.protobuf` that do
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

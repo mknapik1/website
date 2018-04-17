@@ -1,5 +1,6 @@
 ---
 title: 云供应商
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -105,4 +106,4 @@ bs-version=v2
 ```
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

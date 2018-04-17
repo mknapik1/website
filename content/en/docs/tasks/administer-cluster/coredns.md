@@ -3,6 +3,7 @@ reviewers:
 - johnbelamaric
 title: Using CoreDNS for Service Discovery
 min-kubernetes-server-version: v1.9
+content_template: templates/task
 ---
 
 {% include feature-state-beta.md %}
@@ -55,4 +56,4 @@ kube-dns by modifying the `Corefile`. For more information, see the
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -3,6 +3,7 @@ approvers:
 - mikedanese
 - thockin
 title: 容器环境变量
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -58,4 +59,4 @@ FOO_SERVICE_PORT=<服务所启用的端口>
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

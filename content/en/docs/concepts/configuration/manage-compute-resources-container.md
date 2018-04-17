@@ -1,5 +1,6 @@
 ---
 title: Managing Compute Resources for Containers
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -545,4 +546,4 @@ consistency across providers and platforms.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

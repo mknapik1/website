@@ -5,6 +5,7 @@ approvers:
 - deads2k
 - liggitt
 title: Webhook Mode
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -139,4 +140,4 @@ contexts:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

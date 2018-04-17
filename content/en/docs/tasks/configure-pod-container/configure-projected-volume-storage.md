@@ -3,6 +3,7 @@ reviewers:
 - jpeeler
 - pmorie
 title: Configure a Pod to Use a Projected Volume for Storage
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -60,4 +61,4 @@ the Pod:
 * Read the [all-in-one volume](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/node/all-in-one-volume.md) design document.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

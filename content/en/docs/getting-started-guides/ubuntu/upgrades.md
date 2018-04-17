@@ -1,5 +1,6 @@
 ---
 title: Upgrades
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -160,4 +161,4 @@ Upgrading easyrsa should result in zero downtime as it is not a running service:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: Federated Ingress
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -302,4 +303,4 @@ Check that:
  *  For details about use cases that motivated this work, see
  [Federation proposal](https://git.k8s.io/community/contributors/design-proposals/multicluster/federation.md).
 {{% /capture %}}
-{% include templates/task.md %}
+

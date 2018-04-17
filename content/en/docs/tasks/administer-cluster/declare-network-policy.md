@@ -3,6 +3,7 @@ reviewers:
 - caseydavenport
 - danwinship
 title: Declare Network Policy
+content_template: templates/task
 ---
 {{% capture overview %}}
 This document helps you get started using the Kubernetes [NetworkPolicy API](/docs/concepts/services-networking/network-policies/) to declare network policies that govern how pods communicate with each other.
@@ -124,4 +125,4 @@ Connecting to nginx (10.100.0.16:80)
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

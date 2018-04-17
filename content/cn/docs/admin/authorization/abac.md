@@ -5,6 +5,7 @@ approvers:
 - deads2k
 - liggitt
 title: ABAC 模式
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -138,4 +139,4 @@ system:serviceaccount:<namespace>:default
 需要重新启动 apiserver 以获取新的策略行.
 
 {{% /capture %}}
-{% include templates/concept.md %}
+

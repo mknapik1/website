@@ -1,5 +1,6 @@
 ---
 title: Monitoring
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -141,4 +142,4 @@ juju configure nrpe-external-master nagios_master=255.255.255.255
 Once configured, connect nrpe-external-master as outlined above.
 {{% /capture %}}
 
-{% include templates/task.md %}
+

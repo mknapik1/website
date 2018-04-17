@@ -3,6 +3,7 @@ reviewers:
 - bgrant0607
 - janetkuo
 title: Deployments
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -984,4 +985,4 @@ additional features, such as rolling back to any previous revision even after th
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

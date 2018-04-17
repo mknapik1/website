@@ -5,6 +5,7 @@ reviewers:
 - saad-ali
 - thockin
 title: Volumes
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -1156,4 +1157,4 @@ $ sudo systemctl restart docker
 * Follow an example of [deploying WordPress and MySQL with Persistent Volumes](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

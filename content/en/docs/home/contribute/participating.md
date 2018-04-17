@@ -1,5 +1,6 @@
 ---
 title: Participating in SIG-DOCS
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -108,4 +109,4 @@ For more information about contributing to the Kubernetes documentation, see:
   * Learn how to [generate Reference Pages for Kubernetes Components and Tools](/docs/home/contribute/generated-reference/kubernetes-components/)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

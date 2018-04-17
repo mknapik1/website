@@ -4,6 +4,7 @@ reviewers:
 - mikedanese
 - thockin
 title: Configure a Security Context for a Pod or Container
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -356,4 +357,4 @@ label given to all Containers in the Pod as well as the Volumes.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

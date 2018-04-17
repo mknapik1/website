@@ -3,6 +3,7 @@ reviewers:
 - mtaufen
 - dawnchen
 title: Set Kubelet parameters via a config file
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -78,4 +79,4 @@ is considered the default "last known good" configuration by the automatic rollb
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

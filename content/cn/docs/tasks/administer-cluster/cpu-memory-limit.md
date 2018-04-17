@@ -75,6 +75,7 @@ $ kubectl describe limits mylimits --namespace=limit-example
 Name:   mylimits
 Namespace:  limit-example
 Type        Resource      Min      Max      Default Request      Default Limit      Max Limit/Request Ratio
+content_template: templates/task
 ----        --------      ---      ---      ---------------      -------------      -----------------------
 Pod         cpu           200m     2        -                    -                  -
 Pod         memory        6Mi      1Gi      -                    -                  -
@@ -255,4 +256,4 @@ default         Active        12m
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

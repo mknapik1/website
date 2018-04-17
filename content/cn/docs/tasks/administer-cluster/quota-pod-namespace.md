@@ -1,5 +1,6 @@
 ﻿---
 title: 配置命名空间下pod总数
+content_template: templates/task
 ---
 
 
@@ -129,6 +130,6 @@ kubectl delete namespace quota-pod-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

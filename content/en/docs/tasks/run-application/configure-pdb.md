@@ -1,5 +1,6 @@
 ---
 title: Specifying a Disruption Budget for your Application
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -229,4 +230,4 @@ to create PDBs whose selectors overlap.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

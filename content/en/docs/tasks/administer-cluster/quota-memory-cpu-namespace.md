@@ -1,5 +1,6 @@
 ---
 title: Configure Memory and CPU Quotas for a Namespace
+content_template: templates/task
 ---
 
 
@@ -173,6 +174,6 @@ kubectl delete namespace quota-mem-cpu-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

@@ -165,6 +165,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 9376
+content_template: templates/concept
 ---
 kind: Service
 apiVersion: v1
@@ -327,4 +328,4 @@ Apiserver 版本为 1.6 或更高版本的集群，通过使用 `spec.initContai
 {{% /capture %}}
 
 
-{% include templates/concept.md %}
+

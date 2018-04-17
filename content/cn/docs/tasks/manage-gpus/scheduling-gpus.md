@@ -2,6 +2,7 @@
 approvers:
 - vishh
 title: 调度 GPU
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -175,4 +176,4 @@ spec:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

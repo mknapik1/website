@@ -3,6 +3,7 @@ reviewers:
 - bowei
 - zihongz
 title: Customizing DNS Service
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -188,4 +189,4 @@ data:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

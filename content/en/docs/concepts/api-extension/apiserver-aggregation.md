@@ -4,6 +4,7 @@ reviewers:
 - lavalamp
 - cheftako
 - chenopis
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -32,4 +33,4 @@ Ordinarily, the APIService will be implemented by an *extension-apiserver* in a 
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

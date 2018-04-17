@@ -1,5 +1,6 @@
 ---
 title: Logging
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -59,4 +60,4 @@ sudo systemctl restart jujud-machine-0.service
 See the [official documentation](https://jujucharms.com/docs/stable/models-config) for more information about logging and other model settings in Juju. 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

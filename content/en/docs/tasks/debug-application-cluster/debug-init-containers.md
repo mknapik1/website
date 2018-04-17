@@ -123,6 +123,7 @@ execution. The table below describes some example status values that you might
 see while debugging Init Containers.
 
 Status | Meaning
+content_template: templates/task
 ------ | -------
 `Init:N/M` | The Pod has `M` Init Containers, and `N` have completed so far.
 `Init:Error` | An Init Container has failed to execute.
@@ -132,5 +133,5 @@ Status | Meaning
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
 

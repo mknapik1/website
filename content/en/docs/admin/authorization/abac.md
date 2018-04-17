@@ -5,6 +5,7 @@ reviewers:
 - deads2k
 - liggitt
 title: ABAC Mode
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -152,4 +153,4 @@ file:
 The apiserver will need to be restarted to pickup the new policy lines.
 
 {{% /capture %}}
-{% include templates/concept.md %}
+

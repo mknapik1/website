@@ -1,5 +1,6 @@
 ---
 title: Configure Pod Initialization
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -88,4 +89,4 @@ The output shows that nginx is serving the web page that was written by the init
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

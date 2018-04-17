@@ -1,5 +1,6 @@
 ---
 title: Autoscale the DNS Service in a Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -236,4 +237,4 @@ Learn more about the
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

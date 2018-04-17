@@ -1,5 +1,6 @@
 ---
 title: Configure Minimum and Maximum CPU Constraints for a Namespace
+content_template: templates/task
 ---
 
 
@@ -271,6 +272,6 @@ kubectl delete namespace constraints-cpu-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

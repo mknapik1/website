@@ -3,6 +3,7 @@ reviewers:
 - msau42
 - jsafrane
 title: Persistent Volume Claim Protection
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -141,4 +142,4 @@ Events:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

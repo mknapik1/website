@@ -1,5 +1,6 @@
 ---
 title: Staging Your Documentation Changes
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -86,4 +87,4 @@ web server:
 * Learn about [creating a pull request](/docs/home/contribute/create-pull-request/).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

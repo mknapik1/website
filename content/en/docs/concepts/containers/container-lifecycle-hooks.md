@@ -3,6 +3,7 @@ reviewers:
 - mikedanese
 - thockin
 title: Container Lifecycle Hooks
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -121,4 +122,4 @@ Events:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

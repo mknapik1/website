@@ -1,5 +1,6 @@
 ---
 title: Attach Handlers to Container Lifecycle Events
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -97,4 +98,4 @@ This limitation is tracked in [issue #55087](https://github.com/kubernetes/kuber
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

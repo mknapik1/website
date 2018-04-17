@@ -1,5 +1,6 @@
 ---
 title: Distribute Credentials Securely Using Secrets
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -170,4 +171,4 @@ Here is a configuration file you can use to create a Pod:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

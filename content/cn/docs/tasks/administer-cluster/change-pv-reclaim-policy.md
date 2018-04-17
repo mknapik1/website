@@ -1,5 +1,6 @@
 ---
 title: 更改 PersistentVolume 的回收策略
+content_template: templates/task
 ---
 
 
@@ -77,4 +78,4 @@ title: 更改 PersistentVolume 的回收策略
 * 查阅  [PersistentVolumeSpec](/docs/api-reference/{{page.version}}/#persistentvolumeclaim-v1-core) 的 `persistentVolumeReclaimPolicy` 字段。
 {{% /capture %}}
 
-{% include templates/task.md %}
+

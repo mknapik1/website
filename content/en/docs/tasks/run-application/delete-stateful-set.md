@@ -6,6 +6,7 @@ reviewers:
 - janetkuo
 - smarterclayton
 title: Delete a StatefulSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -85,4 +86,4 @@ Learn more about [force deleting StatefulSet Pods](/docs/tasks/run-application/f
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

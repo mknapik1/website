@@ -1,5 +1,6 @@
 ---
 title: Assign CPU Resources to Containers and Pods
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -277,4 +278,4 @@ kubectl delete namespace cpu-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

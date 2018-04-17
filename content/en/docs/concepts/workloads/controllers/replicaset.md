@@ -4,6 +4,7 @@ reviewers:
 - bprashanth
 - madhusudancs
 title: ReplicaSet
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -234,4 +235,4 @@ safe to terminate when the machine is otherwise ready to be rebooted/shutdown.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

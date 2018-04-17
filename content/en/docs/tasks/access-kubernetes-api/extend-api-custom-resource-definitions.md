@@ -3,6 +3,7 @@ title: Extend the Kubernetes API with CustomResourceDefinitions
 reviewers:
 - deads2k
 - enisoc
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -547,4 +548,4 @@ crontabs/my-new-cron-object   3s
 * See [CustomResourceDefinition](/docs/reference/generated/kubernetes-api/{{page.version}}/#customresourcedefinition-v1beta1-apiextensions).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

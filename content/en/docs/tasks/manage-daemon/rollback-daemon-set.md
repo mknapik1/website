@@ -2,6 +2,7 @@
 reviewers:
 - janetkuo
 title: Performing a Rollback on a DaemonSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -151,4 +152,4 @@ have revision 1 and 2 in the system, and roll back from revision 2 to revision
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

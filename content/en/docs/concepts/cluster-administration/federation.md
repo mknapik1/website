@@ -1,5 +1,6 @@
 ---
 title: Federation
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -175,4 +176,4 @@ clusters up to 5000 nodes. See [Building Large Clusters](/docs/admin/cluster-lar
 * See this [Kubecon2017 Europe update on federation](https://www.youtube.com/watch?v=kwOvOLnFYck)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

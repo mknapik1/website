@@ -2,6 +2,7 @@
 reviewers:
 - lavalamp
 title: Kubernetes Components
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -108,4 +109,4 @@ saving container logs to a central log store with search/browsing interface.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

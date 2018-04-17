@@ -1,5 +1,6 @@
 ---
 title: Understanding Kubernetes Objects
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -68,4 +69,4 @@ and the `spec` format for a `Deployment` object can be found
 * Learn about the most important basic Kubernetes objects, such as [Pod](/docs/concepts/workloads/pods/pod-overview/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

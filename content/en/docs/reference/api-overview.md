@@ -5,6 +5,7 @@ approvers:
 - erictune
 - lavalamp
 - jbeda
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -95,4 +96,4 @@ apiserver. `--runtime-config` accepts comma separated values. For example, to di
 `--runtime-config=extensions/v1beta1/deployments=false,extensions/v1beta1/jobs=false`
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

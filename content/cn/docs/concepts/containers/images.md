@@ -3,6 +3,7 @@ approvers:
 - erictune
 - thockin
 title: 镜像
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -293,4 +294,4 @@ spec:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

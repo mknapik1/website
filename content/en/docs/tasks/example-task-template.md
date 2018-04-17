@@ -2,6 +2,7 @@
 title: Example Task Template
 reviewers:
 - chenopis
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -47,4 +48,4 @@ Here's an interesting thing to know about the steps you just did.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

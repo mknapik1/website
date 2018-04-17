@@ -1,5 +1,6 @@
 ---
 title: Assign Extended Resources to a Container
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -140,7 +141,7 @@ kubectl delete pod extended-resource-demo-2
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 
 

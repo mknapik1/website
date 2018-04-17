@@ -5,6 +5,7 @@ reviewers:
 - errordeveloper
 - jbeda
 title: Creating HA clusters with kubeadm
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -595,4 +596,4 @@ Next provision and set up the worker nodes. To do this, you will need to provisi
 
 {% endcapture %}
 
-{% include templates/task.md %}
+

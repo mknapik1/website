@@ -1,5 +1,6 @@
 ---
 title: Configure a Pod to Use a ConfigMap
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -616,4 +617,4 @@ data:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

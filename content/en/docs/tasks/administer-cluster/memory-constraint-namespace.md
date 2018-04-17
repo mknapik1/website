@@ -1,5 +1,6 @@
 ---
 title: Configure Minimum and Maximum Memory Constraints for a Namespace
+content_template: templates/task
 ---
 
 
@@ -266,6 +267,6 @@ kubectl delete namespace constraints-mem-example
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+
 
 

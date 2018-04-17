@@ -1,5 +1,6 @@
 ---
 title: Define Environment Variables for a Container
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -80,4 +81,4 @@ will override any environment variables specified in the container image.
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

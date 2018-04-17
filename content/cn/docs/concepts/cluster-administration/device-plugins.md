@@ -2,6 +2,7 @@
 approvers:
 title: 设备插件
 description: 使用 Kubernetes 设备插件框架来为 GPUs、 NICs、 FPGAs、 InfiniBand 和其他类似的需要供应商特别设置的资源开发插件。
+content_template: templates/concept
 ---
 
 {% include feature-state-alpha.md %}
@@ -93,4 +94,4 @@ Kubernetes能够重新启动 Pods 。 否则就需要额外的设备插件故障
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

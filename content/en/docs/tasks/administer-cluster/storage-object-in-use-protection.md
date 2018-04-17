@@ -3,6 +3,7 @@ approvers:
 - msau42
 - jsafrane
 title: Storage Object in Use Protection
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -312,4 +313,4 @@ No resources found.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

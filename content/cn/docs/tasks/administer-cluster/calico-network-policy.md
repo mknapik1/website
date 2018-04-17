@@ -2,6 +2,7 @@
 approvers:
 - caseydavenport
 title: 使用 Calico 来提供 NetworkPolicy
+content_template: templates/task
 ---
 
 
@@ -71,4 +72,4 @@ calico-policy-controller-65rw1                       1/1       Running   0      
 集群部署完成之后，您可以通过 [NetworkPolicy 入门指南](/docs/getting-started-guides/network-policy/walkthrough)去尝试使用 Kubernetes NetworkPolicy
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -3,6 +3,7 @@ approvers:
 - jcbsmpsn
 - mikedanese
 title: 证书轮换
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -61,4 +62,4 @@ Kubelet 会从 Kubernetes API 取回签署的证书，并将其写入磁盘，�
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

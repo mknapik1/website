@@ -2,6 +2,7 @@
 approvers:
 - chrismarino
 title: 使用 Romana 来提供 NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -47,4 +48,4 @@ Romana 安装完成之后，您可以通过 [NetworkPolicy 入门指南](/docs/g
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

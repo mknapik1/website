@@ -1,5 +1,6 @@
 ---
 title: Generating Reference Pages for Kubernetes Components and Tools
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -302,4 +303,4 @@ topics will be visible in the
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

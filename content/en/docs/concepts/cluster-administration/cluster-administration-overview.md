@@ -3,6 +3,7 @@ reviewers:
 - davidopp
 - lavalamp
 title: Cluster Administration Overview
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -71,4 +72,4 @@ If you are using a guide involving Salt, see [Configuring Kubernetes with Salt](
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

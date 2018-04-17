@@ -1,5 +1,6 @@
 ---
 title: Organizing Cluster Access Using kubeconfig Files
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -151,4 +152,4 @@ are stored absolutely.
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

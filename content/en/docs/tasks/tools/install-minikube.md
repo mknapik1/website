@@ -1,5 +1,6 @@
 ---
 title: Install Minikube
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -54,4 +55,4 @@ If you do not already have a hypervisor installed, install one now.
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

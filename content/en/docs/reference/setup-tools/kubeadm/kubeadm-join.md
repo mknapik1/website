@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm join
+content_template: templates/concept
 ---
 {{% capture overview %}}
 {{% /capture %}}
@@ -234,4 +235,4 @@ discoveryTokenUnsafeSkipCAVerification: <bool>
 * [kubeadm reset](kubeadm-reset.md) to revert any changes made to this host by `kubeadm init` or `kubeadm join`
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

@@ -3,6 +3,7 @@ title: Custom Resources
 reviewers:
 - enisoc
 - deads2k
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -229,4 +230,4 @@ When you add a custom resource, you can access it using:
 * Learn how to [Migrate a ThirdPartyResource to CustomResourceDefinition](/docs/tasks/access-kubernetes-api/migrate-third-party-resource/).
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

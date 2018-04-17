@@ -164,6 +164,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 9376
+content_template: templates/concept
 ---
 kind: Service
 apiVersion: v1
@@ -329,4 +330,4 @@ is removed, requiring a conversion from the deprecated annotations to the
 {{% /capture %}}
 
 
-{% include templates/concept.md %}
+

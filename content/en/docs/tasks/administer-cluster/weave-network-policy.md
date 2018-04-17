@@ -2,6 +2,7 @@
 reviewers:
 - bboreham
 title: Weave Net for NetworkPolicy
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -54,4 +55,4 @@ Once you have installed the Weave Net addon, you can follow the [Declare Network
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -3,6 +3,7 @@ reviewers:
 - bgrant0607
 - mikedanese
 title: Install and Set Up kubectl
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -233,4 +234,4 @@ source <(kubectl completion zsh)
 {{% capture whatsnext %}}
 [Learn how to launch and expose your application.](/docs/tasks/access-application-cluster/service-access-application-cluster/)
 {{% /capture %}}
-{% include templates/task.md %}
+

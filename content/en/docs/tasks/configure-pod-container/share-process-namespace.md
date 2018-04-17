@@ -5,6 +5,7 @@ approvers:
 - verb
 - yujuhong
 - dchen1107
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -108,4 +109,4 @@ containers, though, so it's important to understand these differences:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

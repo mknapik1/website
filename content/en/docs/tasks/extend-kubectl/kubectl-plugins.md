@@ -3,6 +3,7 @@ title: Extend kubectl with plugins
 reviewers:
 - fabianofranz
 description: With kubectl plugins, you can extend the functionality of the kubectl command by adding new subcommands.
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -134,4 +135,4 @@ For example, `KUBECTL_PLUGINS_GLOBAL_FLAG_NAMESPACE`, `KUBECTL_PLUGINS_GLOBAL_FL
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

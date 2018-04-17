@@ -2,6 +2,7 @@
 approvers:
 - derekwaynecarr
 title: 管理巨页（HugePages）
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -66,4 +67,4 @@ spec:
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

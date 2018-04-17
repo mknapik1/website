@@ -1,5 +1,6 @@
 ---
 title: Garbage Collection
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -173,4 +174,4 @@ Tracked at [#26120](https://github.com/kubernetes/kubernetes/issues/26120)
 {{% /capture %}}
 
 
-{% include templates/concept.md %}
+

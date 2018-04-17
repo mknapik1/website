@@ -2,6 +2,7 @@
 reviewers:
 - bprashanth
 title: Ingress
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -299,4 +300,4 @@ You can expose a Service in multiple ways that don't directly involve the Ingres
 * Use a [Port Proxy](https://git.k8s.io/contrib/for-demos/proxy-to-service)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

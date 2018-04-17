@@ -1,5 +1,6 @@
 ---
 title: Generating Reference Documentation for Kubernetes Federation API
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -88,4 +89,4 @@ These files are published at
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

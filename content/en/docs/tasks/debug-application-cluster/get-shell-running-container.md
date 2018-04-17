@@ -3,6 +3,7 @@ reviewers:
 - caesarxuchao
 - mikedanese
 title: Get a Shell to a Running Container
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -142,4 +143,4 @@ kubectl exec -it my-pod --container main-app -- /bin/bash
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

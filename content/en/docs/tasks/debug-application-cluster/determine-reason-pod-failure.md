@@ -1,5 +1,6 @@
 ---
 title: Determine the Reason for Pod Failure
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -118,4 +119,4 @@ is empty and the container exited with an error. The log output is limited to
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

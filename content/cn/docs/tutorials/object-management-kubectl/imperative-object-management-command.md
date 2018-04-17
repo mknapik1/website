@@ -1,5 +1,6 @@
 ---
 title: 使用命令式的方式管理 Kubernetes 对象
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -133,4 +134,4 @@ kubectl create --edit -f /tmp/srv.yaml
  -  [Kubernetes 对象模式参考](/docs/resources-reference/v1.6/)
  {{% /capture %}}
 
- {% include templates/concept.md %}
+ 

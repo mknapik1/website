@@ -3,6 +3,7 @@ reviewers:
 - mikedanese
 - thockin
 title: Container Environment Variables
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -62,4 +63,4 @@ if [DNS addon](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/)
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

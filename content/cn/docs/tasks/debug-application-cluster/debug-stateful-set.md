@@ -1,5 +1,6 @@
 ---
 title: 调试StatefulSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -74,4 +75,4 @@ kubectl annotate pods <pod-name> pod.alpha.kubernetes.io/initialized="true" --ov
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

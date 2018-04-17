@@ -8,6 +8,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Debug a StatefulSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -48,4 +49,4 @@ Learn more about [debugging an init-container](/docs/tasks/debug-application-clu
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

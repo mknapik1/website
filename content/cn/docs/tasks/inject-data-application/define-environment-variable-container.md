@@ -1,5 +1,6 @@
 ---
 title: 为容器设置环境变量
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -69,4 +70,4 @@ title: 为容器设置环境变量
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

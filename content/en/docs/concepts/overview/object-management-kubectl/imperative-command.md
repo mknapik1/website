@@ -1,5 +1,6 @@
 ---
 title: Managing Kubernetes Objects Using Imperative Commands
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -156,4 +157,4 @@ kubectl create --edit -f /tmp/srv.yaml
 - [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

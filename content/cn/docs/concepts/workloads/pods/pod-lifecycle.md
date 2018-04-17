@@ -3,6 +3,7 @@ title: Pod 的生命周期
 redirect_from:
 - "/docs/user-guide/pod-states/"
 - "/docs/user-guide/pod-states.html"
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -170,5 +171,5 @@ spec:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+
 

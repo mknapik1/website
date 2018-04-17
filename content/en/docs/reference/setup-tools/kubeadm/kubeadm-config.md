@@ -4,6 +4,7 @@ approvers:
 - luxas
 - jbeda
 title: kubeadm config
+content_template: templates/concept
 ---
 {{% capture overview %}}
 Beginning with v1.8.0, kubeadm uploads the configuration of your cluster to a ConfigMap called 
@@ -31,4 +32,3 @@ may use `kubeadm upgrade`.
 * [kubeadm upgrade](kubeadm-upgrade.md) to upgrade a Kubernetes cluster to a newer version
 {{% /capture %}}
 
-{% include templates/concept.md %}

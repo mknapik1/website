@@ -2,6 +2,7 @@
 reviewers:
 - jessfraz
 title: Pod Preset
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -82,4 +83,4 @@ In order to use Pod Presets in your cluster you must ensure the following:
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

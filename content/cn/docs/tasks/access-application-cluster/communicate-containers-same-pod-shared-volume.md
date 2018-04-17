@@ -5,6 +5,7 @@ redirect_from:
 - "/docs/user-guide/pods/multi-container.html"
 - "/docs/tasks/configure-pod-container/communicate-containers-same-pod/"
 - "/docs/tasks/configure-pod-container/communicate-containers-same-pod.html"
+content_template: templates/task
 ---
 
 
@@ -183,4 +184,4 @@ Pod 能有多个容器的主要原因是为了支持辅助应用（helper applic
 {{% /capture %}}
 
 
-{% include templates/task.md %}
+

@@ -8,6 +8,7 @@ reviewers:
 - kow3ns
 - smarterclayton
 title: Scale a StatefulSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -98,4 +99,4 @@ Learn more about [deleting a StatefulSet](/docs/tasks/manage-stateful-set/deleti
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

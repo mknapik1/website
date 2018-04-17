@@ -2,6 +2,7 @@
 title: Example Concept Template
 reviewers:
 - chenopis
+content_template: templates/concept
 ---
 
 {{% capture overview %}}
@@ -33,4 +34,4 @@ To use ...
 
 {{% /capture %}}
 
-{% include templates/concept.md %}
+

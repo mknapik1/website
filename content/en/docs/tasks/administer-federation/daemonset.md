@@ -1,5 +1,6 @@
 ---
 title: Federated DaemonSet
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -74,4 +75,4 @@ kubectl --context=federation-cluster delete daemonset mydaemonset
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

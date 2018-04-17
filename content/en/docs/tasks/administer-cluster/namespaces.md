@@ -3,6 +3,7 @@ reviewers:
 - derekwaynecarr
 - janetkuo
 title: Share a Cluster with Namespaces
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -349,4 +350,4 @@ across namespaces, you need to use the fully qualified domain name (FQDN).
 * See [namespaces design](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/architecture/namespaces.md).
 {{% /capture %}}
 
-{% include templates/task.md %}
+

@@ -1,5 +1,6 @@
 ---
 title: IP Masquerade Agent User Guide
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -109,4 +110,4 @@ masqLinkLocal: true
 ```
 {{% /capture %}}
 
-{% include templates/task.md %}
+

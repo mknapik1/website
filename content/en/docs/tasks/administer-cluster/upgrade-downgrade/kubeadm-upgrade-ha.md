@@ -5,6 +5,7 @@ reviewers:
 - timothysc 
 - jbeda
 title: Upgrading kubeadm HA clusters from 1.9.x to 1.9.y
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -132,4 +133,4 @@ If the upgrade fails the situation afterwards depends on the phase in which thin
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+

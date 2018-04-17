@@ -1,5 +1,6 @@
 ---
 title: Federated Cluster
+content_template: templates/task
 ---
 
 {{% capture overview %}}
@@ -111,4 +112,4 @@ The full clusters API reference is currently in `federation/v1beta1` and more de
 
 {{% /capture %}}
 
-{% include templates/task.md %}
+
