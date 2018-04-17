@@ -107,6 +107,16 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
+	// Case Studies
+	if err := m.copyDir("case-studies", "content/en/case-studies"); err != nil {
+		return err
+	}
+
+	// Partners
+	if err := m.copyDir("partners", "content/en/partners"); err != nil {
+		return err
+	}
+
 	// Copy blog content to content/en
 	if err := m.copyDir("blog", "content/en/blog"); err != nil {
 		return err
@@ -128,6 +138,10 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 	}
 
 	if err := m.renameContentFiles("doc.*index\\.html$", "_index.html"); err != nil {
+		return err
+	}
+
+	if err := m.renameContentFiles("(case|partner).*index\\.html$", "_index.html"); err != nil {
 		return err
 	}
 
