@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="{{ .Params.cid }}" lang="en" class="{{ .Params.class }}">
+<html id="{{ .Params.cid | default "docs" }}" lang="en" class="{{ .Params.class }}">
 	<head>
 	{{ partial "head.html" . }}
 	</head>
@@ -7,9 +7,7 @@
 		{{ partial "header.html" . }}
 		{{ block "hero" . }}
 		<!--  HERO  -->
-		<section id="hero" class="light-text">
-			<h1>{{ .Params.bigheader | default .Title }}</h1>
-			<h5>{{ .Params.abstract }}</h5>
+		<section id="hero" class="light-text no-sub">
 			{{ partial "docs/top-menu.html" . }}
 		</section>
 		{{ end }}
