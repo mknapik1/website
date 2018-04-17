@@ -1,1 +1,24 @@
-TODO(bep) glossary
+
+{{- $id := .Get "term_id" -}}
+{{- $length := .Get "length" -}}
+{{- $prepend := .Get "prepend" }}
+{{- $glossaryBundle := .Site.GetPage "page" "docs/reference/glossary" -}}
+{{- $glossaryItems :=  $glossaryBundle.Resources.ByType "page" -}}
+{{- $term_info := $glossaryItems.GetMatch (printf "%s*" $id ) -}}
+{{- if not $term_info -}}
+{{- errorf "%q is not a valid glossary term_id, see ./docs/reference/glossary/* for a full list" $id -}}
+{{- end -}}
+{{- with $term_info -}}
+{{- if (strings.Contains "short" $length) -}}
+	{{- with .Summary -}}
+	{{- if $prepend }}{{- replace . "<p>" (printf "<P>%s %s" $prepend .) -}}{{ else }}{{- . -}}{{ end -}}
+	{{- else -}}
+	{{- partial "templates/errorthrower.html" (dict "block" "summary" "purpose" .purpose "describes the key term in greater depth, supplementing the short-description") . -}}
+	{{- end -}}
+{{- end -}}
+{{- if (strings.Contains "all|long" $length) -}}
+{{- with .Content -}}
+{{- if $prepend }}{{- replace . "<p>" (printf "<P>%s %s" $prepend .) -}}{{ else }}{{- . -}}{{ end -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
