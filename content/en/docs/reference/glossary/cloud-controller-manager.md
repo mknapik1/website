@@ -2,7 +2,8 @@
 title: Cloud Controller Manager
 id: cloud-controller-manager
 date: 2018-04-12
-full-link: https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/
+full_link: https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/
+aka: 
 tags:
 - core-object
 - architecture

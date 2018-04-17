@@ -2,7 +2,8 @@
 title: Kubeadm
 id: kubeadm
 date: 2018-04-12
-full-link: /docs/admin/kubeadm/
+full_link: /docs/admin/kubeadm/
+aka: 
 tags:
 - tool
 - operation 

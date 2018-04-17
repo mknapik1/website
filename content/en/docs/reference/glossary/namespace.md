@@ -2,7 +2,8 @@
 title: Namespace
 id: namespace
 date: 2018-04-12
-full-link: /docs/concepts/overview/working-with-objects/namespaces
+full_link: /docs/concepts/overview/working-with-objects/namespaces
+aka: 
 tags:
 - fundamental 
 ---

@@ -9,7 +9,7 @@
 {{- with $term_info -}}
 {{- $text := $text | default $term_info.Title -}}
 {{- $glossary_home := "docs/reference/glossary/?all=true" | relLangURL -}}
-{{- $external_link := $term_info.Params.full_link | default (printf "%s#%s" $glossary_home $term_info.Params.id | safeURL  ) -}}
+{{- $external_link := $term_info.Params.full_link | default (printf "%s#%s" $glossary_home $id| safeURL  ) -}}
 {{- $tooltip :=  $term_info.Summary -}}
 {{- $tooltip := $tooltip | replaceRE "(?s)<a class='glossary-tooltip'.*?>(.*?)<span class='tooltip-text'>.*</a>" "$1" | plainify -}}
 {{- $tooltip := trim $tooltip " \n" -}}

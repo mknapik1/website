@@ -2,7 +2,8 @@
 title: Service
 id: service
 date: 2018-04-12
-full-link: /docs/concepts/services-networking/service/
+full_link: /docs/concepts/services-networking/service/
+aka: 
 tags:
 - fundamental
 - core-object 

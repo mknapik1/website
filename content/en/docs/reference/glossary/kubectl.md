@@ -2,7 +2,8 @@
 title: Kubectl
 id: kubectl
 date: 2018-04-12
-full-link: /docs/user-guide/kubectl-overview/
+full_link: /docs/user-guide/kubectl-overview/
+aka: 
 tags:
 - tool
 - fundamental 

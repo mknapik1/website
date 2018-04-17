@@ -2,7 +2,8 @@
 title: StatefulSet
 id: statefulset
 date: 2018-04-12
-full-link: /docs/concepts/workloads/controllers/statefulset/
+full_link: /docs/concepts/workloads/controllers/statefulset/
+aka: 
 tags:
 - fundamental
 - core-object

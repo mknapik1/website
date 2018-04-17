@@ -2,7 +2,8 @@
 title: RBAC (Role-Based Access Control)
 id: rbac
 date: 2018-04-12
-full-link: /docs/admin/authorization/rbac/
+full_link: /docs/admin/authorization/rbac/
+aka: 
 tags:
 - security
 - fundamental 

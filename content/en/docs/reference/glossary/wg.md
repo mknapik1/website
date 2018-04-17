@@ -2,7 +2,8 @@
 title: WG (working group)
 id: wg
 date: 2018-04-12
-full-link: https://github.com/kubernetes/community/blob/master/sig-list.md#master-working-group-list
+full_link: https://github.com/kubernetes/community/blob/master/sig-list.md#master-working-group-list
+aka: 
 tags:
 - community 
 ---

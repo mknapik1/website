@@ -2,7 +2,8 @@
 title: Annotation
 id: annotation
 date: 2018-04-12
-full-link: /docs/concepts/overview/working-with-objects/annotations
+full_link: /docs/concepts/overview/working-with-objects/annotations
+aka: 
 tags:
 - fundamental 
 ---

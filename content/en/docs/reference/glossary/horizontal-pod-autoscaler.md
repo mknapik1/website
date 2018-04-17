@@ -2,7 +2,8 @@
 title: Horizontal Pod Autoscaler
 id: horizontal-pod-autoscaler
 date: 2018-04-12
-full-link: /docs/tasks/run-application/horizontal-pod-autoscale/
+full_link: /docs/tasks/run-application/horizontal-pod-autoscale/
+aka: 
 tags:
 - operation 
 ---

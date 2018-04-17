@@ -2,7 +2,8 @@
 title: Kubernetes API
 id: kubernetes-api
 date: 2018-04-12
-full-link: /docs/concepts/overview/kubernetes-api/
+full_link: /docs/concepts/overview/kubernetes-api/
+aka: 
 tags:
 - fundamental
 - architecture 

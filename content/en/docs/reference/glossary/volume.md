@@ -2,7 +2,8 @@
 title: Volume
 id: volume
 date: 2018-04-12
-full-link: /docs/concepts/storage/volumes/
+full_link: /docs/concepts/storage/volumes/
+aka: 
 tags:
 - core-object
 - fundamental 

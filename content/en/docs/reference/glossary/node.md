@@ -2,7 +2,8 @@
 title: Node
 id: node
 date: 2018-04-12
-full-link: /docs/concepts/architecture/nodes/
+full_link: /docs/concepts/architecture/nodes/
+aka: 
 tags:
 - fundamental 
 ---

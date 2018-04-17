@@ -2,7 +2,8 @@
 title: Resource Quotas
 id: resource-quota
 date: 2018-04-12
-full-link: /docs/concepts/policy/resource-quotas/
+full_link: /docs/concepts/policy/resource-quotas/
+aka: 
 tags:
 - fundamental
 - operation

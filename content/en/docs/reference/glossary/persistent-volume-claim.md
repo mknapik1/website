@@ -2,7 +2,8 @@
 title: Persistent Volume Claim
 id: persistent-volume-claim
 date: 2018-04-12
-full-link: /docs/concepts/storage/persistent-volumes/
+full_link: /docs/concepts/storage/persistent-volumes/
+aka: 
 tags:
 - core-object
 - storage 

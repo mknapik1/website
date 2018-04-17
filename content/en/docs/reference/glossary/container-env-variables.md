@@ -2,7 +2,8 @@
 title: Container Environment Variables
 id: container-env-variables
 date: 2018-04-12
-full-link: /docs/concepts/containers/container-environment-variables.md
+full_link: /docs/concepts/containers/container-environment-variables.md
+aka: 
 tags:
 - fundamental 
 ---

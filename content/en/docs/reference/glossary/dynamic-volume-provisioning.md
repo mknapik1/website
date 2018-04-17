@@ -2,7 +2,8 @@
 title: Dynamic Volume Provisioning
 id: dynamicvolumeprovisioning
 date: 2018-04-12
-full-link: /docs/concepts/storage/dynamic-provisioning
+full_link: /docs/concepts/storage/dynamic-provisioning
+aka: 
 tags:
 - core-object
 - storage 

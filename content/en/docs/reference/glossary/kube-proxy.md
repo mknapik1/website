@@ -2,7 +2,8 @@
 title: kube-proxy
 id: kube proxy
 date: 2018-04-12
-full-link: /docs/reference/generated/kube-proxy
+full_link: /docs/reference/generated/kube-proxy
+aka: 
 tags:
 - fundamental
 - core-object 

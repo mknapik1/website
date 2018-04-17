@@ -2,7 +2,8 @@
 title: Code Contributor
 id: code-contributor
 date: 2018-04-12
-full-link: /docs/imported/community/devel/
+full_link: /docs/imported/community/devel/
+aka: 
 tags:
 - community
 - user-type 

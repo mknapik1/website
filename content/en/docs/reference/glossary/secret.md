@@ -2,7 +2,8 @@
 title: Secret
 id: secret
 date: 2018-04-12
-full-link: /docs/concepts/configuration/secret/
+full_link: /docs/concepts/configuration/secret/
+aka: 
 tags:
 - core-object
 - security 

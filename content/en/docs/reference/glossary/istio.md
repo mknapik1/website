@@ -2,7 +2,8 @@
 title: Istio
 id: istio
 date: 2018-04-12
-full-link: https://istio.io/docs/concepts/what-is-istio/overview.html
+full_link: https://istio.io/docs/concepts/what-is-istio/overview.html
+aka: 
 tags:
 - networking
 - architecture

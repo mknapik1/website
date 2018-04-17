@@ -2,7 +2,8 @@
 title: Pod Security Policy
 id: pod-security-policy
 date: 2018-04-12
-full-link: /docs/concepts/policy/pod-security-policy/
+full_link: /docs/concepts/policy/pod-security-policy/
+aka: 
 tags:
 - core-object
 - fundamental 

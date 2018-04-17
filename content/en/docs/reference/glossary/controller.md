@@ -2,7 +2,8 @@
 title: Controller
 id: controller
 date: 2018-04-12
-full-link: /docs/admin/kube-controller-manager/
+full_link: /docs/admin/kube-controller-manager/
+aka: 
 tags:
 - architecture
 - fundamental 

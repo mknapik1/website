@@ -2,7 +2,8 @@
 title: Helm Chart
 id: helm-chart
 date: 2018-04-12
-full-link: https://github.com/kubernetes/helm/blob/master/docs/charts.md
+full_link: https://github.com/kubernetes/helm/blob/master/docs/charts.md
+aka: 
 tags:
 - tool 
 ---

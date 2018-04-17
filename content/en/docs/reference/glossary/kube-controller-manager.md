@@ -2,7 +2,8 @@
 title: kube-controller-manager
 id: kube-controller-manager
 date: 2018-04-12
-full-link: /docs/reference/generated/kube-controller-manager/
+full_link: /docs/reference/generated/kube-controller-manager/
+aka: 
 tags:
 - architecture
 - fundamental 

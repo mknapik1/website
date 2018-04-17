@@ -2,7 +2,8 @@
 title: Network Policy
 id: network-policy
 date: 2018-04-12
-full-link: /docs/concepts/services-networking/network-policies/
+full_link: /docs/concepts/services-networking/network-policies/
+aka: 
 tags:
 - networking
 - architecture

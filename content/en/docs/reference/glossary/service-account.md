@@ -2,7 +2,8 @@
 title: Service Account
 id: service-account
 date: 2018-04-12
-full-link: /docs/tasks/configure-pod-container/configure-service-account/
+full_link: /docs/tasks/configure-pod-container/configure-service-account/
+aka: 
 tags:
 - fundamental
 - core-object 

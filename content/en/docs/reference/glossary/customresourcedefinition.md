@@ -2,7 +2,8 @@
 title: CustomResourceDefinition
 id: CustomResourceDefinition
 date: 2018-04-12
-full-link: docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/
+full_link: docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/
+aka: 
 tags:
 - fundamental
 - operation

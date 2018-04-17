@@ -2,7 +2,8 @@
 title: Application Architect
 id: application-architect
 date: 2018-04-12
-full-link: 
+full_link: 
+aka: 
 tags:
 - user-type 
 ---

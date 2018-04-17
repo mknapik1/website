@@ -2,7 +2,8 @@
 title: Certificate
 id: certificate
 date: 2018-04-12
-full-link: /docs/tasks/tls/managing-tls-in-a-cluster/
+full_link: /docs/tasks/tls/managing-tls-in-a-cluster/
+aka: 
 tags:
 - security 
 ---

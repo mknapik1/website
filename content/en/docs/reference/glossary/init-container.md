@@ -2,7 +2,8 @@
 title: Init Container
 id: init-container
 date: 2018-04-12
-full-link: 
+full_link: 
+aka: 
 tags:
 - fundamental 
 ---

@@ -2,7 +2,8 @@
 title: Security Context
 id: security-context
 date: 2018-04-12
-full-link: /docs/tasks/configure-pod-container/security-context/
+full_link: /docs/tasks/configure-pod-container/security-context/
+aka: 
 tags:
 - security 
 ---

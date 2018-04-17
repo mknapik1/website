@@ -2,7 +2,8 @@
 title: Cluster Operator
 id: cluster-operator
 date: 2018-04-12
-full-link: 
+full_link: 
+aka: 
 tags:
 - user-type 
 ---

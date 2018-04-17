@@ -2,7 +2,8 @@
 title: ConfigMap
 id: configmap
 date: 2018-04-12
-full-link: /docs/tasks/configure-pod-container/configure-pod-configmap/
+full_link: /docs/tasks/configure-pod-container/configure-pod-configmap/
+aka: 
 tags:
 - core-object 
 ---

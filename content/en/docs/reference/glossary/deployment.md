@@ -2,7 +2,8 @@
 title: Deployment
 id: deployment
 date: 2018-04-12
-full-link: /docs/concepts/workloads/controllers/deployment/
+full_link: /docs/concepts/workloads/controllers/deployment/
+aka: 
 tags:
 - fundamental
 - core-object

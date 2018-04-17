@@ -2,7 +2,8 @@
 title: SIG (special interest group)
 id: sig
 date: 2018-04-12
-full-link: https://github.com/kubernetes/community/blob/master/sig-list.md#master-sig-list
+full_link: https://github.com/kubernetes/community/blob/master/sig-list.md#master-sig-list
+aka: 
 tags:
 - community 
 ---

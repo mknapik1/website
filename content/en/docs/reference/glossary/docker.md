@@ -2,7 +2,8 @@
 title: docker
 id: docker
 date: 2018-04-12
-full-link: /docs/reference/kubectl/docker-cli-to-kubectl/
+full_link: /docs/reference/kubectl/docker-cli-to-kubectl/
+aka: 
 tags:
 - fundamental 
 ---

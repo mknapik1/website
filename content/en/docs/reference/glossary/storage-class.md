@@ -2,7 +2,8 @@
 title: Storage Class
 id: storageclass
 date: 2018-04-12
-full-link: /docs/concepts/storage/storage-classes
+full_link: /docs/concepts/storage/storage-classes
+aka: 
 tags:
 - core-object
 - storage 

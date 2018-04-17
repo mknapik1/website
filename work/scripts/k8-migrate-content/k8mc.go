@@ -202,6 +202,7 @@ weight: 5
 		shortDesc := cast.ToString(vv["short-description"])
 		longDesc := cast.ToString(vv["long-description"])
 		fullLink := cast.ToString(vv["full-link"])
+		aka := cast.ToString(vv["aka"])
 		tags := cast.ToStringSlice(vv["tags"])
 		tagsStr := ""
 		for _, tag := range tags {
@@ -215,7 +216,8 @@ weight: 5
 title: %s
 id: %s
 date: 2018-04-12
-full-link: %s
+full_link: %s
+aka: %s
 tags:
 %s 
 ---
@@ -223,7 +225,7 @@ tags:
 <!--more--> 
 
 %s
-`, name, id, fullLink, tagsStr, shortDesc, longDesc)
+`, name, id, fullLink, aka, tagsStr, shortDesc, longDesc)
 
 		if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
 			return err

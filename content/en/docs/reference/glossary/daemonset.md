@@ -2,7 +2,8 @@
 title: DaemonSet
 id: daemonset
 date: 2018-04-12
-full-link: /docs/concepts/workloads/controllers/daemonset
+full_link: /docs/concepts/workloads/controllers/daemonset
+aka: 
 tags:
 - fundamental
 - core-object

@@ -2,7 +2,8 @@
 title: kube-scheduler
 id: kube-scheduler
 date: 2018-04-12
-full-link: /docs/reference/generated/kube-scheduler/
+full_link: /docs/reference/generated/kube-scheduler/
+aka: 
 tags:
 - architecture 
 ---

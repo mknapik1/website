@@ -2,7 +2,8 @@
 title: Pod
 id: pod
 date: 2018-04-12
-full-link: /docs/concepts/workloads/pods/pod-overview/
+full_link: /docs/concepts/workloads/pods/pod-overview/
+aka: 
 tags:
 - core-object
 - fundamental 

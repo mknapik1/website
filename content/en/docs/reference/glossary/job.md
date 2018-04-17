@@ -2,7 +2,8 @@
 title: Job
 id: job
 date: 2018-04-12
-full-link: /docs/concepts/workloads/controllers/jobs-run-to-completion
+full_link: /docs/concepts/workloads/controllers/jobs-run-to-completion
+aka: 
 tags:
 - fundamental
 - core-object

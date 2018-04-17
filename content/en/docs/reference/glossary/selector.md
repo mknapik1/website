@@ -2,7 +2,8 @@
 title: Selector
 id: selector
 date: 2018-04-12
-full-link: /docs/concepts/overview/working-with-objects/labels/
+full_link: /docs/concepts/overview/working-with-objects/labels/
+aka: 
 tags:
 - fundamental 
 ---

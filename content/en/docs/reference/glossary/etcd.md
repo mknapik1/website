@@ -2,7 +2,8 @@
 title: etcd
 id: etcd
 date: 2018-04-12
-full-link: /docs/tasks/administer-cluster/configure-upgrade-etcd/
+full_link: /docs/tasks/administer-cluster/configure-upgrade-etcd/
+aka: 
 tags:
 - architecture
 - storage 

@@ -2,7 +2,8 @@
 title: Kops
 id: kops
 date: 2018-04-12
-full-link: /docs/getting-started-guides/kops/
+full_link: /docs/getting-started-guides/kops/
+aka: 
 tags:
 - tool
 - operation 

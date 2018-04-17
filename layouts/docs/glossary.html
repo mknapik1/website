@@ -35,19 +35,19 @@
 	{{ range .Params.tags }}
 	{{ $.Scratch.Add "tag_classes" (printf "tag-%s " .)  }}
 	{{ end }}
-	{{ $term_identifier := (printf "term-%s") .Params.id }}
+	{{ $term_identifier := (printf "term-%s" .Params.id) }}
+	
 	<li class="{{ $.Scratch.Get "tag_classes" }} hide" data-show-count="0">
 		<div id="{{ $term_identifier }}" class="term-anchor"></div>
 		<div>
 			<div class="term-name"><b>{{ .Title }}</b><a href="{{ printf "#%s" $term_identifier }}" class="permalink hide">LINK</a></div>
-			{{/* TODO(bep) aka */}}
 			{{ with .Params.aka }}
 			Also known as: <i>{{ delimit . ", " }}</i>
 			<br>
 			{{ end }}
 			<span class="preview-text">{{ .Summary }} <a href="javascript:void(0)" class="click-controller no-underline" data-target="{{ .Params.id }}">[+]</a></span>
 			<div id="{{ .Params.id }}" class="hide">
-				{{ .Content }}
+				{{ .Content | strings.TrimPrefix .Summary | safeHTML }}
 			</div>
 		</div>
 	</li>

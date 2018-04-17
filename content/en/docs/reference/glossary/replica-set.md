@@ -2,7 +2,8 @@
 title: ReplicaSet
 id: replica-set
 date: 2018-04-12
-full-link: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+full_link: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+aka: 
 tags:
 - fundamental
 - core-object

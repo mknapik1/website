@@ -2,7 +2,8 @@
 title: Ingress
 id: ingress
 date: 2018-04-12
-full-link: /docs/concepts/services-networking/ingress/
+full_link: /docs/concepts/services-networking/ingress/
+aka: 
 tags:
 - networking
 - architecture

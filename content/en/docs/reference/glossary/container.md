@@ -2,7 +2,8 @@
 title: Container
 id: container
 date: 2018-04-12
-full-link: /docs/concepts/overview/what-is-kubernetes/#why-containers
+full_link: /docs/concepts/overview/what-is-kubernetes/#why-containers
+aka: 
 tags:
 - fundamental
 - workload 
