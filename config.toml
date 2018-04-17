@@ -32,6 +32,15 @@ twitter = "kubernetesio"
   blog = "/:section/:year/:month/:day/:slug/"
 
 
+# Be explicit about the output formats. We only want an RSS feed for the sections.
+[outputs]
+home = [ "HTML"]
+page = [ "HTML"]
+section = [ "HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+baseName = "feed"	
 
 [params]
 
