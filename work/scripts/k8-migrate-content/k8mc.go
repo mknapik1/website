@@ -855,9 +855,9 @@ func fixDates(path, s string) (string, error) {
 		key, val := m[0][1], m[0][2]
 		var tt time.Time
 
-		tt, err = time.Parse("Monday, January 2, 2006", val)
+		tt, err = time.Parse("Monday, January 2, 2006", strings.TrimSpace(val))
 		if err != nil {
-			err = fmt.Errorf("%s: %s", key, err)
+			err = fmt.Errorf("Date Parse failed: %s: %s", key, err)
 			return ""
 		}
 

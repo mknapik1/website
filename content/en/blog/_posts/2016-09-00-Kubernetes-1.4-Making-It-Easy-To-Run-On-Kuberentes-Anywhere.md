@@ -2,8 +2,7 @@
 permalink: /blog/:year/:month/:title
 layout: blog
 title: " Kubernetes 1.4: Making it easy to run on Kubernetes anywhere "
-date:  Tuesday, September 26, 2016 
-
+date: 2016-09-26
 ---
 Today we’re happy to announce the release of Kubernetes 1.4.  
   

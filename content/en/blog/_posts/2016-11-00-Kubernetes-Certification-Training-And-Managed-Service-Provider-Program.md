@@ -2,8 +2,7 @@
 permalink: /blog/:year/:month/:title
 layout: blog
 title: " CNCF Partners With The Linux Foundation To Launch New Kubernetes Certification, Training and Managed Service Provider Program "
-date:  Wednesday, November 08, 2016 
-
+date: 2016-11-08
 ---
 Today the CNCF is pleased to launch a new training, certification and Kubernetes Managed Service Provider (KMSP) program.&nbsp;  
   

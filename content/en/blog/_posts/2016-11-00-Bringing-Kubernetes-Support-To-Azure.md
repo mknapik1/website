@@ -2,8 +2,7 @@
 permalink: /blog/:year/:month/:title
 layout: blog
 title: " Bringing Kubernetes Support to Azure Container Service "
-date:  Tuesday, November 07, 2016 
-
+date: 2016-11-07
 ---
 _Editor's note: Today’s post is by Brendan Burns, Partner Architect, at Microsoft & Kubernetes co-founder talking about bringing Kubernetes to Azure Container Service._  
   
