@@ -25,7 +25,7 @@ After checking out the current page and its linked sections, you should have a b
 
 ## Deploy an application with advanced features
 
-Now you know the set of API objects that Kubernetes provides. Understanding the difference between a {% glossary_tooltip term_id="daemonset" %} and a {% glossary_tooltip term_id="deployment" %} is oftentimes sufficient for app deployment. That being said, it's also worth familiarizing yourself with Kubernetes's lesser known features. They can be quite powerful when applied to the right use cases.
+Now you know the set of API objects that Kubernetes provides. Understanding the difference between a {{< glossary_tooltip term_id="daemonset" >}} and a {{< glossary_tooltip term_id="deployment" >}} is oftentimes sufficient for app deployment. That being said, it's also worth familiarizing yourself with Kubernetes's lesser known features. They can be quite powerful when applied to the right use cases.
 
 #### Container-level features
 
@@ -109,7 +109,7 @@ The following topics are also useful for building more complex applications:
 #### What's next
 Congrats on completing the Application Developer user journey! You've covered the majority of features that Kubernetes has to offer. What now?
 
-* If you'd like to suggest new features or keep up with the latest developments around Kubernetes app development, consider joining a {% glossary_tooltip term_id="sig" %} such as [SIG Apps](https://github.com/kubernetes/community/tree/master/sig-apps){:target="_blank"}.
+* If you'd like to suggest new features or keep up with the latest developments around Kubernetes app development, consider joining a {{< glossary_tooltip term_id="sig" >}} such as [SIG Apps](https://github.com/kubernetes/community/tree/master/sig-apps){:target="_blank"}.
 
 * If you are interested in learning more about the inner workings of Kubernetes (e.g. networking), consider checking out the [Cluster Operator journey](/docs/user-journeys/users/cluster-operator/foundational/){:target="_blank"}.
 

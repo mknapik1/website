@@ -20,5 +20,5 @@ tags:
   * High availability (HA) support
   * The ability to directly provision, or generate terraform manifests
 
-You can also build your own cluster using {% glossary_tooltip term_id="kubeadm" %} as a building block. `kops` builds on the kubeadm work.
+You can also build your own cluster using {{< glossary_tooltip term_id="kubeadm" >}} as a building block. `kops` builds on the kubeadm work.
 

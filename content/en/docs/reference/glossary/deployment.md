@@ -12,5 +12,5 @@ tags:
 
 <!--more--> 
 
-Each replica is represented by a {% glossary_tooltip term_id="pod" %}, and the Pods are distributed among the nodes of a cluster.
+Each replica is represented by a {{< glossary_tooltip term_id="pod" >}}, and the Pods are distributed among the nodes of a cluster.
 

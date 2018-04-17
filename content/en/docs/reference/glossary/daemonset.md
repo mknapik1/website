@@ -12,5 +12,5 @@ tags:
 
 <!--more--> 
 
-Used to deploy system daemons such as log collectors and monitoring agents that typically must run on every {% glossary_tooltip term_id="node" %}.
+Used to deploy system daemons such as log collectors and monitoring agents that typically must run on every {{< glossary_tooltip term_id="node" >}}.
 

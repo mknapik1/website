@@ -6,7 +6,7 @@ weight: 10
 {{% capture overview %}}
 
 This page shows how to define commands and arguments when you run a container
-in a {% glossary_tooltip term_id="pod" %}.
+in a {{< glossary_tooltip term_id="pod" >}}.
 
 {{% /capture %}}
 

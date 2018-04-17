@@ -7,7 +7,7 @@ tags:
 - core-object
 - fundamental 
 ---
- Enables fine-grained authorization of {% glossary_tooltip term_id="pod" %} creation and updates.
+ Enables fine-grained authorization of {{< glossary_tooltip term_id="pod" >}} creation and updates.
 
 <!--more--> 
 

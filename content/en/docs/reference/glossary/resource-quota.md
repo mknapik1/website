@@ -8,7 +8,7 @@ tags:
 - operation
 - architecture 
 ---
- Provides constraints that limit aggregate resource consumption per {% glossary_tooltip term_id="namespace" %}.
+ Provides constraints that limit aggregate resource consumption per {{< glossary_tooltip term_id="namespace" >}}.
 
 <!--more--> 
 

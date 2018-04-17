@@ -484,8 +484,8 @@ func (m *mover) contentMigrate_Replacements() error {
 		},
 
 		func(path, s string) (string, error) {
-			re := regexp.MustCompile(`{% glossary_tooltip text="(.*?)" term_id="(.*?)" %}`)
-			return re.ReplaceAllString(s, `{{< glossary_tooltip text="$1" term_id="$2" >}}`), nil
+			re := regexp.MustCompile(`{% glossary_tooltip(.*?)%}`)
+			return re.ReplaceAllString(s, `{{< glossary_tooltip$1>}}`), nil
 			return s, nil
 		},
 
