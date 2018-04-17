@@ -6,7 +6,7 @@
 {{- $glossaryItems :=  $glossaryBundle.Resources.ByType "page" -}}
 {{- $term_info := $glossaryItems.GetMatch (printf "%s*" $id ) -}}
 {{- if not $term_info -}}
-{{- errorf "%q is not a valid glossary term_id, see ./docs/reference/glossary/* for a full list" $id -}}
+{{- errorf "[%s] %q: %q is not a valid glossary term_id, see ./docs/reference/glossary/* for a full list" .Page.Site.Language.Lang .Page.Path $id -}}
 {{- end -}}
 {{- with $term_info -}}
 {{- if (strings.Contains "short" $length) -}}
