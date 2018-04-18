@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ "css/blog.css" | relURL }}">
 	</head>
 	<body>
-		{{ partial "header.html" . }}
+		{{ partialCached "header.html" . "blog" }}
 		<section id="hero" class="light-text no-sub">
 			<h1>Kubernetes Blog</h1>
 		</section>
@@ -33,6 +33,6 @@
 			</div>
 		</div>
 		{{ partialCached "footer.html" . }}
-		{{ partial "footer-scripts.html" . }}
+		{{ partialCached "footer-scripts.html" . }}
 	</body>
 </html>
