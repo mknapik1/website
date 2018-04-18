@@ -905,25 +905,24 @@ of a volume are preserved when it is unmounted. It supports both VMFS and VSAN d
 
 Choose one of the following methods to create a VMDK.
 
-{% capture vmkfstools %}
+{{< tabs name="tabs_volumes" >}}
+{{% tab name="Create using vmkfstools" %}}
 First ssh into ESX, then use the following command to create a VMDK:
 
 ```shell
 vmkfstools -c 2G /vmfs/volumes/DatastoreName/volumes/myDisk.vmdk
 ```
-{{% /capture %}}
-
-{{% capture vdiskmanager %}}
+{{% /tab %}}
+{{% tab name="Create using vmware-vdiskmanager" %}}
 Use the following command to create a VMDK:
 
 ```shell
 vmware-vdiskmanager -c -t 0 -s 40GB -a lsilogic myDisk.vmdk
 ```
-{{% /capture %}}
+{{% /tab %}}
 
-{% assign tab_names = 'Create using vmkfstools,Create using vmware-vdiskmanager' | split: ',' | compact %}
-{% assign tab_contents = site.emptyArray | push: vmkfstools | push: vdiskmanager %}
-{% include tabs.md %}
+{{< /tabs >}}
+
 
 #### vSphere VMDK Example configuration
 

@@ -91,8 +91,8 @@ Please proceed with executing the following commands based on your OS as root. Y
 If you already have the required versions of the Docker installed, you can move on to next section.
 If not, you can use the following commands to install Docker on your system:
 
-{% capture docker_ubuntu %}
-
+{{< tabs name="docker_install" >}}
+{{% tab name="Ubuntu, Debian or HypriotOS" %}}
 Install Docker from Ubuntu's repositories:
 
 ```bash
@@ -104,47 +104,29 @@ or install Docker CE 17.03 from Docker's repositories for Ubuntu or Debian:
 
 ```bash
 apt-get update
-apt-get install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
+apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-add-apt-repository \
-   "deb https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
-   $(lsb_release -cs) \
-   stable"
-apt-get update && apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 17.03 | head -1 | awk '{print $3}')
+add-apt-repository "deb https://download.docker.com/linux/$(. /etc/os-release; echo "") $(lsb_release -cs) stable"
+apt-get update && apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 17.03 | head -1 | awk '{print }')
 ```
-
-{{% /capture %}}
-
-{{% capture docker_centos %}}
-
+{{% /tab %}}
+{{% tab name="CentOS, RHEL or Fedora" %}}
 Install Docker using your operating system's bundled package:
 
 ```bash
 yum install -y docker
 systemctl enable docker && systemctl start docker
 ```
-
-{{% /capture %}}
-
-{{% capture docker_coreos %}}
-
+{{% /tab %}}
+{{% tab name="Container Linux" %}}
 Enable and start Docker:
 
 ```bash
 systemctl enable docker && systemctl start docker
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
-{{% /capture %}}
-
-{% assign tab_set_name = "docker_install" %}
-{% assign tab_names = "Ubuntu, Debian or HypriotOS;CentOS, RHEL or Fedora; Container Linux" | split: ';' | compact %}
-{% assign tab_contents = site.emptyArray | push: docker_ubuntu | push: docker_centos | push: docker_coreos %}
-
-{% include tabs.md %}
 
 Refer to the [official Docker installation guides](https://docs.docker.com/engine/installation/)
 for more information.
@@ -171,9 +153,8 @@ but not vice versa.
 For more information on version skews, please read our 
 [version skew policy](/docs/setup/independent/create-cluster-kubeadm/#version-skew-policy).
 
-{{% capture ubuntu %}}
-
-```bash
+{{< tabs name="k8s_install" >}}
+{{< tab name="Ubuntu, Debian or HypriotOS" codelang="bash" >}}
 apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
@@ -181,17 +162,13 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
-```
-
-{{% /capture %}}
-
-{{% capture centos %}}
-
-```bash
+{{< /tab >}}
+{{% tab name="CentOS, RHEL or Fedora" %}}
+``
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
@@ -216,17 +193,14 @@ systemctl enable kubelet && systemctl start kubelet
     EOF
     sysctl --system
     ```
-
-{{% /capture %}}
-
-{{% capture coreos %}}
-
+{{% /tab %}}
+{{% tab name="Container Linux" %}}
 Install CNI plugins (required for most pod network):
 
 ```bash
 CNI_VERSION="v0.6.0"
 mkdir -p /opt/cni/bin
-curl -L "https://github.com/containernetworking/plugins/releases/download/${CNI_VERSION}/cni-plugins-amd64-${CNI_VERSION}.tgz" | tar -C /opt/cni/bin -xz
+curl -L "https://github.com/containernetworking/plugins/releases/download//cni-plugins-amd64-.tgz" | tar -C /opt/cni/bin -xz
 ```
 
 Install `kubeadm`, `kubelet`, `kubectl` and add a `kubelet` systemd service:
@@ -236,12 +210,12 @@ RELEASE="$(curl -sSL https://dl.k8s.io/release/stable.txt)"
 
 mkdir -p /opt/bin
 cd /opt/bin
-curl -L --remote-name-all https://storage.googleapis.com/kubernetes-release/release/${RELEASE}/bin/linux/amd64/{kubeadm,kubelet,kubectl}
+curl -L --remote-name-all https://storage.googleapis.com/kubernetes-release/release//bin/linux/amd64/{kubeadm,kubelet,kubectl}
 chmod +x {kubeadm,kubelet,kubectl}
 
-curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/kubelet.service" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service
+curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes//build/debs/kubelet.service" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service
 mkdir -p /etc/systemd/system/kubelet.service.d
-curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes//build/debs/10-kubeadm.conf" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 ```
 
 Enable and start `kubelet`:
@@ -249,14 +223,9 @@ Enable and start `kubelet`:
 ```bash
 systemctl enable kubelet && systemctl start kubelet
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
-{{% /capture %}}
-
-{% assign tab_set_name = "k8s_install" %}
-{% assign tab_names = "Ubuntu, Debian or HypriotOS;CentOS, RHEL or Fedora;Container Linux" | split: ';' | compact %}
-{% assign tab_contents = site.emptyArray | push: ubuntu | push: centos | push: coreos %}
-
-{% include tabs.md %}
 
 The kubelet is now restarting every few seconds, as it waits in a crashloop for
 kubeadm to tell it what to do.

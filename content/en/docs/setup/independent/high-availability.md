@@ -214,22 +214,17 @@ In order to copy certs between machines, you must enable SSH access for `scp`.
 
 This will result in the following files: `peer.pem`, `peer-key.pem`, `server.pem`, `server-key.pem`.
 
-### Run etcd
-
-Now that all the certificates have been generated, you will now install and set up etcd on each machine.
-
-{% capture choose %}
+### {{< tabs name="etcd_mode" >}}
+{{% tab name="Choose one..." %}}
 Please select one of the tabs to see installation instructions for the respective way to run etcd.
-{{% /capture %}}
-
-{{% capture systemd %}}
-
+{{% /tab %}}
+{{% tab name="systemd" %}}
 1. First you will install etcd binaries like so:
 
    ```shell
    export ETCD_VERSION=v3.1.10
-   curl -sSL https://github.com/coreos/etcd/releases/download/${ETCD_VERSION}/etcd-${ETCD_VERSION}-linux-amd64.tar.gz | tar -xzv --strip-components=1 -C /usr/local/bin/
-   rm -rf etcd-$ETCD_VERSION-linux-amd64*
+   curl -sSL https://github.com/coreos/etcd/releases/download//etcd--linux-amd64.tar.gz | tar -xzv --strip-components=1 -C /usr/local/bin/
+   rm -rf etcd--linux-amd64*
    ```
 
    It is worth noting that etcd v3.1.10 is the preferred version for Kubernetes v1.9. For other versions of Kubernetes please consult [the changelog](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG.md).
@@ -240,8 +235,8 @@ Please select one of the tabs to see installation instructions for the respectiv
 
    ```
    touch /etc/etcd.env
-   echo "PEER_NAME=$PEER_NAME" >> /etc/etcd.env
-   echo "PRIVATE_IP=$PRIVATE_IP" >> /etc/etcd.env
+   echo "PEER_NAME=" >> /etc/etcd.env
+   echo "PRIVATE_IP=" >> /etc/etcd.env
    ```
 
 1. Now copy the systemd unit file like so:
@@ -262,23 +257,7 @@ Please select one of the tabs to see installation instructions for the respectiv
    LimitNOFILE=40000
    TimeoutStartSec=0
 
-   ExecStart=/usr/local/bin/etcd --name ${PEER_NAME} \
-       --data-dir /var/lib/etcd \
-       --listen-client-urls https://${PRIVATE_IP}:2379 \
-       --advertise-client-urls https://${PRIVATE_IP}:2379 \
-       --listen-peer-urls https://${PRIVATE_IP}:2380 \
-       --initial-advertise-peer-urls https://${PRIVATE_IP}:2380 \
-       --cert-file=/etc/kubernetes/pki/etcd/server.pem \
-       --key-file=/etc/kubernetes/pki/etcd/server-key.pem \
-       --client-cert-auth \
-       --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.pem \
-       --peer-cert-file=/etc/kubernetes/pki/etcd/peer.pem \
-       --peer-key-file=/etc/kubernetes/pki/etcd/peer-key.pem \
-       --peer-client-cert-auth \
-       --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.pem \
-       --initial-cluster <etcd0>=https://<etcd0-ip-address>:2380,<etcd1>=https://<etcd1-ip-address>:2380,<etcd2>=https://<etcd2-ip-address>:2380 \
-       --initial-cluster-token my-etcd-token \
-       --initial-cluster-state new
+   ExecStart=/usr/local/bin/etcd --name  --data-dir /var/lib/etcd --listen-client-urls https://:2379 --advertise-client-urls https://:2379 --listen-peer-urls https://:2380 --initial-advertise-peer-urls https://:2380 --cert-file=/etc/kubernetes/pki/etcd/server.pem --key-file=/etc/kubernetes/pki/etcd/server-key.pem --client-cert-auth --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.pem --peer-cert-file=/etc/kubernetes/pki/etcd/peer.pem --peer-key-file=/etc/kubernetes/pki/etcd/peer-key.pem --peer-client-cert-auth --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.pem --initial-cluster <etcd0>=https://<etcd0-ip-address>:2380,<etcd1>=https://<etcd1-ip-address>:2380,<etcd2>=https://<etcd2-ip-address>:2380 --initial-cluster-token my-etcd-token --initial-cluster-state new
 
    [Install]
    WantedBy=multi-user.target
@@ -299,10 +278,8 @@ Please select one of the tabs to see installation instructions for the respectiv
    ```shell
    systemctl status etcd
    ```
-{{% /capture %}}
-
-{{% capture static_pods %}}
-
+{{% /tab %}}
+{{% tab name="Static Pods" %}}
 **Note**: This is only supported on nodes that have the all dependencies for the kubelet installed. If you are hosting etcd on the master nodes, this has already been set up. If you are hosting etcd on dedicated nodes, you should either use systemd or run the [installation guide](/docs/setup/independent/install-kubeadm/) on each dedicated etcd machine.
 
 1. The first step is to run the following to generate the manifest file:
@@ -320,23 +297,7 @@ Please select one of the tabs to see installation instructions for the respectiv
    spec:
    containers:
    - command:
-       - etcd --name ${PEER_NAME} \
-       - --data-dir /var/lib/etcd \
-       - --listen-client-urls https://${PRIVATE_IP}:2379 \
-       - --advertise-client-urls https://${PRIVATE_IP}:2379 \
-       - --listen-peer-urls https://${PRIVATE_IP}:2380 \
-       - --initial-advertise-peer-urls https://${PRIVATE_IP}:2380 \
-       - --cert-file=/certs/server.pem \
-       - --key-file=/certs/server-key.pem \
-       - --client-cert-auth \
-       - --trusted-ca-file=/certs/ca.pem \
-       - --peer-cert-file=/certs/peer.pem \
-       - --peer-key-file=/certs/peer-key.pem \
-       - --peer-client-cert-auth \
-       - --peer-trusted-ca-file=/certs/ca.pem \
-       - --initial-cluster etcd0=https://<etcd0-ip-address>:2380,etcd1=https://<etcd1-ip-address>:2380,etcd2=https://<etcd2-ip-address>:2380 \
-       - --initial-cluster-token my-etcd-token \
-       - --initial-cluster-state new
+       - etcd --name  - --data-dir /var/lib/etcd - --listen-client-urls https://:2379 - --advertise-client-urls https://:2379 - --listen-peer-urls https://:2380 - --initial-advertise-peer-urls https://:2380 - --cert-file=/certs/server.pem - --key-file=/certs/server-key.pem - --client-cert-auth - --trusted-ca-file=/certs/ca.pem - --peer-cert-file=/certs/peer.pem - --peer-key-file=/certs/peer-key.pem - --peer-client-cert-auth - --peer-trusted-ca-file=/certs/ca.pem - --initial-cluster etcd0=https://<etcd0-ip-address>:2380,etcd1=https://<etcd1-ip-address>:2380,etcd2=https://<etcd2-ip-address>:2380 - --initial-cluster-token my-etcd-token - --initial-cluster-state new
        image: k8s.gcr.io/etcd-amd64:3.1.10
        livenessProbe:
        httpGet:
@@ -379,24 +340,15 @@ Please select one of the tabs to see installation instructions for the respectiv
    Make sure you replace:
    * `<podname>` with the name of the node you're running on (e.g. `etcd0`, `etcd1` or `etcd2`)
    * `<etcd0-ip-address>`, `<etcd1-ip-address>` and `<etcd2-ip-address>` with the public IPv4s of the other machines that host etcd.
+{{% /tab %}}
+{{< /tabs >}}
 
-{{% /capture %}}
 
-{% assign tab_set_name = "etcd_mode" %}
-{% assign tab_names = "Choose one...,systemd,Static Pods" | split: ',' | compact %}
-{% assign tab_contents = site.emptyArray | push: choose | push: systemd | push: static_pods %}
-
-{% include tabs.md %}
-
-## Set up master Load Balancer
-
-The next step is to create a Load Balancer that sits in front of your master nodes. How you do this depends on your environment; you could, for example, leverage a cloud provider Load Balancer, or set up your own using NGINX, keepalived, or HAproxy.
-
-{{% capture choose %}}
-Please select one of the tabs to see installation instructions for information on load balancing in the respective environment.
-{{% /capture %}}
-
-{{% capture cloud %}}
+## {{< tabs name="lb_mode" >}}
+{{% tab name="Choose one..." %}}
+Please select one of the tabs to see installation instructions for the respective way to run etcd.
+{{% /tab %}}
+{{% tab name="Cloud" %}}
 Some examples of cloud provider solutions are:
 
 * [AWS Elastic Load Balancer](https://aws.amazon.com/elasticloadbalancing/)
@@ -406,9 +358,8 @@ Some examples of cloud provider solutions are:
 You will need to ensure that the load balancer routes to **just `master0` on port 6443**. This is because kubeadm will perform health checks using the load balancer IP. Since `master0` is set up individually first, the other masters will not have running apiservers, which will result in kubeadm hanging indefinitely.
 
 If possible, use a smart load balancing algorithm like "least connections", and use health checks so unhealthy nodes can be removed from circulation. Most providers will provide these features.
-{{% /capture %}}
-
-{{% capture onsite %}}
+{{% /tab %}}
+{{% tab name="On-Site" %}}
 In an on-site environment there may not be a physical load balancer available. Instead, a virtual IP pointing to a healthy master node can be used. There are a number of solutions for this including keepalived, Pacemaker and probably many others, some with and some without load balancing.
 
 As an example we outline a simple setup based on keepalived. Depending on environment and requirements people may prefer different solutions. The configuration shown here provides an _active/passive_ failover without load balancing. If required, load balancing can by added quite easily by setting up HAProxy, NGINX or similar on the master nodes (not covered in this guide).
@@ -476,14 +427,9 @@ As an example we outline a simple setup based on keepalived. Depending on enviro
     Replace the `<VIRTUAL-IP>` by your chosen virtual IP.
 
 4. Restart keepalived. While no Kubernetes services are up yet it will log health check fails on all master nodes. This will stop as soon as the first master node has been bootstrapped.
+{{% /tab %}}
+{{< /tabs >}}
 
-{{% /capture %}}
-
-{% assign tab_set_name = "lb_mode" %}
-{% assign tab_names = "Choose one...,Cloud,On-Site" | split: ',' | compact %}
-{% assign tab_contents = site.emptyArray | push: choose | push: cloud | push: onsite %}
-
-{% include tabs.md %}
 
 ## Acquire etcd certs
 

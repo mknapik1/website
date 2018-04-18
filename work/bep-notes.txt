@@ -58,7 +58,6 @@ All:
 - OK headless bundle for all the includes
 
 
-
 In /data:
 
 * Delete /glossary and all YAML in root
@@ -66,9 +65,13 @@ In /data:
 
 
 
-Talking points Monday meeting
+content/en/docs/home/contribute/includes.md: Ignore
+content/en/docs/tasks/access-kubernetes-api/extend-api-third-party-resource.md:{% assign for_k8s_version="1.7" %}{% include feature-state-deprecated.md %}
+content/en/docs/concepts/storage/volumes.md:{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
 
-* Glossary is now a Hugo bundle
+{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
 
+
+* Inline: page.fullversion
 
 

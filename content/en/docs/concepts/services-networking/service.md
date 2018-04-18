@@ -469,11 +469,11 @@ In a split-horizon DNS environment you would need two services to be able to rou
 
 This can be achieved by adding the following annotations to the service based on cloud provider.
 
-{{% capture default_tab %}}
+{{< tabs name="service_tabs" >}}
+{{% tab name="Decfault" %}}
 Select one of the tabs.
-{{% /capture %}}
-
-{{% capture gcp %}}
+{{% /tab %}}
+{{% tab name="GCP" %}}
 ```yaml
 [...]
 metadata:
@@ -484,9 +484,8 @@ metadata:
 ```
 Use `cloud.google.com/load-balancer-type: "internal"` for masters with version 1.7.0 to 1.7.3.
 For more information, see the [docs](https://cloud.google.com/kubernetes-engine/docs/internal-load-balancing).
-{{% /capture %}}
-
-{{% capture aws %}}
+{{% /tab %}}
+{{% tab name="AWS" %}}
 ```yaml
 [...]
 metadata:
@@ -495,9 +494,8 @@ metadata:
         service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
 [...]
 ```
-{{% /capture %}}
-
-{{% capture azure %}}
+{{% /tab %}}
+{{% tab name="Azure" %}}
 ```yaml
 [...]
 metadata:
@@ -506,9 +504,8 @@ metadata:
         service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 [...]
 ```
-{{% /capture %}}
-
-{{% capture openstack %}}
+{{% /tab %}}
+{{% tab name="OpenStack" %}}
 ```yaml
 [...]
 metadata:
@@ -517,11 +514,9 @@ metadata:
         service.beta.kubernetes.io/openstack-internal-load-balancer: "true"
 [...]
 ```
-{{% /capture %}}
+{{% /tab %}}
+{{< /tabs >}}
 
-{% assign tab_names = 'Default,GCP,AWS,Azure,OpenStack' | split: ',' | compact %}
-{% assign tab_contents = site.emptyArray | push: default_tab | push: gcp | push: aws | push: azure | push: openstack %}
-{% include tabs.md %}
 
 #### SSL support on AWS
 For partial SSL support on clusters running on AWS, starting with 1.3 three

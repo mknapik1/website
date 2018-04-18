@@ -244,12 +244,11 @@ kubectl apply -f <add-on.yaml>
 
 **NOTE:** You can install **only one** pod network per cluster.
 
-{% capture choose %}
+{{< tabs name="tabs-pod-install" >}}
+{{% tab name="Choose one..." %}}
 Please select one of the tabs to see installation instructions for the respective third-party Pod Network Provider.
-{{% /capture %}}
-
-{{% capture calico %}}
-
+{{% /tab %}}
+{{% tab name="Calico" %}}
 Refer to the Calico documentation for a [kubeadm quickstart](https://docs.projectcalico.org/latest/getting-started/kubernetes/), a [kubeadm installation guide](http://docs.projectcalico.org/latest/getting-started/kubernetes/installation/hosted/kubeadm/), and other resources.
 
 **Note:**
@@ -260,10 +259,8 @@ Refer to the Calico documentation for a [kubeadm quickstart](https://docs.projec
 ```shell
 kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
 ```
-{{% /capture %}}
-
-{{% capture canal %}}
-
+{{% /tab %}}
+{{% tab name="Canal" %}}
 The official Canal set-up guide is [here](https://github.com/projectcalico/canal/tree/master/k8s-install).
 
 **Note:**
@@ -275,10 +272,8 @@ The official Canal set-up guide is [here](https://github.com/projectcalico/canal
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/canal/master/k8s-install/1.7/canal.yaml
 ```
-{{% /capture %}}
-
-{{% capture flannel %}}
-
+{{% /tab %}}
+{{% tab name="Flannel" %}}
 **Note:**
 
  - For `flannel` to work correctly, `--pod-network-cidr=10.244.0.0/16` has to be passed to `kubeadm init`.
@@ -293,11 +288,8 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.9.1/Documen
 ```
 
  - For more information about `flannel`, please see [here](https://github.com/coreos/flannel).
-
-{{% /capture %}}
-
-{{% capture kube-router %}}
-
+{{% /tab %}}
+{{% tab name="Kube-router" %}}
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
 please see [here](https://kubernetes.io/docs/concepts/cluster-administration/network-plugins/#network-plugin-requirements).
@@ -307,11 +299,8 @@ Kube-router relies on kube-controller-manager to allocate pod CIDR for the nodes
 Kube-router provides pod networking, network policy, and high-performing IP Virtual Server(IPVS)/Linux Virtual Server(LVS) based service proxy.
 
 For information on setting up Kubernetes cluster with Kube-router using kubeadm, please see official [setup guide](https://github.com/cloudnativelabs/kube-router/blob/master/Documentation/kubeadm.md).
-
-{{% /capture %}}
-
-{{% capture romana %}}
-
+{{% /tab %}}
+{{% tab name="Romana" %}}
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
 please see [here](https://kubernetes.io/docs/concepts/cluster-administration/network-plugins/#network-plugin-requirements).
@@ -323,10 +312,8 @@ The official Romana set-up guide is [here](https://github.com/romana/romana/tree
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/romana/romana/master/containerize/specs/romana-kubeadm.yml
 ```
-{{% /capture %}}
-
-{{% capture weave_net %}}
-
+{{% /tab %}}
+{{% tab name="Weave Net" %}}
 Set `/proc/sys/net/bridge/bridge-nf-call-iptables` to `1` by running `sysctl net.bridge.bridge-nf-call-iptables=1`
 to pass bridged IPv4 traffic to iptables' chains. This is a requirement for some CNI plugins to work, for more information
 please see [here](https://kubernetes.io/docs/concepts/cluster-administration/network-plugins/#network-plugin-requirements).
@@ -338,15 +325,13 @@ Weave Net sets hairpin mode by default. This allows Pods to access themselves vi
 if they don't know their PodIP.
 
 ```shell
-export kubever=$(kubectl version | base64 | tr -d '\n')
-kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+export kubever=$(kubectl version | base64 | tr -d '
+')
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version="
 ```
-{{% /capture %}}
+{{% /tab %}}
+{{< /tabs >}}
 
-{% assign tab_names = "Choose one...,Calico,Canal,Flannel,Kube-router,Romana,Weave Net" | split: ',' | compact %}
-{% assign tab_contents = site.emptyArray | push: choose | push: calico | push: canal | push: flannel | push: kube-router | push: romana | push: weave_net %}
-
-{% include tabs.md %}
 
 Once a pod network has been installed, you can confirm that it is working by
 checking that the kube-dns pod is Running in the output of `kubectl get pods --all-namespaces`.

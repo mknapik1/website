@@ -17,6 +17,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/BurntSushi/toml"
+
 	"github.com/spf13/cast"
 
 	"gopkg.in/yaml.v2"
@@ -513,6 +515,11 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	// Handle the explicit replacements defined in replacments toml (tabs etc.)
+	if err := m.handleReplacementsFromTOML(); err != nil {
+		return err
+	}
+
 	return nil
 
 }
@@ -660,6 +667,37 @@ func (m *mover) handleFile(filename string, create bool, info os.FileInfo, repla
 	defer out.Close()
 
 	return m.replace(filename, &in, out, replacer)
+}
+
+func (m *mover) handleReplacementsFromTOML() error {
+	log.Println("Handle replacements defined in replacements.toml …")
+	mm := make(map[string]interface{})
+	_, err := toml.DecodeFile("replacements.toml", &mm)
+	if err != nil {
+		return err
+	}
+	replacements := cast.ToSlice(mm["replacements"])
+
+	for _, r := range replacements {
+		rm := cast.ToStringMapString(r)
+		filename := rm["filename"]
+		match := rm["matchRe"]
+		replacement := rm["replacement"]
+
+		matchRe := regexp.MustCompile(match)
+
+		absFilename := m.absFilename(filename)
+		replacer := func(path string, content string) (string, error) {
+			return matchRe.ReplaceAllString(content, replacement), nil
+		}
+
+		if err := m.replaceInFile(absFilename, replacer); err != nil {
+			return err
+		}
+
+	}
+
+	return nil
 }
 
 func (m *mover) replace(path string, in io.Reader, out io.Writer, replacer func(path string, content string) (string, error)) error {
