@@ -53,7 +53,7 @@ kind: Pod
 metadata:
   ...
   ownerReferences:
-  - apiVersion: extensions/v1beta1
+  - apiVersion: apps/v1
     controller: true
     blockOwnerDeletion: true
     kind: ReplicaSet

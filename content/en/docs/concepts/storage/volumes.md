@@ -1,9 +1,9 @@
 ---
 reviewers:
 - jsafrane
-- mikedanese
 - saad-ali
 - thockin
+- msau42
 title: Volumes
 content_template: templates/concept
 ---
@@ -213,6 +213,10 @@ The `log-config` ConfigMap is mounted as a volume, and all contents stored in
 its `log_level` entry are mounted into the Pod at path "`/etc/config/log_level`".
 Note that this path is derived from the volume's `mountPath` and the `path`
 keyed with `log_level`.
+
+{{< caution >}}
+**Important:** You must create a [ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) before you can use it.
+{{< /caution >}}
 
 {{< note >}}
 **Note:** A container using a ConfigMap as a [subPath](#using-subpath) volume mount will not

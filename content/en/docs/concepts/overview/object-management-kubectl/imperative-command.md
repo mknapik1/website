@@ -74,8 +74,10 @@ Setting this aspect may set different fields for different object types:
 
 - `set` <field>: Set an aspect of an object.
 
+{{< note >}}
 **Note**: In Kubernetes version 1.5, not every verb-driven command has an
 associated aspect-driven command.
+{{< /note >}}
 
 The `kubectl` tool supports these additional ways to update a live object directly,
 however they require a better understanding of the Kubernetes object schema.
@@ -91,10 +93,12 @@ You can use the `delete` command to delete an object from a cluster:
 
 - `delete <type>/<name>`
 
+{{< note >}}
 **Note**: You can use `kubectl delete` for both imperative commands and imperative object
 configuration. The difference is in the arguments passed to the command. To use
 `kubectl delete` as an imperative command, pass the object to be deleted as
 an argument. Here's an example that passes a Deployment object named nginx:
+{{< /note >}}
 
 ```shell
 kubectl delete deployment/nginx
@@ -153,7 +157,7 @@ kubectl create --edit -f /tmp/srv.yaml
 {{% capture whatsnext %}}
 - [Managing Kubernetes Objects Using Object Configuration (Imperative)](/docs/concepts/overview/object-management-kubectl/imperative-config/)
 - [Managing Kubernetes Objects Using Object Configuration (Declarative)](/docs/concepts/overview/object-management-kubectl/declarative-config/)
-- [Kubectl Command Reference](/docs/user-guide/kubectl/{{page.version}}/)
+- [Kubectl Command Reference](/docs/reference/generated/kubectl/kubectl/)
 - [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
 {{% /capture %}}
 

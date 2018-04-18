@@ -182,7 +182,7 @@ $ kubectl logs --previous nginx-app-zibvs
 10.240.63.110 - - [14/Jul/2015:01:09:02 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.26.0" "-"
 ```
 
-For more information, see [Logging Architecture](docs/concepts/cluster-administration/logging/).
+For more information, see [Logging Architecture](/docs/concepts/cluster-administration/logging/).
 
 #### docker stop and docker rm
 
@@ -230,7 +230,7 @@ There is no direct analog of `docker login` in kubectl. If you are interested in
 
 #### docker version
 
-To get the version of client and server, see [kubectl version](/docs/reference/generated/kubectl/kubectl-commands{{page.version}}/#version).
+To get the version of client and server, see [kubectl version](/docs/user-guide/kubectl/{{page.version}}/#version).
 
 docker:
 

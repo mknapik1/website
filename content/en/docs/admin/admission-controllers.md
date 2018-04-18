@@ -189,7 +189,8 @@ for more details.
 
 This plug-in facilitates creation of dedicated nodes with extended resources.
 If operators want to create dedicated nodes with extended resources (like GPUs, FPGAs etc.), they are expected to
-taint the node with the extended resource name as the key. This admission controller, if enabled, automatically
+[taint the node](/docs/concepts/configuration/taint-and-toleration/#example-use-cases) with the extended resource
+name as the key. This admission controller, if enabled, automatically
 adds tolerations for such taints to pods requesting extended resources, so users don't have to manually
 add these tolerations.
 
@@ -327,7 +328,7 @@ For more information, please check [Dynamic Admission Control](/docs/admin/exten
 This admission controller observes pod creation requests. If a container omits compute resource requests and limits,
 then the admission controller auto-populates a compute resource request based on historical usage of containers running the same image.
 If there is not enough data to make a decision the Request is left unchanged.
-When the admission controller sets a compute resource request, it does this by *annotating* the
+When the admission controller sets a compute resource request, it does this by *annotating* 
 the pod spec rather than mutating the `container.resources` fields.
 The annotations added contain the information on what compute resources were auto-populated.
 
@@ -455,7 +456,7 @@ plugins:
 ```
 
 #### Configuration Annotation Format
-`PodNodeSelector` uses the annotation key `scheduler.kubernetes.io/node-selector` to assign node selectors to namespaces.
+`PodNodeSelector` uses the annotation key `scheduler.alpha.kubernetes.io/node-selector` to assign node selectors to namespaces.
 
 ```yaml
 apiVersion: v1
@@ -468,7 +469,7 @@ metadata:
 
 #### Internal Behavior
 This admission controller has the following behavior:
-  1. If the `Namespace` has an annotation with a key `scheduler.kubernetes.io/nodeSelector`, use its value as the
+  1. If the `Namespace` has an annotation with a key `scheduler.alpha.kubernetes.io/node-selector`, use its value as the
      node selector.
   1. If the namespace lacks such an annotation, use the `clusterDefaultNodeSelector` defined in the `PodNodeSelector`
      plugin configuration file as the node selector.
@@ -477,13 +478,15 @@ This admission controller has the following behavior:
      Conflicts result in rejection.
 
 {{< note >}}
-**Note:** `PodTolerationRestriction` is more versatile and powerful than `PodNodeSelector` and can encompass the scenarios supported by `PodNodeSelector`.
+**Note:** PodNodeSelector allows forcing pods to run on specifically labeled nodes. Also see the PodTolerationRestriction 
+admission plugin, which allows preventing pods from running on specifically tainted nodes.
 {{< /note >}}
 
 ### PersistentVolumeClaimResize
 
-{{< note >}}
 This admission controller implements additional validations for checking incoming `PersistentVolumeClaim` resize requests.
+
+{{< note >}}
 **Note:** Support for volume resizing is available as an alpha feature. Admins must set the feature gate `ExpandPersistentVolumes`
 to `true` to enable resizing.
 {{< /note >}}
