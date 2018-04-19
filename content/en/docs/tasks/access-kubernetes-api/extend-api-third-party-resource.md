@@ -5,7 +5,7 @@ reviewers:
 title: Extend the Kubernetes API with ThirdPartyResources
 ---
 
-{% assign for_k8s_version="1.7" %}{% include feature-state-deprecated.md %}
+{{< feature-state for_k8s_version="1.7" state="deprecated" >}}
 
 * TOC
 {:toc}

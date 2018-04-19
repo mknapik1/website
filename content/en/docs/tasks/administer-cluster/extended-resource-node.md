@@ -10,7 +10,7 @@ This page shows how to specify extended resources for a Node.
 Extended resources allow cluster administrators to advertise node-level
 resources that would otherwise be unknown to Kubernetes.
 
-{% include feature-state-stable.md %}
+{{< feature-state state="stable" >}}
 
 {{% /capture %}}
 

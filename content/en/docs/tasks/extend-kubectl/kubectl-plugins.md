@@ -8,7 +8,7 @@ content_template: templates/task
 
 {{% capture overview %}}
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 This guide shows you how to install and write extensions for [kubectl](/docs/user-guide/kubectl/). Usually called *plugins* or *binary extensions*, this feature allows you to extend the default set of commands available in `kubectl` by adding new subcommands to perform new tasks and extend the set of features available in the main distribution of `kubectl`.
 

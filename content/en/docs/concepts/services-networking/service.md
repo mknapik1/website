@@ -198,7 +198,7 @@ Note that in the above diagram, `clusterIP` is shown as `ServiceIP`.
 
 ### Proxy-mode: ipvs
 
-{% assign for_k8s_version="v1.9" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.9" state="beta" >}}
 
 In this mode, kube-proxy watches Kubernetes Services and Endpoints,
 calls `netlink` interface to create ipvs rules accordingly and syncs ipvs rules with Kubernetes

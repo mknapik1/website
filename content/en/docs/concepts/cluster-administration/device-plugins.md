@@ -5,7 +5,7 @@ description: Use the Kubernetes device plugin framework to implement plugins for
 content_template: templates/concept
 ---
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 {{% capture overview %}}
 Starting in version 1.8, Kubernetes provides a

@@ -7,7 +7,7 @@ content_template: templates/task
 
 This page shows how to assign extended resources to a Container.
 
-{% include feature-state-stable.md %}
+{{< feature-state state="stable" >}}
 
 {{% /capture %}}
 

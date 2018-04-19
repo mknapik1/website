@@ -485,6 +485,19 @@ func (m *mover) contentMigrate_Replacements() error {
 		replaceCaptures,
 
 		calloutsToShortCodes,
+
+		// Handle the feature state dialogs
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% assign for_k8s_version="(.*?)" %}{% include feature-state-(.*?).md %}`)
+			return re.ReplaceAllString(s, `{{< feature-state for_k8s_version="$1" state="$2" >}}`), nil
+			return s, nil
+		},
+
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% include feature-state-(.*?).md %}`)
+			return re.ReplaceAllString(s, `{{< feature-state state="$1" >}}`), nil
+			return s, nil
+		},
 	}
 
 	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {

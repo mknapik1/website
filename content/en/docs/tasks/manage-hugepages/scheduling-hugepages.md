@@ -6,7 +6,7 @@ content_template: templates/task
 ---
 
 {{% capture overview %}}
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 Kubernetes supports the allocation and consumption of pre-allocated huge pages
 by applications in a Pod as a **beta** feature. This page describes how users

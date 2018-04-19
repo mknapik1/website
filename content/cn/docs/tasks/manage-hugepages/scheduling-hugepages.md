@@ -6,7 +6,7 @@ content_template: templates/task
 ---
 
 {{% capture overview %}}
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 作为 **alpha** 特性，Kubernetes 支持在 Pod 应用中使用预先分配的巨页（或称“大页面”，下文统称为“巨页”）。  本文描述了用户如何使用巨页，以及当前的限制。
 

@@ -71,7 +71,7 @@ Pods use claims as volumes. The cluster inspects the claim to find the bound vol
 Once a user has a claim and that claim is bound, the bound PV belongs to the user for as long as they need it. Users schedule Pods and access their claimed PVs by including a `persistentVolumeClaim` in their Pod's volumes block. [See below for syntax details](#claims-as-volumes).
 
 ### Storage Object in Use Protection
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 The purpose of the Storage Object in Use Protection feature is to ensure that Persistent Volume Claims (PVCs) in active use by a pod and Persistent Volume (PVs) that are bound to PVCs are not removed from the system as this may result in data loss.
 
 {{< note >}}

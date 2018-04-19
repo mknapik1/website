@@ -572,7 +572,7 @@ This admission controller implements automation for [serviceAccounts](/docs/user
 We strongly recommend using this admission controller if you intend to make use of Kubernetes `ServiceAccount` objects.
 
 ### Storage Object in Use Protection (beta)
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 The `StorageObjectInUseProtection` plugin adds the `kubernetes.io/pvc-protection` or `kubernetes.io/pv-protection` finalizers to newly created Persistent Volume Claims (PVCs) or Persistent Volumes (PV). In case a user deletes a PVC or PV the PVC or PV is not removed until the finalizer is removed from the PVC or PV by PVC or PV Protection Controller. Refer to the [Storage Object in Use Protection](/docs/concepts/storage/persistent-volumes/#storage-object-in-use-protection) for more detailed information.
 
 ### ValidatingAdmissionWebhook (alpha in 1.8; beta in 1.9)

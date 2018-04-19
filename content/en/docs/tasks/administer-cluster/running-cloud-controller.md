@@ -6,7 +6,7 @@ reviewers:
 title: Kubernetes Cloud Controller Manager
 ---
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 * TOC
 {:toc}

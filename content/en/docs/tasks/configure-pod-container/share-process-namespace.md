@@ -10,7 +10,7 @@ content_template: templates/task
 
 {{% capture overview %}}
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 This page shows how to configure process namespace sharing for a pod. When
 process namespace sharing is enabled, processes in a container are visible

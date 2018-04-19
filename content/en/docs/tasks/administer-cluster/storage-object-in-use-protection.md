@@ -7,7 +7,7 @@ content_template: templates/task
 ---
 
 {{% capture overview %}}
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 
 Persistent volume claims (PVCs) that are in active use by a pod and persistent volumes (PVs) that are bound to PVCs can be protected from pre-mature removal.
 

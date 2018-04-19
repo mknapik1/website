@@ -216,7 +216,7 @@ replicas notice that the lease expired and remove it from the list of
 endpoints. You can switch to the new reconciler by adding the flag
 `--endpoint-reconciler-type=lease` when starting your apiserver replicas.
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 If you want to know more, you can check the following resources:
 - [issue kubernetes/kubernetes#22609](https://github.com/kubernetes/kubernetes/issues/22609),

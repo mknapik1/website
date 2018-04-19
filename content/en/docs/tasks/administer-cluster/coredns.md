@@ -6,7 +6,7 @@ min-kubernetes-server-version: v1.9
 content_template: templates/task
 ---
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 {{% capture overview %}}
 This page describes how to enable CoreDNS instead of kube-dns for service

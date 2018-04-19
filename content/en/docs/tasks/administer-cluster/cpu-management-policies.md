@@ -6,7 +6,7 @@ reviewers:
 - balajismaniam
 ---
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 * TOC
 {:toc}

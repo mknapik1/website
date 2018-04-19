@@ -5,7 +5,7 @@ reviewers:
 title: Pod Security Policies
 ---
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 Pod Security Policies enable fine-grained authorization of pod creation and
 updates.

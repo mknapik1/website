@@ -498,7 +498,7 @@ See the [iSCSI example](https://github.com/kubernetes/examples/tree/{{page.githu
 
 ### local
 
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 
 {{< note >}}
 **Note:** The alpha PersistentVolume NodeAffinity annotation has been deprecated
@@ -1018,7 +1018,7 @@ to [this FAQ](https://github.com/kubernetes/community/blob/master/sig-storage/vo
 
 ### CSI
 
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 
 [Container Storage Interface](https://github.com/container-storage-interface/spec/blob/master/spec.md) (CSI)
 defines a standard interface for container orchestration systems (like
@@ -1095,7 +1095,7 @@ More details can be found [here](https://github.com/kubernetes/community/blob/ma
 
 ## Mount propagation
 
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 
 Mount propagation allows for sharing volumes mounted by a Container to
 other Containers in the same Pod, or even to other Pods on the same node.

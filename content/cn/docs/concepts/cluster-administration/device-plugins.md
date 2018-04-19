@@ -5,7 +5,7 @@ description: 使用 Kubernetes 设备插件框架来为 GPUs、 NICs、 FPGAs、
 content_template: templates/concept
 ---
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 {{% capture overview %}}
 从1.8版本开始，Kubernetes 提供了一套

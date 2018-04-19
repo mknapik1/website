@@ -14,7 +14,7 @@ content_template: templates/task
 
 
 {{% capture overview %}}
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 
 在 Kubernetes 1.8 版本上，除了可以通过命令行参数外，还可以通过保存在硬盘的配置文件设置 Kubelet 的配置子集。

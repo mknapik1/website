@@ -24,7 +24,7 @@ Controller Manager.  The tokens are also used to create a signature for a
 specific ConfigMap used in a "discovery" process through a BootstrapSigner
 controller.
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 ## Token Format
 

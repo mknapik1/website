@@ -7,7 +7,7 @@ content_template: templates/task
 
 本页展示了如何给容器分配非透明整型资源。
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 {{% /capture %}}
 

@@ -7,7 +7,7 @@ content_template: templates/task
 ---
 
 {{% capture overview %}}
-{% assign for_k8s_version="v1.9" %}{% include feature-state-alpha.md %}
+{{< feature-state for_k8s_version="v1.9" state="alpha" >}}
 
 As of Kubernetes 1.9, persistent volume claims (PVCs) that are in active use by a pod can be protected from pre-mature removal.
 

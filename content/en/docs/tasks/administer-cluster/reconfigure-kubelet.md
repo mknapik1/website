@@ -7,7 +7,7 @@ content_template: templates/task
 ---
 
 {{% capture overview %}}
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 As of Kubernetes 1.8, the new
 [Dynamic Kubelet Configuration](https://github.com/kubernetes/features/issues/281)
 feature is available in alpha. This allows you to change the configuration of

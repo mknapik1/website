@@ -7,7 +7,7 @@ content_template: templates/tutorial
 
 {{% capture overview %}}
 
-{% assign for_k8s_version="v1.4" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.4" state="beta" >}}
 
 
 AppArmor is a Linux kernel security module that supplements the standard Linux user and group based

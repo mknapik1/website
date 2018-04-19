@@ -9,7 +9,7 @@ title: Auditing
 * TOC
 {:toc}
 
-{% include feature-state-beta.md %}
+{{< feature-state state="beta" >}}
 
 Kubernetes auditing provides a security-relevant chronological set of records documenting
 the sequence of activities that have affected system by individual users, administrators

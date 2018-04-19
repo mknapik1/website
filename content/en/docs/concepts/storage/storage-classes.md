@@ -640,7 +640,7 @@ references it.
 
 ### Local
 
-{% assign for_k8s_version="v1.10" %}{% include feature-state-beta.md %}
+{{< feature-state for_k8s_version="v1.10" state="beta" >}}
 
 ```yaml
 kind: StorageClass

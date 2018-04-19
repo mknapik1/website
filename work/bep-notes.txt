@@ -42,7 +42,7 @@ TODO
 * Check capture
 * Case studies, partners etc.
 
-
+{% include feature-state
 * Glossary:
 
 - Check default_active_tag
@@ -55,8 +55,12 @@ All:
 - Revise toc_list
 - Check noedit
 - Check params.current_version
+for_k8s_version
+ default page.version 
+
 - OK headless bundle for all the includes
 
+* Check glossary vs GetPage
 
 In /data:
 

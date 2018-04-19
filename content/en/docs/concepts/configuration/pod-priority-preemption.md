@@ -8,7 +8,7 @@ content_template: templates/concept
 
 {{% capture overview %}}
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 [Pods](/docs/user-guide/pods) in Kubernetes 1.8 and later can have priority. Priority
 indicates the importance of a Pod relative to other Pods. When a Pod cannot be scheduled,

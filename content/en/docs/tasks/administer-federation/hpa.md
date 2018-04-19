@@ -5,7 +5,7 @@ content_template: templates/task
 
 {{% capture overview %}}
 
-{% include feature-state-alpha.md %}
+{{< feature-state state="alpha" >}}
 
 This guide explains how to use federated horizontal pod autoscalers (HPAs) in the federation control plane.
 
