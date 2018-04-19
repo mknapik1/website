@@ -129,10 +129,13 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
-	// Move generated content to /static
-	if err := m.moveDir("content/en/docs/reference/generated", "static/reference/generated"); err != nil {
+	// Remove this for now. TODO(bep)
+	if err := os.RemoveAll(m.absFilename("content/en/docs/reference/generated")); err != nil {
 		return err
 	}
+	/*if err := m.moveDir("content/en/docs/reference/generated", "static/reference/generated"); err != nil {
+		return err
+	}*/
 
 	// Create proper Hugo sections
 	if err := m.renameContentFiles("index\\.md$", "_index.md"); err != nil {
