@@ -3,10 +3,13 @@ title: Pod Security Policy
 id: pod-security-policy
 date: 2018-04-12
 full_link: /docs/concepts/policy/pod-security-policy/
+short_description: >
+  Enables fine-grained authorization of pod creation and updates.
+
 aka: 
 tags:
 - core-object
-- fundamental 
+- fundamental
 ---
  Enables fine-grained authorization of {{< glossary_tooltip term_id="pod" >}} creation and updates.
 

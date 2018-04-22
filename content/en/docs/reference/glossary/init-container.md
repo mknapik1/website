@@ -3,9 +3,12 @@ title: Init Container
 id: init-container
 date: 2018-04-12
 full_link: 
+short_description: >
+  One or more initialization containers that must run to completion before any app containers run. 
+
 aka: 
 tags:
-- fundamental 
+- fundamental
 ---
  One or more initialization containers that must run to completion before any app containers run. 
 

@@ -3,9 +3,12 @@ title: Service Broker
 id: service-broker
 date: 2018-04-12
 full_link: 
+short_description: >
+  An endpoint for a set of Managed Services offered and maintained by a third-party.
+
 aka: 
 tags:
-- extension 
+- extension
 ---
  An endpoint for a set of {{< glossary_tooltip text="Managed Services" term_id="managed-service" >}} offered and maintained by a third-party.
 

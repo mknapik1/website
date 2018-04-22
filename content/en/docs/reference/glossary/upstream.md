@@ -3,9 +3,12 @@ title: Upstream (disambiguation)
 id: upstream
 date: 2018-04-12
 full_link: 
+short_description: >
+  May refer to: core Kubernetes or the source repo from which a repo was forked.
+
 aka: 
 tags:
-- community 
+- community
 ---
  May refer to: core Kubernetes or the source repo from which a repo was forked.
 

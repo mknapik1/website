@@ -3,9 +3,12 @@ title: Downstream (disambiguation)
 id: downstream
 date: 2018-04-12
 full_link: 
+short_description: >
+  May refer to: code in the Kubernetes ecosystem that depends upon the core Kubernetes codebase or a forked repo.
+
 aka: 
 tags:
-- community 
+- community
 ---
  May refer to: code in the Kubernetes ecosystem that depends upon the core Kubernetes codebase or a forked repo.
 

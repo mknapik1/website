@@ -3,12 +3,15 @@ title: StatefulSet
 id: statefulset
 date: 2018-04-12
 full_link: /docs/concepts/workloads/controllers/statefulset/
+short_description: >
+  Manages the deployment and scaling of a set of Pods, *and provides guarantees about the ordering and uniqueness* of these Pods.
+
 aka: 
 tags:
 - fundamental
 - core-object
 - workload
-- storage 
+- storage
 ---
  Manages the deployment and scaling of a set of {{< glossary_tooltip text="Pods" term_id="pod" >}}, *and provides guarantees about the ordering and uniqueness* of these Pods.
 

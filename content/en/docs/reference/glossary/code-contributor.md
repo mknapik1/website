@@ -3,10 +3,13 @@ title: Code Contributor
 id: code-contributor
 date: 2018-04-12
 full_link: /docs/imported/community/devel/
+short_description: >
+  A person who develops and contributes code to the Kubernetes open source codebase.
+
 aka: 
 tags:
 - community
-- user-type 
+- user-type
 ---
  A person who develops and contributes code to the Kubernetes open source codebase.
 

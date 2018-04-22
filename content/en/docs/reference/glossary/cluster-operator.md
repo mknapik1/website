@@ -3,9 +3,12 @@ title: Cluster Operator
 id: cluster-operator
 date: 2018-04-12
 full_link: 
+short_description: >
+  A person who configures, controls, and monitors clusters.
+
 aka: 
 tags:
-- user-type 
+- user-type
 ---
  A person who configures, controls, and monitors clusters.
 

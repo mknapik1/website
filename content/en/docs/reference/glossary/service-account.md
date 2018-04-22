@@ -3,10 +3,13 @@ title: Service Account
 id: service-account
 date: 2018-04-12
 full_link: /docs/tasks/configure-pod-container/configure-service-account/
+short_description: >
+  Provides an identity for processes that run in a Pod.
+
 aka: 
 tags:
 - fundamental
-- core-object 
+- core-object
 ---
  Provides an identity for processes that run in a {{< glossary_tooltip text="Pod" term_id="pod" >}}.
 

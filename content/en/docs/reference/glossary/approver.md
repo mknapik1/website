@@ -3,9 +3,12 @@ title: Approver
 id: approver
 date: 2018-04-12
 full_link: 
+short_description: >
+  A person who can review and approve Kubernetes code contributions.
+
 aka: 
 tags:
-- community 
+- community
 ---
  A person who can review and approve Kubernetes code contributions.
 

@@ -3,9 +3,12 @@ title: ConfigMap
 id: configmap
 date: 2018-04-12
 full_link: /docs/tasks/configure-pod-container/configure-pod-configmap/
+short_description: >
+  An API object used to store non-confidential data in key-value pairs. Can be consumed as environment variables, command-line arguments, or config files in a volume.
+
 aka: 
 tags:
-- core-object 
+- core-object
 ---
  An API object used to store non-confidential data in key-value pairs. Can be consumed as environment variables, command-line arguments, or config files in a {{< glossary_tooltip text="volume" term_id="volume" >}}.
 

@@ -3,9 +3,12 @@ title: Platform Developer
 id: platform-developer
 date: 2018-04-12
 full_link: 
+short_description: >
+  A person who customizes the Kubernetes platform to fit the needs of their project.
+
 aka: 
 tags:
-- user-type 
+- user-type
 ---
  A person who customizes the Kubernetes platform to fit the needs of their project.
 

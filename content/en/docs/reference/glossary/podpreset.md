@@ -3,9 +3,12 @@ title: PodPreset
 id: podpreset
 date: 2018-04-12
 full_link: 
+short_description: >
+  An API object that injects information such as secrets, volume mounts, and environment variables into pods at creation time.
+
 aka: 
 tags:
-- operation 
+- operation
 ---
  An API object that injects information such as secrets, volume mounts, and environment variables into pods at creation time.
 

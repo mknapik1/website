@@ -3,9 +3,12 @@ title: Node
 id: node
 date: 2018-04-12
 full_link: /docs/concepts/architecture/nodes/
+short_description: >
+  A node is a worker machine in Kubernetes.
+
 aka: 
 tags:
-- fundamental 
+- fundamental
 ---
  A node is a worker machine in Kubernetes.
 

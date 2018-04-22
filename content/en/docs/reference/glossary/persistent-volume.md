@@ -3,10 +3,13 @@ title: Persistent Volume
 id: persistent-volume
 date: 2018-04-12
 full_link: /docs/concepts/storage/persistent-volumes/
+short_description: >
+  An API object that represents a piece of storage in the cluster. Available as a general, pluggable resource that persists beyond the lifecycle of any individual Pod.
+
 aka: 
 tags:
 - core-object
-- storage 
+- storage
 ---
  An API object that represents a piece of storage in the cluster. Available as a general, pluggable resource that persists beyond the lifecycle of any individual {{< glossary_tooltip text="Pod" term_id="pod" >}}.
 

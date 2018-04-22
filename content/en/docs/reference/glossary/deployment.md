@@ -3,11 +3,14 @@ title: Deployment
 id: deployment
 date: 2018-04-12
 full_link: /docs/concepts/workloads/controllers/deployment/
+short_description: >
+  An API object that manages a replicated application.
+
 aka: 
 tags:
 - fundamental
 - core-object
-- workload 
+- workload
 ---
  An API object that manages a replicated application.
 

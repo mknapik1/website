@@ -3,9 +3,12 @@ title: Service Catalog
 id: service-catalog
 date: 2018-04-12
 full_link: 
+short_description: >
+  An extension API that enables applications running in Kubernetes clusters to easily use external managed software offerings, such as a datastore service offered by a cloud provider.
+
 aka: 
 tags:
-- extension 
+- extension
 ---
  An extension API that enables applications running in Kubernetes clusters to easily use external managed software offerings, such as a datastore service offered by a cloud provider.
 

@@ -3,9 +3,12 @@ title: Namespace
 id: namespace
 date: 2018-04-12
 full_link: /docs/concepts/overview/working-with-objects/namespaces
+short_description: >
+  An abstraction used by Kubernetes to support multiple virtual clusters on the same physical cluster.
+
 aka: 
 tags:
-- fundamental 
+- fundamental
 ---
  An abstraction used by Kubernetes to support multiple virtual clusters on the same physical {{< glossary_tooltip text="cluster" term_id="cluster" >}}.
 

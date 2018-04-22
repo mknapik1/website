@@ -3,10 +3,13 @@ title: kube-controller-manager
 id: kube-controller-manager
 date: 2018-04-12
 full_link: /docs/reference/generated/kube-controller-manager/
+short_description: >
+  Component on the master that runs controllers.
+
 aka: 
 tags:
 - architecture
-- fundamental 
+- fundamental
 ---
  Component on the master that runs {{< glossary_tooltip text="controllers" term_id="controller" >}}.
 

@@ -3,9 +3,12 @@ title: SIG (special interest group)
 id: sig
 date: 2018-04-12
 full_link: https://github.com/kubernetes/community/blob/master/sig-list.md#master-sig-list
+short_description: >
+  Community members who collectively manage an ongoing piece or aspect of the larger Kubernetes open source project.
+
 aka: 
 tags:
-- community 
+- community
 ---
  {{< glossary_tooltip text="Community members" term_id="member" >}} who collectively manage an ongoing piece or aspect of the larger Kubernetes open source project.
 

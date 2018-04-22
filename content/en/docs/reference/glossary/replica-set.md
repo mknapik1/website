@@ -3,11 +3,14 @@ title: ReplicaSet
 id: replica-set
 date: 2018-04-12
 full_link: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+short_description: >
+  ReplicaSet is the next-generation Replication Controller.
+
 aka: 
 tags:
 - fundamental
 - core-object
-- workload 
+- workload
 ---
  ReplicaSet is the next-generation Replication Controller.
 

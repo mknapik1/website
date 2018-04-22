@@ -3,9 +3,12 @@ title: Member
 id: member
 date: 2018-04-12
 full_link: 
+short_description: >
+  A continuously active contributor in the K8s community.
+
 aka: 
 tags:
-- community 
+- community
 ---
  A continuously active {{< glossary_tooltip text="contributor" term_id="contributor" >}} in the K8s community.
 

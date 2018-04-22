@@ -159,7 +159,7 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 }
 
 func (m *mover) contentMigrate_CreateGlossaryFromData() error {
-	mm, err := m.readDataDir("glossary_remove", func() interface{} { return make(map[string]interface{}) })
+	mm, err := m.readDataDir("glossary", func() interface{} { return make(map[string]interface{}) })
 	if err != nil {
 		return err
 	}
@@ -211,20 +211,41 @@ weight: 5
 
 		filename := filepath.Join(glossaryDir, fmt.Sprintf("%s.md", k))
 
+		shortDescNoToolTip := regexp.MustCompile(`{% glossary_tooltip.*?%}`).ReplaceAllStringFunc(
+			shortDesc, func(s string) string {
+				matches := regexp.MustCompile(`{% glossary_tooltip\s(text=".*?"\s)?(term_id=".*?")?\s%}`).FindStringSubmatch(s)
+				if len(matches) == 0 {
+					return s
+				} else {
+					if matches[1] != "" {
+						// Use the text provided
+						text := regexp.MustCompile(`text="(.*?)"`).ReplaceAllString(matches[1], "$1")
+						return strings.TrimSpace(text)
+					} else {
+						term := regexp.MustCompile(`term_id="(.*?)"`).ReplaceAllString(matches[2], "$1")
+						return strings.TrimSpace(term)
+					}
+				}
+
+			},
+		)
+
 		content := fmt.Sprintf(`---
 title: %s
 id: %s
 date: 2018-04-12
 full_link: %s
+short_description: >
+  %s
 aka: %s
 tags:
-%s 
+%s
 ---
  %s
 <!--more--> 
 
 %s
-`, name, id, fullLink, aka, tagsStr, shortDesc, longDesc)
+`, name, id, fullLink, shortDescNoToolTip, aka, tagsStr, shortDesc, longDesc)
 
 		if err := ioutil.WriteFile(filename, []byte(content), os.FileMode(0755)); err != nil {
 			return err

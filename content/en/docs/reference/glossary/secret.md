@@ -3,10 +3,13 @@ title: Secret
 id: secret
 date: 2018-04-12
 full_link: /docs/concepts/configuration/secret/
+short_description: >
+  Stores sensitive information, such as passwords, OAuth tokens, and ssh keys.
+
 aka: 
 tags:
 - core-object
-- security 
+- security
 ---
  Stores sensitive information, such as passwords, OAuth tokens, and ssh keys.
 

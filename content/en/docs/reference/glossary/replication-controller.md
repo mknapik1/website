@@ -3,10 +3,13 @@ title: Replication Controller
 id: replication-controller
 date: 2018-04-12
 full_link: 
+short_description: >
+  Kubernetes service that ensures a specific number of instances of a pod are always running.
+
 aka: 
 tags:
 - workload
-- core-object 
+- core-object
 ---
  Kubernetes service that ensures a specific number of instances of a pod are always running.
 
