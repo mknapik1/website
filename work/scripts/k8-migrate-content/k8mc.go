@@ -119,6 +119,11 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
+	// Community
+	if err := m.copyDir("community", "content/en/community"); err != nil {
+		return err
+	}
+
 	// Copy blog content to content/en
 	if err := m.copyDir("blog", "content/en/blog"); err != nil {
 		return err
