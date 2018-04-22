@@ -12,7 +12,7 @@ content_template: templates/concept
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

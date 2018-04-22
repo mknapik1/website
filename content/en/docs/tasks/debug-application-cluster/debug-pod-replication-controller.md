@@ -5,7 +5,7 @@ title: Debug Pods and Replication Controllers
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Debugging pods
 

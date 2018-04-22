@@ -9,7 +9,7 @@ reviewers:
 {{< feature-state state="beta" >}}
 
 * TOC
-{:toc}
+{{< toc >}}
 
 Kubernetes keeps many aspects of how pods execute on nodes abstracted
 from the user. This is by design.  However, some workloads require

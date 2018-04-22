@@ -8,7 +8,7 @@ title: Master 节点通信
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 ## 概览

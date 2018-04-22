@@ -21,7 +21,7 @@ Familiarity with [pods](/docs/user-guide/pods) is suggested.
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

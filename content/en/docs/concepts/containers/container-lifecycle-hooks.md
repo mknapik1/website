@@ -13,7 +13,7 @@ to run code triggered by events during their management lifecycle.
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

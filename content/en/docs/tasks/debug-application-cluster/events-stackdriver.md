@@ -34,7 +34,7 @@ of the potential inaccuracy.
 [sdAlerts]: https://cloud.google.com/logging/docs/view/logs_based_metrics#creating_an_alerting_policy
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Deployment
 

@@ -9,7 +9,7 @@ title: 使用 PodPreset 将信息注入 Pods
 用户可以从[理解 Pod Presets](/docs/concepts/workloads/pods/podpreset/) 中了解 PodPresets 的整体情况。
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## 创建 Pod Preset
 

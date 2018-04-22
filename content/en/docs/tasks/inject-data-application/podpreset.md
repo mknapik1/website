@@ -11,7 +11,7 @@ You can get an overview of PodPresets at
 [Understanding Pod Presets](/docs/concepts/workloads/pods/podpreset/).
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Create a Pod Preset
 

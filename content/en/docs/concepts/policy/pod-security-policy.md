@@ -11,7 +11,7 @@ Pod Security Policies enable fine-grained authorization of pod creation and
 updates.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is a Pod Security Policy?
 

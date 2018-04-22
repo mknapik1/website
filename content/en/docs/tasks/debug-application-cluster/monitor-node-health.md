@@ -6,7 +6,7 @@ title: Monitor Node Health
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Node Problem Detector
 

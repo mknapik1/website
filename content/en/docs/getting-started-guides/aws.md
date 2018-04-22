@@ -6,7 +6,7 @@ title: Running Kubernetes on AWS EC2
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 ## Supported Production Grade Tools

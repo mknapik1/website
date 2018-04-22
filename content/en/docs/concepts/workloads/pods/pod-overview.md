@@ -9,7 +9,7 @@ content_template: templates/concept
 This page provides an overview of `Pod`, the smallest deployable object in the Kubernetes object model.
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 ## Understanding Pods

@@ -9,7 +9,7 @@ title: DaemonSet
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is a DaemonSet?
 

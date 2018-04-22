@@ -5,7 +5,7 @@ title: Federated Secrets
 This guide explains how to use secrets in Federation control plane.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Prerequisites
 

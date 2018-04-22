@@ -6,7 +6,7 @@ title: Cluster Management
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 This document describes several topics related to the lifecycle of a cluster: creating a new cluster,
 upgrading your cluster's

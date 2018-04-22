@@ -3,7 +3,7 @@ title: Accessing Clusters
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Accessing the cluster API
 

@@ -6,7 +6,7 @@ title: Jobs - Run to Completion
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is a Job?
 

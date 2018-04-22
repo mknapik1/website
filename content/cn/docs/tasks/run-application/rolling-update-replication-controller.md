@@ -5,7 +5,7 @@ title: 基于Replication Controller执行滚动升级
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## 概述
 

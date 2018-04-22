@@ -476,6 +476,13 @@ func (m *mover) contentMigrate_Replacements() error {
 			return s, nil
 		},
 
+		// Toc / table of contents
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{:toc}`)
+			return re.ReplaceAllString(s, `{{< toc >}}`), nil
+			return s, nil
+		},
+
 		// Code includes
 		// TODO(bep) ghlink looks superflous?
 		// {% include code.html file="frontend/frontend.conf" ghlink="/docs/tasks/access-application-cluster/frontend/frontend.conf" %}

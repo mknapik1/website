@@ -5,7 +5,7 @@ title: Kubelet authentication/authorization
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

@@ -7,7 +7,7 @@ title: Using RBAC Authorization
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 Role-Based Access Control ("RBAC") uses the "rbac.authorization.k8s.io" API group 
 to drive authorization decisions, allowing admins to dynamically configure policies

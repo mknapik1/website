@@ -5,7 +5,7 @@ title: Validate Node Setup
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Node Conformance Test
 

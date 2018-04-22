@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 

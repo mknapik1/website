@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 # Kubernetes + Compose = Kompose
 

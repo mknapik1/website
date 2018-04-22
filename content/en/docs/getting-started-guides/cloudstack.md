@@ -13,7 +13,7 @@ This guide uses a single [Ansible playbook](https://github.com/apachecloudstack/
 
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Prerequisites
 

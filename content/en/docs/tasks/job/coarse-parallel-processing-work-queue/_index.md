@@ -4,7 +4,7 @@ toc_hide: true
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 # Example: Job with Work Queue with Pod Per Work Item
 

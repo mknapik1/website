@@ -10,7 +10,7 @@ Earlier we described how you can use `kubectl get pods` to retrieve simple statu
 your pods. But there are a number of ways to get even more information about your application.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Using `kubectl describe pod` to fetch details about pods
 

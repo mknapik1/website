@@ -5,7 +5,7 @@ title: Cluster Management Guide for Version 1.6
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 This document outlines the potentially disruptive changes that exist in the 1.6 release cycle.  Operators, administrators, and developers should
 take note of the changes below in order to maintain continuity across their upgrade process.

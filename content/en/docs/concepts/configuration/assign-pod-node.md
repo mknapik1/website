@@ -19,7 +19,7 @@ You can find all the files for these examples [in our docs
 repo here](https://github.com/kubernetes/website/tree/{{page.docsbranch}}/docs/user-guide/node-selection).
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## nodeSelector
 

@@ -3,7 +3,7 @@ title: CoreOS on AWS or GCE
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 There are multiple guides on running Kubernetes with [CoreOS](https://coreos.com/kubernetes/docs/latest/):
 

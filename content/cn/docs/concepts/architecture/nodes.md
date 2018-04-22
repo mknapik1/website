@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 ## Node 是什么？

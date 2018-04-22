@@ -17,7 +17,7 @@ At {{page.version}}, Kubernetes supports clusters with up to 5000 nodes. More sp
 <br>
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Setup
 

@@ -18,7 +18,7 @@ Tolerations are applied to pods, and allow (but do not require) the pods to sche
 onto nodes with matching taints.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Concepts
 

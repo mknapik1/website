@@ -5,7 +5,7 @@ title: Perform Rolling Update Using a Replication Controller
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

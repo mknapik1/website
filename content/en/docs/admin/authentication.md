@@ -9,7 +9,7 @@ title: Authenticating
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Users in Kubernetes
 

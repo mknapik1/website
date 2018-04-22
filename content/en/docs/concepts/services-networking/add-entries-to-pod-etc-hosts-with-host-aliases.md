@@ -6,7 +6,7 @@ title: Adding entries to Pod /etc/hosts with HostAliases
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 Adding entries to a Pod's /etc/hosts file provides Pod-level override of hostname resolution when DNS and other options are not applicable. In 1.7, users can add these custom entries with the HostAliases field in PodSpec.
 

@@ -3,7 +3,7 @@ title: Certificates
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Creating Certificates
 

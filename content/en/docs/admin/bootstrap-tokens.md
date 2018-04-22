@@ -5,7 +5,7 @@ title: Authenticating with Bootstrap Tokens
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

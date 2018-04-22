@@ -34,7 +34,7 @@ non-native applications, Kubernetes offers a virtual-IP-based bridge to Services
 which redirects to the backend `Pods`.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Defining a service
 

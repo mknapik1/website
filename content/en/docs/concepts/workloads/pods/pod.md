@@ -4,7 +4,7 @@ title: Pods
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 _Pods_ are the smallest deployable units of computing that can be created and

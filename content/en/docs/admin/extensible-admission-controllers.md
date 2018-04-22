@@ -9,7 +9,7 @@ title: Dynamic Admission Control
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

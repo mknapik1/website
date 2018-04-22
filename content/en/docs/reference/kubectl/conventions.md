@@ -6,7 +6,7 @@ title: kubectl Usage Conventions
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Using `kubectl` in Reusable Scripts
 

@@ -7,7 +7,7 @@ title: Network Plugins
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 __Disclaimer__: Network plugins are in alpha. Its contents will change rapidly.
 

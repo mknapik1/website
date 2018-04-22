@@ -12,7 +12,7 @@ This page describes the resources available to Containers in the Container envir
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

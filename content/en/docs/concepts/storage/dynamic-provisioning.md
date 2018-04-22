@@ -20,7 +20,7 @@ automatically provisions storage when it is requested by users.
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

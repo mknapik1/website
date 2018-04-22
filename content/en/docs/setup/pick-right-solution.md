@@ -23,7 +23,7 @@ If you already have a way to configure hosting resources, use [kubeadm](/docs/se
 a Kubernetes cluster from scratch.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 # Local-machine Solutions
 

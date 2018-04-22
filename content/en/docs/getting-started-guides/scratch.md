@@ -19,7 +19,7 @@ This guide is also useful for those wanting to understand at a high level some o
 steps that existing cluster setup scripts are making.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Designing and Preparing
 

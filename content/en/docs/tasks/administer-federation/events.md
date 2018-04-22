@@ -6,7 +6,7 @@ This guide explains how to use events in federation control plane to help in deb
 
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Prerequisites
 

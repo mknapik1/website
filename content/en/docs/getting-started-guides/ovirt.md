@@ -6,7 +6,7 @@ title: oVirt
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is oVirt
 

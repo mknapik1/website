@@ -10,7 +10,7 @@ content_template: templates/concept
 pod 中，这些信息可以包括 secret、 卷、卷挂载和环境变量。
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 ## 理解 Pod Preset

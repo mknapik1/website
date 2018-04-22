@@ -12,7 +12,7 @@ fault tolerance for your Kubernetes applications.
 
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Prerequisites
 

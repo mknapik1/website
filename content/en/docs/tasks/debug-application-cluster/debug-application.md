@@ -10,7 +10,7 @@ This is *not* a guide for people who want to debug their cluster.  For that you 
 [this guide](/docs/admin/cluster-troubleshooting).
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Diagnosing the problem
 

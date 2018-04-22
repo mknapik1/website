@@ -7,7 +7,7 @@ title: TLS bootstrapping
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

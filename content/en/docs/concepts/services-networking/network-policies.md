@@ -7,7 +7,7 @@ title: Network Policies
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 A network policy is a specification of how groups of pods are allowed to communicate with each other and other network endpoints.
 

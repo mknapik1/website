@@ -7,7 +7,7 @@ title: Fedora (Single Node)
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Prerequisites
 

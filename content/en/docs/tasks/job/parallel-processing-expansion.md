@@ -3,7 +3,7 @@ title: Parallel Processing using Expansions
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 # Example: Multiple Job Objects from Template Expansion
 

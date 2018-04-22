@@ -7,7 +7,7 @@ title: Auditing
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 {{< feature-state state="beta" >}}
 

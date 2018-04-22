@@ -12,7 +12,7 @@ with [volumes](/docs/concepts/storage/volumes/) and
 [persistent volumes](/docs/concepts/storage/persistent-volumes) is suggested.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Introduction
 

@@ -13,7 +13,7 @@ Also, at this time high availability support for Kubernetes is not continuously 
 be working to add this continuous testing, but for now the single-node master installations are more heavily tested.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

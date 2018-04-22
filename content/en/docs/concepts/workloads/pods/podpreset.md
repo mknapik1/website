@@ -11,7 +11,7 @@ certain information into pods at creation time. The information can include
 secrets, volumes, volume mounts, and environment variables.
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 ## Understanding Pod Presets

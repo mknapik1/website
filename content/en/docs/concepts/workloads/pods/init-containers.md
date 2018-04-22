@@ -10,7 +10,7 @@ Containers that run before app Containers and can contain utilities or setup
 scripts not present in an app image.
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 This feature has exited beta in 1.6. Init Containers can be specified in the PodSpec
 alongside the app `containers` array. The beta annotation value will still be respected

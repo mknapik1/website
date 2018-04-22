@@ -7,7 +7,7 @@ title: 关键插件 Pod 的调度保证
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 

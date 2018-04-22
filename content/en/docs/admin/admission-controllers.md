@@ -10,7 +10,7 @@ title: Using Admission Controllers
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What are they?
 

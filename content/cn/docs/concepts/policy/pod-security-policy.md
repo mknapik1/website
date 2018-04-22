@@ -13,7 +13,7 @@ redirect_from:
 查看 [Pod 安全策略建议](https://git.k8s.io/community/contributors/design-proposals/security-context-constraints.md) 获取更多信息。
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 

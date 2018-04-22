@@ -17,7 +17,7 @@ cluster actions, like upgrading and autoscaling clusters.
 
 {{% /capture %}}
 
-{:toc}
+{{< toc >}}
 
 {{% capture body %}}
 

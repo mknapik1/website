@@ -7,7 +7,7 @@ title: Connecting Applications with Services
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## The Kubernetes model for connecting containers
 

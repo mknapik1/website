@@ -7,7 +7,7 @@ reviewers:
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

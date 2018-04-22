@@ -6,7 +6,7 @@ title: Nodes
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is a node?
 

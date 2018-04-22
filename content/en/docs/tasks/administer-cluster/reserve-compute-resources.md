@@ -7,7 +7,7 @@ title: Reserve Compute Resources for System Daemons
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 Kubernetes nodes can be scheduled to `Capacity`. Pods can consume all the
 available capacity on a node by default. This is an issue because nodes

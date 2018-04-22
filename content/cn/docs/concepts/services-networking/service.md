@@ -35,7 +35,7 @@ Kubernetes `Service` 定义了这样一种抽象：一个 `Pod` 的逻辑分组�
 对非 Kubernetes 集群中的应用，Kubernetes 提供了基于 VIP 的网桥的方式访问 `Service`，再由 `Service` 重定向到 backend `Pod`。
 
 * TOC
-{:toc}
+{{< toc >}}
 
 
 

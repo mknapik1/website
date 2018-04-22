@@ -7,7 +7,7 @@ title: Configure Out Of Resource Handling
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 This page explains how to configure out of resource handling with `kubelet`.
 

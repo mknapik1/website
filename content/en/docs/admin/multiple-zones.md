@@ -27,7 +27,7 @@ for the appropriate labels to be added to nodes and volumes).
 
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Functionality
 

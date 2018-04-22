@@ -11,7 +11,7 @@ created a `Service`, but you get no response when you try to access it.
 This document will hopefully help you to figure out what's going wrong.
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Conventions
 

@@ -7,7 +7,7 @@ title: CronJob
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## What is a cron job?
 

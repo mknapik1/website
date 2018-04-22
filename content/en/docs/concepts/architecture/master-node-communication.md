@@ -7,7 +7,7 @@ title: Master-Node communication
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 

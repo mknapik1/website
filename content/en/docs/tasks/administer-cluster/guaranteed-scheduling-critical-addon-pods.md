@@ -7,7 +7,7 @@ title: Guaranteed Scheduling For Critical Add-On Pods
 ---
 
 * TOC
-{:toc}
+{{< toc >}}
 
 ## Overview
 
