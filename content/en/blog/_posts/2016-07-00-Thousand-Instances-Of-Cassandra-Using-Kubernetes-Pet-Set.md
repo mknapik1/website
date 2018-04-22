@@ -95,6 +95,7 @@ spec:
 
     app: cassandra-data
 
+slug: thousand-instances-of-cassandra-using-kubernetes-pet-set
 ----
 
 # new API name

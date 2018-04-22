@@ -5,6 +5,7 @@ title: " Scaling Kubernetes deployments with Policy-Based Networking "
 date: 2017-01-19
 pagination:
   enabled: true
+slug: scaling-kubernetes-deployments-with-policy-base-networking
 ---
 _Editor's note: Today’s post is by Harmeet Sahni, Director of Product Management, at Nuage Networks, writing about their contributions to Kubernetes and insights on policy-based networking. &nbsp;_  
 

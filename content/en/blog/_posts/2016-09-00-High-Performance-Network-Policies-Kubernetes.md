@@ -5,6 +5,7 @@ title: " High performance network policies in Kubernetes clusters "
 date: 2016-09-21
 pagination:
   enabled: true
+slug: high-performance-network-policies-kubernetes
 ---
 _Editor's note: today’s post is by Juergen Brendel, Pritesh Kothari and Chris Marino co-founders of Pani Networks, the sponsor of the Romana project, the network policy software used for these benchmark tests._  
 

@@ -5,6 +5,7 @@ title: " From Network Policies to Security Policies "
 date: 2016-12-08
 pagination:
   enabled: true
+slug: from-network-policies-to-security-policies
 ---
 _Editor's note: Today’s post is by Bernard Van De Walle, Kubernetes Lead Engineer, at Aporeto, showing how they took a new approach to the Kubernetes network policy enforcement._  
 

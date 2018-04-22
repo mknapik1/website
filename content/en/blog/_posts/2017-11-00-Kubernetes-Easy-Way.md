@@ -5,6 +5,7 @@ title: " Kubernetes the Easy Way "
 date: 2017-11-01
 pagination:
   enabled: true
+slug: kubernetes-easy-way
 ---
  **_Editor's note: Today's post is by Dan Garfield, VP of Marketing at Codefresh, on how to set up and easily deploy a Kubernetes cluster._**  
 

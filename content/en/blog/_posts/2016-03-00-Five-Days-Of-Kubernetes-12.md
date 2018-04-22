@@ -5,6 +5,7 @@ permalink: /blog/:year/:month/:title
 date: 2016-03-28
 pagination:
   enabled: true
+slug: five-days-of-kubernetes-12
 ---
 The Kubernetes project has had some huge milestones over the past few weeks. We released [Kubernetes 1.2](http://blog.kubernetes.io/2016/03/Kubernetes-1.2-even-more-performance-upgrades-plus-easier-application-deployment-and-management-.html), had our [first conference in Europe](https://kubecon.io/), and were accepted into the [Cloud Native Computing Foundation](https://cncf.io/). While we catch our breath, we would like to take a moment to highlight some of the great work contributed by the community since our last milestone, just four months ago.
 

@@ -247,6 +247,7 @@ spec:
 
     serviceAccountName: prometheus-sa
 
+slug: using-rbac-generally-available-18
 ---
 
 apiVersion: v1

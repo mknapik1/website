@@ -5,6 +5,7 @@ title: " AppC Support for Kubernetes through RKT "
 date: 2015-05-04
 pagination:
   enabled: true
+slug: appc-support-for-kubernetes-through-rkt
 ---
 We very recently accepted a pull request to the Kubernetes project to add appc support for the Kubernetes community. &nbsp;Appc is a new open container specification that was initiated by CoreOS, and is supported through CoreOS rkt container runtime.
 

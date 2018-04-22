@@ -5,6 +5,7 @@ title: " A Stronger Foundation for Creating and Managing Kubernetes Clusters "
 date: 2017-01-12
 pagination:
   enabled: true
+slug: stronger-foundation-for-creating-and-managing-kubernetes-clusters
 ---
 _Editor's note: Today’s post is by Lucas Käldström an independent Kubernetes maintainer and SIG-Cluster-Lifecycle member, sharing what the group has been building and what’s upcoming.&nbsp;_  
 

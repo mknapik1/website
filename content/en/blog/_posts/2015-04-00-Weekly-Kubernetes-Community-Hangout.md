@@ -5,6 +5,7 @@ title: " Weekly Kubernetes Community Hangout Notes - April 3 2015 "
 date: 2015-04-04
 pagination:
   enabled: true
+slug: weekly-kubernetes-community-hangout
 ---
 # Kubernetes: Weekly Kubernetes Community Hangout Notes
 

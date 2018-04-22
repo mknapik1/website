@@ -5,6 +5,7 @@ title: " Kubernetes Containers Logging and Monitoring with Sematext "
 date: 2016-11-18
 pagination:
   enabled: true
+slug: kubernetes-containers-logging-monitoring-with-sematext
 ---
 _Editor's note: Today’s post is by Stefan Thies, Developer Evangelist, at Sematext, showing key Kubernetes metrics and log elements to help you troubleshoot and tune Docker and Kubernetes._  
 

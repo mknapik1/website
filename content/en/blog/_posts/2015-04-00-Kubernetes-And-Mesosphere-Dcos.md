@@ -5,6 +5,7 @@ title: " Kubernetes and the Mesosphere DCOS "
 date: 2015-04-22
 pagination:
   enabled: true
+slug: kubernetes-and-mesosphere-dcos
 ---
 
 # Kubernetes and the Mesosphere DCOS

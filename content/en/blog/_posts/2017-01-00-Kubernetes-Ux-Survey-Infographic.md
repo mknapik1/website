@@ -5,6 +5,7 @@ title: " Kubernetes UX Survey Infographic "
 date: 2017-01-09
 pagination:
   enabled: true
+slug: kubernetes-ux-survey-infographic
 ---
 _Editor's note: Today’s post is by Dan Romlein, UX Designer at Apprenda and member of the SIG-UI, sharing UX survey results from the Kubernetes community.&nbsp;_  
 

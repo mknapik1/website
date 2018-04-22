@@ -407,6 +407,7 @@ spec:
 
      destinationVersion: destination.labels["version"] | "unknown"
 
+slug: request-routing-and-policy-management
 ---
 
 apiVersion: "config.istio.io/v1alpha2"

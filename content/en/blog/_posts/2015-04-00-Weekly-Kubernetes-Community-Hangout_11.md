@@ -5,6 +5,7 @@ title: " Weekly Kubernetes Community Hangout Notes - April 10 2015 "
 date: 2015-04-11
 pagination:
   enabled: true
+slug: weekly-kubernetes-community-hangout_11
 ---
 Every week the Kubernetes contributing community meet virtually over Google Hangouts. We want anyone who's interested to know what's discussed in this forum.
 

@@ -5,6 +5,7 @@ title: " Challenges of a Remotely Managed, On-Premises, Bare-Metal Kubernetes Cl
 date: 2016-08-02
 pagination:
   enabled: true
+slug: challenges-remotely-managed-onpremise-kubernetes-cluster
 ---
 
 _Today's post is written by Bich Le, chief architect at Platform9, describing how their engineering team overcame challenges in remotely managing bare-metal Kubernetes clusters.&nbsp;_  

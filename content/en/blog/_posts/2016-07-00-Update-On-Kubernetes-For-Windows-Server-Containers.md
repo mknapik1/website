@@ -5,6 +5,7 @@ title: " Updates to Performance and Scalability in Kubernetes 1.3 -- 2,000 node 
 date: 2016-07-07
 pagination:
   enabled: true
+slug: update-on-kubernetes-for-windows-server-containers
 ---
 We are proud to announce that with the [release of version 1.3](http://blog.kubernetes.io/2016/07/kubernetes-1.3-bridging-cloud-native-and-enterprise-workloads.html), Kubernetes now supports 2000-node clusters with even better end-to-end pod startup time. The latency of our API calls are within our one-second [Service Level Objective (SLO)](https://en.wikipedia.org/wiki/Service_level_objective) and most of them are even an order of magnitude better than that. It is possible to run larger deployments than a 2,000 node cluster, but performance may be degraded and it may not meet our strict SLO.  
 

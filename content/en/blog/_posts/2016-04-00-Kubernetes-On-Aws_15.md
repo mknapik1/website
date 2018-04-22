@@ -5,6 +5,7 @@ title: " How to deploy secure, auditable, and reproducible Kubernetes clusters o
 date: 2016-04-15
 pagination:
   enabled: true
+slug: kubernetes-on-aws_15
 ---
 
 _Today’s guest post is written by Colin Hom, infrastructure engineer at [CoreOS](https://coreos.com/), the company delivering Google’s Infrastructure for Everyone Else (#GIFEE) and running the world's containers securely on CoreOS Linux, Tectonic and Quay._  

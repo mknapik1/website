@@ -5,6 +5,7 @@ title: " High Performance Networking with EC2 Virtual Private Clouds "
 date: 2017-08-11
 pagination:
   enabled: true
+slug: high-performance-networking-with-ec2
 ---
 
 

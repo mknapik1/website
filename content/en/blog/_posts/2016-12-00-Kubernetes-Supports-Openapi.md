@@ -5,6 +5,7 @@ title: " Kubernetes supports OpenAPI "
 date: 2016-12-23
 pagination:
   enabled: true
+slug: kubernetes-supports-openapi
 ---
 _Editor’s note: this post is part of a [series of in-depth articles](http://blog.kubernetes.io/2016/12/five-days-of-kubernetes-1.5.html) on what's new in Kubernetes 1.5_  
 

@@ -5,6 +5,7 @@ title: " Using Kubernetes Namespaces to Manage Environments "
 date: 2015-08-28
 pagination:
   enabled: true
+slug: using-kubernetes-namespaces-to-manage
 ---
 #####  One of the advantages that Kubernetes provides is the ability to manage various environments easier and better than traditional deployment strategies. For most nontrivial applications, you have test, staging, and production environments. You can spin up a separate cluster of resources, such as VMs, with the same configuration in staging and production, but that can be costly and managing the differences between the environments can be difficult.
 

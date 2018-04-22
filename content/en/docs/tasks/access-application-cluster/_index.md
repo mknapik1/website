@@ -1,5 +1,5 @@
 ---
-title: "Stateless Applications"
-weight: 100
+title: "Access Applications in a Cluster"
+weight: 70
 ---
 

@@ -5,6 +5,7 @@ title: " Container Design Patterns "
 date: 2016-06-21
 pagination:
   enabled: true
+slug: container-design-patterns
 ---
 Kubernetes automates deployment, operations, and scaling of applications, but our goals in the Kubernetes project extend beyond system management -- we want Kubernetes to help developers, too. Kubernetes should make it easy for them to write the distributed applications and services that run in cloud and datacenter environments. To enable this, Kubernetes defines not only an API for administrators to perform management actions, but also an API for containerized applications to interact with the management platform.  
 

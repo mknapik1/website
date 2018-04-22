@@ -5,6 +5,7 @@ title: " How container metadata changes your point of view "
 date: 2016-03-28
 pagination:
   enabled: true
+slug: how-container-metadata-changes-your-point-of-view
 ---
 _Today’s guest post is brought to you by Apurva Davé, VP of Marketing at Sysdig, who’ll discuss using Kubernetes metadata & Sysdig to understand what’s going on in your Kubernetes cluster.&nbsp;_  
 

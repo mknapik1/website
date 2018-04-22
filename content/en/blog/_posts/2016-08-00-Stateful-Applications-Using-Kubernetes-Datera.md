@@ -385,6 +385,7 @@ spec:
 
     app: nginx
 
+slug: stateful-applications-using-kubernetes-datera
 ---
 
 apiVersion: apps/v1alpha1

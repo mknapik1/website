@@ -5,6 +5,7 @@ title: " SIG-ClusterOps: Promote operability and interoperability of Kubernetes 
 date: 2016-04-19
 pagination:
   enabled: true
+slug: sig-clusterops-promote-operability-and-interoperability-of-k8s-clusters
 ---
 _Editor’s note: This week we’re featuring [Kubernetes Special Interest Groups](https://github.com/kubernetes/kubernetes/wiki/Special-Interest-Groups-(SIGs)); Today’s post is by the SIG-ClusterOps team whose mission is to promote operability and interoperability of Kubernetes clusters -- to listen, help & escalate._  
 

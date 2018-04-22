@@ -5,6 +5,7 @@ title: " Dancing at the Lip of a Volcano: The Kubernetes Security Process - Expl
 date: 2017-05-18
 pagination:
   enabled: true
+slug: kubernetes-security-process-explained
 ---
 _Editor's note: Today’s post is by&nbsp; __Jess Frazelle of Google and Brandon Philips of CoreOS about the Kubernetes security disclosures and response policy.__ &nbsp;_  
 

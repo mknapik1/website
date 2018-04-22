@@ -5,6 +5,7 @@ title: " Bringing End-to-End Kubernetes Testing to Azure (Part 2) "
 date: 2016-07-18
 pagination:
   enabled: true
+slug: bringing-end-to-end-kubernetes-testing-to-azure-2
 ---
 _Editor’s Note: Today’s guest post is Part II from a [series](http://blog.kubernetes.io/2016/06/bringing-end-to-end-testing-to-azure.html) by Travis Newhouse, Chief Architect at AppFormix, writing about their contributions to Kubernetes._  
 

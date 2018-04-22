@@ -5,6 +5,7 @@ title: " Kubernetes 1.1 Performance upgrades, improved tooling and a growing com
 date: 2015-11-09
 pagination:
   enabled: true
+slug: kubernetes-1-1-performance-upgrades-improved-tooling-and-a-growing-community
 ---
 Since the Kubernetes 1.0 release in July, we’ve seen tremendous adoption by companies building distributed systems to manage their container clusters. We’re also been humbled by the rapid growth of the community who help make Kubernetes better everyday. We have seen commercial offerings such as Tectonic by CoreOS and RedHat Atomic Host emerge to deliver deployment and support of Kubernetes. And a growing ecosystem has added Kubernetes support including tool vendors such as Sysdig and Project Calico.  
 

@@ -5,6 +5,7 @@ title: " Containers as a Service, the foundation for next generation PaaS "
 date: 2017-02-21
 pagination:
   enabled: true
+slug: caas-the-foundation-for-next-gen-paas
 ---
 
 _Today’s post is by Brendan Burns, Partner Architect, at Microsoft & Kubernetes co-founder._  

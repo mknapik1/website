@@ -5,6 +5,7 @@ title: " Introducing Container Storage Interface (CSI) Alpha for Kubernetes "
 date: 2018-01-10
 pagination:
   enabled: true
+slug: introducing-container-storage-interface
 ---
 
 One of the key differentiators for Kubernetes has been a powerful [volume plugin system](https://kubernetes.io/docs/concepts/storage/volumes/) that enables many different types of storage systems to:  

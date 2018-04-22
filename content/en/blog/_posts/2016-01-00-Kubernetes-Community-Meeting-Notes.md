@@ -9,6 +9,7 @@ pagination:
 #####  January 14 - RackN demo, testing woes, and KubeCon EU CFP.
 ---
  Note taker: Joe Beda
+slug: kubernetes-community-meeting-notes
 ---
 * Demonstration: Automated Deploy on Metal, AWS and others w/ Digital Rebar, Rob Hirschfeld  and Greg Althaus from RackN
 

@@ -5,6 +5,7 @@ title: " Kubernetes Namespaces: use cases and insights "
 date: 2016-08-16
 pagination:
   enabled: true
+slug: kubernetes-namespaces-use-cases-insights
 ---
 
 _“Who's on first, What's on second, I Don't Know's on third”&nbsp;_

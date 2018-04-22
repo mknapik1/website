@@ -5,6 +5,7 @@ title: " Kubernetes is Still Hard (for Developers) "
 date: 2017-11-15
 pagination:
   enabled: true
+slug: kubernetes-is-still-hard-for-developers
 ---
 
 Kubernetes has made the Ops experience much easier, but how does the developer experience compare? Ops teams can deploy a Kubernetes cluster in a matter of minutes. But developers need to understand a host of new concepts before beginning to work with Kubernetes. This can be a tedious and manual process, but it doesn’t have to be. In this talk, [Michelle Noorali](https://twitter.com/michellenoorali), co-lead of SIG-Apps, reimagines the Kubernetes developer experience. She shares her top 3 tips for building a successful developer experience including:  

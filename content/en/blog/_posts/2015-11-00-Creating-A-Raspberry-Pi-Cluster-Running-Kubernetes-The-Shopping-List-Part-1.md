@@ -5,6 +5,7 @@ title: " Creating a Raspberry Pi cluster running Kubernetes, the shopping list (
 date: 2015-11-25
 pagination:
   enabled: true
+slug: creating-a-raspberry-pi-cluster-running-kubernetes-the-shopping-list-part-1
 ---
 At Devoxx Belgium and Devoxx Morocco, Ray Tsang and I showed a Raspberry Pi cluster we built at Quintor running HypriotOS, Docker and Kubernetes. For those who did not see the talks, you can check out [an abbreviated version of the demo](https://www.youtube.com/watch?v=AAS5Mq9EktI) or the full talk by Ray on [developing and deploying Java-based microservices](https://www.youtube.com/watch?v=kT1vmK0r184) in Kubernetes. While we received many compliments on the talk, the most common question was about how to build a Pi cluster themselves! We’ll be doing just that, in two parts. This first post will cover the shopping list for the cluster, and the second will show you how to get it up and running . . .
 

@@ -5,6 +5,7 @@ title: " Citrix + Kubernetes = A Home Run "
 date: 2016-07-14
 pagination:
   enabled: true
+slug: citrix-netscaler-and-kubernetes
 ---
 _Editor’s note: today’s guest post is by Mikko Disini, a Director of Product Management at Citrix Systems, sharing their collaboration experience on a Kubernetes integration.&nbsp;_  
 

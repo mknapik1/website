@@ -5,6 +5,7 @@ title: " Strong, Simple SSL for Kubernetes Services "
 date: 2015-07-14
 pagination:
   enabled: true
+slug: strong-simple-ssl-for-kubernetes
 ---
 Hi, I’m Evan Brown [(@evandbrown](http://twitter.com/evandbrown)) and I work on the solutions architecture team for Google Cloud Platform. I recently wrote an [article](https://cloud.google.com/solutions/automated-build-images-with-jenkins-kubernetes) and [tutorial](https://github.com/GoogleCloudPlatform/kube-jenkins-imager) about using Jenkins on Kubernetes to automate the Docker and GCE image build process. Today I’m going to discuss how I used Kubernetes services and secrets to add SSL to the Jenkins web UI. After reading this, you’ll be able to add SSL termination (and HTTP-\>HTTPS redirects + basic auth) to your public HTTP Kubernetes services.
 

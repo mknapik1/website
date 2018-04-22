@@ -413,6 +413,7 @@ user@test-instance-us:~$ curl 130.211.40.186
 <p>Congratulations!</p>
 
 
+slug: globally-distributed-services-kubernetes-cluster-federation
 ----
  ```
 

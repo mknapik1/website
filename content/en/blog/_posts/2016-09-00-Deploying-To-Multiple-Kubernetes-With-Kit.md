@@ -5,6 +5,7 @@ title: " Deploying to Multiple Kubernetes Clusters with kit "
 date: 2016-09-06
 pagination:
   enabled: true
+slug: deploying-to-multiple-kubernetes-with-kit
 ---
 _Editor’s note: today’s guest post is by&nbsp;Chesley Brown, Full-Stack Engineer, at InVision, talking about how they build and open&nbsp;sourced kit to help them to continuously deploy updates to multiple clusters._  
 

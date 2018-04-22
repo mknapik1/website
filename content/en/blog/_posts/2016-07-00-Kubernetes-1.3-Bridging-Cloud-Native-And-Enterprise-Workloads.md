@@ -5,6 +5,7 @@ title: " Kubernetes 1.3: Bridging Cloud Native and Enterprise Workloads "
 date: 2016-07-06
 pagination:
   enabled: true
+slug: kubernetes-1.3-bridging-cloud-native-and-enterprise-workloads
 ---
 Nearly two years ago, when we officially kicked off the Kubernetes project, we wanted to simplify distributed systems management and provide the core technology required to everyone. The community’s response to this effort has blown us away. Today, thousands of customers, partners and developers are running clusters in production using Kubernetes and have joined the cloud native revolution.&nbsp;  
 

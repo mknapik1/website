@@ -5,6 +5,7 @@ title: " Cluster Level Logging with Kubernetes "
 date: 2015-06-11
 pagination:
   enabled: true
+slug: cluster-level-logging-with-kubernetes
 ---
 
 

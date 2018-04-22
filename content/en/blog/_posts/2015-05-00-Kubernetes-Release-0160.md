@@ -5,6 +5,7 @@ title: " Kubernetes Release: 0.16.0 "
 date: 2015-05-11
 pagination:
   enabled: true
+slug: kubernetes-release-0160
 ---
 Release Notes:
 

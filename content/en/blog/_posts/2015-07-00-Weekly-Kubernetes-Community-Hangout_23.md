@@ -5,6 +5,7 @@ title: " Weekly Kubernetes Community Hangout Notes - July 17 2015 "
 date: 2015-07-23
 pagination:
   enabled: true
+slug: weekly-kubernetes-community-hangout_23
 ---
 
 

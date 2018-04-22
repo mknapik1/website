@@ -5,6 +5,7 @@ title: " PaddlePaddle Fluid: Elastic Deep Learning on Kubernetes "
 date: 2017-12-06
 pagination:
   enabled: true
+slug: paddle-paddle-fluid-elastic-learning
 ---
 _Editor's note: Today's post is a joint post from the deep learning team at Baidu and the etcd team at CoreOS._
 

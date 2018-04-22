@@ -5,6 +5,7 @@ title: " The K8sPort: Engaging Kubernetes Community One Activity at a Time "
 date: 2017-03-24
 pagination:
   enabled: true
+slug: k8sport-engaging-the-kubernetes-community
 ---
 _Editor's note: Today’s post is by Ryan Quackenbush, Advocacy Programs Manager at Apprenda, showing a new community portal for Kubernetes advocates: the K8sPort._   
 

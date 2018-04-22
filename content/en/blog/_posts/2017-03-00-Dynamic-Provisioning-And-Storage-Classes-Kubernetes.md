@@ -5,6 +5,7 @@ title: " Dynamic Provisioning and Storage Classes in Kubernetes "
 date: 2017-03-29
 pagination:
   enabled: true
+slug: dynamic-provisioning-and-storage-classes-kubernetes
 ---
 
 _Editor’s note: this post is part of a [series of in-depth articles](http://blog.kubernetes.io/2017/03/five-days-of-kubernetes-1.6.html) on what's new in Kubernetes 1.6_  

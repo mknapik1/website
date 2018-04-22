@@ -5,6 +5,7 @@ title: " Running MongoDB on Kubernetes with StatefulSets "
 date: 2017-01-30
 pagination:
   enabled: true
+slug: running-mongodb-on-kubernetes-with-statefulsets
 ---
 _Editor's note: Today’s post is by Sandeep Dinesh, Developer Advocate, Google Cloud Platform, showing how to run a database in a container._  
 

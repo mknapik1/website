@@ -5,6 +5,7 @@ title: " How we improved Kubernetes Dashboard UI in 1.4 for your production need
 date: 2016-10-03
 pagination:
   enabled: true
+slug: production-kubernetes-dashboard-ui-1.4-improvements_3
 ---
 With the release of [Kubernetes 1.4](http://blog.kubernetes.io/2016/09/kubernetes-1.4-making-it-easy-to-run-on-kuberentes-anywhere.html) last week, Dashboard – the official web UI for Kubernetes – has a number of exciting updates and improvements of its own. The past three months have been busy ones for the Dashboard team, and we’re excited to share the resulting features of that effort here. If you’re not familiar with Dashboard, the [GitHub repo](https://github.com/kubernetes/dashboard#kubernetes-dashboard) is a great place to get started.  
 

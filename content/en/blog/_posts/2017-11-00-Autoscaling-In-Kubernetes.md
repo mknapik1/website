@@ -5,6 +5,7 @@ title: " Autoscaling in Kubernetes "
 date: 2017-11-17
 pagination:
   enabled: true
+slug: autoscaling-in-kubernetes
 ---
 
 

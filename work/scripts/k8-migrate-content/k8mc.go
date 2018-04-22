@@ -532,7 +532,6 @@ func (m *mover) contentMigrate_Replacements() error {
 		func(path, s string) (string, error) {
 			re := regexp.MustCompile(`{% include feature-state-(.*?).md %}`)
 			return re.ReplaceAllString(s, `{{< feature-state state="$1" >}}`), nil
-			return s, nil
 		},
 	}
 
@@ -543,6 +542,16 @@ func (m *mover) contentMigrate_Replacements() error {
 	blogFixers := contentFixers{
 		// Makes proper YAML dates from "Friday, July 02, 2015" etc.
 		fixDates,
+
+		// Add slugs from filename. Note that we could have configured Hugo to use
+		// date/slug from filename, but the 2018-01-00- filenames breaks it.
+		func(path, s string) (string, error) {
+			// 2018-01-00-Core-Workloads-Api-Ga.md
+			re := regexp.MustCompile(`\d{4}-\d{2}-\d{2}-(.*?)\.md`)
+			m := re.FindStringSubmatch(path)
+			slug := strings.ToLower(strings.Replace(strings.TrimSpace(m[1]), " ", "-", -1))
+			return addKeyValue("slug", slug)(path, s)
+		},
 	}
 
 	if err := m.applyContentFixers(blogFixers, ".*blog/.*md$"); err != nil {
@@ -877,6 +886,7 @@ func replaceCaptures(path, s string) (string, error) {
 	return re.ReplaceAllString(s, `{{% capture $1 %}}$2{{% /capture %}}`), nil
 }
 
+// TODO(bep) blog {: .scale-yaml} remove
 // Introduce them little by little to test
 var callouts = regexp.MustCompile("note|caution|warning")
 

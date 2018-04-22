@@ -74,6 +74,7 @@ spec:
 
    app: productpage
 
+slug: managing-microservices-with-istio-service-mesh
 ---
 
 apiVersion: extensions/v1beta1

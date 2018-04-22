@@ -36,6 +36,7 @@ TODO
 * OK customcss/js
 * .Params.version
 * Check for index.md files
+* % assign reference_docs_url = ‘/docs/reference/generated/kubernetes-api/’ | append: site.latest %}
 
 
 * Style code highlight
@@ -58,6 +59,8 @@ All:
 - Check params.current_version
 for_k8s_version
  default page.version 
+* Remove permalink: /blog/:year/:month/:title in blog
+* Check permalink vs slug vs prod
 
 - OK headless bundle for all the includes
 

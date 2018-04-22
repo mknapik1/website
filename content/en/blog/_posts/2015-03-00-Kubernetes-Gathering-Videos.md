@@ -6,6 +6,7 @@ title: " Kubernetes Gathering Videos "
 date: 2015-03-23
 pagination:
   enabled: true
+slug: kubernetes-gathering-videos
 ---
 If you missed the Kubernetes Gathering in SF last month, fear not! Here are the videos from the evening presentations organized into a playlist on YouTube
 

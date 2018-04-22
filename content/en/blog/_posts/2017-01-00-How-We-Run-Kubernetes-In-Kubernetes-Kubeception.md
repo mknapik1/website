@@ -5,6 +5,7 @@ title: " How we run Kubernetes in Kubernetes aka Kubeception "
 date: 2017-01-20
 pagination:
   enabled: true
+slug: how-we-run-kubernetes-in-kubernetes-kubeception
 ---
 _Editor's note: Today’s post is by the team at Giant Swarm, showing how they run Kubernetes in Kubernetes._  
 

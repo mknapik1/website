@@ -85,6 +85,7 @@ spec:
             value: MASTER  
         ports:  
         - containerPort: 8091  
+slug: create-couchbase-cluster-using-kubernetes
 ----  
 apiVersion: v1  
 kind: Service  

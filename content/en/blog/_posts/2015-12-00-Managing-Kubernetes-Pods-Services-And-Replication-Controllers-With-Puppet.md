@@ -5,6 +5,7 @@ title: " Managing Kubernetes Pods, Services and Replication Controllers with Pup
 date: 2015-12-17
 pagination:
   enabled: true
+slug: managing-kubernetes-pods-services-and-replication-controllers-with-puppet
 ---
 _Today’s guest post is written by Gareth Rushgrove, Senior Software Engineer at Puppet Labs, a leader in IT automation. Gareth tells us about a new Puppet module that helps manage resources in Kubernetes.&nbsp;_  
 

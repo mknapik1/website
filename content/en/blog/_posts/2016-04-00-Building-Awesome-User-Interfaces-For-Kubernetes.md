@@ -5,6 +5,7 @@ title: " SIG-UI: the place for building awesome user interfaces for Kubernetes "
 date: 2016-04-20
 pagination:
   enabled: true
+slug: building-awesome-user-interfaces-for-kubernetes
 ---
 _Editor’s note: This week we’re featuring [Kubernetes Special Interest Groups](https://github.com/kubernetes/kubernetes/wiki/Special-Interest-Groups-(SIGs)); Today’s post is by the SIG-UI team describing their mission and showing the cool projects they work on._  
 

@@ -5,6 +5,7 @@ title: " Kubespray Ansible Playbooks foster Collaborative Kubernetes Ops "
 date: 2017-05-19
 pagination:
   enabled: true
+slug: kubespray-ansible-collaborative-kubernetes-ops
 ---
 _Today’s guest post is by Rob Hirschfeld, co-founder of open infrastructure automation project, Digital Rebar and co-chair of the SIG Cluster Ops. &nbsp;_  
 

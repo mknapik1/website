@@ -5,6 +5,7 @@ title: " Container survey results - March 2016 "
 date: 2016-04-08
 pagination:
   enabled: true
+slug: container-survey-results-march-2016
 ---
 Last month, we had our third installment of our container survey and today we look at the results. &nbsp;(raw data is available [here](https://docs.google.com/spreadsheets/d/13356w6I2xxKnmjblFSsKGVANZGGlX2yFMzb8eOIe2Oo/edit?usp=sharing))
 

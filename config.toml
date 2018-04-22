@@ -30,6 +30,9 @@ fractions = false
 [social]
 twitter = "kubernetesio"
 
+[frontmatter]
+date = ["date", ":filename", "publishDate", "lastmod"]
+
 [permalinks]
   blog = "/:section/:year/:month/:day/:slug/"
 

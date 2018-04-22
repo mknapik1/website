@@ -5,6 +5,7 @@ title: " The Bet on Kubernetes, a Red Hat Perspective "
 date: 2016-07-21
 pagination:
   enabled: true
+slug: the-bet-on-kubernetes
 ---
 _Editor’s note: Today’s guest post is from a Kubernetes contributor Clayton Coleman, Architect on OpenShift at Red Hat, sharing their adoption of the project from its beginnings._  
 

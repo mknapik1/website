@@ -5,6 +5,7 @@ title: "Extensible Admission is Beta"
 date: 2018-01-11
 pagination:
   enabled: true
+slug: extensible-admission-is-beta
 ---
 In this post we review a feature, available in the Kubernetes API server, that allows you to implement arbitrary control decisions and which has matured considerably in Kubernetes 1.9.  
 

@@ -5,6 +5,7 @@ title: " Kubernetes as Foundation for Cloud Native PaaS "
 date: 2015-11-03
 pagination:
   enabled: true
+slug: kubernetes-as-foundation-for-cloud-native-paas
 ---
 With Kubernetes continuing to gain momentum as a critical tool for building and scaling container based applications, we’ve been thrilled to see a growing number of platform as a service (PaaS) offerings adopt it as a foundation. PaaS developers have been drawn to Kubernetes by its rapid rate of maturation, the soundness of its core architectural concepts, and the strength of its contributor community. The [Kubernetes ecosystem](http://blog.kubernetes.io/2015/07/the-growing-kubernetes-ecosystem.html) continues to grow, and these PaaS projects are great additions to it.
 

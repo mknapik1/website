@@ -5,6 +5,7 @@ title: "Core Workloads API GA"
 date: 2018-01-15
 pagination:
   enabled: true
+slug: core-workloads-api-ga
 ---
 
 ## DaemonSet, Deployment, ReplicaSet, and StatefulSet are GA

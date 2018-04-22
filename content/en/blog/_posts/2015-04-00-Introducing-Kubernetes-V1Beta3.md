@@ -5,6 +5,7 @@ title: " Introducing Kubernetes API Version v1beta3 "
 date: 2015-04-16
 pagination:
   enabled: true
+slug: introducing-kubernetes-v1beta3
 ---
 We've been hard at work on cleaning up the API over the past several months (see&nbsp;[https://github.com/GoogleCloudPlatform/kubernetes/issues/1519](https://github.com/GoogleCloudPlatform/kubernetes/issues/1519)&nbsp;for details). The result is v1beta3, which is considered to be the release candidate for the v1 API.  
 

@@ -5,6 +5,7 @@ title: " Cloud Native Application Interfaces "
 date: 2016-09-01
 pagination:
   enabled: true
+slug: cloud-native-application-interfaces
 ---
 
 

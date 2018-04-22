@@ -5,6 +5,7 @@ title: " Introducing the Kubernetes OpenStack Special Interest Group "
 date: 2016-04-22
 pagination:
   enabled: true
+slug: introducing-kubernetes-openstack-sig
 ---
 _Editor’s note: This week we’re featuring [Kubernetes Special Interest Groups](https://github.com/kubernetes/kubernetes/wiki/Special-Interest-Groups-(SIGs)); Today’s post is by the SIG-OpenStack team about their mission to facilitate ideas between the OpenStack and Kubernetes communities.&nbsp;_  
 

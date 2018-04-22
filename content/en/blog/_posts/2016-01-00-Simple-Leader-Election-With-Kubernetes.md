@@ -5,6 +5,7 @@ title: " Simple leader election with Kubernetes and Docker "
 date: 2016-01-11
 pagination:
   enabled: true
+slug: simple-leader-election-with-kubernetes
 ---
 
 ####  Overview

@@ -5,6 +5,7 @@ title: " SIG Apps: build apps for and operate them in Kubernetes "
 date: 2016-08-16
 pagination:
   enabled: true
+slug: sig-apps-running-apps-in-kubernetes
 ---
 _Editor’s note: This post is by the Kubernetes SIG-Apps team sharing how they focus on the developer and devops experience of running applications in Kubernetes._  
 

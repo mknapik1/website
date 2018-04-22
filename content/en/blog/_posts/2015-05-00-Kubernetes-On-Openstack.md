@@ -5,6 +5,7 @@ title: " Kubernetes on OpenStack "
 date: 2015-05-19
 pagination:
   enabled: true
+slug: kubernetes-on-openstack
 ---
 
 
