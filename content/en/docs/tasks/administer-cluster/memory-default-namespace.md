@@ -14,7 +14,7 @@ Kubernetes assigns a default memory request under certain conditions that are ex
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 Each node in your cluster must have at least 2 GiB of memory.
 

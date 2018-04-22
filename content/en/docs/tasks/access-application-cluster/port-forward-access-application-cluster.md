@@ -14,7 +14,7 @@ for database debugging.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * Install [redis-cli](http://redis.io/topics/rediscli).
 

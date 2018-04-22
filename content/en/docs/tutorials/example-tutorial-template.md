@@ -15,7 +15,7 @@ This page shows how to ...
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 * Do this.
 * Do this too.
 

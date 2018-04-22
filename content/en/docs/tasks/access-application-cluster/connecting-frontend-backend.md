@@ -24,7 +24,7 @@ frontend and backend are connected using a Kubernetes Service object.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * This task uses
   [Services with external load balancers](/docs/tasks/access-application-cluster/create-external-load-balancer/), which

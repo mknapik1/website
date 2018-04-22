@@ -9,7 +9,7 @@ This page shows how to access clusters using the Kubernetes API.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 {{% /capture %}}
 
 {{% capture steps %}}

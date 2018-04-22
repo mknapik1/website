@@ -15,7 +15,7 @@ replicas exist across the registered clusters.
 
 {{% capture prerequisites %}}
 
-* {% include federated-task-tutorial-prereqs.md %}
+* {{< include "federated-task-tutorial-prereqs.md" >}}
 * You are also expected to have a basic
 [working knowledge of Kubernetes](/docs/setup/) in
 general and [ReplicaSets](/docs/concepts/workloads/controllers/replicaset/) in particular.

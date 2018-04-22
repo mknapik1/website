@@ -10,7 +10,7 @@ toc_hide: true
 
 For Kubernetes 101, we will cover kubectl, pods, volumes, and multiple containers
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 In order for the kubectl usage examples to work, make sure you have an example directory locally, either from [a release](https://github.com/kubernetes/kubernetes/releases) or the latest .yaml files located at: https://github.com/kubernetes/website/tree/master/docs/user-guide/walkthrough.
 

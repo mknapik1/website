@@ -23,7 +23,7 @@ documentation.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

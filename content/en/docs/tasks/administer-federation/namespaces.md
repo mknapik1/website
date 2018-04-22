@@ -15,7 +15,7 @@ across all the clusters in federation.
 
 {{% capture prerequisites %}}
 
-* {% include federated-task-tutorial-prereqs.md %}
+* {{< include "federated-task-tutorial-prereqs.md" >}}
 * You are also expected to have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [Namespaces](/docs/concepts/overview/working-with-objects/namespaces/) in particular.

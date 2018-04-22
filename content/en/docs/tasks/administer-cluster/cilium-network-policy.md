@@ -13,7 +13,7 @@ For background on Cilium, read the [Introduction to Cilium](https://cilium.readt
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

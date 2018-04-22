@@ -14,7 +14,7 @@ of Services, and how you can toggle this behavior according to your needs.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 ## Terminology
 

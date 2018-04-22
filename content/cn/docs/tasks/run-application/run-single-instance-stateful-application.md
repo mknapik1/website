@@ -21,7 +21,7 @@ content_template: templates/tutorial
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * 为了数据持久性我们将在环境上通过磁盘创建一个持久卷. 环境支持的类型见这里[here](/docs/user-guide/persistent-volumes/#types-of-persistent-volumes). 本篇文档将介绍 `GCEPersistentDisk` . `GCEPersistentDisk`卷只能工作在Google Compute Engine平台上.
 

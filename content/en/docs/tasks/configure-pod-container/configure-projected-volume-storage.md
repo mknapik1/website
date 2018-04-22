@@ -11,7 +11,7 @@ This page shows how to use a [`projected`](/docs/concepts/storage/volumes/#proje
 {{% /capture %}}
 
 {{% capture prerequisites %}}
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 {{% /capture %}}
 
 {{% capture steps %}}

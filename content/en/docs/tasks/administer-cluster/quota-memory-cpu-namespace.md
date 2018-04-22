@@ -16,7 +16,7 @@ object.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 Each node in your cluster must have at least 1 GiB of memory.
 

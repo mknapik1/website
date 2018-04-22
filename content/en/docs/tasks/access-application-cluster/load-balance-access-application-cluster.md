@@ -13,7 +13,7 @@ load-balanced access to an application running in a cluster.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

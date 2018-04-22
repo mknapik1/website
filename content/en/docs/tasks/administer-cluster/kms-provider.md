@@ -10,7 +10,7 @@ This page shows how to configure a Key Management Service (KMS) provider and plu
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * Kubernetes version 1.10.0 or later is required
 

@@ -16,7 +16,7 @@ across all the clusters in federation.
 
 {{% capture prerequisites %}}
 
-* {% include federated-task-tutorial-prereqs.md %}
+* {{< include "federated-task-tutorial-prereqs.md" >}}
 * You should also have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [ConfigMaps](/docs/tasks/configure-pod-container/configure-pod-configmap/) in particular.

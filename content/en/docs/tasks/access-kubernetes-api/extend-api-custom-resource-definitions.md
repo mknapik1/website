@@ -15,7 +15,7 @@ into the Kubernetes API by creating a
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 * Make sure your Kubernetes cluster has a master version of 1.7.0 or higher.
 

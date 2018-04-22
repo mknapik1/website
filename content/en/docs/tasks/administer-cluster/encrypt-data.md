@@ -10,7 +10,7 @@ This page shows how to enable and configure encryption of secret data at rest.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * Kubernetes version 1.7.0 or later is required
 

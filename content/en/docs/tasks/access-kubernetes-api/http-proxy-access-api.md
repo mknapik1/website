@@ -9,7 +9,7 @@ This page shows how to use an HTTP proxy to access the Kubernetes API.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * If you do not already have an application running in your cluster, start
   a Hello world application by entering this command:

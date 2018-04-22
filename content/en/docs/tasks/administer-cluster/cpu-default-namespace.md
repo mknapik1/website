@@ -15,7 +15,7 @@ under certain conditions that are explained later in this topic.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 {{% /capture %}}
 
 {{% capture steps %}}

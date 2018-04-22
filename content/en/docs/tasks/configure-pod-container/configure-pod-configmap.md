@@ -10,7 +10,7 @@ ConfigMaps allow you to decouple configuration artifacts from image content to k
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

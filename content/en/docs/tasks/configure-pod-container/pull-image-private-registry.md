@@ -12,7 +12,7 @@ private Docker registry or repository.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 * To do this exercise, you need a
 [Docker ID](https://docs.docker.com/docker-id/) and password.

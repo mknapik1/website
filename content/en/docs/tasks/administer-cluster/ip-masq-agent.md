@@ -9,7 +9,7 @@ This page shows how to configure and enable the ip-masq-agent.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

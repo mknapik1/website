@@ -569,11 +569,22 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	// These needs to be applied late
+	lateContentFixSet := contentFixers{
+		// Includes
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{% include (.*?) %}`)
+			return re.ReplaceAllString(s, `{{< include "$1" >}}`), nil
+			return s, nil
+		},
+	}
+
+	if err := m.applyContentFixers(lateContentFixSet, "md$"); err != nil {
+		return err
+	}
 	return nil
 
 }
-
-// TODO(bep) {% include templates/user-journey-content.md %} etc.
 
 func (m *mover) contentMigrate_Final_Step() error {
 	log.Println("Start Final Step …")

@@ -29,7 +29,7 @@ content_template: templates/tutorial
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 
 * 本任务使用 [外部负载均衡服务](/docs/tasks/access-application-cluster/create-external-load-balancer/)，

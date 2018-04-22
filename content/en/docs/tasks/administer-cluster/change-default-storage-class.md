@@ -11,7 +11,7 @@ provision volumes for PersistentVolumeClaims that have no special requirements.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

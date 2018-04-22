@@ -95,4 +95,4 @@ Some additional resources for getting information about your cluster and how it 
 
 {{% /capture %}}
 
-{% include templates/user-journey-content.md %}
+{{< include "templates/user-journey-content.md" >}}

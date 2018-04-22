@@ -13,7 +13,7 @@ content_template: templates/task
 {{% /capture %}}
 
 {{% capture prerequisites %}}
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
 
 

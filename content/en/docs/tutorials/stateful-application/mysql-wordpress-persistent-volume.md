@@ -31,7 +31,7 @@ A [PersistentVolume](/docs/concepts/storage/persistent-volumes/) (PV) is a piece
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %} 
+{{< include "task-tutorial-prereqs.md" >}} 
 
 Download the following configuration files:
 

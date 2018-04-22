@@ -19,7 +19,7 @@ functionality of Deployment is present, but some features
 
 {{% capture prerequisites %}}
 
-* {% include federated-task-tutorial-prereqs.md %}
+* {{< include "federated-task-tutorial-prereqs.md" >}}
 * You should also have a basic
 [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general and [Deployments](/docs/concepts/workloads/controllers/deployment/) in particular.

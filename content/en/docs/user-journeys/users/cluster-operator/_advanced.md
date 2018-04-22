@@ -81,4 +81,4 @@ Aenean suscipit arcu ac leo tincidunt tempus. Donec maximus tellus libero, ac ul
 
 {{% /capture %}}
 
-{% include templates/user-journey-content.md %}
+{{< include "templates/user-journey-content.md" >}}

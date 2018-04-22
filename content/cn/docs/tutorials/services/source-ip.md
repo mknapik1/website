@@ -13,7 +13,7 @@ Kubernetes 集群中运行的应用通过抽象的 Service 查找彼此，相互
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 
 ## 术语表

@@ -9,7 +9,7 @@ This page shows how to connect to services running on the Kubernetes cluster.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 {{% /capture %}}
 
 {{% capture steps %}}

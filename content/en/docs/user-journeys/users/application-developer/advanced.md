@@ -114,4 +114,4 @@ Congrats on completing the Application Developer user journey! You've covered th
 
 {{% /capture %}}
 
-{% include templates/user-journey-content.md %}
+{{< include "templates/user-journey-content.md" >}}

@@ -14,7 +14,7 @@ content_template: templates/task
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 在做这个练习之前，请在[给节点配置非透明整型资源](/docs/tasks/administer-cluster/opaque-integer-resource-node/)文档中进行练习，
 该文档介绍了在一个节点上配置dongle资源。

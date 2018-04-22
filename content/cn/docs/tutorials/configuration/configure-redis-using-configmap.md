@@ -23,7 +23,7 @@ content_template: templates/tutorial
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 * 理解[使用ConfigMap来配置Containers](/docs/tasks/configure-pod-container/configure-pod-configmap/)。
 
 {{% /capture %}}

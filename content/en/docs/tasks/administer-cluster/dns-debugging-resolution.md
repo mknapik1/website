@@ -11,7 +11,7 @@ This page provides hints on diagnosing DNS problems.
 {{% /capture %}}
 
 {{% capture prerequisites %}}
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 * Kubernetes version 1.6 and above.
 * The cluster must be configured to use the `kube-dns` addon.
 {{% /capture %}}

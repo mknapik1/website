@@ -22,7 +22,7 @@ This page shows how to run an application using a Kubernetes Deployment object.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

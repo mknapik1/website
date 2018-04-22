@@ -229,4 +229,4 @@ If you feel fairly comfortable with the topics on this page and want to learn mo
 {{% /capture %}}
 
 
-{% include templates/user-journey-content.md %}
+{{< include "templates/user-journey-content.md" >}}

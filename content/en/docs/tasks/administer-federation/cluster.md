@@ -15,7 +15,7 @@ federation api-server.
 
 {{% capture prerequisites %}}
 
-* {% include federated-task-tutorial-prereqs.md %}
+* {{< include "federated-task-tutorial-prereqs.md" >}}
 * You should also have a basic [working knowledge of Kubernetes](/docs/setup/pick-right-solution/) in
 general.
 

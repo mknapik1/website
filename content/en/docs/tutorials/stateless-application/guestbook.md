@@ -24,7 +24,7 @@ This tutorial shows you how to build and deploy a simple, multi-tier web applica
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 Download the following configuration files:
 
 1. [redis-master-deployment.yaml](/docs/tutorials/stateless-application/guestbook/redis-master-deployment.yaml)

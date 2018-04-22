@@ -25,8 +25,8 @@ on general patterns for running stateful applications in Kubernetes.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
-* {% include default-storage-class-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
+* {{< include "default-storage-class-prereqs.md" >}}
 * This tutorial assumes you are familiar with
   [PersistentVolumes](/docs/concepts/storage/persistent-volumes/)
   and [StatefulSets](/docs/concepts/workloads/controllers/statefulset/),

@@ -105,4 +105,4 @@ Cluster Administration:
 
 {{% /capture %}}
 
-{% include templates/user-journey-content.md %}
+{{< include "templates/user-journey-content.md" >}}

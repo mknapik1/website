@@ -14,7 +14,7 @@ This page shows how to assign extended resources to a Container.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 Before you do this exercise, do the exercise in
 [Advertise Extended Resources for a Node](/docs/tasks/administer-cluster/extended-resource-node/).

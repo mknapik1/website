@@ -17,7 +17,7 @@ resources that would otherwise be unknown to Kubernetes.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

@@ -24,7 +24,7 @@ include debugging utilities like a shell.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 A special **alpha** feature gate `PodShareProcessNamespace` must be set to true
 across the system: `--feature-gates=PodShareProcessNamespace=true`.

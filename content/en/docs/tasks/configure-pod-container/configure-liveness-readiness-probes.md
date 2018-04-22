@@ -21,7 +21,7 @@ When a Pod is not ready, it is removed from Service load balancers.
 
 {{% capture prerequisites %}}
 
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}
 

@@ -23,9 +23,9 @@ application is MySQL.
 
 {{% capture prerequisites %}}
 
-* {% include task-tutorial-prereqs.md %}
+* {{< include "task-tutorial-prereqs.md" >}}
 
-* {% include default-storage-class-prereqs.md %}
+* {{< include "default-storage-class-prereqs.md" >}}
 
 {{% /capture %}}
 

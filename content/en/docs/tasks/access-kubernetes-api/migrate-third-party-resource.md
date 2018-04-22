@@ -24,7 +24,7 @@ you **on a best-effort basis**.
 {{% /capture %}}
 
 {{% capture prerequisites %}}
-{% include task-tutorial-prereqs.md %}
+{{< include "task-tutorial-prereqs.md" >}}
 
 * Make sure your Kubernetes cluster has a **master version of exactly 1.7.x** (any patch release),
   as this is the only version that supports both TPR and CRD.
