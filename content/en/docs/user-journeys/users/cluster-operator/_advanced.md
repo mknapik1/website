@@ -6,6 +6,7 @@ css: /css/style_user_journeys.css
 js: https://use.fontawesome.com/4bcc658a89.js, https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js
 title: Advanced Topics
 track: "USERS > CLUSTER OPERATOR > ADVANCED"
+content_template: templates/user-journey-content
 ---
 
 {{% capture overview %}}
@@ -81,4 +82,4 @@ Aenean suscipit arcu ac leo tincidunt tempus. Donec maximus tellus libero, ac ul
 
 {{% /capture %}}
 
-{{< include "templates/user-journey-content.md" >}}
+

@@ -6,6 +6,7 @@ css: /css/style_user_journeys.css
 js: https://use.fontawesome.com/4bcc658a89.js, https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js
 title: Intermediate
 track: "USERS > CLUSTER OPERATOR > INTERMEDIATE"
+content_template: templates/user-journey-content
 ---
 
 {{% capture overview %}}
@@ -105,4 +106,4 @@ Cluster Administration:
 
 {{% /capture %}}
 
-{{< include "templates/user-journey-content.md" >}}
+

@@ -13,8 +13,6 @@ in the same Pod.
 
 {{% capture prerequisites %}}
 
-Tasks:
-
 {{< include "task-tutorial-prereqs.md" >}}
 
 {{% /capture %}}

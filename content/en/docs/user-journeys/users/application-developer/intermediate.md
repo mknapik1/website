@@ -6,6 +6,7 @@ css: /css/style_user_journeys.css
 js: https://use.fontawesome.com/4bcc658a89.js, https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js
 title: Intermediate
 track: "USERS › APPLICATION DEVELOPER › INTERMEDIATE"
+content_template: templates/user-journey-content
 ---
 {% assign reference_docs_url = '/docs/reference/generated/kubernetes-api/' | append: site.latest %}
 
@@ -154,4 +155,4 @@ If you feel fairly comfortable with the topics on this page and want to learn mo
 * [Foundational Cluster Operator](/docs/user-journeys/users/cluster-operator/foundational/){:target="_blank"} - Build breadth, by exploring other journeys.
 {{% /capture %}}
 
-{{< include "templates/user-journey-content.md" >}}
+

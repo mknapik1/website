@@ -564,6 +564,11 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	// Handle the user journey (sounds like a rock band)
+	if err := m.replaceStringWithFrontMatter(`{% include templates/user-journey-content.md %}`, "content_template", "templates/user-journey-content"); err != nil {
+		return err
+	}
+
 	// Handle the explicit replacements defined in replacments toml (tabs etc.)
 	if err := m.handleReplacementsFromTOML(); err != nil {
 		return err
