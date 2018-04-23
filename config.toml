@@ -13,7 +13,7 @@ contentDir = "content/en"
 # TODO(bep)
 logo = "/images/favicon.png"
 
-timeout = 500
+timeout = 3000
 
 # Highlighting config.
 pygmentsCodeFences = true
