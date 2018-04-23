@@ -599,8 +599,8 @@ func (m *mover) contentMigrate_Replacements() error {
 	lateContentFixSet := contentFixers{
 		// Includes
 		func(path, s string) (string, error) {
-			re := regexp.MustCompile(`{% include (.*?) %}`)
-			return re.ReplaceAllString(s, `{{< include "$1" >}}`), nil
+			re := regexp.MustCompile(`{% include(_relative)? (.*?) %}`)
+			return re.ReplaceAllString(s, `{{< include "$2" >}}`), nil
 			return s, nil
 		},
 	}

@@ -19,13 +19,13 @@ may use `kubeadm upgrade`.
 
 {{% capture body %}}
 ## kubeadm config upload from-file {#cmd-config-from-file}
-{% include_relative generated/kubeadm_config_upload_from-file.md %}
+{{< include "generated/kubeadm_config_upload_from-file.md" >}}
 
 ## kubeadm config upload from-flags {#cmd-config-from-flags}
-{% include_relative generated/kubeadm_config_upload_from-flags.md %}
+{{< include "generated/kubeadm_config_upload_from-flags.md" >}}
 
 ## kubeadm config view {#cmd-config-view}
-{% include_relative generated/kubeadm_config_view.md %}
+{{< include "generated/kubeadm_config_view.md" >}}
 {{% /capture %}}
 
 {{% capture whatsnext %}}

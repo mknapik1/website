@@ -1,5 +1,5 @@
 ---
-title: "Install Tools"
-weight: 40
+title: "Bootstrapping Clusters with kubeadm"
+weight: 20
 ---
 

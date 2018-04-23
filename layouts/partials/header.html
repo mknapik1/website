@@ -28,7 +28,6 @@
                 </a>
                 <ul>
                 {{ range .Site.Params.versions }}
-                    {{/* TODO(bep) versionedurl */}}
                     <li><a href="{{  .url }}">{{ .version }}</a></li>
                 {{ end }}
                 </ul>

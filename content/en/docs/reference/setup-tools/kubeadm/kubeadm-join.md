@@ -10,7 +10,7 @@ content_template: templates/concept
 {{% /capture %}}
 
 {{% capture body %}}
-{% include_relative generated/kubeadm_join.md %}
+{{< include "generated/kubeadm_join.md" >}}
 
 ### The joining workflow
 

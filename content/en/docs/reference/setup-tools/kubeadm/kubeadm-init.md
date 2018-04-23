@@ -10,7 +10,7 @@ content_template: templates/concept
 {{% /capture %}}
 
 {{% capture body %}}
-{% include_relative generated/kubeadm_init.md %}
+{{< include "generated/kubeadm_init.md" >}}
 
 ### Init workflow {#init-workflow}
 `kubeadm init` bootstraps a Kubernetes master node by executing the

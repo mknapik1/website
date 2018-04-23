@@ -10,7 +10,14 @@
 	{{ with $resource }}
 	{{ .Content | safeHTML }}
 	{{ else }}
-	{{ errorf "[%s] no resource matching %q." $.Page.Lang $pattern}}
+	{{/* It is not a resource in the includes bundle. Try to find the page relative to the current. */}}
+	{{ $path := path.Join $.Page.Dir $name }}
+	{{ $page := $.Page.Site.GetPage "page" $path }}
+	{{ with $page  }}
+	{{ .Content  }}
+	{{ else }}
+	{{ errorf "[%s] no Resource or Page matching %q." $.Page.Lang ($pattern | safeHTML ) }}
+	{{ end }}
 	{{ end }}
 	{{ else }}
 	{{ errorf "[%s] the 'inclucdes' bundle was not found." $.Page.Lang }}

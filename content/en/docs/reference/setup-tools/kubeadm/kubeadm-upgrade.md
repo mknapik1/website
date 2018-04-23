@@ -27,10 +27,10 @@ Please check these documents out for more detailed how-to-upgrade guidance:
  * [1.9.x to 1.9.y HA cluster upgrades](/docs/tasks/administer-cluster/kubeadm-upgrade-ha/)
 
 ## kubeadm upgrade plan {#cmd-upgrade-plan}
-{% include_relative generated/kubeadm_upgrade_plan.md %}
+{{< include "generated/kubeadm_upgrade_plan.md" >}}
 
 ## kubeadm upgrade apply  {#cmd-upgrade-apply}
-{% include_relative generated/kubeadm_upgrade_apply.md %}
+{{< include "generated/kubeadm_upgrade_apply.md" >}}
 
 {{% /capture %}}
 
