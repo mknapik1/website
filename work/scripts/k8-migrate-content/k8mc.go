@@ -109,6 +109,11 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
+	// Copy the root content files
+	if err := m.copyFile("code-of-conduct.md", "content/en/code-of-conduct.md"); err != nil {
+		return err
+	}
+
 	// Case Studies
 	if err := m.copyDir("case-studies", "content/en/case-studies"); err != nil {
 		return err
@@ -660,6 +665,11 @@ func (m *mover) doWithContentFile(subfolder string, f func(path string, info os.
 func (m *mover) copyDir(from, to string) error {
 	from, to = m.absFromTo(from, to)
 	return fileutils.CopyDir(from, to)
+}
+
+func (m *mover) copyFile(from, to string) error {
+	from, to = m.absFromTo(from, to)
+	return fileutils.CopyFile(from, to)
 }
 
 func (m *mover) moveDir(from, to string) error {
