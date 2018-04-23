@@ -8,7 +8,7 @@
 	{{ end }}
 	{{ $resource := $bundle.Resources.GetMatch $pattern}}
 	{{ with $resource }}
-	{{ .Content }}
+	{{ .Content | safeHTML }}
 	{{ else }}
 	{{ errorf "[%s] no resource matching %q." $.Page.Lang $pattern}}
 	{{ end }}
