@@ -15,7 +15,7 @@ This page provides an overview of the Kubernetes API.
 {{% capture body %}}
 The REST API is the fundamental fabric of Kubernetes. All operations and communications between components, and external user commands are REST API calls that the API Server handles. Consequently, everything in the Kubernetes
 platform is treated as an API object and has a corresponding entry in the
-[API](/docs/reference/generated/kubernetes-api/{{page.version}}/).
+[API](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/).
 
 Most operations can be performed through the
 [kubectl](/docs/reference/kubectl/overview/) command-line interface or other

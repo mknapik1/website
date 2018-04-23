@@ -538,6 +538,13 @@ func (m *mover) contentMigrate_Replacements() error {
 			re := regexp.MustCompile(`{% include feature-state-(.*?).md %}`)
 			return re.ReplaceAllString(s, `{{< feature-state state="$1" >}}`), nil
 		},
+
+		// Handle the params in content (version etc.)
+		//
+		func(path, s string) (string, error) {
+			re := regexp.MustCompile(`{{\s?page\.(.*?)\s?}}`)
+			return re.ReplaceAllString(s, `{{< param "$1" >}}`), nil
+		},
 	}
 
 	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {

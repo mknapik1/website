@@ -41,7 +41,7 @@ In the configuration file, you can see that the Pod has a `downwardAPI` Volume,
 and the Container mounts the Volume at `/etc/podinfo`.
 
 Look at the `items` array under `downwardAPI`. Each element of the array is a
-[DownwardAPIVolumeFile](/docs/reference/generated/kubernetes-api/{{page.version}}/#downwardapivolumefile-v1-core).
+[DownwardAPIVolumeFile](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#downwardapivolumefile-v1-core).
 The first element specifies that the value of the Pod's
 `metadata.labels` field should be stored in a file named `labels`.
 The second element specifies that the value of the Pod's `annotations`
@@ -243,11 +243,11 @@ inject the Pod's name into the well-known environment variable.
 
 {{% capture whatsnext %}}
 
-* [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core)
-* [Volume](/docs/reference/generated/kubernetes-api/{{page.version}}/#volume-v1-core)
-* [DownwardAPIVolumeSource](/docs/reference/generated/kubernetes-api/{{page.version}}/#downwardapivolumesource-v1-core)
-* [DownwardAPIVolumeFile](/docs/reference/generated/kubernetes-api/{{page.version}}/#downwardapivolumefile-v1-core)
-* [ResourceFieldSelector](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcefieldselector-v1-core)
+* [PodSpec](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#podspec-v1-core)
+* [Volume](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#volume-v1-core)
+* [DownwardAPIVolumeSource](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#downwardapivolumesource-v1-core)
+* [DownwardAPIVolumeFile](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#downwardapivolumefile-v1-core)
+* [ResourceFieldSelector](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#resourcefieldselector-v1-core)
 
 {{% /capture %}}
 

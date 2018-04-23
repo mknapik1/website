@@ -122,7 +122,7 @@ content_template: templates/task
 * 获取更多资讯可参考 [containers and commands](/docs/user-guide/containers/).
 * 获取更多资讯可参考 [configuring pods and containers](/docs/tasks/).
 * 获取更多资讯可参考 [running commands in a container](/docs/tasks/debug-application-cluster/get-shell-running-container/).
-* 参考 [Container](/docs/api-reference/{{page.version}}/#container-v1-core).
+* 参考 [Container](/docs/api-reference/{{< param "version" >}}/#container-v1-core).
 
 {{% /capture %}}
 

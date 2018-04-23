@@ -109,7 +109,7 @@ spec:
 
 Pod 的资源使用情况被报告为 Pod 状态的一部分。
 
-如果为集群配置了 [可选监控](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/cluster-monitoring/README.md)，则可以从监控系统检索 Pod 资源的使用情况。
+如果为集群配置了 [可选监控](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/cluster-monitoring/README.md)，则可以从监控系统检索 Pod 资源的使用情况。
 
 ## 疑难解答
 
@@ -160,7 +160,7 @@ Allocated resources:
 
 通过查看 `Pods` 部分，您将看到哪些 Pod 占用的节点上的资源。
 
-Pod 可用的资源量小于节点容量，因为系统守护程序使用一部分可用资源。 [NodeStatus](/docs/resources-reference/{{page.version}}/#nodestatus-v1-core)  的 `allocatable` 字段给出了可用于 Pod 的资源量。有关更多信息，请参阅 [节点可分配资源](https://git.k8s.io/community/contributors/design-proposals/node-allocatable.md)。
+Pod 可用的资源量小于节点容量，因为系统守护程序使用一部分可用资源。 [NodeStatus](/docs/resources-reference/{{< param "version" >}}/#nodestatus-v1-core)  的 `allocatable` 字段给出了可用于 Pod 的资源量。有关更多信息，请参阅 [节点可分配资源](https://git.k8s.io/community/contributors/design-proposals/node-allocatable.md)。
 
 可以将 [资源配额](/docs/concepts/policy/resource-quotas/) 功能配置为限制可以使用的资源总量。如果与 namespace 配合一起使用，就可以防止一个团队占用所有资源。
 
@@ -279,7 +279,7 @@ spec:
 
 在 kubernetes 1.5 版本中仅允许在容器上指定资源量。计划改进对所有容器在 Pod 中共享资源的计量，如 [emptyDir volume](/docs/concepts/storage/volumes/#emptydir)。
 
-在 kubernetes 1.5 版本中仅支持容器对 CPU 和内存的申请和限制。计划增加新的资源类型，包括节点磁盘空间资源和一个可支持自定义 [资源类型](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/resources.md) 的框架。
+在 kubernetes 1.5 版本中仅支持容器对 CPU 和内存的申请和限制。计划增加新的资源类型，包括节点磁盘空间资源和一个可支持自定义 [资源类型](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/design-proposals/resources.md) 的框架。
 
 Kubernetes 通过支持通过多级别的 [服务质量](http://issue.k8s.io/168) 来支持资源的过度使用。
 
@@ -290,8 +290,8 @@ Kubernetes 通过支持通过多级别的 [服务质量](http://issue.k8s.io/168
 {{% capture whatsnext %}}
 
 - 获取将 [CPU 和内存资源分配给容器](/docs/tasks/configure-pod-container/assign-cpu-ram-container/) 的实践经验
-- [容器](/docs/api-reference/{{page.version}}/#container-v1-core)
-- [ResourceRequirements](/docs/resources-reference/{{page.version}}/#resourcerequirements-v1-core)
+- [容器](/docs/api-reference/{{< param "version" >}}/#container-v1-core)
+- [ResourceRequirements](/docs/resources-reference/{{< param "version" >}}/#resourcerequirements-v1-core)
 
 {{% /capture %}}
 

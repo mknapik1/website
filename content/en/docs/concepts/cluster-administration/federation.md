@@ -170,7 +170,7 @@ clusters up to 5000 nodes. See [Building Large Clusters](/docs/admin/cluster-lar
 
 {{% capture whatsnext %}}
 * Learn more about the [Federation
-  proposal](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/multicluster/federation.md).
+  proposal](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/design-proposals/multicluster/federation.md).
 * See this [setup guide](/docs/tutorials/federation/set-up-cluster-federation-kubefed/) for cluster federation.
 * See this [Kubecon2016 talk on federation](https://www.youtube.com/watch?v=pq9lbkmxpS8)
 * See this [Kubecon2017 Europe update on federation](https://www.youtube.com/watch?v=kwOvOLnFYck)

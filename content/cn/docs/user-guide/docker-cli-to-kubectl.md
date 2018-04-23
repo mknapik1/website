@@ -13,7 +13,7 @@ title: Docker 用户使用 kubectl 命令指南
 
 #### docker run
 
-如何运行一个 nginx Deployment 并将其暴露出来？ 查看 [kubectl run](/docs/user-guide/kubectl/{{page.version}}/#run) 。
+如何运行一个 nginx Deployment 并将其暴露出来？ 查看 [kubectl run](/docs/user-guide/kubectl/{{< param "version" >}}/#run) 。
 
 使用 docker 命令：
 
@@ -34,7 +34,7 @@ deployment "nginx-app" created
 ```
 
 在 1.2 及以上版本的 Kubernetes 集群中，使用`kubectl run` 命令将创建一个名为 "nginx-app" 的 Deployment。如果您运行的是老版本，将会创建一个 replication controller。
-如果您想沿用旧的行为，使用 `--generation=run/v1` 参数，这样就会创建 replication controller。查看 [`kubectl run`](/docs/user-guide/kubectl/{{page.version}}/#run) 获取更多详细信息。
+如果您想沿用旧的行为，使用 `--generation=run/v1` 参数，这样就会创建 replication controller。查看 [`kubectl run`](/docs/user-guide/kubectl/{{< param "version" >}}/#run) 获取更多详细信息。
 
 ```shell
 # expose a port through with a service
@@ -57,7 +57,7 @@ kubectl run [-i] [--tty] --attach <name> --image=<image>
 
 #### docker ps
 
-如何列出哪些正在运行？查看 [kubectl get](/docs/user-guide/kubectl/{{page.version}}/#get)。
+如何列出哪些正在运行？查看 [kubectl get](/docs/user-guide/kubectl/{{< param "version" >}}/#get)。
 
 使用 docker 命令：
 
@@ -77,7 +77,7 @@ nginx-app-5jyvm   1/1       Running   0          1h
 
 #### docker attach
 
-如何连接到已经运行在容器中的进程？查看 [kubectl attach](/docs/user-guide/kubectl/{{page.version}}/#attach)。
+如何连接到已经运行在容器中的进程？查看 [kubectl attach](/docs/user-guide/kubectl/{{< param "version" >}}/#attach)。
 
 使用 docker 命令：
 
@@ -101,7 +101,7 @@ $ kubectl attach -it nginx-app-5jyvm
 
 #### docker exec
 
-如何在容器中执行命令？查看 [kubectl exec](/docs/user-guide/kubectl/{{page.version}}/#exec)。
+如何在容器中执行命令？查看 [kubectl exec](/docs/user-guide/kubectl/{{< param "version" >}}/#exec)。
 
 使用 docker 命令：
 
@@ -143,7 +143,7 @@ $ kubectl exec -ti nginx-app-5jyvm -- /bin/sh
 
 #### docker logs
 
-如何查看运行中进程的 stdout/stderr？查看 [kubectl logs](/docs/user-guide/kubectl/{{page.version}}/#logs)。
+如何查看运行中进程的 stdout/stderr？查看 [kubectl logs](/docs/user-guide/kubectl/{{< param "version" >}}/#logs)。
 
 使用 docker 命令：
 
@@ -173,7 +173,7 @@ $ kubectl logs --previous nginx-app-zibvs
 
 #### docker stop 和 docker rm
 
-如何停止和删除运行中的进程？查看 [kubectl delete](/docs/user-guide/kubectl/{{page.version}}/#delete)。
+如何停止和删除运行中的进程？查看 [kubectl delete](/docs/user-guide/kubectl/{{< param "version" >}}/#delete)。
 
 使用 docker 命令：
 
@@ -210,7 +210,7 @@ $ kubectl get po -l run=nginx-app
 
 #### docker version
 
-如何查看客户端和服务端的版本？查看  [kubectl version](/docs/user-guide/kubectl/{{page.version}}/#version)。
+如何查看客户端和服务端的版本？查看  [kubectl version](/docs/user-guide/kubectl/{{< param "version" >}}/#version)。
 
 使用 docker 命令：
 
@@ -238,7 +238,7 @@ Server Version: version.Info{Major:"1", Minor:"6", GitVersion:"v1.6.9+a3d1dfa6f4
 
 #### docker info
 
-如何获取有关环境和配置的各种信息？查看  [kubectl cluster-info](/docs/user-guide/kubectl/{{page.version}}/#cluster-info)。
+如何获取有关环境和配置的各种信息？查看  [kubectl cluster-info](/docs/user-guide/kubectl/{{< param "version" >}}/#cluster-info)。
 
 使用 docker 命令：
 

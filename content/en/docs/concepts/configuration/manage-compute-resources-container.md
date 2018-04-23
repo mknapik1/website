@@ -170,7 +170,7 @@ resource limits, see the
 
 The resource usage of a Pod is reported as part of the Pod status.
 
-If [optional monitoring](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/cluster-monitoring/README.md)
+If [optional monitoring](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/cluster-monitoring/README.md)
 is configured for your cluster, then Pod resource usage can be retrieved from
 the monitoring system.
 
@@ -241,7 +241,7 @@ the node.
 
 The amount of resources available to Pods is less than the node capacity, because
 system daemons use a portion of the available resources. The `allocatable` field
-[NodeStatus](/docs/reference/generated/kubernetes-api/{{page.version}}/#nodestatus-v1-core)
+[NodeStatus](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#nodestatus-v1-core)
 gives the amount of resources that are available to Pods. For more information, see
 [Node Allocatable Resources](https://git.k8s.io/community/contributors/design-proposals/node/node-allocatable.md).
 
@@ -519,7 +519,7 @@ all Containers in a Pod, such as
 Kubernetes version 1.5 only supports Container requests and limits for CPU and
 memory. It is planned to add new resource types, including a node disk space
 resource, and a framework for adding custom
-[resource types](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/scheduling/resources.md).
+[resource types](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/design-proposals/scheduling/resources.md).
 
 Kubernetes supports overcommitment of resources by supporting multiple levels of
 [Quality of Service](http://issue.k8s.io/168).
@@ -540,9 +540,9 @@ consistency across providers and platforms.
 
 * Get hands-on experience [assigning CPU resources to containers and pods](/docs/tasks/configure-pod-container/assign-cpu-resource/).
 
-* [Container](/docs/reference/generated/kubernetes-api/{{page.version}}/#container-v1-core)
+* [Container](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#container-v1-core)
 
-* [ResourceRequirements](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcerequirements-v1-core)
+* [ResourceRequirements](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#resourcerequirements-v1-core)
 
 {{% /capture %}}
 

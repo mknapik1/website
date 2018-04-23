@@ -7,7 +7,7 @@ title: 创建大规模集群
 
 ## 支持规格
 
-在 {{page.version}}，Kubernetes支持最多5000节点规模的集群。 更具体地说，我们支持满足以下 *所有* 标准的配置：
+在 {{< param "version" >}}，Kubernetes支持最多5000节点规模的集群。 更具体地说，我们支持满足以下 *所有* 标准的配置：
 
 * 不超过5000节点
 * 总共不超过15000个pod
@@ -23,7 +23,7 @@ title: 创建大规模集群
 
 集群是一组运行Kubernetes代理组件的节点(物理或虚拟机)，它们被 "master" (集群管理平面)所管理。
 
-一般来说，集群的节点数量通过平台相关的 `config-default.sh` 文件中的 `NUM_NODES` 值来控制，(例如，详见 [GCE's `config-default.sh`](http://releases.k8s.io/{{page.githubbranch}}/cluster/gce/config-default.sh))。
+一般来说，集群的节点数量通过平台相关的 `config-default.sh` 文件中的 `NUM_NODES` 值来控制，(例如，详见 [GCE's `config-default.sh`](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/gce/config-default.sh))。
 
 对很多云提供商来说，单纯地修改`NUM_NODES` 为一个非常大的值，可能会导致集群的创建脚本失败。 例如，在GCE中部署时，会因配额不足，导致集群启动失败。
 
@@ -78,7 +78,7 @@ AWS使用的规格为：
 
 ### 插件的资源占用
 
-为防止 [集群插件](https://releases.k8s.io/{{page.githubbranch}}/cluster/addons) 耗尽节点资源引起内存泄漏或其他资源问题， Kubernetes 设置了插件容器资源的上限，来限制其对CPU和内存资源的占用 (参考 PR [#10653](http://pr.k8s.io/10653/files) 和 [#10778](http://pr.k8s.io/10778/files))。
+为防止 [集群插件](https://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons) 耗尽节点资源引起内存泄漏或其他资源问题， Kubernetes 设置了插件容器资源的上限，来限制其对CPU和内存资源的占用 (参考 PR [#10653](http://pr.k8s.io/10653/files) 和 [#10778](http://pr.k8s.io/10778/files))。
 
 例如：
 
@@ -97,14 +97,14 @@ AWS使用的规格为：
 为了避免集群插件的资源问题，创建多节点的集群时，考虑以下几点：
 
 * 当扩大集群规模时，如果涉及，相应扩大以下插件的内存和CPU限制 (通过一个实例处理整个集群，因此其内存和CPU使用量往往与集群的大小/负载成比例增长)：
-  * [InfluxDB 和 Grafana](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml)
-  * [kubedns, dnsmasq, 和 sidecar](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/kubedns-controller.yaml.in)
-  * [Kibana](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/fluentd-elasticsearch/kibana-controller.yaml)
+  * [InfluxDB 和 Grafana](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml)
+  * [kubedns, dnsmasq, 和 sidecar](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/kubedns-controller.yaml.in)
+  * [Kibana](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/fluentd-elasticsearch/kibana-controller.yaml)
 * 当扩大集群规模时，如果涉及，相应扩大以下插件副本数 (每个组件有多个副本，因此增加副本将有助于处理增加的负载，但是，由于每个副本的负载也略有增加，也应考虑提高CPU /内存上限)：
-  * [elasticsearch](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/fluentd-elasticsearch/es-controller.yaml)
+  * [elasticsearch](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/fluentd-elasticsearch/es-controller.yaml)
 * 当扩大集群规模时，如果涉及，略微扩大以下插件的内存和CPU限制 (每个节点一个副本， 但是CPU/内存使用随集群的大小/负载增长变化不明显)：
-  * [FluentD with ElasticSearch Plugin](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/fluentd-elasticsearch/fluentd-es-ds.yaml)
-  * [FluentD with GCP Plugin](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/fluentd-gcp/fluentd-gcp-ds.yaml)
+  * [FluentD with ElasticSearch Plugin](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/fluentd-elasticsearch/fluentd-es-ds.yaml)
+  * [FluentD with GCP Plugin](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/fluentd-gcp/fluentd-gcp-ds.yaml)
 
 Heapster的资源限制是基于集群的初始规模动态设置的 (参考 [#16185](http://issue.k8s.io/16185)
 和 [#22940](http://issue.k8s.io/22940))。 当发现Heapster资源耗尽，应考虑调整计算Heapster内存请求的公式 (参考上述PR)。

@@ -48,7 +48,7 @@ FOO_SERVICE_HOST=<服务所在的主机地址>
 FOO_SERVICE_PORT=<服务所启用的端口>
 ```
 
-服务具有专用 IP 地址，如果启用了 [DNS 插件](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/)，还可以在容器中通过 DNS 进行访问。
+服务具有专用 IP 地址，如果启用了 [DNS 插件](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/)，还可以在容器中通过 DNS 进行访问。
 
 {{% /capture %}}
 

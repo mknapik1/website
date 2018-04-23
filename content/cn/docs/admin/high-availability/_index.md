@@ -53,7 +53,7 @@ title: 构建高可用集群
 
 
 如果你是从标准的Kubernetes安装扩展而来，那么`kubelet`二进制文件应该已经存在于你的系统中。你可以运行`which kubelet`来判断是否确实安装了这个二进制文件。如果没有安装的话，你应该手动安装 [kubelet binary](https://storage.googleapis.com/kubernetes-release/release/v0.19.3/bin/linux/amd64/kubelet), 
-[kubelet init file](http://releases.k8s.io/{{page.githubbranch}}/cluster/saltbase/salt/kubelet/initd) 和 [default-kubelet](/docs/admin/high-availability/default-kubelet)脚本。
+[kubelet init file](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/saltbase/salt/kubelet/initd) 和 [default-kubelet](/docs/admin/high-availability/default-kubelet)脚本。
 
 如果使用monit，你还需要安装monit守护程序（`apt-get install monit`）以及[monit-kubelet](/docs/admin/high-availability/monit-kubelet) 和
 [monit-docker](/docs/admin/high-availability/monit-docker) 配置。

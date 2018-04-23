@@ -40,7 +40,7 @@ $ sudo sysctl -a
 Sysctls中非命名空间级的被称为 _节点级_ ，其必须由集群管理员手动设置，要么通过节点的底层Linux分布方式(例如，通过 `/etc/sysctls.conf`)，亦或在特权容器中使用Daemonset。
 
 **注意**: 这是很好的做法，考虑在一个集群里给有特殊sysctl的节点设置为 _污点_ ，并且给他们安排仅需要这些sysctl设置的pods。 建议采用Kubernetes [_污点和容点_
-特征](/docs/user-guide/kubectl/{{page.version}}/#taint) 来实现。
+特征](/docs/user-guide/kubectl/{{< param "version" >}}/#taint) 来实现。
 
 ## 安全的 vs. 不安全的 Sysctls
 

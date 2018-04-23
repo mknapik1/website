@@ -115,7 +115,7 @@ Kubectl 使用 api-server 的 `/api` 和 `/apis` 端点进行协商客户端/服
     {"apiVersion": "abac.authorization.kubernetes.io/v1beta1", "kind": "Policy", "spec": {"group": "system:unauthenticated", "readonly": true, "nonResourcePath": "*"}}
     ```
 
-[完整文件示例](http://releases.k8s.io/{{page.githubbranch}}/pkg/auth/authorizer/abac/example_policy_file.jsonl)
+[完整文件示例](http://releases.k8s.io/{{< param "githubbranch" >}}/pkg/auth/authorizer/abac/example_policy_file.jsonl)
 
 ## 服务帐户的快速说明
 

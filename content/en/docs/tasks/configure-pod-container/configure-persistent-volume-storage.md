@@ -55,7 +55,7 @@ PersistentVolume uses a file or directory on the Node to emulate network-attache
 In a production cluster, you would not use hostPath. Instead a cluster administrator
 would provision a network resource like a Google Compute Engine persistent disk,
 an NFS share, or an Amazon Elastic Block Store volume. Cluster administrators can also
-use [StorageClasses](/docs/reference/generated/kubernetes-api/{{page.version}}/#storageclass-v1-storage)
+use [StorageClasses](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#storageclass-v1-storage)
 to set up
 [dynamic provisioning](http://blog.kubernetes.io/2016/10/dynamic-provisioning-and-storage-in-kubernetes.html).
 
@@ -202,10 +202,10 @@ PersistentVolume are not present on the Pod resource itself.
 
 ### Reference
 
-* [PersistentVolume](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolume-v1-core)
-* [PersistentVolumeSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumespec-v1-core)
-* [PersistentVolumeClaim](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaim-v1-core)
-* [PersistentVolumeClaimSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#persistentvolumeclaimspec-v1-core)
+* [PersistentVolume](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#persistentvolume-v1-core)
+* [PersistentVolumeSpec](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#persistentvolumespec-v1-core)
+* [PersistentVolumeClaim](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#persistentvolumeclaim-v1-core)
+* [PersistentVolumeClaimSpec](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#persistentvolumeclaimspec-v1-core)
 
 {{% /capture %}}
 

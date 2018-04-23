@@ -159,7 +159,7 @@ You can also see the patch strategy in the
 ```
 
 And you can see the patch strategy in the
-[Kubernetes API documentation](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core).
+[Kubernetes API documentation](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#podspec-v1-core).
 
 Create a file named `patch-file-tolerations.yaml` that has this content:
 
@@ -317,12 +317,12 @@ kubectl patch deployment patch-demo --patch '{"spec": {"template": {"spec": {"co
 In this exercise, you used `kubectl patch` to change the live configuration
 of a Deployment object. You did not change the configuration file that you originally used to
 create the Deployment object. Other commands for updating API objects include
-[kubectl annotate](/docs/user-guide/kubectl/{{page.version}}/#annotate),
-[kubectl edit](/docs/user-guide/kubectl/{{page.version}}/#edit),
-[kubectl replace](/docs/user-guide/kubectl/{{page.version}}/#replace),
-[kubectl scale](/docs/user-guide/kubectl/{{page.version}}/#scale),
+[kubectl annotate](/docs/user-guide/kubectl/{{< param "version" >}}/#annotate),
+[kubectl edit](/docs/user-guide/kubectl/{{< param "version" >}}/#edit),
+[kubectl replace](/docs/user-guide/kubectl/{{< param "version" >}}/#replace),
+[kubectl scale](/docs/user-guide/kubectl/{{< param "version" >}}/#scale),
 and
-[kubectl apply](/docs/user-guide/kubectl/{{page.version}}/#apply).
+[kubectl apply](/docs/user-guide/kubectl/{{< param "version" >}}/#apply).
 
 {{% /capture %}}
 

@@ -72,10 +72,10 @@ content_template: templates/task
 
 ### 参考
 
-* [PersistentVolume](/docs/api-reference/{{page.version}}/#persistentvolume-v1-core)
-* [PersistentVolumeClaim](/docs/api-reference/{{page.version}}/#persistentvolumeclaim-v1-core)
+* [PersistentVolume](/docs/api-reference/{{< param "version" >}}/#persistentvolume-v1-core)
+* [PersistentVolumeClaim](/docs/api-reference/{{< param "version" >}}/#persistentvolumeclaim-v1-core)
 
-* 查阅  [PersistentVolumeSpec](/docs/api-reference/{{page.version}}/#persistentvolumeclaim-v1-core) 的 `persistentVolumeReclaimPolicy` 字段。
+* 查阅  [PersistentVolumeSpec](/docs/api-reference/{{< param "version" >}}/#persistentvolumeclaim-v1-core) 的 `persistentVolumeReclaimPolicy` 字段。
 {{% /capture %}}
 
 

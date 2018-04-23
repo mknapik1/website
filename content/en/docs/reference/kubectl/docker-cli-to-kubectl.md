@@ -13,7 +13,7 @@ You can use the Kubernetes command line tool kubectl to interact with the api. Y
 
 #### docker run
 
-To run an nginx Deployment and expose the Deployment, see [kubectl run](/docs/user-guide/kubectl/{{page.version}}/#run).
+To run an nginx Deployment and expose the Deployment, see [kubectl run](/docs/user-guide/kubectl/{{< param "version" >}}/#run).
 
 docker:
 
@@ -60,7 +60,7 @@ To destroy the Deployment and its pods you need to run `kubectl delete deploymen
 
 #### docker ps
 
-To list what is currently running, see [kubectl get](/docs/user-guide/kubectl/{{page.version}}/#get).
+To list what is currently running, see [kubectl get](/docs/user-guide/kubectl/{{< param "version" >}}/#get).
 
 docker:
 
@@ -82,7 +82,7 @@ ubuntu                      0/1       Completed   0          20s
 
 #### docker attach
 
-To attach a process that is already running in a container, see [kubectl attach](/docs/user-guide/kubectl/{{page.version}}/#attach).
+To attach a process that is already running in a container, see [kubectl attach](/docs/user-guide/kubectl/{{< param "version" >}}/#attach).
 
 docker:
 
@@ -110,7 +110,7 @@ To detach from the container, you can type the escape sequence Ctrl+P followed b
 
 #### docker exec
 
-To execute a command in a container, see [kubectl exec](/docs/user-guide/kubectl/{{page.version}}/#exec).
+To execute a command in a container, see [kubectl exec](/docs/user-guide/kubectl/{{< param "version" >}}/#exec).
 
 docker:
 
@@ -155,7 +155,7 @@ For more information, see [Get a Shell to a Running Container](/docs/tasks/debug
 
 #### docker logs
 
-To follow stdout/stderr of a process that is running, see [kubectl logs](/docs/user-guide/kubectl/{{page.version}}/#logs).
+To follow stdout/stderr of a process that is running, see [kubectl logs](/docs/user-guide/kubectl/{{< param "version" >}}/#logs).
 
 
 docker:
@@ -186,7 +186,7 @@ For more information, see [Logging Architecture](/docs/concepts/cluster-administ
 
 #### docker stop and docker rm
 
-To stop and delete a running process, see [kubectl delete](/docs/user-guide/kubectl/{{page.version}}/#delete).
+To stop and delete a running process, see [kubectl delete](/docs/user-guide/kubectl/{{< param "version" >}}/#delete).
 
 docker:
 
@@ -230,7 +230,7 @@ There is no direct analog of `docker login` in kubectl. If you are interested in
 
 #### docker version
 
-To get the version of client and server, see [kubectl version](/docs/user-guide/kubectl/{{page.version}}/#version).
+To get the version of client and server, see [kubectl version](/docs/user-guide/kubectl/{{< param "version" >}}/#version).
 
 docker:
 
@@ -258,7 +258,7 @@ Server Version: version.Info{Major:"1", Minor:"6", GitVersion:"v1.6.9+a3d1dfa6f4
 
 #### docker info
 
-To get miscellaneous information about the environment and configuration, see [kubectl cluster-info](/docs/user-guide/kubectl/{{page.version}}/#cluster-info).
+To get miscellaneous information about the environment and configuration, see [kubectl cluster-info](/docs/user-guide/kubectl/{{< param "version" >}}/#cluster-info).
 
 docker:
 

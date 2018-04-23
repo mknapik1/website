@@ -165,9 +165,9 @@ Here is a configuration file you can use to create a Pod:
 
 ### Reference
 
-* [Secret](/docs/reference/generated/kubernetes-api/{{page.version}}/#secret-v1-core)
-* [Volume](/docs/reference/generated/kubernetes-api/{{page.version}}/#volume-v1-core)
-* [Pod](/docs/reference/generated/kubernetes-api/{{page.version}}/#pod-v1-core)
+* [Secret](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#secret-v1-core)
+* [Volume](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#volume-v1-core)
+* [Pod](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#pod-v1-core)
 
 {{% /capture %}}
 

@@ -977,7 +977,7 @@ template:
 - [Managing Kubernetes Objects Using Imperative Commands](/docs/concepts/overview/object-management-kubectl/imperative-command/)
 - [Imperative Management of Kubernetes Objects Using Configuration Files](/docs/concepts/overview/object-management-kubectl/imperative-config/)
 - [Kubectl Command Reference](/docs/reference/generated/kubectl/kubectl/)
-- [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{page.version}}/)
+- [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)
 {{% /capture %}}
 
 

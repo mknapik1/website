@@ -73,7 +73,7 @@ sudo docker run -it --rm --privileged --net=host \
   k8s.gcr.io/node-test:0.2
 ```
 
-节点合规性测试是[节点端到端测试](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/devel/e2e-node-tests.md)的一个容器化的版本。
+节点合规性测试是[节点端到端测试](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/devel/e2e-node-tests.md)的一个容器化的版本。
 默认情况下， 它会运行所有的合规性测试用例。
 
 理论上，只要合理地配置容器和挂载所需的卷，就可以运行任何的节点端到端测试用例。 但是这里 **强烈建议只运行合规性测试**，因为运行非合规性测试需要很多复杂的配置。

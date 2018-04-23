@@ -59,7 +59,7 @@ Additionally, the [Kubernetes control
 plane](/docs/concepts/overview/components/) is built upon the same
 [APIs](/docs/reference/api-overview/) that are available to developers
 and users. Users can write their own controllers, such as
-[schedulers](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/devel/scheduler.md),
+[schedulers](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/devel/scheduler.md),
 with [their own
 APIs](/docs/concepts/api-extension/custom-resources/)
 that can be targeted by a general-purpose [command-line

@@ -39,7 +39,7 @@ and will respect the `PodDisruptionBudgets` you have specified.
 
 **Note:** By default `kubectl drain` will ignore certain system pods on the node
 that cannot be killed; see
-the [kubectl drain](/docs/user-guide/kubectl/{{page.version}}/#drain)
+the [kubectl drain](/docs/user-guide/kubectl/{{< param "version" >}}/#drain)
 documentation for more details.
 
 When `kubectl drain` returns successfully, that indicates that all of
@@ -90,7 +90,7 @@ budget are blocked.
 
 ## The Eviction API
 
-If you prefer not to use [kubectl drain](/docs/user-guide/kubectl/{{page.version}}/#drain) (such as
+If you prefer not to use [kubectl drain](/docs/user-guide/kubectl/{{< param "version" >}}/#drain) (such as
 to avoid calling to an external command, or to get finer control over the pod
 eviction process), you can also programmatically cause evictions using the eviction API.
 

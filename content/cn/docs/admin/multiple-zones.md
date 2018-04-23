@@ -10,7 +10,7 @@ title: 多区域运行
 
 Kubernetes 从v1.2开始支持将集群运行在多个故障域中。
 (GCE 中称其为 "区（Zones）"， AWS 中称其为 "可用区（Availability Zones）"，这里我们也称其为 "区")。
-它是广泛意义上的集群联邦特性的轻量级版本 (之前被称为 ["Ubernetes"](https://github.com/kubernetes/community/blob/{{page.githubbranch}}/contributors/design-proposals/multicluster/federation.md))。
+它是广泛意义上的集群联邦特性的轻量级版本 (之前被称为 ["Ubernetes"](https://github.com/kubernetes/community/blob/{{< param "githubbranch" >}}/contributors/design-proposals/multicluster/federation.md))。
 完整的集群联邦能够将多个分别运行在不同区或云供应商（或本地数据中心）的集群集中管理。
 然而，很多用户只是希望通过将单一云供应商上的Kubernetes集群运行在多个区域，来提高集群的可用性，
 这就是1.2版本中提供的对多区域的支持。

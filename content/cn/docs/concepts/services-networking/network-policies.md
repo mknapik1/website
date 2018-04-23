@@ -25,7 +25,7 @@ Pod可以通过相关的网络策略进行隔离。一旦命名空间中有网�
 
 ## `NetworkPolicy` 资源
 
-通过[api参考](/docs/api-reference/{{page.version}}/#networkpolicy-v1-networking)来了解资源定义。
+通过[api参考](/docs/api-reference/{{< param "version" >}}/#networkpolicy-v1-networking)来了解资源定义。
 
 下面是一个 `NetworkPolicy` 的示例:
 

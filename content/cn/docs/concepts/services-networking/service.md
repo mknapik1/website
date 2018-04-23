@@ -283,7 +283,7 @@ Kubernetes 支持2种基本的服务发现模式 —— 环境变量和 DNS。
 
 
 当 `Pod` 运行在 `Node` 上，kubelet 会为每个活跃的 `Service` 添加一组环境变量。
-它同时支持 [Docker links兼容](https://docs.docker.com/userguide/dockerlinks/) 变量（查看 [makeLinkVariables](http://releases.k8s.io/{{page.githubbranch}}/pkg/kubelet/envvars/envvars.go#L49)）、简单的 `{SVCNAME}_SERVICE_HOST` 和 `{SVCNAME}_SERVICE_PORT` 变量，这里 `Service` 的名称需大写，横线被转换成下划线。
+它同时支持 [Docker links兼容](https://docs.docker.com/userguide/dockerlinks/) 变量（查看 [makeLinkVariables](http://releases.k8s.io/{{< param "githubbranch" >}}/pkg/kubelet/envvars/envvars.go#L49)）、简单的 `{SVCNAME}_SERVICE_HOST` 和 `{SVCNAME}_SERVICE_PORT` 变量，这里 `Service` 的名称需大写，横线被转换成下划线。
 
 
 
@@ -306,7 +306,7 @@ REDIS_MASTER_PORT_6379_TCP_ADDR=10.0.0.11
 
 
 
-一个可选（尽管强烈推荐）[集群插件](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/README.md) 是 DNS 服务器。
+一个可选（尽管强烈推荐）[集群插件](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/README.md) 是 DNS 服务器。
 DNS 服务器监视着创建新 `Service` 的 Kubernetes API，从而为每一个 `Service` 创建一组 DNS 记录。
 如果整个集群的 DNS 一直被启用，那么所有的 `Pod` 应该能够自动对 `Service` 进行名称解析。
 
@@ -622,7 +622,7 @@ Kubernetes 最主要的哲学之一，是用户不应该暴露那些能够导致
 
 ## API 对象
 
-在 Kubernetes REST API 中，Service 是 top-level 资源。关于 API 对象的更多细节可以查看：[Service API 对象](/docs/api-reference/{{page.version}}/#service-v1-core)。
+在 Kubernetes REST API 中，Service 是 top-level 资源。关于 API 对象的更多细节可以查看：[Service API 对象](/docs/api-reference/{{< param "version" >}}/#service-v1-core)。
 
 
 

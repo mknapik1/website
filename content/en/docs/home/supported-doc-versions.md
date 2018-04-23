@@ -15,7 +15,7 @@ and the four previous versions of Kubernetes.
 ## Current version
 
 The current version is
-[{{page.version}}](/).
+[{{< param "version" >}}](/).
 
 ## Previous versions
 

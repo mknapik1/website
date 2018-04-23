@@ -97,7 +97,7 @@ service "my-nginx" exposed
 
 
 上述规约将创建一个 Service，对应具有标签 `run: my-nginx` 的 Pod，目标 TCP 端口 80，并且在一个抽象的 Service 端口（`targetPort`：容器接收流量的端口；`port`：抽象的 Service 端口，可以使任何其它 Pod 访问该 Service 的端口）上暴露。
-查看 [Service API 对象](/docs/api-reference/{{page.version}}/#service-v1-core) 了解 Service 定义支持的字段列表。
+查看 [Service API 对象](/docs/api-reference/{{< param "version" >}}/#service-v1-core) 了解 Service 定义支持的字段列表。
 
 ```shell
 $ kubectl get svc my-nginx
@@ -139,7 +139,7 @@ my-nginx   10.244.2.5:80,10.244.3.4:80   1m
 
 ## 访问 Service
 
-Kubernetes 支持两种主要的服务发现模式 —— 环境变量和 DNS。前者在单个节点上可用使用，然而后者必须使用 [kube-dns 集群插件](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/README.md)。
+Kubernetes 支持两种主要的服务发现模式 —— 环境变量和 DNS。前者在单个节点上可用使用，然而后者必须使用 [kube-dns 集群插件](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/README.md)。
 
 
 
@@ -198,7 +198,7 @@ kube-dns   10.0.0.10    <none>        53/UDP,53/TCP   8m
 
 
 
-如果没有在运行，可以 [启用它](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/README.md#how-do-i-configure-it)。
+如果没有在运行，可以 [启用它](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/README.md#how-do-i-configure-it)。
 本段剩余的内容，将假设已经有一个 Service，它具有一个长久存在的 IP（my-nginx），一个为该 IP 指派名称的 DNS 服务器（kube-dns 集群插件），所以可以通过标准做法，使在集群中的任何 Pod 都能与该 Service 通信（例如：gethostbyname）。
 让我们运行另一个 curl 应用来进行测试：
 
@@ -232,7 +232,7 @@ Address 1: 10.0.162.149
 * 使用证书配置的 Nginx server
 * 使证书可以访问 Pod 的[秘钥](/docs/user-guide/secrets)
 
-可以从 [Nginx https 示例](https://github.com/kubernetes/kubernetes/tree/{{page.githubbranch}}/examples/https-nginx/) 获取所有上述内容，简明示例如下：
+可以从 [Nginx https 示例](https://github.com/kubernetes/kubernetes/tree/{{< param "githubbranch" >}}/examples/https-nginx/) 获取所有上述内容，简明示例如下：
 
 ```shell
 $ make keys secret KEY=/tmp/nginx.key CERT=/tmp/nginx.crt SECRET=/tmp/secret.json
@@ -257,7 +257,7 @@ nginxsecret           Opaque                                2         1m
 
 
 - 它在相同的文件中包含了 Deployment 和 Service 的规格
-- [Nginx server](https://github.com/kubernetes/kubernetes/tree/{{page.githubbranch}}/examples/https-nginx/default.conf) 处理 80 端口上的 http 流量，以及 443  端口上的 https 流量，Nginx Service 暴露了这两个端口。
+- [Nginx server](https://github.com/kubernetes/kubernetes/tree/{{< param "githubbranch" >}}/examples/https-nginx/default.conf) 处理 80 端口上的 http 流量，以及 443  端口上的 https 流量，Nginx Service 暴露了这两个端口。
 - 每个容器访问挂载在 /etc/nginx/ssl 卷上的秘钥。这需要在 Nginx server 启动之前安装好。
 
 ```shell

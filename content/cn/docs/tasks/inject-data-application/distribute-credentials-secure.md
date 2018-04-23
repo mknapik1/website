@@ -158,9 +158,9 @@ base-64 形式的密码为 `Mzk1MjgkdmRnN0pi`。
 
 ### 参考
 
-* [Secret](/docs/api-reference/{{page.version}}/#secret-v1-core)
-* [Volume](/docs/api-reference/{{page.version}}/#volume-v1-core)
-* [Pod](/docs/api-reference/{{page.version}}/#pod-v1-core)
+* [Secret](/docs/api-reference/{{< param "version" >}}/#secret-v1-core)
+* [Volume](/docs/api-reference/{{< param "version" >}}/#volume-v1-core)
+* [Pod](/docs/api-reference/{{< param "version" >}}/#pod-v1-core)
 
 {{% /capture %}}
 

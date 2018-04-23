@@ -23,7 +23,7 @@ DNS resolution process.
 
 Starting from Kubernetes v1.3, DNS is a built-in service launched automatically
 using the addon manager
-[cluster add-on](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/README.md).
+[cluster add-on](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/README.md).
 
 The running Kubernetes DNS pod holds 3 containers:
 

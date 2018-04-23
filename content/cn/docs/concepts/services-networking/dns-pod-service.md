@@ -12,7 +12,7 @@ redirect_from:
 
 ## 介绍
 
-Kubernetes 从 1.3 版本起， DNS 是内置的服务，通过插件管理器 [集群插件](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/README.md) 自动被启动。
+Kubernetes 从 1.3 版本起， DNS 是内置的服务，通过插件管理器 [集群插件](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/README.md) 自动被启动。
 
 Kubernetes DNS 在集群中调度 DNS Pod 和 Service ，配置 kubelet 以通知个别容器使用 DNS Service 的 IP 解析 DNS 名字。
 
@@ -410,7 +410,7 @@ Linux libc 在限制为3个 DNS `nameserver` 记录和3个 DNS `search` 记录�
 
 ## 参考
 
-- [DNS 集群插件文档](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/README.md)
+- [DNS 集群插件文档](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/README.md)
 
 
 

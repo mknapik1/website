@@ -23,7 +23,7 @@ content_template: templates/tutorial
 * [Cluster DNS](/docs/concepts/services-networking/dns-pod-service/)
 * [Headless Services](/docs/concepts/services-networking/service/#headless-services)
 * [PersistentVolumes](/docs/concepts/storage/volumes/)
-* [PersistentVolume Provisioning](http://releases.k8s.io/{{page.githubbranch}}/examples/persistent-volume-provisioning/)
+* [PersistentVolume Provisioning](http://releases.k8s.io/{{< param "githubbranch" >}}/examples/persistent-volume-provisioning/)
 * [StatefulSets](/docs/concepts/abstractions/controllers/statefulsets/)
 * [kubectl CLI](/docs/user-guide/kubectl)
 
@@ -57,14 +57,14 @@ StatefulSets 旨在与有状态的应用及分布式系统一起使用。然而�
 下载上面的例子并保存为文件 `web.yaml`。
 
 
-你需要使用两个终端窗口。在第一个终端中，使用 [`kubectl get`](/docs/user-guide/kubectl/{{page.version}}/#get)  来查看 StatefulSet 的 Pods 的创建情况。
+你需要使用两个终端窗口。在第一个终端中，使用 [`kubectl get`](/docs/user-guide/kubectl/{{< param "version" >}}/#get)  来查看 StatefulSet 的 Pods 的创建情况。
 
 ```shell
 kubectl get pods -w -l app=nginx
 ```
 
 
-在另一个终端中，使用 [`kubectl create`](/docs/user-guide/kubectl/{{page.version}}/#create) 来创建定义在 `web.yaml` 中的 Headless Service 和 StatefulSet。
+在另一个终端中，使用 [`kubectl create`](/docs/user-guide/kubectl/{{< param "version" >}}/#create) 来创建定义在 `web.yaml` 中的 Headless Service 和 StatefulSet。
 
 ```shell
 kubectl create -f web.yaml 
@@ -136,7 +136,7 @@ web-1     1/1       Running   0          1m
 ### 使用稳定的网络身份标识
 
 
-每个 Pod 都拥有一个基于其顺序索引的稳定的主机名。使用[`kubectl exec`](/docs/user-guide/kubectl/{{page.version}}/#exec) 在每个 Pod 中执行`hostname` 。
+每个 Pod 都拥有一个基于其顺序索引的稳定的主机名。使用[`kubectl exec`](/docs/user-guide/kubectl/{{< param "version" >}}/#exec) 在每个 Pod 中执行`hostname` 。
 
 ```shell
 for i in 0 1; do kubectl exec web-$i -- sh -c 'hostname'; done
@@ -145,7 +145,7 @@ web-1
 ```
 
 
-使用 [`kubectl run`](/docs/user-guide/kubectl/{{page.version}}/#run)  运行一个提供 `nslookup` 命令的容器，该命令来自于 `dnsutils` 包。通过对 Pod 的主机名执行 `nslookup`，你可以检查他们在集群内部的 DNS 地址。
+使用 [`kubectl run`](/docs/user-guide/kubectl/{{< param "version" >}}/#run)  运行一个提供 `nslookup` 命令的容器，该命令来自于 `dnsutils` 包。通过对 Pod 的主机名执行 `nslookup`，你可以检查他们在集群内部的 DNS 地址。
 
 ```shell
 kubectl run -i --tty --image busybox dns-test --restart=Never --rm /bin/sh 
@@ -174,7 +174,7 @@ headless service 的 CNAME 指向 SRV 记录（记录每个 Running 和 Ready �
 kubectl get pod -w -l app=nginx
 ```
 
-在另一个终端中使用 [`kubectl delete`](/docs/user-guide/kubectl/{{page.version}}/#delete)  删除 StatefulSet 中所有的 Pod。
+在另一个终端中使用 [`kubectl delete`](/docs/user-guide/kubectl/{{< param "version" >}}/#delete)  删除 StatefulSet 中所有的 Pod。
 
 ```shell
 kubectl delete pod -l app=nginx
@@ -314,7 +314,7 @@ web-1
 
 ## 扩容/缩容 StatefulSet
 
-扩容/缩容 StatefulSet 指增加或减少它的副本数。这通过更新 `replicas` 字段完成。你可以使用[`kubectl scale`](/docs/user-guide/kubectl/{{page.version}}/#scale) 或者[`kubectl patch`](/docs/user-guide/kubectl/{{page.version}}/#patch)来扩容/缩容一个 StatefulSet。
+扩容/缩容 StatefulSet 指增加或减少它的副本数。这通过更新 `replicas` 字段完成。你可以使用[`kubectl scale`](/docs/user-guide/kubectl/{{< param "version" >}}/#scale) 或者[`kubectl patch`](/docs/user-guide/kubectl/{{< param "version" >}}/#patch)来扩容/缩容一个 StatefulSet。
 
 
 ### 扩容
@@ -794,7 +794,7 @@ kubectl get pods -w -l app=nginx
 ```
 
 
-使用 [`kubectl delete`](/docs/user-guide/kubectl/{{page.version}}/#delete) 删 除StatefulSet。请确保提供了 `--cascade=false` 参数给命令。这个参数告诉 Kubernetes 只删除 StatefulSet 而不要删除它的任何 Pod。
+使用 [`kubectl delete`](/docs/user-guide/kubectl/{{< param "version" >}}/#delete) 删 除StatefulSet。请确保提供了 `--cascade=false` 参数给命令。这个参数告诉 Kubernetes 只删除 StatefulSet 而不要删除它的任何 Pod。
 
 ```shell
 kubectl delete statefulset web --cascade=false

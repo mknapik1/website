@@ -25,7 +25,7 @@ content_template: templates/tutorial
 * [Cluster DNS](/docs/concepts/services-networking/dns-pod-service/)
 * [Headless Services](/docs/concepts/services-networking/service/#headless-services)
 * [PersistentVolumes](/docs/concepts/storage/volumes/)
-* [PersistentVolume Provisioning](http://releases.k8s.io/{{page.githubbranch}}/examples/persistent-volume-provisioning/)
+* [PersistentVolume Provisioning](http://releases.k8s.io/{{< param "githubbranch" >}}/examples/persistent-volume-provisioning/)
 * [ConfigMaps](/docs/tasks/configure-pod-container/configure-pod-configmap/)
 * [StatefulSets](/docs/concepts/abstractions/controllers/statefulsets/)
 * [PodDisruptionBudgets](/docs/admin/disruptions/#specifying-a-poddisruptionbudget)
@@ -73,7 +73,7 @@ ZooKeeper 在内存中保存它们的整个状态机，但是每个改变都被�
 {{< code language="yaml" file="zookeeper.yaml" ghlink="/docs/tutorials/stateful-application/zookeeper.yaml" >}}
 
 
-打开一个命令行终端，使用 [`kubectl create`](/docs/user-guide/kubectl/{{page.version}}/#create) 创建这个清单。
+打开一个命令行终端，使用 [`kubectl create`](/docs/user-guide/kubectl/{{< param "version" >}}/#create) 创建这个清单。
 
 ```shell
 kubectl create -f https://k8s.io/docs/tutorials/stateful-application/zookeeper.yaml
@@ -90,7 +90,7 @@ statefulset "zk" created
 ```
 
 
-使用 [`kubectl get`](/docs/user-guide/kubectl/{{page.version}}/#get) 查看 StatefulSet 控制器创建的 Pods。
+使用 [`kubectl get`](/docs/user-guide/kubectl/{{< param "version" >}}/#get) 查看 StatefulSet 控制器创建的 Pods。
 
 ```shell
 kubectl get pods -w -l app=zk
@@ -128,7 +128,7 @@ StatefulSet 控制器创建了3个 Pods，每个 Pod 包含一个 [ZooKeeper 3.4
 由于在匿名网络中没有用于选举 leader 的终止算法，Zab 要求显式的进行成员关系配置，以执行 leader 选举。Ensemble 中的每个服务都需要具有一个独一无二的标识符，所有的服务均需要知道标识符的全集，并且每个标志都需要和一个网络地址相关联。
 
 
-使用 [`kubectl exec`](/docs/user-guide/kubectl/{{page.version}}/#exec) 获取 `zk` StatefulSet 中 Pods 的主机名。
+使用 [`kubectl exec`](/docs/user-guide/kubectl/{{< param "version" >}}/#exec) 获取 `zk` StatefulSet 中 Pods 的主机名。
 
 ```shell
 for i in 0 1 2; do kubectl exec zk-$i -- hostname; done
@@ -318,7 +318,7 @@ numChildren = 0
 如同在 [ZooKeeper 基础](#zookeeper-basics) 一节所提到的，ZooKeeper 提交所有的条目到一个持久 WAL，并周期性的将内存快照写入存储介质。对于使用一致性协议实现一个复制状态机的应用来说，使用 WALs 提供持久化是一种常用的技术，对于普通的存储应用也是如此。
 
 
-使用 [`kubectl delete`](/docs/user-guide/kubectl/{{page.version}}/#delete) 删除 `zk` StatefulSet。
+使用 [`kubectl delete`](/docs/user-guide/kubectl/{{< param "version" >}}/#delete) 删除 `zk` StatefulSet。
 
 ```shell
 kubectl delete statefulset zk
@@ -639,7 +639,7 @@ log4j.appender.CONSOLE.layout.ConversionPattern=%d{ISO8601} [myid:%X{myid}] - %-
 这是在容器里安全记录日志的最简单的方法。由于应用的日志被写入标准输出，Kubernetes 将会为你处理日志轮转。Kubernetes 还实现了一个智能保存策略，保证写入标准输出和标准错误流的应用日志不会耗尽本地存储媒介。
 
 
-使用 [`kubectl logs`](/docs/user-guide/kubectl/{{page.version}}/#logs) 从一个 Pod 中取回最后几行日志。
+使用 [`kubectl logs`](/docs/user-guide/kubectl/{{< param "version" >}}/#logs) 从一个 Pod 中取回最后几行日志。
 
 ```shell
 kubectl logs zk-0 --tail 20
@@ -945,7 +945,7 @@ kubectl get nodes
 ```
 
 
-使用 [`kubectl cordon`](/docs/user-guide/kubectl/{{page.version}}/#cordon) cordon 你的集群中除4个节点以外的所有节点。
+使用 [`kubectl cordon`](/docs/user-guide/kubectl/{{< param "version" >}}/#cordon) cordon 你的集群中除4个节点以外的所有节点。
 
 ```shell{% raw %}
 kubectl cordon < node name >
@@ -985,7 +985,7 @@ kubernetes-minion-group-i4c4
 {% endraw %}
 ```
 
-使用 [`kubectl drain`](/docs/user-guide/kubectl/{{page.version}}/#drain) 来 cordon 和 drain `zk-0` Pod 调度的节点。
+使用 [`kubectl drain`](/docs/user-guide/kubectl/{{< param "version" >}}/#drain) 来 cordon 和 drain `zk-0` Pod 调度的节点。
 
 ```shell {% raw %}
 kubectl drain $(kubectl get pod zk-0 --template {{.spec.nodeName}}) --ignore-daemonsets --force --delete-local-data
@@ -1100,7 +1100,7 @@ numChildren = 0
 ```
 
 
-使用 [`kubectl uncordon`](/docs/user-guide/kubectl/{{page.version}}/#uncordon) 来取消对第一个节点的隔离。
+使用 [`kubectl uncordon`](/docs/user-guide/kubectl/{{< param "version" >}}/#uncordon) 来取消对第一个节点的隔离。
 
 ```shell
 kubectl uncordon kubernetes-minion-group-pb41

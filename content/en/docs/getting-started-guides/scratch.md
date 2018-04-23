@@ -185,7 +185,7 @@ You have several choices for Kubernetes images:
   - For example `k8s.gcr.io/hyperkube:$TAG`, where `TAG` is the latest
     release tag, which can be found on the [latest releases page](https://github.com/kubernetes/kubernetes/releases/latest).
   - Ensure $TAG is the same tag as the release tag you are using for kubelet and kube-proxy.
-  - The [hyperkube](https://releases.k8s.io/{{page.githubbranch}}/cmd/hyperkube) binary is an all in one binary
+  - The [hyperkube](https://releases.k8s.io/{{< param "githubbranch" >}}/cmd/hyperkube) binary is an all in one binary
     - `hyperkube kubelet ...` runs the kubelet, `hyperkube apiserver ...` runs an apiserver, etc.
 - Build your own images.
   - Useful if you are using a private registry.
@@ -643,7 +643,7 @@ Apiserver supports several cloud providers.
 
 - options for `--cloud-provider` flag are `aws`, `azure`, `cloudstack`, `fake`, `gce`, `mesos`, `openstack`, `ovirt`, `photon`, `rackspace`, `vsphere`, or unset.
 - unset used for bare metal setups.
-- support for new IaaS is added by contributing code [here](https://releases.k8s.io/{{page.githubbranch}}/pkg/cloudprovider/providers)
+- support for new IaaS is added by contributing code [here](https://releases.k8s.io/{{< param "githubbranch" >}}/pkg/cloudprovider/providers)
 
 Some cloud providers require a config file. If so, you need to put config file into apiserver image or mount through hostPath.
 
@@ -651,7 +651,7 @@ Some cloud providers require a config file. If so, you need to put config file i
 - Used by `aws`, `gce`, `mesos`, `openstack`, `ovirt` and `rackspace`.
 - You must put config file into apiserver image or mount through hostPath.
 - Cloud config file syntax is [Gcfg](https://code.google.com/p/gcfg/).
-- AWS format defined by type [AWSCloudConfig](https://releases.k8s.io/{{page.githubbranch}}/pkg/cloudprovider/providers/aws/aws.go)
+- AWS format defined by type [AWSCloudConfig](https://releases.k8s.io/{{< param "githubbranch" >}}/pkg/cloudprovider/providers/aws/aws.go)
 - There is a similar type in the corresponding file for other cloud providers.
 
 #### Scheduler pod template
@@ -814,14 +814,14 @@ Notes for setting up each cluster service are given below:
 
 * Cluster DNS:
   * Required for many Kubernetes examples
-  * [Setup instructions](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/dns/)
+  * [Setup instructions](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/)
   * [Admin Guide](/docs/concepts/services-networking/dns-pod-service/)
 * Cluster-level Logging
   * [Cluster-level Logging Overview](/docs/user-guide/logging/overview/)
   * [Cluster-level Logging with Elasticsearch](/docs/user-guide/logging/elasticsearch/)
   * [Cluster-level Logging with Stackdriver Logging](/docs/user-guide/logging/stackdriver/)
 * Container Resource Monitoring
-  * [Setup instructions](http://releases.k8s.io/{{page.githubbranch}}/cluster/addons/cluster-monitoring/)
+  * [Setup instructions](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/cluster-monitoring/)
 * GUI
   * [Setup instructions](https://github.com/kubernetes/dashboard)
 
@@ -862,7 +862,7 @@ At this point you should be able to run through one of the basic examples, such 
 
 ### Running the Conformance Test
 
-You may want to try to run the [Conformance test](http://releases.k8s.io/{{page.githubbranch}}/test/e2e_node/conformance/run_test.sh).  Any failures may give a hint as to areas that need more attention.
+You may want to try to run the [Conformance test](http://releases.k8s.io/{{< param "githubbranch" >}}/test/e2e_node/conformance/run_test.sh).  Any failures may give a hint as to areas that need more attention.
 
 ### Networking
 

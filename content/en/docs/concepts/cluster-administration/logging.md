@@ -81,7 +81,7 @@ only the contents of the latest log file will be available through
 the rotation and there are two files, one 10MB in size and one empty,
 `kubectl logs` will return an empty response.
 
-[cosConfigureHelper]: https://github.com/kubernetes/kubernetes/blob/{{page.githubbranch}}/cluster/gce/gci/configure-helper.sh
+[cosConfigureHelper]: https://github.com/kubernetes/kubernetes/blob/{{< param "githubbranch" >}}/cluster/gce/gci/configure-helper.sh
 
 ### System component logs
 

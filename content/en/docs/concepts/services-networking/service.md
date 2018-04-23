@@ -297,7 +297,7 @@ variables and DNS.
 When a `Pod` is run on a `Node`, the kubelet adds a set of environment variables
 for each active `Service`.  It supports both [Docker links
 compatible](https://docs.docker.com/userguide/dockerlinks/) variables (see
-[makeLinkVariables](http://releases.k8s.io/{{page.githubbranch}}/pkg/kubelet/envvars/envvars.go#L49))
+[makeLinkVariables](http://releases.k8s.io/{{< param "githubbranch" >}}/pkg/kubelet/envvars/envvars.go#L49))
 and simpler `{SVCNAME}_SERVICE_HOST` and `{SVCNAME}_SERVICE_PORT` variables,
 where the Service name is upper-cased and dashes are converted to underscores.
 
@@ -889,7 +889,7 @@ Iptables operations slow down dramatically in large scale cluster e.g 10,000 Ser
 
 Service is a top-level resource in the Kubernetes REST API. More details about the
 API object can be found at:
-[Service API object](/docs/reference/generated/kubernetes-api/{{page.version}}/#service-v1-core).
+[Service API object](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#service-v1-core).
 
 ## For More Information
 

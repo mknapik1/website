@@ -310,7 +310,7 @@ export KUBECONFIG=$KUBECONFIG_SAVED
 {{% capture whatsnext %}}
 
 * [使用 kubeconfig 文件组织集群访问](/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
-* [kubectl 配置](/docs/user-guide/kubectl/{{page.version}}/)
+* [kubectl 配置](/docs/user-guide/kubectl/{{< param "version" >}}/)
 
 {{% /capture %}}
 

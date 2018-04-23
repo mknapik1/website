@@ -26,7 +26,7 @@ Pod fields and Container fields.
 There are two ways to expose Pod and Container fields to a running Container:
 
 * Environment variables
-* [DownwardAPIVolumeFiles](/docs/reference/generated/kubernetes-api/{{page.version}}/#downwardapivolumefile-v1-core)
+* [DownwardAPIVolumeFiles](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#downwardapivolumefile-v1-core)
 
 Together, these two ways of exposing Pod and Container fields are called the
 *Downward API*.
@@ -41,7 +41,7 @@ configuration file for the Pod:
 
 In the configuration file, you can see five environment variables. The `env`
 field is an array of
-[EnvVars](/docs/reference/generated/kubernetes-api/{{page.version}}/#envvar-v1-core).
+[EnvVars](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#envvar-v1-core).
 The first element in the array specifies that the `MY_NODE_NAME` environment
 variable gets its value from the Pod's `spec.nodeName` field. Similarly, the
 other environment variables get their names from Pod fields.
@@ -120,7 +120,7 @@ container:
 
 In the configuration file, you can see four environment variables. The `env`
 field is an array of
-[EnvVars](/docs/reference/generated/kubernetes-api/{{page.version}}/#envvar-v1-core).
+[EnvVars](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#envvar-v1-core).
 The first element in the array specifies that the `MY_CPU_REQUEST` environment
 variable gets its value from the `requests.cpu` field of a Container named
 `test-container`. Similarly, the other environment variables get their values
@@ -158,12 +158,12 @@ The output shows the values of selected environment variables:
 {{% capture whatsnext %}}
 
 * [Defining Environment Variables for a Container](/docs/tasks/inject-data-application/define-environment-variable-container/)
-* [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core)
-* [Container](/docs/reference/generated/kubernetes-api/{{page.version}}/#container-v1-core)
-* [EnvVar](/docs/reference/generated/kubernetes-api/{{page.version}}/#envvar-v1-core)
-* [EnvVarSource](/docs/reference/generated/kubernetes-api/{{page.version}}/#envvarsource-v1-core)
-* [ObjectFieldSelector](/docs/reference/generated/kubernetes-api/{{page.version}}/#objectfieldselector-v1-core)
-* [ResourceFieldSelector](/docs/reference/generated/kubernetes-api/{{page.version}}/#resourcefieldselector-v1-core)
+* [PodSpec](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#podspec-v1-core)
+* [Container](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#container-v1-core)
+* [EnvVar](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#envvar-v1-core)
+* [EnvVarSource](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#envvarsource-v1-core)
+* [ObjectFieldSelector](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#objectfieldselector-v1-core)
+* [ResourceFieldSelector](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#resourcefieldselector-v1-core)
 
 {{% /capture %}}
 
