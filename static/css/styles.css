@@ -450,19 +450,21 @@ dd { margin-bottom: 16px; }
 
 #docsContent #editPageButton { position: absolute; top: -25px; right: 5px; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; white-space: nowrap; text-indent: 50px; overflow: hidden; background: #3371e3 url(/images/icon-pencil.svg) no-repeat; background-position: 12px 10px; background-size: 29px 29px; }
 
-#docsContent #markdown-toc { margin-bottom: 20px; }
+#docsContent #markdown-toc, #docsContent #TableOfContents { margin-bottom: 20px; }
 
-#docsContent #markdown-toc ul, #docsContent #markdown-toc li { list-style: disc; color: #3371e3; }
+#docsContent #markdown-toc ul, #docsContent #markdown-toc li, #docsContent #TableOfContents ul, #docsContent #TableOfContents li { list-style: disc; color: #3371e3; }
 
-#docsContent #markdown-toc ul { padding: 0 15px; margin: 0; }
+#docsContent #markdown-toc ul, #docsContent #TableOfContents ul { padding: 0 15px; margin: 0; }
 
-#docsContent #markdown-toc li { padding: 0; line-height: 1.5em; margin-bottom: 0; }
+#docsContent #markdown-toc li, #docsContent #TableOfContents li { padding: 0; line-height: 1.5em; margin-bottom: 0; }
 
-#docsContent #markdown-toc a { position: relative; color: #3371e3; font-weight: 700; }
+#docsContent #markdown-toc a, #docsContent #TableOfContents a { position: relative; color: #3371e3; font-weight: 700; }
 
 #docsContent img { max-width: 100%; }
 
 #docsContent a { text-decoration: underline; }
+
+#docsContent #TableOfContents ul, #docsContent #TableOfContents li { list-style: none; }
 
 .fixed footer { position: fixed; bottom: 0; }
 
