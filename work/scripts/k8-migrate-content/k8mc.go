@@ -488,6 +488,12 @@ func (m *mover) contentMigrate_Replacements() error {
 		return err
 	}
 
+	htmlAndMDContentFixSet := contentFixers{
+		func(path, s string) (string, error) {
+			return strings.Replace(s, `layout: basic`, `type: basic`, 1), nil
+		},
+	}
+
 	mainContentFixSet := contentFixers{
 		// This is a type, but it creates a breaking shortcode
 		// {{ "{% glossary_tooltip text=" }}"cluster" term_id="cluster" %}
@@ -548,6 +554,10 @@ func (m *mover) contentMigrate_Replacements() error {
 	}
 
 	if err := m.applyContentFixers(mainContentFixSet, "md$"); err != nil {
+		return err
+	}
+
+	if err := m.applyContentFixers(htmlAndMDContentFixSet, "md$|html$"); err != nil {
 		return err
 	}
 
