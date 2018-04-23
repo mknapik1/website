@@ -151,7 +151,7 @@ func (m *mover) contentMigrate_Step1_Basic_Copy_And_Rename() error {
 		return err
 	}
 
-	if err := m.renameContentFiles("(case|partner).*index\\.html$", "_index.html"); err != nil {
+	if err := m.renameContentFiles("(case|partner|community).*index\\.html$", "_index.html"); err != nil {
 		return err
 	}
 
